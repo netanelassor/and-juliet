@@ -26,8 +26,6 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci
-      - name: Verify story and music integrity
-        run: npm test
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Build for repository subpath

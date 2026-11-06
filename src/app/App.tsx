@@ -1,15 +1,20 @@
-import { useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { asset, illustration, chapters, characterInfo, locationForScene, type ChapterId, type CharacterId } from '../content/scenes';
 import { musicById, musicCues } from '../content/music-cues';
 import { Icon } from '../components/Icons';
 import { Stage } from '../components/Stage';
+import { OfflineBook } from '../components/OfflineBook';
+import { DeviceNarration } from '../components/DeviceNarration';
 import { Modal } from '../components/Modal';
 import { MusicPanel } from '../components/MusicPanel';
 import { BackgroundMusic, type BackgroundTrack } from '../components/BackgroundMusic';
 import { ContentsPanel } from '../components/ContentsPanel';
 import { TheatreCurtain, CURTAIN_ART } from '../components/TheatreCurtain';
 import { loadPreferences, parseSceneHash, savePreferences, swipeDirection, type Mode, type Preferences } from '../utils/progress';
+
+const PremiumStage = lazy(() => import('../components/PremiumStage').then(module => ({default:module.PremiumStage})));
+const JourneyStage = lazy(() => import('../components/JourneyStage').then(module => ({default:module.JourneyStage})));
 
 type Overlay = 'contents' | 'settings' | 'music' | 'identity' | 'intermission' | 'finish' | null;
 const initial = loadPreferences();
@@ -25,6 +30,8 @@ export default function App() {
   const [identity, setIdentity] = useState<CharacterId>('shakespeare');
   const [reading, setReading] = useState(false);
   const [replay, setReplay] = useState(0);
+  const [narrationLine, setNarrationLine] = useState<number | null>(null);
+  const [narrationStop, setNarrationStop] = useState(0);
   const [backgroundTrack, setBackgroundTrack] = useState<BackgroundTrack | null>(null);
   const [hidden, setHidden] = useState(document.hidden);
   const [systemReduced, setSystemReduced] = useState(matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -38,7 +45,9 @@ export default function App() {
   const chapterIndex = chapters.indexOf(chapter);
   const beat = chapter.beats[preferences.beat];
   const moving = preferences.motion && !systemReduced && preferences.mode !== 'quiet' && !hidden;
-  const sceneMusic = chapter.id === 'opening' ? chapter.music : chapter.music.filter(id => musicById[id].sourceScene === beat.sourceScene);
+  const sceneMusic = chapter.music.filter(id => musicById[id].sourceScene === beat.sourceScene);
+  const showcase = !cover;
+  const StageComponent = [3, 14, 46].includes(beat.sourceScene) ? PremiumStage : [10,24].includes(beat.sourceScene) ? JourneyStage : Stage;
   const currentCue = musicCues.find(c => c.sourceScene === beat.sourceScene)?.id || chapter.music[0] || musicCues[0].id;
   const dense = beat.paragraphs.length >= 8 || beat.paragraphs.join(' ').split(/\s+/).length >= 43;
 
@@ -74,7 +83,7 @@ export default function App() {
   }, []);
   useEffect(() => {
     if (!cover) history.replaceState(null, '', `#/${chapter.id}/${preferences.beat + 1}`);
-    scroll.current?.scrollTo(0, 0); setReading(false);
+    scroll.current?.scrollTo(0, 0); window.scrollTo({top:0,behavior:"instant"}); setReading(false);
     const paragraphs = scroll.current?.querySelectorAll('p');
     const intro = moving && !curtain && !cover && paragraphs?.length ? gsap.fromTo(paragraphs, {opacity: 0, y: 6}, {opacity: 1, y: 0, duration: .55, stagger: .055, ease: 'power2.out', clearProps: 'opacity,transform'}) : null;
     narrativeIntro.current = intro;
@@ -98,6 +107,14 @@ export default function App() {
     addEventListener('keydown', onKey); return () => removeEventListener('keydown', onKey);
   });
 
+  useEffect(() => {
+    if (narrationLine === null || cover) return;
+    const paragraph = scroll.current?.querySelectorAll('p')[narrationLine];
+    if (!paragraph) return;
+    const bounds = paragraph.getBoundingClientRect();
+    if (bounds.top < 65 || bounds.bottom > innerHeight - 45) paragraph.scrollIntoView({block:'nearest',behavior:moving?'smooth':'auto'});
+  }, [narrationLine]);
+
   function go(id: ChapterId, index = 0) { if (curtain) return; setSceneReady(false); update({chapter: id, beat: index, hasProgress: true}); setCover(false); setOverlay(null); }
   function start(resume: boolean) {
     if (curtain) return;
@@ -118,12 +135,14 @@ export default function App() {
     else if (chapterIndex > 0) { const previous = chapters[chapterIndex - 1]; go(previous.id, previous.beats.length - 1); }
     else {setCover(true); history.replaceState(null, '', '#/cover');}
   }
-  function openMusic(id: string) { savePreferences(preferences); setCue(id); setOverlay('music'); }
+  function openMusic(id: string) { savePreferences(preferences); setCue(id); playInStory(id, preferences.service); }
+  function openLibrary(id: string) { savePreferences(preferences); setCue(id); setOverlay('music'); }
   function openIdentity(id: CharacterId) {setIdentity(id); setOverlay('identity');}
   function playInStory(id: string, service: BackgroundTrack['service']) {
+    setNarrationStop(n => n + 1); setNarrationLine(null);
     playerReturnY.current = window.scrollY;
     setBackgroundTrack({id, service}); setOverlay(null);
-    if (matchMedia('(orientation: portrait), (max-width: 740px)').matches) requestAnimationFrame(() => requestAnimationFrame(() => document.querySelector('.music-dock')?.scrollIntoView({block: 'center', behavior: moving ? 'smooth' : 'auto'})));
+    requestAnimationFrame(() => requestAnimationFrame(() => document.querySelector('.music-dock')?.scrollIntoView({block: 'center', behavior: moving ? 'smooth' : 'auto'})));
   }
   function returnToStory() {
     scroll.current?.focus({preventScroll: true});
@@ -132,7 +151,7 @@ export default function App() {
   const atLast = chapterIndex === chapters.length - 1 && preferences.beat === chapter.beats.length - 1;
   const nextLabel = beat.sourceScene === 24 ? 'הפסקה קצרה' : atLast ? 'עוד רגע על הבמה' : 'ממשיכים';
 
-  return <div className={`app mode-${preferences.mode} ${moving ? '' : 'reduced-motion'} ${backgroundTrack ? 'has-background-player' : ''}`} onClickCapture={e => {
+  return <div className={`app prototype-app ${showcase ? 'premium-showcase' : ''} mode-${preferences.mode} ${moving ? '' : 'reduced-motion'} ${backgroundTrack ? 'has-background-player' : ''}`} onClickCapture={e => {
     // Safari does not focus a tapped button by default. Retain a concrete
     // focus-return target before native dialogs open, including on iPad.
     (e.target as Element).closest<HTMLElement>('button:not(:disabled),a[href]')?.focus({preventScroll: true});
@@ -150,10 +169,11 @@ export default function App() {
       <header className="reader-header" inert={curtain}>
         <button className="brand-button" aria-label="חזרה למסך הפתיחה" onClick={() => {setCover(true); history.replaceState(null, '', '#/cover');}}><img src={asset('cover/logo.webp')} alt="& Juliet"/></button>
         <div className="header-title"><span>מערכה {chapter.act === 1 ? 'ראשונה' : 'שנייה'}</span><span className="header-divider"/><b>{chapter.subtitle}</b></div>
-        <div className="header-controls"><button className="icon-button" aria-label="בחירת פרק" onClick={() => setOverlay('contents')}><Icon name="contents"/></button><button className="icon-button" aria-label="כל השירים" onClick={() => openMusic(currentCue)}><Icon name="music"/></button><button className="icon-button" aria-label="הגדרות להורים" onClick={() => setOverlay('settings')}><Icon name="settings"/></button></div>
+        <div className="header-controls"><button className="icon-button" aria-label="בחירת פרק" onClick={() => setOverlay('contents')}><Icon name="contents"/></button><button className="icon-button" aria-label="כל השירים" onClick={() => openLibrary(currentCue)}><Icon name="music"/></button><button className="icon-button" aria-label="הגדרות להורים" onClick={() => setOverlay('settings')}><Icon name="settings"/></button></div>
       </header>
-      <main className="reader-layout" inert={curtain} aria-busy={curtain} data-chapter={chapter.id} data-beat={preferences.beat} data-source-scene={beat.sourceScene} onPointerDown={e => {
-        if (overlay || !matchMedia('(orientation: landscape)').matches || (e.target as HTMLElement).closest('button,a,.story-copy,iframe')) return;
+
+      <main className="reader-layout" inert={curtain} aria-busy={curtain} data-chapter={chapter.id} data-beat={preferences.beat} data-source-scene={beat.sourceScene} data-family={chapter.family} data-density={dense ? "dense" : "regular"} onPointerDown={e => {
+        if (overlay || !matchMedia('(orientation: landscape)').matches || (e.target as HTMLElement).closest('button,a,.story-copy,iframe,[data-premium-gesture]')) return;
         const bounds = e.currentTarget.getBoundingClientRect();
         if (e.clientX < bounds.left + 20 || e.clientX > bounds.right - 20) edgeTap.current = {x: e.clientX, y: e.clientY, t: performance.now(), direction: e.clientX < bounds.left + 20 ? 'next' : 'back'};
       }} onPointerUp={e => {
@@ -162,7 +182,7 @@ export default function App() {
           if (start.direction === 'next') advance(); else back();
         }
       }} onPointerCancel={() => {edgeTap.current = null;}} onTouchStart={e => {
-        if (overlay || e.touches.length !== 1 || (e.target as HTMLElement).closest('button,a,.reading-panel,iframe')) {gesture.current = null; return;}
+        if (overlay || e.touches.length !== 1 || (e.target as HTMLElement).closest('button,a,.reading-panel,iframe,[data-premium-gesture]')) {gesture.current = null; return;}
         const p = e.touches[0]; gesture.current = {x: p.clientX, y: p.clientY, t: performance.now()};
       }} onTouchEnd={e => {
         const start = gesture.current; gesture.current = null;
@@ -170,15 +190,18 @@ export default function App() {
         const p = e.changedTouches[0]; const result = swipeDirection(p.clientX - start.x, p.clientY - start.y, performance.now() - start.t);
         if (result === 'next') advance(); else if (result === 'back') back();
       }}>
-        <Stage key={beat.sourceScene} chapter={chapter} beatIndex={preferences.beat} motion={moving && !overlay && !curtain} mode={preferences.mode} reading={reading} replay={replay} onIdentity={openIdentity} onInteract={() => setReading(false)} onReady={() => setSceneReady(true)}/>
+        <Suspense fallback={<Stage key={beat.sourceScene} chapter={chapter} beatIndex={preferences.beat} motion={moving && !overlay && !curtain} mode={preferences.mode} reading={reading} replay={replay} onIdentity={openIdentity} onInteract={() => setReading(false)} onReady={() => setSceneReady(true)}/>}>
+        <StageComponent key={beat.sourceScene} chapter={chapter} beatIndex={preferences.beat} motion={moving && !overlay && !curtain} mode={preferences.mode} reading={reading} replay={replay} onIdentity={openIdentity} onInteract={() => setReading(false)} onReady={() => setSceneReady(true)}/>
+        </Suspense>
         <section className={`reading-panel ${dense ? 'dense-story' : ''}`} onPointerDown={() => setReading(true)}>
           <div className="reading-heading"><span className="eyebrow">{chapter.subtitle}</span><h1 ref={heading} tabIndex={-1}>{beat.title}</h1><span className="literary-rule"/></div>
+          {!cover && <DeviceNarration key={beat.sourceScene} scene={beat.sourceScene} paragraphs={beat.paragraphs} stopSignal={narrationStop} onHighlight={setNarrationLine} onStart={() => {setBackgroundTrack(null);setReading(true);}}/>}
           <div className="story-copy" ref={scroll} id="story-text" tabIndex={0} onFocus={() => setReading(true)} aria-label="טקסט הסיפור">
-            {beat.paragraphs.map((paragraph, i) => <p key={`${beat.sourceScene}-${i}`}>{paragraph}</p>)}
+            {beat.paragraphs.map((paragraph, i) => <p key={`${beat.sourceScene}-${i}`} className={narrationLine === i ? 'narration-current' : undefined}>{paragraph}</p>)}
           </div>
           {sceneMusic.length ? <div className="scene-music"><span className="music-caption"><Icon name="music" size={15}/>המוזיקה של הרגע</span>
             {sceneMusic.map(id => <button key={id} className={`music-cue ${musicById[id].sourceScene === beat.sourceScene ? 'current-cue' : ''}`} onClick={() => openMusic(id)} aria-label={`להאזנה: ${musicById[id].displayTitle}`}><span className="cue-play"><Icon name="play" size={14}/></span><bdi>{musicById[id].displayTitle}</bdi></button>)}
-          </div> : <div className="quiet-reading-hint"><Icon name="spark" size={14}/><span>אפשר לגעת באיור ולגלות</span></div>}
+          </div> : <div className="quiet-reading-hint"><Icon name="spark" size={14}/><span>הבמה ממשיכה עם הסיפור</span></div>}
         </section>
       </main>
       <footer className="reader-footer" inert={curtain}>
@@ -192,10 +215,10 @@ export default function App() {
     <span className="sr-only" aria-live="polite" aria-atomic="true">{!cover && !curtain ? beat.title : ''}</span>
     {overlay === 'contents' && <ContentsPanel current={chapter.id} onGo={go} onClose={() => setOverlay(null)} onReplay={() => {setReading(false); setReplay(n => n + 1); setOverlay(null);}}/>}
     {overlay === 'intermission' && <Modal title="הפסקה קצרה" onClose={() => setOverlay(null)} className="intermission-modal"><div className="intermission-curtains" aria-hidden="true"/><span className="eyebrow">סוף המערכה הראשונה</span><p>המסך יורד לרגע.<br/>כשתהיו מוכנים, המערכה השנייה מחכה.</p><button className="button primary" onClick={() => {const next = locationForScene(25)!; go(next.chapter, next.beat); if (moving) setCurtain(true);}} data-testid="start-act-two">נפתח שוב את המסך<Icon name="left"/></button></Modal>}
-    {overlay === 'finish' && <Modal title="הבמה שלך, רון!" onClose={() => setOverlay(null)} className="finish-modal"><img src={asset('cover/logo.webp')} alt="& Juliet"/><p>הסיפור הזה נגמר.<br/>הסיפור שלך רק מתחיל!</p><button className="button primary" onClick={() => {setReading(false); setReplay(n => n + 1); setOverlay(null);}}>עוד חגיגה על הבמה<Icon name="spark"/></button><button className="text-button" onClick={() => go('opening')}><Icon name="replay" size={18}/>נחזור להתחלה</button><button className="text-button" onClick={() => openMusic(currentCue)}><Icon name="music" size={18}/>לכל שירי הסיפור</button></Modal>}
-    {overlay === 'settings' && <Modal title="איך נעלה לבמה?" onClose={() => setOverlay(null)} className="settings-modal"><p className="muted small">ההעדפות נשמרות במכשיר הזה.</p><fieldset><legend>הקצב שלנו</legend><div className="mode-choices">{([['read', 'קוראים', 'הסיפור במרכז'], ['explore', 'מגלים', 'תאורה ותנועה עדינה'], ['quiet', 'שקט', 'בלי תנועה ואפקטים']] as [Mode, string, string][]).map(([value, name, description]) => <button key={value} aria-pressed={preferences.mode === value} onClick={() => update({mode: value})}><b>{name}</b><span>{description}</span></button>)}</div></fieldset><div className="setting-row"><div><b>תנועה ואורות</b><p className="small muted">אפשר תמיד לקרוא עם במה שקטה.</p></div><button className="switch" aria-label="תנועה ואורות" role="switch" aria-checked={moving} disabled={systemReduced || preferences.mode === 'quiet'} onClick={() => update({motion: !preferences.motion})}><i/></button></div>{systemReduced && <p className="small muted">הפחתת התנועה של המכשיר פעילה.</p>}<fieldset><legend>איפה נקשיב?</legend><div className="segmented"><button dir="ltr" aria-pressed={preferences.service === 'apple'} onClick={() => update({service: 'apple'})}>Apple Music</button><button dir="ltr" aria-pressed={preferences.service === 'spotify'} onClick={() => update({service: 'spotify'})}>Spotify</button></div></fieldset><p className="settings-note">ספר משפחתי לרון, בהשראת המחזמר. אין פרסומות, חשבון משתמש או איסוף מידע. המוזיקה נפתחת בשירות שתבחרו.</p></Modal>}
+    {overlay === 'finish' && <Modal title="הבמה שלך, רון!" onClose={() => setOverlay(null)} className="finish-modal"><img src={asset('cover/logo.webp')} alt="& Juliet"/><p>הסיפור הזה נגמר.<br/>הסיפור שלך רק מתחיל!</p><button className="button primary" onClick={() => {setReading(false); setReplay(n => n + 1); setOverlay(null);}}>עוד חגיגה על הבמה<Icon name="spark"/></button><button className="text-button" onClick={() => go('opening')}><Icon name="replay" size={18}/>נחזור להתחלה</button><button className="text-button" onClick={() => openLibrary(currentCue)}><Icon name="music" size={18}/>לכל שירי הסיפור</button></Modal>}
+    {overlay === 'settings' && <Modal title="איך נעלה לבמה?" onClose={() => setOverlay(null)} className="settings-modal"><p className="muted small">ההעדפות נשמרות במכשיר הזה.</p><fieldset><legend>הקצב שלנו</legend><div className="mode-choices">{([['read', 'קוראים', 'הסיפור במרכז'], ['explore', 'מגלים', 'תאורה ותנועה עדינה'], ['quiet', 'שקט', 'בלי תנועה ואפקטים']] as [Mode, string, string][]).map(([value, name, description]) => <button key={value} aria-pressed={preferences.mode === value} onClick={() => update({mode: value})}><b>{name}</b><span>{description}</span></button>)}</div></fieldset><div className="setting-row"><div><b>הנפשות בכל הספר</b><p className="small muted">{moving ? "פועלות ברצף בכל סצנה. אפשר להפסיק כאן." : "ההנפשות כבויות. אפשר לקרוא עם במה שקטה."}</p></div><button className="switch" aria-label="הנפשות בכל הספר" role="switch" aria-checked={moving} disabled={systemReduced || preferences.mode === 'quiet'} onClick={() => update({motion: !preferences.motion})}><i/></button></div>{systemReduced && <p className="small muted">הפחתת התנועה של המכשיר פעילה.</p>}<fieldset><legend>איפה נקשיב?</legend><div className="segmented"><button dir="ltr" aria-pressed={preferences.service === 'apple'} onClick={() => update({service: 'apple'})}>Apple Music</button><button dir="ltr" aria-pressed={preferences.service === 'spotify'} onClick={() => update({service: 'spotify'})}>Spotify</button></div></fieldset><OfflineBook/><p className="settings-note">ספר משפחתי לרון, בהשראת המחזמר. אין פרסומות, חשבון משתמש או איסוף מידע. המוזיקה נפתחת בשירות שתבחרו.</p></Modal>}
     {overlay === 'identity' && <Modal title={characterInfo[identity].name} onClose={() => setOverlay(null)} className="identity-modal"><img className="identity-portrait" src={asset(`characters/${characterInfo[identity].image}.webp`)} alt={characterInfo[identity].name}/><p>{characterInfo[identity].description}</p><button className="button primary" onClick={() => setOverlay(null)}>נחזור לסיפור<Icon name="left"/></button></Modal>}
     {overlay === 'music' && <MusicPanel cueId={cue} service={preferences.service} onService={service => update({service})} favorites={preferences.favorites} onFavorite={id => update({favorites: preferences.favorites.includes(id) ? preferences.favorites.filter(x => x !== id) : [...preferences.favorites, id]})} onClose={() => setOverlay(null)} onPlayHere={playInStory}/>}
-    {backgroundTrack && <BackgroundMusic track={backgroundTrack} interactionLocked={curtain} onReturnToStory={returnToStory} onClose={() => setBackgroundTrack(null)} onService={service => {setBackgroundTrack({...backgroundTrack, service}); update({service});}}/>}
+    {backgroundTrack && <BackgroundMusic track={backgroundTrack} interactionLocked={curtain} onOpenLibrary={() => openLibrary(backgroundTrack.id)} onReturnToStory={returnToStory} onClose={() => setBackgroundTrack(null)} onService={service => {setBackgroundTrack({...backgroundTrack, service}); update({service});}}/>}
   </div>;
 }

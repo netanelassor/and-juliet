@@ -1,0 +1,510 @@
+/* Approved theatrical reading system, applied to the complete 48-scene book. */
+body:has(.app.premium-showcase) {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.app.premium-showcase {
+  --premium-header: 54px;
+  --premium-ribbon: 0px;
+  --premium-footer: 64px;
+  --premium-surface: #171321;
+  --premium-text: #f7eddc;
+  --premium-secondary: #b5a4b8;
+  --header: var(--premium-header);
+  --footer: var(--premium-footer);
+  height: auto;
+  min-height: 100svh;
+  overflow: clip;
+  padding-bottom: 0;
+  color: var(--premium-text);
+  background: #11101f;
+  font-family: Rubik, Arial, sans-serif;
+}
+
+.app.premium-showcase .reader-header {
+  position: relative;
+  height: var(--premium-header);
+  grid-template-columns: 110px minmax(0, 1fr) 144px;
+  padding-inline: max(22px, env(safe-area-inset-right)) max(22px, env(safe-area-inset-left));
+  background: #11101f;
+  border: 0;
+  color: #b7a8c0;
+}
+
+.app.premium-showcase .brand-button {
+  width: 78px;
+  height: 46px;
+  padding-block: 4px;
+}
+
+.app.premium-showcase .header-title {
+  gap: 11px;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.app.premium-showcase .header-title b {
+  color: #cbbbca;
+  font-size: 12px;
+}
+
+.app.premium-showcase .header-title > span:first-child {
+  color: #8e809b;
+}
+
+.app.premium-showcase .header-controls {
+  gap: 2px;
+  color: #a394b0;
+}
+
+.app.premium-showcase .header-controls .icon-button {
+  width: 44px;
+  height: 44px;
+}
+
+/* The sample-comparison ribbon does not belong to the complete story. */
+.app.premium-showcase .premium-route-ribbon {
+  display: none;
+}
+
+/* Native 3:2 artwork, a generous calm column, and no panel pasted on the art. */
+.app.premium-showcase .reader-layout {
+  display: grid;
+  direction: ltr;
+  grid-template-columns: minmax(0, 1.95fr) minmax(330px, 1fr);
+  align-items: stretch;
+  height: auto;
+  min-height: calc(100svh - var(--premium-header) - var(--premium-ribbon) - var(--premium-footer) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  padding: 0;
+  background: var(--premium-surface);
+}
+
+.app.premium-showcase :is(.premium-stage, .premium-standard-stage) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: auto;
+  padding-block: 22px 10px;
+  background: radial-gradient(ellipse at 50% 40%, #21182d 0%, #141221 72%);
+}
+
+.app.premium-showcase :is(.premium-stage, .premium-standard-stage) .stage-picture {
+  width: 100%;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: 3 / 2;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.app.premium-showcase :is(.premium-stage, .premium-standard-stage) .stage-picture::after {
+  display: none;
+}
+
+.app.premium-showcase .premium-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+}
+
+.app.premium-showcase .premium-standard-stage .stage-picture {
+  overflow: hidden;
+}
+
+.app.premium-showcase .premium-standard-stage .ambient-backdrop {
+  opacity: .26;
+}
+
+.app.premium-showcase .premium-standard-stage .light-beam {
+  opacity: .035;
+}
+
+.app.premium-showcase .premium-standard-stage .light-wash {
+  opacity: .3;
+}
+
+.app.premium-showcase .premium-stage-footer {
+  display: flex;
+  direction: rtl;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 50px;
+  padding: 4px 22px;
+  color: #b8a6b9;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.app.premium-showcase .premium-stage-footer > span {
+  min-width: 0;
+}
+
+.app.premium-showcase .premium-stage-footer > p {
+  min-width: 0;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.app.premium-showcase .premium-stage-footer button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 44px;
+  min-height: 44px;
+  flex: none;
+  padding: 6px 10px;
+  color: #d5bf9f;
+  background: none;
+  font-size: 11px;
+}
+
+.app.premium-showcase :is(.cast-strip, .stage-interactions, .stage-ceiling, .stage-floor) {
+  display: none;
+}
+
+.app.premium-showcase .reading-panel,
+.app.premium-showcase .reading-panel.dense-story {
+  position: relative;
+  direction: rtl;
+  justify-content: center;
+  padding: 24px clamp(26px, 2.6vw, 42px);
+  color: var(--premium-text);
+  background: linear-gradient(125deg, #171321, #1a1525 76%, #1d1728);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.app.premium-showcase .reading-panel::before,
+.app.premium-showcase .reading-panel::after {
+  display: none;
+}
+
+.app.premium-showcase .reading-heading .eyebrow,
+.app.premium-showcase .reading-heading .literary-rule {
+  display: none;
+}
+
+.app.premium-showcase .reading-heading h1,
+.app.premium-showcase .dense-story .reading-heading h1 {
+  margin: 0;
+  color: #ecd9bc;
+  font-size: clamp(26px, 2.35vw, 32px);
+  line-height: 1.4;
+  letter-spacing: -.02em;
+  text-shadow: none;
+  text-wrap: balance;
+}
+
+.app.premium-showcase .story-copy,
+.app.premium-showcase .dense-story .story-copy {
+  flex: 0 1 auto;
+  min-height: auto;
+  max-height: none;
+  margin-top: 20px;
+  padding: 0;
+  overflow: visible;
+  color: var(--premium-text);
+  font-family: Rubik, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: right;
+  text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app.premium-showcase .story-copy p + p,
+.app.premium-showcase .dense-story .story-copy p + p {
+  margin-top: 9px;
+}
+
+/* Quiet conversations breathe; the longest dialogue never needs smaller type. */
+.app.premium-showcase .reader-layout[data-family="quiet"] .reading-panel {
+  background: linear-gradient(125deg, #171422, #1b1625 78%, #1e1829);
+}
+
+.app.premium-showcase .reader-layout[data-family="quiet"] .story-copy {
+  line-height: 1.58;
+}
+
+.app.premium-showcase .reader-layout[data-family="quiet"] .premium-standard-stage .light-beam {
+  opacity: .02;
+}
+
+.app.premium-showcase .reader-layout[data-family="quiet"],
+.app.premium-showcase .reader-layout:has(.reading-panel.dense-story) {
+  grid-template-columns: minmax(0, 1.85fr) minmax(345px, 1fr);
+}
+
+.app.premium-showcase .reading-panel .scene-music {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 21px;
+  padding-top: 12px;
+  border-top: 1px solid #d2b28a22;
+}
+
+.app.premium-showcase .music-caption {
+  margin-bottom: 2px;
+  color: #97869e;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.app.premium-showcase .music-cue,
+.app.premium-showcase .music-cue.current-cue {
+  width: 100%;
+  min-height: 44px;
+  gap: 10px;
+  padding: 7px 0;
+  color: #d0b7cf;
+  background: none;
+  border-radius: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.app.premium-showcase .music-cue:hover {
+  color: #ffdfab;
+}
+
+.app.premium-showcase .cue-play,
+.app.premium-showcase .current-cue .cue-play {
+  width: 28px;
+  height: 28px;
+  color: #d1b58d;
+  background: transparent;
+  border: 1px solid #b799704a;
+}
+
+.app.premium-showcase .quiet-reading-hint {
+  margin-top: 24px;
+  padding-top: 14px;
+  min-height: 44px;
+  color: #9986a0;
+  border-color: #b79b7922;
+  font-size: 11px;
+}
+
+.app.premium-showcase .reader-footer {
+  position: relative;
+  inset: auto;
+  height: calc(var(--premium-footer) + env(safe-area-inset-bottom));
+  grid-template-columns: 130px minmax(0, 1fr) 160px;
+  padding: 8px max(24px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+  background: #11101f;
+  border-top: 1px solid #c8ab811c;
+  box-shadow: none;
+}
+
+.app.premium-showcase .global-progress {
+  height: 1px;
+  opacity: .65;
+}
+
+.app.premium-showcase .back-button {
+  width: auto;
+  color: #a999b5;
+  font-size: 12px;
+}
+
+.app.premium-showcase .next-button {
+  min-width: 144px;
+  min-height: 46px;
+  gap: 18px;
+  padding: 9px 18px;
+  background: #e1c18b;
+  color: #2c2131;
+  box-shadow: none;
+  font-size: 13px;
+}
+
+.app.premium-showcase .next-button:hover {
+  background: #f0d39f;
+}
+
+.app.premium-showcase .beat-dots {
+  display: none;
+}
+
+.app.premium-showcase .progress-area > span {
+  max-width: none;
+  color: #8c7d98;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* The provider keeps its real controls and its identity in normal document flow. */
+.app.premium-showcase.has-background-player {
+  padding-bottom: 0;
+}
+
+.app.premium-showcase.has-background-player .reader-layout {
+  padding-bottom: 0;
+}
+
+.app.premium-showcase > .music-dock.premium-music-dock[data-testid="background-player"] {
+  position: relative;
+  inset: auto;
+  width: min(600px, calc(100% - 48px));
+  margin: 25px auto calc(28px + env(safe-area-inset-bottom));
+}
+
+/* These two dialogue-heavy moments need width, never smaller letters. */
+@media (orientation: landscape) and (min-width: 741px) {
+  .app.premium-showcase .reader-layout[data-density]:is([data-source-scene="26"], [data-source-scene="40"]) {
+    grid-template-columns: minmax(0, 1.6fr) minmax(345px, 1fr);
+  }
+
+  .app.premium-showcase .reader-layout[data-density]:is([data-source-scene="26"], [data-source-scene="40"]) .reading-panel {
+    padding-block: 20px;
+  }
+
+  .app.premium-showcase .reader-layout[data-density]:is([data-source-scene="26"], [data-source-scene="40"]) .story-copy p + p {
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 1450px) {
+  .app.premium-showcase .reader-layout {
+    grid-template-columns: minmax(0, 2fr) minmax(410px, 1fr);
+  }
+
+  .app.premium-showcase .reading-panel {
+    padding-inline: 44px;
+  }
+}
+
+@media (max-height: 740px) and (orientation: landscape) and (min-width: 741px) {
+  .app.premium-showcase {
+    --premium-header: 48px;
+    --premium-footer: 60px;
+  }
+
+  .app.premium-showcase :is(.premium-stage, .premium-standard-stage) {
+    padding-top: 12px;
+  }
+
+  .app.premium-showcase .reading-panel,
+  .app.premium-showcase .reading-panel.dense-story {
+    padding-block: 24px;
+  }
+
+  .app.premium-showcase .story-copy,
+  .app.premium-showcase .dense-story .story-copy {
+    margin-top: 20px;
+  }
+
+  .app.premium-showcase .reading-panel .scene-music {
+    margin-top: 18px;
+  }
+}
+
+@media (orientation: portrait), (max-width: 740px) {
+  .app.premium-showcase .reader-header {
+    grid-template-columns: 85px minmax(0, 1fr) 138px;
+    padding-inline: 14px;
+  }
+
+  .app.premium-showcase .header-title {
+    flex-direction: column;
+    gap: 1px;
+    line-height: 1.35;
+  }
+
+  .app.premium-showcase .header-title b {
+    font-size: 10px;
+  }
+
+  .app.premium-showcase .reader-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  .app.premium-showcase :is(.premium-stage, .premium-standard-stage) {
+    min-height: 0;
+    aspect-ratio: auto;
+    padding-block: 14px 0;
+  }
+
+  .app.premium-showcase .premium-stage-footer {
+    padding-inline: 7%;
+  }
+
+  .app.premium-showcase .reading-panel,
+  .app.premium-showcase .reading-panel.dense-story {
+    padding: 26px max(7%, env(safe-area-inset-right)) 33px max(7%, env(safe-area-inset-left));
+  }
+
+  .app.premium-showcase .reading-heading h1,
+  .app.premium-showcase .dense-story .reading-heading h1 {
+    font-size: 29px;
+  }
+
+  .app.premium-showcase .story-copy,
+  .app.premium-showcase .dense-story .story-copy {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-top: 22px;
+  }
+
+  .app.premium-showcase .reader-footer {
+    grid-template-columns: 92px minmax(0, 1fr) 148px;
+    padding-inline: 18px;
+  }
+
+  .app.premium-showcase .progress-area > span {
+    max-width: 130px;
+    font-size: 9px;
+    padding-inline: 4px;
+  }
+
+  .app.premium-showcase .next-button {
+    min-width: 140px;
+    padding-inline: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app.premium-showcase .reader-footer {
+    grid-template-columns: 64px minmax(0, 1fr) 132px;
+    padding-inline: 13px;
+  }
+
+  .app.premium-showcase .next-button {
+    min-width: 128px;
+    padding-inline: 13px;
+  }
+
+  .app.premium-showcase .back-button {
+    gap: 4px;
+    font-size: 11px;
+  }
+
+  .app.premium-showcase .progress-area > span {
+    font-size: 8px;
+  }
+}
+/* The nine-paragraph reveal keeps its full 24px prose and footer on the iPad. */
+@media (orientation:landscape) and (min-width:741px){
+  .app.premium-showcase .reader-layout[data-density][data-source-scene="40"] .reading-panel{padding-block:12px}
+  .app.premium-showcase .reader-layout[data-source-scene="40"] .story-copy{margin-top:18px}
+}

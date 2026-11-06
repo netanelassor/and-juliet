@@ -1,0 +1,11 @@
+.device-narration{display:flex;align-items:center;gap:11px;flex-wrap:wrap;direction:rtl;color:#c9b8c5}
+.device-narration-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;padding:7px 13px;border:1px solid #c49a622d;border-radius:24px;background:#d7aa6e08;color:#ddc3ac;font:inherit;font-size:11px;line-height:1.5;cursor:pointer}
+.device-narration-toggle:hover{border-color:#c49a6266;background:#d7aa6e10;color:#ffe5c0}
+.device-narration-toggle:focus-visible{outline:2px solid #edc47d;outline-offset:3px}
+.device-narration-toggle:disabled{opacity:.55;cursor:default}
+.device-narration-active .device-narration-toggle{border-color:#d4ac6c70;background:#d7aa6e13;color:#ffe0b0}
+.device-narration-toggle svg{flex:none}
+.device-narration-help{font-size:10px;line-height:1.7;color:#ac97ab;max-width:230px}
+/* Applied by the parent to the paragraph currently spoken by the device. */
+.story-copy p.narration-current{color:#ffe3ac;text-shadow:0 0 20px #edba6a25}
+@media(max-width:670px){.device-narration{gap:6px 10px}.device-narration-toggle{font-size:11px}.device-narration-help{font-size:9px;max-width:200px}}

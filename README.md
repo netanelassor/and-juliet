@@ -1,33 +1,32 @@
 # & Juliet · הבמה של רון
 
-An illustrated Hebrew musical storybook made for Ron, with all 48 original scenes, 17 chapters, two acts and 29 Original Broadway Cast Recording references.
+הספר האינטראקטיבי המלא, גרסה 0.5: 48 סצנות, 48 איורים, 17 פרקים ושתי מערכות. כל 1,784 מילות הסיפור המקורי נשמרו, עם השם ג'ולייט ופונט Rubik.
 
-**Read the book:** https://netanelassor.github.io/and-juliet/
+**אתר הספר:** https://netanelassor.github.io/and-juliet/
 
-The experience uses live RTL Hebrew text, Rubik, the original illustrations, an illustrated opening curtain, scene-specific stage effects, saved reading progress and official Apple Music/Spotify embeds. Music starts only after a deliberate user action; full playback depends on the provider and account.
+העיצוב שאושר בשלוש הדוגמאות הורחב לכל הספר: איור גדול ביחס המקורי, קריאה בעברית על רקע כהה רגוע, הנפשות אוטומטיות בלולאה, כיבוי כללי בהגדרות, הקראת המכשיר ושיר הסצנה בנגיעה אחת. חמש סצנות מקבלות הנפשה בשכבות מתוך האיור המקורי: אן ושייקספיר, הכרכרה, הנברשת, חזרת רומיאו ו־Roar. בשאר הסצנות פועלים מתכוני הבמה הקיימים בלולאה.
 
-## Run locally
+## לקריאה בלי רשת
+
+בהגדרות בוחרים **הספר בא איתנו → נשמור את הספר לדרך**. זו הורדה יזומה של כ־32MB, עם התקדמות, עצירה והמשך. אחרי סיום השמירה אפשר לקרוא ולהפעיל את הנפשות הספר ללא רשת. Apple Music ו־Spotify דורשים חיבור, והקראה תלויה בקול עברי זמין במכשיר. הדפדפן מנהל את האחסון ועשוי לפנות אותו כאשר חסר מקום.
+
+## עבודה מקומית
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open the address printed by Vite. The default port is 4176.
-
-## Check and build
+פורט התצוגה הוא 4178. לבנייה עבור GitHub Pages:
 
 ```sh
-npm test
 VITE_BASE_PATH=/and-juliet/ npm run build
 ```
 
-The static deployment is `dist/`. Machine-specific preservation checks skip when the original PDF and earlier local deliverables are unavailable; portable story, artwork and music checks still run.
+`dist/` כוללת גם את עובד השירות ומלאי השמירה שנוצרים בבנייה. אין הורדה מלאה לפני בחירה מפורשת. תהליך הפרסום ידני ומעלה את `dist/` בלבד.
 
-## Deploy
+לפי בקשת המשתמש לא נוספו ולא הורצו בדיקות אוטומטיות, ותהליך GitHub Actions מריץ התקנה ובנייה. בדיקות השימור הקודמות נשמרו למקרה שיידרשו בעתיד. ההפקה כוללת בנייה וצפייה חזותית במסכים מייצגים, ללא אישור על אייפד פיזי או חשבון מוזיקה משפחתי.
 
-The **Deploy Ron storybook** GitHub Actions workflow builds and publishes to GitHub Pages. It runs manually from Actions. Only the built static site is published.
+[פרטי הגרסה](docs/FULL_PREMIUM_RELEASE.md) · [העימוד](docs/FULL_PREMIUM_LAYOUT.md) · [שמירה לדרך](docs/OFFLINE_READING.md) · [רקעי ההשלמה והפרומפטים](docs/PREMIUM_ASSET_PROVENANCE.json)
 
-The app is designed for an 11-inch iPad and supports portrait reflow and reduced motion. The illustrations remain flattened original art; animation consists of stage effects and controlled camera movement. Home-screen icons are included; no offline cache or service worker is provided.
-
-A personal family project, with no official affiliation to the theatrical production. No commercial song recordings, lyrics or service credentials are included.
+קובצי ה־PDF והספר המודפס, האבטיפוס הקודם והדגמת שלוש הסצנות נשמרים בנפרד. זהו פרויקט משפחתי ללא שיוך רשמי להפקה. אין בפרויקט הקלטות מסחריות, מילות שירים או מפתחות שירות.

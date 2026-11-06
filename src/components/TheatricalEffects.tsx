@@ -5,11 +5,10 @@ import '../styles/theatrical-effects.css';
 
 export interface TheatricalEffectsProps {
   scene: number;
-  /** Increment after a deliberate touch. Reset to0 when changing source scene. */
+  /** Optional restart token. Choreography runs automatically while enabled. */
   run: number;
   enabled: boolean;
   ambient: boolean;
-  paused: boolean;
 }
 const palette = ['#FFC84B', '#EF168F', '#29C5F6', '#FFF2DD', '#EEA3C1'];
 const fraction = (n: number) => {const v = Math.sin(n * 12.9898) * 43758.5453; return v - Math.floor(v);};
@@ -19,10 +18,8 @@ const flowerPath = 'M50 38C24-2 0 23 31 47 0 66 24 99 48 64 70 100 101 75 69 51 
 
 /** Light and stage-prop choreography around the untouched original illustration.
  * Every generated shape is a theatrical effect, not a replacement character. */
-export function TheatricalEffects({scene, run, enabled, ambient, paused}: TheatricalEffectsProps) {
+export function TheatricalEffects({scene, run, enabled, ambient}: TheatricalEffectsProps) {
   const root = useRef<HTMLDivElement>(null);
-  const interaction = useRef<gsap.core.Timeline | null>(null);
-  const interactionContext = useRef<ReturnType<typeof gsap.context> | null>(null);
   const direction = motionForScene(scene);
   const {kind, focal, intensity} = direction;
   const count = kind === 'finale' ? 48 : intensity === 'grand' ? 30 : intensity === 'gentle' ? 10 : 20;
@@ -36,11 +33,10 @@ export function TheatricalEffects({scene, run, enabled, ambient, paused}: Theatr
   })), [scene, count, kind, intensity]);
 
   useLayoutEffect(() => {
-    if (!root.current || !enabled || paused || run < 1) return;
+    if (!root.current || !enabled) return;
     const ctx = gsap.context(() => {
       const q = (s: string) => [...root.current!.querySelectorAll(s)];
-      const tl = gsap.timeline({defaults: {overwrite: 'auto'}});
-      interaction.current = tl;
+      const tl = gsap.timeline({repeat: -1, repeatDelay: intensity === 'gentle' ? 3.8 : intensity === 'grand' ? 2 : 2.8, delay: .65, defaults: {overwrite: 'auto'}});
       const body = root.current!;
       const h = Math.max(body.clientHeight, 300);
 
@@ -69,8 +65,8 @@ export function TheatricalEffects({scene, run, enabled, ambient, paused}: Theatr
           .to(q('.fx-feather'), {rotation: -3, opacity: 0, y: -25, duration: 1.1}, 1.1);
       }
       if (kind === 'quill-snap') {
-        tl.fromTo(q('.fx-quill-left'), {opacity: 0, x: 0, rotation: 0}, {opacity: .9, duration: .25}, .1)
-          .fromTo(q('.fx-quill-right'), {opacity: 0, x: 0, rotation: 0}, {opacity: .9, duration: .25}, .1)
+        tl.fromTo(q('.fx-quill-left'), {opacity: 0, x: 0, y: 0, rotation: 0}, {opacity: .9, duration: .25}, .1)
+          .fromTo(q('.fx-quill-right'), {opacity: 0, x: 0, y: 0, rotation: 0}, {opacity: .9, duration: .25}, .1)
           .to(q('.fx-quill-left'), {x: -65, y: 35, rotation: -27, duration: .85, ease: 'power2.out'}, .45)
           .to(q('.fx-quill-right'), {x: 65, y: 28, rotation: 24, duration: .85, ease: 'power2.out'}, .45)
           .to(q('.fx-quill-half'), {opacity: 0, duration: .8}, 1.5);
@@ -80,7 +76,7 @@ export function TheatricalEffects({scene, run, enabled, ambient, paused}: Theatr
           .to(q('.fx-followspot'), {opacity: 0, rotation: 0, duration: 1.5}, 2.1);
       }
       if (kind === 'reveal') {
-        tl.set(q('.fx-side-curtain'), {opacity: 1, xPercent: 0}, 0)
+        tl.fromTo(q('.fx-side-curtain'), {opacity: 0, xPercent: 0}, {opacity: 1, duration: .3, ease: 'sine.inOut'}, 0)
           .to(q('.fx-curtain-left'), {xPercent: -104, duration: 1.2, ease: 'power3.inOut'}, .15)
           .to(q('.fx-curtain-right'), {xPercent: 104, duration: 1.2, ease: 'power3.inOut'}, .15)
           .set(q('.fx-side-curtain'), {opacity: 0}, 1.5);
@@ -114,38 +110,24 @@ export function TheatricalEffects({scene, run, enabled, ambient, paused}: Theatr
           .to(q('.fx-music-bar,.fx-note'), {opacity: 0, duration: .9}, 2.5);
       }
     }, root);
-    interactionContext.current = ctx;
-    return () => {ctx.revert(); interaction.current = null; interactionContext.current = null;};
-  }, [scene, run]);
+    return () => ctx.revert();
+  }, [scene, run, enabled]);
 
   useEffect(() => {
-    if (!enabled) {
-      interactionContext.current?.revert();
-      interaction.current = null;
-    } else if (paused) {
-      // Reading must reveal the untouched painting, rather than freezing a
-      // curtain or a foreground prop across a character's face.
-      interactionContext.current?.revert();
-      interaction.current = null;
-    }
-    // Enabling motion again does not replay a previously consumed run.
-  }, [enabled, paused]);
-
-  useEffect(() => {
-    if (!enabled || !ambient || paused || direction.ambient === 'none') return;
+    if (!enabled || !ambient || direction.ambient === 'none') return;
     const ctx = gsap.context(() => {
       root.current!.querySelectorAll('.fx-ambient-mote').forEach((mote, i) => {
         gsap.fromTo(mote, {opacity: .03, y: 7, scale: .7}, {opacity: intensity === 'gentle' ? .1 : .18, y: -12 - i % 3 * 4, scale: 1, duration: 3.8 + i * .25, delay: i * .25, repeat: -1, yoyo: true, ease: 'sine.inOut'});
       });
     }, root);
     return () => ctx.revert();
-  }, [scene, enabled, ambient, paused]);
+  }, [scene, enabled, ambient]);
 
   const fxStyle = {'--fx-focal-x': `${focal[0] * 100}%`, '--fx-focal-y': `${focal[1] * 100}%`} as CSSProperties;
   const paper = kind === 'quill' || kind === 'quill-snap';
   const light = inKinds(kind, ['spotlight', 'reveal', 'chandelier']);
   const rays = inKinds(kind, ['sunrise', 'courage', 'finale']);
-  return <div ref={root} className={`theatrical-effects effects-${kind} effects-${intensity} ${!enabled ? 'fx-no-motion' : ''} ${run > 0 ? 'fx-touched' : ''}`} style={fxStyle} aria-hidden="true" data-motion-kind={kind}>
+  return <div ref={root} className={`theatrical-effects effects-${kind} effects-${intensity} ${!enabled ? 'fx-no-motion' : ''} ${enabled || run > 0 ? 'fx-touched' : ''}`} style={fxStyle} aria-hidden="true" data-motion-kind={kind}>
     <div className="fx-static-warmth"/>
     <div className="fx-halo fx-user-piece"/>
     {light && <div className="fx-followspot fx-user-piece"/>}

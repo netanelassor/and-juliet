@@ -9,7 +9,7 @@ export interface Preferences {
 export const STORAGE_KEY = 'ron-juliet-stage-v1';
 export function loadPreferences(): Preferences {
   const defaults: Preferences = { version: 1, chapter: 'opening', beat: 0, hasProgress: false,
-    service: 'apple', motion: !matchMedia('(prefers-reduced-motion: reduce)').matches,
+    service: 'apple', motion: true,
     mode: 'read', favorites: [] };
   try {
     const p = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
@@ -17,7 +17,7 @@ export function loadPreferences(): Preferences {
     if (!chapter || p.version !== 1) return defaults;
     return { ...defaults, chapter: chapter.id, beat: Math.max(0, Math.min(chapter.beats.length - 1, Number.isInteger(p.beat) ? p.beat : 0)),
       hasProgress: p.hasProgress === true, service: p.service === 'spotify' ? 'spotify' : 'apple',
-      motion: p.motion !== false && !matchMedia('(prefers-reduced-motion: reduce)').matches,
+      motion: p.motion !== false,
       mode: ['read', 'explore', 'quiet'].includes(p.mode) ? p.mode : 'read',
       favorites: Array.isArray(p.favorites) ? p.favorites.filter((x: unknown) => typeof x === 'string') : [] };
   } catch { return defaults; }
