@@ -1,0 +1,1605 @@
+{
+  "coordinateSystem": "Normalized x/y relative to the original uncropped1536x1024 image content, before CSScontain letterboxing or transforms. Place hotspots within the actual image wrapper, not the outer viewport.",
+  "imageAspectRatio": 1.5,
+  "scenes": {
+    "01": {
+      "image": "assets/story/scene-01.webp",
+      "canonicalPdfPage": 7,
+      "focalPoint": [
+        0.49,
+        0.46
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.445,
+          "y": 0.19,
+          "radius": 0.085
+        },
+        {
+          "characterId": "anne",
+          "x": 0.79,
+          "y": 0.49,
+          "radius": 0.07
+        }
+      ],
+      "interactionAnchor": {
+        "id": "quill",
+        "x": 0.54,
+        "y": 0.07
+      }
+    },
+    "02": {
+      "image": "assets/story/scene-02.webp",
+      "canonicalPdfPage": 8,
+      "focalPoint": [
+        0.57,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.595,
+          "y": 0.35,
+          "radius": 0.085
+        },
+        {
+          "characterId": "may",
+          "x": 0.265,
+          "y": 0.29,
+          "radius": 0.075
+        }
+      ],
+      "interactionAnchor": {
+        "id": "quill",
+        "x": 0.93,
+        "y": 0.18
+      }
+    },
+    "03": {
+      "image": "assets/story/scene-03.webp",
+      "canonicalPdfPage": 9,
+      "focalPoint": [
+        0.52,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.265,
+          "y": 0.185,
+          "radius": 0.085
+        },
+        {
+          "characterId": "anne",
+          "x": 0.595,
+          "y": 0.22,
+          "radius": 0.09
+        }
+      ],
+      "interactionAnchor": {
+        "id": "anne-spotlight",
+        "x": 0.595,
+        "y": 0.28
+      }
+    },
+    "04": {
+      "image": "assets/story/scene-04.webp",
+      "canonicalPdfPage": 10,
+      "focalPoint": [
+        0.5,
+        0.49
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.14,
+          "y": 0.29,
+          "radius": 0.09
+        },
+        {
+          "characterId": "anne",
+          "x": 0.395,
+          "y": 0.26,
+          "radius": 0.09
+        }
+      ],
+      "interactionAnchor": {
+        "id": "rewritten-ending",
+        "x": 0.88,
+        "y": 0.43
+      }
+    },
+    "05": {
+      "image": "assets/story/scene-05.webp",
+      "canonicalPdfPage": 11,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.5,
+          "y": 0.27,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "flower",
+        "x": 0.74,
+        "y": 0.62
+      }
+    },
+    "06": {
+      "image": "assets/story/scene-06.webp",
+      "canonicalPdfPage": 12,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.51,
+          "y": 0.16,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "new-light",
+        "x": 0.59,
+        "y": 0.22
+      }
+    },
+    "07": {
+      "image": "assets/story/scene-07.webp",
+      "canonicalPdfPage": 13,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.3,
+          "y": 0.32,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "flowers",
+        "x": 0.56,
+        "y": 0.64
+      }
+    },
+    "08": {
+      "image": "assets/story/scene-08.webp",
+      "canonicalPdfPage": 14,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.25,
+          "y": 0.28,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "doorway",
+        "x": 0.93,
+        "y": 0.54
+      }
+    },
+    "09": {
+      "image": "assets/story/scene-09.webp",
+      "canonicalPdfPage": 15,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "angelique",
+          "x": 0.17,
+          "y": 0.19,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.465,
+          "y": 0.395,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.64,
+          "y": 0.31,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.77,
+          "y": 0.18,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "luggage",
+        "x": 0.14,
+        "y": 0.83
+      }
+    },
+    "10": {
+      "image": "assets/story/scene-10.webp",
+      "canonicalPdfPage": 16,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.72,
+          "y": 0.15,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.22,
+          "y": 0.4,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.32,
+          "y": 0.38,
+          "radius": 0.08
+        },
+        {
+          "characterId": "angelique",
+          "x": 0.41,
+          "y": 0.37,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.5,
+          "y": 0.39,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "carriage-wheel",
+        "x": 0.47,
+        "y": 0.82
+      }
+    },
+    "11": {
+      "image": "assets/story/scene-11.webp",
+      "canonicalPdfPage": 17,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.72,
+          "y": 0.19,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.21,
+          "y": 0.36,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.28,
+          "y": 0.24,
+          "radius": 0.08
+        },
+        {
+          "characterId": "angelique",
+          "x": 0.38,
+          "y": 0.25,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.5,
+          "y": 0.29,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "carriage-wheel",
+        "x": 0.7,
+        "y": 0.8
+      }
+    },
+    "12": {
+      "image": "assets/story/scene-12.webp",
+      "canonicalPdfPage": 18,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "angelique",
+          "x": 0.16,
+          "y": 0.45,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.34,
+          "y": 0.4,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.51,
+          "y": 0.4,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.71,
+          "y": 0.35,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "palace-doors",
+        "x": 0.67,
+        "y": 0.31
+      }
+    },
+    "13": {
+      "image": "assets/story/scene-13.webp",
+      "canonicalPdfPage": 19,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "angelique",
+          "x": 0.11,
+          "y": 0.28,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.22,
+          "y": 0.28,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.35,
+          "y": 0.26,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.64,
+          "y": 0.27,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "invitation",
+        "x": 0.66,
+        "y": 0.3
+      }
+    },
+    "14": {
+      "image": "assets/story/scene-14.webp",
+      "canonicalPdfPage": 20,
+      "focalPoint": [
+        0.5,
+        0.47
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.49,
+          "y": 0.21,
+          "radius": 0.1
+        },
+        {
+          "characterId": "may",
+          "x": 0.7,
+          "y": 0.58,
+          "radius": 0.075
+        },
+        {
+          "characterId": "anne",
+          "x": 0.82,
+          "y": 0.57,
+          "radius": 0.075
+        },
+        {
+          "characterId": "angelique",
+          "x": 0.17,
+          "y": 0.55,
+          "radius": 0.075
+        }
+      ],
+      "interactionAnchor": {
+        "id": "chandelier",
+        "x": 0.505,
+        "y": 0.1
+      },
+      "motion": {
+        "type": "whole-stage-rock-on-tap",
+        "transformOrigin": "50% 0%",
+        "maximumRotationDegrees": 0.8,
+        "durationSeconds": 1.6,
+        "comment": "Wholeillustration transform only; stillart is not segmented or turned into independentacting. Prefers-reduced-motion: no rotation, static sparkle state."
+      }
+    },
+    "15": {
+      "image": "assets/story/scene-15.webp",
+      "canonicalPdfPage": 21,
+      "focalPoint": [
+        0.5,
+        0.46
+      ],
+      "hotspots": [
+        {
+          "characterId": "francois",
+          "x": 0.265,
+          "y": 0.21,
+          "radius": 0.1
+        },
+        {
+          "characterId": "may",
+          "x": 0.58,
+          "y": 0.15,
+          "radius": 0.105
+        }
+      ],
+      "interactionAnchor": {
+        "id": "listen-to-each-other",
+        "x": 0.49,
+        "y": 0.34
+      }
+    },
+    "16": {
+      "image": "assets/story/scene-16.webp",
+      "canonicalPdfPage": 22,
+      "focalPoint": [
+        0.51,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.415,
+          "y": 0.21,
+          "radius": 0.12
+        },
+        {
+          "characterId": "may",
+          "x": 0.69,
+          "y": 0.17,
+          "radius": 0.12
+        }
+      ],
+      "interactionAnchor": {
+        "id": "may-identity",
+        "x": 0.69,
+        "y": 0.34
+      }
+    },
+    "17": {
+      "image": "assets/story/scene-17.webp",
+      "canonicalPdfPage": 23,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.365,
+          "y": 0.18,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.59,
+          "y": 0.18,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "listening",
+        "x": 0.57,
+        "y": 0.36
+      }
+    },
+    "18": {
+      "image": "assets/story/scene-18.webp",
+      "canonicalPdfPage": 24,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.26,
+          "y": 0.28,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.325,
+          "y": 0.26,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.71,
+          "y": 0.28,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "reflection",
+        "x": 0.72,
+        "y": 0.43
+      }
+    },
+    "19": {
+      "image": "assets/story/scene-19.webp",
+      "canonicalPdfPage": 25,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "angelique",
+          "x": 0.31,
+          "y": 0.22,
+          "radius": 0.08
+        },
+        {
+          "characterId": "lance",
+          "x": 0.68,
+          "y": 0.17,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "old-love",
+        "x": 0.5,
+        "y": 0.39
+      }
+    },
+    "20": {
+      "image": "assets/story/scene-20.webp",
+      "canonicalPdfPage": 26,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "angelique",
+          "x": 0.25,
+          "y": 0.22,
+          "radius": 0.08
+        },
+        {
+          "characterId": "lance",
+          "x": 0.63,
+          "y": 0.15,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "dance",
+        "x": 0.5,
+        "y": 0.52
+      }
+    },
+    "21": {
+      "image": "assets/story/scene-21.webp",
+      "canonicalPdfPage": 27,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.27,
+          "y": 0.17,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.63,
+          "y": 0.14,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "ring",
+        "x": 0.67,
+        "y": 0.46
+      }
+    },
+    "22": {
+      "image": "assets/story/scene-22.webp",
+      "canonicalPdfPage": 28,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "francois",
+          "x": 0.455,
+          "y": 0.165,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.56,
+          "y": 0.18,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "heart",
+        "x": 0.5,
+        "y": 0.35
+      }
+    },
+    "23": {
+      "image": "assets/story/scene-23.webp",
+      "canonicalPdfPage": 29,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.35,
+          "y": 0.245,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.67,
+          "y": 0.14,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "quill",
+        "x": 0.6,
+        "y": 0.54
+      }
+    },
+    "24": {
+      "image": "assets/story/scene-24.webp",
+      "canonicalPdfPage": 30,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.24,
+          "y": 0.27,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.62,
+          "y": 0.12,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "romeo-reveal",
+        "x": 0.63,
+        "y": 0.18
+      }
+    },
+    "25": {
+      "image": "assets/story/scene-25.webp",
+      "canonicalPdfPage": 31,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.27,
+          "y": 0.19,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.65,
+          "y": 0.19,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "romeo-response",
+        "x": 0.5,
+        "y": 0.4
+      }
+    },
+    "26": {
+      "image": "assets/story/scene-26.webp",
+      "canonicalPdfPage": 32,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.32,
+          "y": 0.12,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.8,
+          "y": 0.19,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "choice",
+        "x": 0.4,
+        "y": 0.4
+      }
+    },
+    "27": {
+      "image": "assets/story/scene-27.webp",
+      "canonicalPdfPage": 33,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "anne",
+          "x": 0.34,
+          "y": 0.18,
+          "radius": 0.08
+        },
+        {
+          "characterId": "shakespeare",
+          "x": 0.69,
+          "y": 0.2,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "quill",
+        "x": 0.83,
+        "y": 0.19
+      }
+    },
+    "28": {
+      "image": "assets/story/scene-28.webp",
+      "canonicalPdfPage": 34,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.25,
+          "y": 0.32,
+          "radius": 0.1
+        },
+        {
+          "characterId": "anne",
+          "x": 0.68,
+          "y": 0.27,
+          "radius": 0.1
+        }
+      ],
+      "interactionAnchor": {
+        "id": "broken-quill",
+        "x": 0.5,
+        "y": 0.45
+      }
+    },
+    "29": {
+      "image": "assets/story/scene-29.webp",
+      "canonicalPdfPage": 35,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "francois",
+          "x": 0.33,
+          "y": 0.18,
+          "radius": 0.1
+        },
+        {
+          "characterId": "may",
+          "x": 0.6,
+          "y": 0.24,
+          "radius": 0.1
+        }
+      ],
+      "interactionAnchor": {
+        "id": "truth",
+        "x": 0.52,
+        "y": 0.5
+      }
+    },
+    "30": {
+      "image": "assets/story/scene-30.webp",
+      "canonicalPdfPage": 36,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "may",
+          "x": 0.27,
+          "y": 0.15,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.82,
+          "y": 0.28,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "distance",
+        "x": 0.52,
+        "y": 0.49
+      }
+    },
+    "31": {
+      "image": "assets/story/scene-31.webp",
+      "canonicalPdfPage": 37,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.33,
+          "y": 0.25,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.64,
+          "y": 0.2,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "stars",
+        "x": 0.5,
+        "y": 0.2
+      }
+    },
+    "32": {
+      "image": "assets/story/scene-32.webp",
+      "canonicalPdfPage": 38,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.75,
+          "y": 0.2,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.24,
+          "y": 0.15,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "balcony",
+        "x": 0.5,
+        "y": 0.64
+      }
+    },
+    "33": {
+      "image": "assets/story/scene-33.webp",
+      "canonicalPdfPage": 39,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.38,
+          "y": 0.15,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.64,
+          "y": 0.16,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.83,
+          "y": 0.17,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.215,
+          "y": 0.16,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.1,
+          "y": 0.53,
+          "radius": 0.08
+        },
+        {
+          "characterId": "angelique",
+          "x": 0.35,
+          "y": 0.57,
+          "radius": 0.08
+        },
+        {
+          "characterId": "lance",
+          "x": 0.575,
+          "y": 0.5,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.9,
+          "y": 0.59,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "script",
+        "x": 0.51,
+        "y": 0.39
+      }
+    },
+    "34": {
+      "image": "assets/story/scene-34.webp",
+      "canonicalPdfPage": 40,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.31,
+          "y": 0.25,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.76,
+          "y": 0.28,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "costumes",
+        "x": 0.59,
+        "y": 0.75
+      }
+    },
+    "35": {
+      "image": "assets/story/scene-35.webp",
+      "canonicalPdfPage": 41,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.39,
+          "y": 0.26,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.59,
+          "y": 0.24,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "listening",
+        "x": 0.5,
+        "y": 0.38
+      }
+    },
+    "36": {
+      "image": "assets/story/scene-36.webp",
+      "canonicalPdfPage": 42,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.38,
+          "y": 0.17,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.58,
+          "y": 0.14,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "courage",
+        "x": 0.5,
+        "y": 0.42
+      }
+    },
+    "37": {
+      "image": "assets/story/scene-37.webp",
+      "canonicalPdfPage": 43,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.12,
+          "y": 0.2,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.245,
+          "y": 0.22,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.38,
+          "y": 0.22,
+          "radius": 0.08
+        },
+        {
+          "characterId": "lance",
+          "x": 0.51,
+          "y": 0.21,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.88,
+          "y": 0.23,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "band",
+        "x": 0.5,
+        "y": 0.44
+      }
+    },
+    "38": {
+      "image": "assets/story/scene-38.webp",
+      "canonicalPdfPage": 44,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "shakespeare",
+          "x": 0.135,
+          "y": 0.18,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.275,
+          "y": 0.2,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.415,
+          "y": 0.2,
+          "radius": 0.08
+        },
+        {
+          "characterId": "lance",
+          "x": 0.685,
+          "y": 0.21,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.845,
+          "y": 0.22,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "footlights",
+        "x": 0.5,
+        "y": 0.85
+      }
+    },
+    "39": {
+      "image": "assets/story/scene-39.webp",
+      "canonicalPdfPage": 45,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "lance",
+          "x": 0.21,
+          "y": 0.3,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.54,
+          "y": 0.25,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.77,
+          "y": 0.25,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "flower-arch",
+        "x": 0.53,
+        "y": 0.17
+      }
+    },
+    "40": {
+      "image": "assets/story/scene-40.webp",
+      "canonicalPdfPage": 46,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "lance",
+          "x": 0.095,
+          "y": 0.31,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.32,
+          "y": 0.22,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.555,
+          "y": 0.27,
+          "radius": 0.08
+        },
+        {
+          "characterId": "may",
+          "x": 0.785,
+          "y": 0.25,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "wedding-interruption",
+        "x": 0.4,
+        "y": 0.4
+      }
+    },
+    "41": {
+      "image": "assets/story/scene-41.webp",
+      "canonicalPdfPage": 47,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "angelique",
+          "x": 0.2,
+          "y": 0.31,
+          "radius": 0.08
+        },
+        {
+          "characterId": "lance",
+          "x": 0.26,
+          "y": 0.18,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.51,
+          "y": 0.31,
+          "radius": 0.08
+        },
+        {
+          "characterId": "shakespeare",
+          "x": 0.66,
+          "y": 0.18,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.85,
+          "y": 0.4,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "voices",
+        "x": 0.49,
+        "y": 0.42
+      }
+    },
+    "42": {
+      "image": "assets/story/scene-42.webp",
+      "canonicalPdfPage": 48,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.52,
+          "y": 0.3,
+          "radius": 0.08
+        },
+        {
+          "characterId": "angelique",
+          "x": 0.19,
+          "y": 0.42,
+          "radius": 0.08
+        },
+        {
+          "characterId": "shakespeare",
+          "x": 0.29,
+          "y": 0.35,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.71,
+          "y": 0.4,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "own-spotlight",
+        "x": 0.51,
+        "y": 0.4
+      }
+    },
+    "43": {
+      "image": "assets/story/scene-43.webp",
+      "canonicalPdfPage": 49,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "francois",
+          "x": 0.33,
+          "y": 0.29,
+          "radius": 0.1
+        },
+        {
+          "characterId": "lance",
+          "x": 0.43,
+          "y": 0.16,
+          "radius": 0.1
+        },
+        {
+          "characterId": "may",
+          "x": 0.75,
+          "y": 0.22,
+          "radius": 0.1
+        }
+      ],
+      "interactionAnchor": {
+        "id": "family-hug",
+        "x": 0.45,
+        "y": 0.41
+      }
+    },
+    "44": {
+      "image": "assets/story/scene-44.webp",
+      "canonicalPdfPage": 50,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.43,
+          "y": 0.3,
+          "radius": 0.1
+        },
+        {
+          "characterId": "angelique",
+          "x": 0.55,
+          "y": 0.2,
+          "radius": 0.1
+        }
+      ],
+      "interactionAnchor": {
+        "id": "hug",
+        "x": 0.5,
+        "y": 0.47
+      }
+    },
+    "45": {
+      "image": "assets/story/scene-45.webp",
+      "canonicalPdfPage": 51,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "francois",
+          "x": 0.39,
+          "y": 0.26,
+          "radius": 0.1
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.51,
+          "y": 0.21,
+          "radius": 0.1
+        },
+        {
+          "characterId": "may",
+          "x": 0.62,
+          "y": 0.28,
+          "radius": 0.1
+        }
+      ],
+      "interactionAnchor": {
+        "id": "friendship",
+        "x": 0.5,
+        "y": 0.43
+      }
+    },
+    "46": {
+      "image": "assets/story/scene-46.webp",
+      "canonicalPdfPage": 52,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "juliet",
+          "x": 0.5,
+          "y": 0.25,
+          "radius": 0.07
+        },
+        {
+          "characterId": "francois",
+          "x": 0.15,
+          "y": 0.58,
+          "radius": 0.035
+        },
+        {
+          "characterId": "angelique",
+          "x": 0.255,
+          "y": 0.605,
+          "radius": 0.035
+        },
+        {
+          "characterId": "shakespeare",
+          "x": 0.325,
+          "y": 0.59,
+          "radius": 0.035
+        },
+        {
+          "characterId": "anne",
+          "x": 0.606,
+          "y": 0.625,
+          "radius": 0.035
+        },
+        {
+          "characterId": "lance",
+          "x": 0.676,
+          "y": 0.595,
+          "radius": 0.035
+        },
+        {
+          "characterId": "may",
+          "x": 0.75,
+          "y": 0.6,
+          "radius": 0.035
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.823,
+          "y": 0.584,
+          "radius": 0.035
+        }
+      ],
+      "interactionAnchor": {
+        "id": "gold-fireworks",
+        "x": 0.53,
+        "y": 0.2
+      }
+    },
+    "47": {
+      "image": "assets/story/scene-47.webp",
+      "canonicalPdfPage": 53,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "anne",
+          "x": 0.12,
+          "y": 0.3,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.38,
+          "y": 0.26,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.62,
+          "y": 0.22,
+          "radius": 0.08
+        },
+        {
+          "characterId": "shakespeare",
+          "x": 0.87,
+          "y": 0.27,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "handshake",
+        "x": 0.5,
+        "y": 0.52
+      }
+    },
+    "48": {
+      "image": "assets/story/scene-48.webp",
+      "canonicalPdfPage": 54,
+      "focalPoint": [
+        0.5,
+        0.48
+      ],
+      "hotspots": [
+        {
+          "characterId": "may",
+          "x": 0.107,
+          "y": 0.4,
+          "radius": 0.08
+        },
+        {
+          "characterId": "francois",
+          "x": 0.202,
+          "y": 0.42,
+          "radius": 0.08
+        },
+        {
+          "characterId": "juliet",
+          "x": 0.506,
+          "y": 0.399,
+          "radius": 0.08
+        },
+        {
+          "characterId": "anne",
+          "x": 0.32,
+          "y": 0.18,
+          "radius": 0.08
+        },
+        {
+          "characterId": "shakespeare",
+          "x": 0.468,
+          "y": 0.165,
+          "radius": 0.08
+        },
+        {
+          "characterId": "romeo",
+          "x": 0.674,
+          "y": 0.438,
+          "radius": 0.08
+        },
+        {
+          "characterId": "angelique",
+          "x": 0.742,
+          "y": 0.225,
+          "radius": 0.08
+        },
+        {
+          "characterId": "lance",
+          "x": 0.806,
+          "y": 0.205,
+          "radius": 0.08
+        }
+      ],
+      "interactionAnchor": {
+        "id": "confetti",
+        "x": 0.5,
+        "y": 0.2
+      }
+    }
+  },
+  "motionGuidance": [
+    "Keep the sourceimage itself intact and fullyvisible usingobject-fit:contain.",
+    "CSSlights andpetals are separate atmosphereplanes, not replacementart.",
+    "If using1.02scale tohide rotatedcorners, only the outeredge scenery may be clipped and only during thetapgesture; defaultstate must showwholeart.",
+    "Do not extract a moving character over an uncleared duplicate of the same character. This would show ghosting.",
+    "Inquietmode showfullystatic originalart."
+  ],
+  "missingForFullCharacterAnimation": [
+    "Cleanbackgroundplates with characters removed",
+    "Separatedoriginalcharacterlayers and jointmasks",
+    "Multipleauthoredpose frames orapprovedmutedvideoassets"
+  ],
+  "revision": "full-48-source-scenes",
+  "hotspotNote": "All48 illustrations visually inspected. Face-center regions are generous child-friendly identity targets; they are not segmentation or animation masks."
+}

@@ -1,0 +1,28 @@
+{
+  "id": "./",
+  "name": "& Juliet · הבמה של רון",
+  "short_name": "& Juliet",
+  "description": "הסיפור המוזיקלי של רון, בשתי מערכות.",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#11102C",
+  "theme_color": "#11102C",
+  "icons": [
+    {
+      "src": "./assets/app/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/app/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

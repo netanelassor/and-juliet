@@ -1,0 +1,28 @@
+{
+  "capturedAt": "2026-11-05T14:52:48.632Z",
+  "purpose": "Preserve the previously approved v9 book while developing a separate Phase1 interactive prototype.",
+  "bookDirectory": "../and-juliet-full-story-v9",
+  "canonicalNarrativeSha256": "a162cd22c4e2a7b03a9b784b301090fd228bd877da2af1a79036a144d1fe8684",
+  "files": [
+    {
+      "path": "docs/quality-check.json",
+      "sha256": "a08562d069149b01c5acf4943c9d9ba407d9a84f9901e623fd425409d57bf093"
+    },
+    {
+      "path": "docs/pdf-quality-check.json",
+      "sha256": "8a68577cd59389e9db5d8b1a64af71012413efc0c801658bae8fc91e398a1942"
+    },
+    {
+      "path": "covers/01-front-approved.png",
+      "sha256": "db25a3f6c4f65263ec1381a26d72e287b0035ea7a65cc1908af8dc372a677358"
+    },
+    {
+      "path": "covers/02-back-cover.jpg",
+      "sha256": "742299cd8c77f7fa5be67990133f7cd1d256878eb7e5831ed330af0a9775f316"
+    },
+    {
+      "path": "and-juliet-full-story-review.pdf",
+      "sha256": "e0aa266638cac67b42eddcd8e7a5739aaaa239f9e057a5fe1e574ac1e2136d64"
+    }
+  ]
+}

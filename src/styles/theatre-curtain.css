@@ -1,0 +1,12 @@
+.curtain-reveal.illustrated-curtain{position:absolute;inset:0;z-index:60;display:block;overflow:hidden;pointer-events:auto;touch-action:none;background:#0b0819;isolation:isolate}
+.curtain-reveal.illustrated-curtain>.curtain-wing{position:absolute;top:0;bottom:0;width:50.2%;height:100%;overflow:hidden;border:0;animation:none!important;box-shadow:none;background:#651244;will-change:transform}
+.illustrated-curtain>.curtain-wing-left{left:0}.illustrated-curtain>.curtain-wing-right{right:0}
+.illustrated-curtain .curtain-wing>img{position:absolute;top:0;height:100%;width:200%;max-width:none;object-fit:fill;user-select:none;pointer-events:none}
+.illustrated-curtain .curtain-wing-left>img{left:0}.illustrated-curtain .curtain-wing-right>img{right:0}
+.curtain-reveal.illustrated-curtain>.curtain-edge-light{position:absolute;inset:0;width:auto;height:auto;pointer-events:none;animation:none!important;border:0;box-shadow:none;background:radial-gradient(ellipse at 50% 70%,#ffc84b0d,transparent 40%),linear-gradient(90deg,#0b082b22,transparent 25%,transparent 75%,#0b082b22)}
+.curtain-reveal.illustrated-curtain>.curtain-seal{position:absolute;left:50%;top:47%;width:min(270px,38vw);height:auto;transform:translate(-50%,-50%);background:none;border:0;animation:none!important;box-shadow:none;display:flex;flex-direction:column;align-items:center;gap:20px;pointer-events:none}
+.curtain-seal>img{width:100%;height:auto;filter:drop-shadow(0 5px 11px #1f0b2b88)}.curtain-seal>span{color:#ffe5a8;font:400 15px/1.5 Rubik,Arial,sans-serif;text-shadow:0 2px 6px #2a0b30;white-space:nowrap}
+.cover-screen>.cover-drape{background-image:url('/assets/theatre/curtain-illustrated-v1.webp');background-size:auto 100%;background-repeat:no-repeat}.cover-screen>.drape-left{background-position:left center}.cover-screen>.drape-right{background-position:right center}
+.theatrical-effects .fx-side-curtain{background-image:url('/assets/theatre/curtain-illustrated-v1.webp');background-size:200% 100%;background-repeat:no-repeat}.theatrical-effects .fx-curtain-left{background-position:left center}.theatrical-effects .fx-curtain-right{background-position:right center}
+.intermission-modal>.intermission-curtains{height:130px;background-image:url('/assets/theatre/curtain-illustrated-v1.webp');background-position:center 21%;background-size:cover;border-block:1px solid #e0af6766}.intermission-curtains>i{display:none}
+@media(orientation:portrait){.curtain-reveal.illustrated-curtain>.curtain-seal{width:min(260px,54vw);top:44%}.curtain-seal>span{font-size:14px}}

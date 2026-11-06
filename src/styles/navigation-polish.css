@@ -1,0 +1,19 @@
+/* Navigation is a quiet theatre program, using the book's existing palette. */
+.full-contents[open]{display:flex;flex-direction:column;block-size:min(760px,calc(100dvh - 48px));overflow:hidden}
+.full-contents .modal-header,.full-contents .act-tabs,.full-contents>.text-button{flex-shrink:0}
+.contents-location{display:flex;align-items:center;justify-content:space-between;gap:20px;flex:none;padding:4px 0 14px;border-bottom:1px solid #bc95572b}
+.contents-location>div{min-width:0;display:flex;flex-direction:column;gap:4px}
+.contents-location span{font-size:11px;color:#b99ab7;line-height:1.5}
+.contents-location strong{font-weight:400;font-size:17px;color:#ffe2b1;line-height:1.5}
+.contents-location>bdi{flex:none;color:#bd9865;font-size:13px;letter-spacing:.05em}
+.full-contents .act-tabs{margin-top:16px}
+.full-contents .chapter-list{position:relative;flex:1 1 auto;min-height:0;max-height:none;margin:12px -6px 10px;padding:4px 6px;scroll-padding-block:12px;scrollbar-gutter:stable}
+.full-contents .chapter-list>button{position:relative;min-height:96px;border-radius:11px;transition:background-color .2s ease,border-color .2s ease}
+.full-contents .chapter-list>button:hover{background:#bd74a510}
+.full-contents .chapter-list>button.current{background:linear-gradient(110deg,#b37e4a14,#c3489910);border-color:#c798594c;box-shadow:inset -2px 0 0 #d7aa65}
+.full-contents .chapter-list>button.current .chapter-number{color:#ffe1a9}
+.contents-current-marker{display:flex;align-items:center;gap:5px;font-size:10px;line-height:1.4;color:#ddbd8a;margin-top:7px}
+.contents-current-marker svg{color:inherit}
+.full-contents>.text-button{border-top:1px solid #bc95572b;padding-block:10px 0;min-height:48px}
+@media(orientation:portrait),(max-width:740px){.contents-location strong{font-size:16px}.contents-location>bdi{font-size:12px}.full-contents .chapter-list{max-height:none}.full-contents .chapter-list>button{gap:11px;padding-inline:8px}.full-contents .chapter-list img{width:76px;height:54px}.full-contents[open]{block-size:min(780px,calc(100dvh - 42px))}}
+@media(prefers-reduced-motion:reduce){.full-contents .chapter-list>button{transition:none}}

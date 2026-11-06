@@ -1,0 +1,2091 @@
+{
+  "canonicalSource": {
+    "path": "/Users/natiassor/Downloads/and-juliet-book-he.pdf",
+    "sha256": "9f79819126904d02408e7b1af58c1faa13f793654ba2c8e3ffdd59a9b0e1460b",
+    "pdfPages": 60,
+    "storyPages": 48,
+    "storyPdfRange": [
+      7,
+      54
+    ],
+    "originalWords": 1784,
+    "act1Scenes": [
+      1,
+      24
+    ],
+    "act2Scenes": [
+      25,
+      48
+    ],
+    "actBreakAfterSourceScene": 24,
+    "musicTrackCount": 29,
+    "lastAlbumTrackBonusNotStory": 30
+  },
+  "textPolicy": "Original story wording, dialogue and chronology retained. The sole authored story edit is יוליה → ג'ולייט, as previously requested directly by the user. PDF extraction bidirectional artifacts are repaired from the matching pre-PDF source manuscript, not rewritten.",
+  "nameReplacementsInStory": 70,
+  "originalSourceManuscript": "work/proof-v8/name-backups/work/story.json",
+  "sourceManuscriptSha256": "0ec7aceca0371ce69ac33ddd2ac0b1016ec65045789612d2cdea07c00ed01efd",
+  "sourceArtVerification": {
+    "count": 48,
+    "allPdfImages1536x1024": true,
+    "losslessSourceFilesRetained": true,
+    "pdfJpegVersusSourceMaeRange": [
+      1.9327,
+      2.934
+    ],
+    "note": "The PDF embeds JPEG-compressed versions; the original PNG files preserve the same composition at the same pixel dimensions without that JPEG compression."
+  },
+  "scenes": [
+    {
+      "sourceScene": 1,
+      "sourcePdfPage": 7,
+      "printedStoryPage": 5,
+      "act": 1,
+      "canonicalTitle": "יש לי מחזה חדש!",
+      "canonicalParagraphs": [
+        "במרכז במה ענקית עמד ויליאם שייקספיר, עם נוצה ביד וחיוך רחב.",
+        "\"גבירותיי ורבותיי!\" הכריז. \"כתבתי הצגה חדשה!\"",
+        "\"יש!\" הריעו השחקנים.",
+        "\"קוראים לה רומיאו ויוליה!\"",
+        "\"והיא מצחיקה?\" שאל שחקן.",
+        "\"לא בדיוק,\" חייך שייקספיר. \"היא דרמטית!\""
+      ],
+      "paragraphs": [
+        "במרכז במה ענקית עמד ויליאם שייקספיר, עם נוצה ביד וחיוך רחב.",
+        "\"גבירותיי ורבותיי!\" הכריז. \"כתבתי הצגה חדשה!\"",
+        "\"יש!\" הריעו השחקנים.",
+        "\"קוראים לה רומיאו וג'ולייט!\"",
+        "\"והיא מצחיקה?\" שאל שחקן.",
+        "\"לא בדיוק,\" חייך שייקספיר. \"היא דרמטית!\""
+      ],
+      "rawPdfExtract": "מערכה ראשונה\nיש לי מחזה חדש!\nבמרכז במה ענקית עמד ויליאם שייקספיר, עם נוצה ביד וחיוך רחב.\n\"גבירותיי ורבותיי!\" הכריז. \"כתבתי הצגה חדשה!\"\n\"יש!\" הריעו השחקנים.\n\"קוראים לה רומיאו ויוליה!\"\n\"והיא מצחיקה?\" שאל שחקן.\n\"לא בדיוק,\" חייך שייקספיר. \"היא דרמטית!\"\n▶01רצועהLarger Than Life\n51סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-01.png",
+      "sourceArtSha256": "c8374126b3cff825da34130193b8660c0603c4d72def75c181b2292235ae3e6c",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X33.jpg",
+      "pdfImageJpegSha256": "fa8edd8d68afc4bb987c8e356712afbccf06b6aa7cb8623fab74c50d140a8736",
+      "pdfVersusLosslessSourceMae": 2.6076,
+      "musicTrackNumber": 1,
+      "canonicalTrackTitle": "Larger Than Life",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "romeo"
+      ],
+      "inPhase1": true
+    },
+    {
+      "sourceScene": 2,
+      "sourcePdfPage": 8,
+      "printedStoryPage": 6,
+      "act": 1,
+      "canonicalTitle": "הסוף הכי עצוב בעולם",
+      "canonicalParagraphs": [
+        "\"אז איך זה נגמר?\" שאלו כולם.",
+        "\"רומיאו מת,\" אמר שייקספיר, \"ובסיפור שכתבתי, גם יוליה מתה אחריו.\"",
+        "הבמה השתתקה.",
+        "\"שניהם מתים?!\"",
+        "\"נכון!\" שייקספיר קד קידה מרוצה.",
+        "\"אבל מי ירצה סוף כזה?\""
+      ],
+      "paragraphs": [
+        "\"אז איך זה נגמר?\" שאלו כולם.",
+        "\"רומיאו מת,\" אמר שייקספיר, \"ובסיפור שכתבתי, גם ג'ולייט מתה אחריו.\"",
+        "הבמה השתתקה.",
+        "\"שניהם מתים?!\"",
+        "\"נכון!\" שייקספיר קד קידה מרוצה.",
+        "\"אבל מי ירצה סוף כזה?\""
+      ],
+      "rawPdfExtract": "הסוף הכי עצוב בעולם\n\"אז איך זה נגמר?\" שאלו כולם.\n\"רומיאו מת,\" אמר שייקספיר, \"ובסיפור שכתבתי, גם יוליה מתה אחריו.\"\nהבמה השתתקה.\n\"שניהם מתים?!\"\n\"נכון!\" שייקספיר קד קידה מרוצה.\n\"אבל מי ירצה סוף כזה?\"\n2סיפור6",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-02.png",
+      "sourceArtSha256": "90eb1b76bc844092387dd09c7fd7731ae9e524c31ff88e6a54cd6fc14b59b376",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X50.jpg",
+      "pdfImageJpegSha256": "015012bfacea45e66a05cd9e5d90ad8fd97c934529dd5220d9934a3aa5eddb51",
+      "pdfVersusLosslessSourceMae": 2.5881,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "romeo"
+      ],
+      "inPhase1": true
+    },
+    {
+      "sourceScene": 3,
+      "sourcePdfPage": 9,
+      "printedStoryPage": 7,
+      "act": 1,
+      "canonicalTitle": "רגע, ויליאם!",
+      "canonicalParagraphs": [
+        "\"ויליאם!\" נשמע קול מן הצד.",
+        "זאת הייתה אן, אשתו.",
+        "\"למה יוליה חייבת למות?\" שאלה.",
+        "\"כי ככה כתבתי!\" ענה שייקספיר.",
+        "\"אז אולי תכתוב אחרת?\"",
+        "השחקנים החליפו מבטים. פתאום כולם רצו לשמוע מה אן מציעה."
+      ],
+      "paragraphs": [
+        "\"ויליאם!\" נשמע קול מן הצד.",
+        "זאת הייתה אן, אשתו.",
+        "\"למה ג'ולייט חייבת למות?\" שאלה.",
+        "\"כי ככה כתבתי!\" ענה שייקספיר.",
+        "\"אז אולי תכתוב אחרת?\"",
+        "השחקנים החליפו מבטים. פתאום כולם רצו לשמוע מה אן מציעה."
+      ],
+      "rawPdfExtract": "רגע, ויליאם\n\"ויליאם!\" נשמע קול מן הצד.\nזאת הייתה אן, אשתו.\n\"למה יוליה חייבת למות?\" שאלה.\n\"כי ככה כתבתי!\" ענה שייקספיר.\n\"אז אולי תכתוב אחרת?\"\nהשחקנים החליפו מבטים. פתאום כולם רצו לשמוע מה אן מציעה.\n▶02רצועהI Want It That Way\n73סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-03.png",
+      "sourceArtSha256": "d72979bf796b4112e8cf8f45bf4d261f93816e14f75a73dd6406ea602404a266",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X56.jpg",
+      "pdfImageJpegSha256": "0a12e602ae582aeabdb4630ff1bb06dc5faca18f9664d09def47ea7ba929b0d7",
+      "pdfVersusLosslessSourceMae": 2.3262,
+      "musicTrackNumber": 2,
+      "canonicalTrackTitle": "I Want It That Way",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne"
+      ],
+      "inPhase1": true
+    },
+    {
+      "sourceScene": 4,
+      "sourcePdfPage": 10,
+      "printedStoryPage": 8,
+      "act": 1,
+      "canonicalTitle": "ומה אם היא תבחר לחיות?",
+      "canonicalParagraphs": [
+        "\"דמיין,\" אמרה אן, \"שיוליה קמה בבוקר ומחליטה שהיא ממשיכה לחיות!\"",
+        "\"אבל זה משנה את כל המחזה!\" נבהל שייקספיר.",
+        "\"בדיוק!\" חייכה אן.",
+        "שייקספיר הביט בנוצה שלו ונאנח.",
+        "\"טוב. ננסה. אבל אני עדיין הסופר!\"",
+        "אן קרצה לשחקנים. \"נראה כבר.\""
+      ],
+      "paragraphs": [
+        "\"דמיין,\" אמרה אן, \"שג'ולייט קמה בבוקר ומחליטה שהיא ממשיכה לחיות!\"",
+        "\"אבל זה משנה את כל המחזה!\" נבהל שייקספיר.",
+        "\"בדיוק!\" חייכה אן.",
+        "שייקספיר הביט בנוצה שלו ונאנח.",
+        "\"טוב. ננסה. אבל אני עדיין הסופר!\"",
+        "אן קרצה לשחקנים. \"נראה כבר.\""
+      ],
+      "rawPdfExtract": "ומה אם היא תבחר לחיות\n\"דמיין,\" אמרה אן, \"שיוליה קמה בבוקר ומחליטה שהיא ממשיכה לחיות!\"\n\"אבל זה משנה את כל המחזה!\" נבהל שייקספיר.\n\"בדיוק!\" חייכה אן.\nשייקספיר הביט בנוצה שלו ונאנח.\n\"טוב. ננסה. אבל אני עדיין הסופר!\"\nאן קרצה לשחקנים. \"נראה כבר.\"\n4סיפור8",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-04.png",
+      "sourceArtSha256": "a742caa57df453caec63cbc26ebd9ac26b926009d6d9c8ac83fafce06e2deb5b",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X63.jpg",
+      "pdfImageJpegSha256": "afb5954af95c837025b5fa9d7081e1d0af80fd33f25d22a9da5b5afbe804b00a",
+      "pdfVersusLosslessSourceMae": 2.5211,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne",
+        "may"
+      ],
+      "inPhase1": true
+    },
+    {
+      "sourceScene": 5,
+      "sourcePdfPage": 11,
+      "printedStoryPage": 9,
+      "act": 1,
+      "canonicalTitle": "יוליה פוקחת עיניים",
+      "canonicalParagraphs": [
+        "בוורונה שבאיטליה פקחה יוליה את עיניה.",
+        "לידה שכב רומיאו, בלי תנועה.",
+        "\"רומיאו?\" לחשה.",
+        "הוא לא ענה. יוליה הבינה שהוא מת.",
+        "היא הרגישה כאילו כל האור בחדר כבה.",
+        "לרגע חשבה שגם הסיפור שלה צריך להיגמר כאן."
+      ],
+      "paragraphs": [
+        "בוורונה שבאיטליה פקחה ג'ולייט את עיניה.",
+        "לידה שכב רומיאו, בלי תנועה.",
+        "\"רומיאו?\" לחשה.",
+        "הוא לא ענה. ג'ולייט הבינה שהוא מת.",
+        "היא הרגישה כאילו כל האור בחדר כבה.",
+        "לרגע חשבה שגם הסיפור שלה צריך להיגמר כאן."
+      ],
+      "rawPdfExtract": "יוליה פוקחת עיניים\nבוורונה שבאיטליה פקחה יוליה את עיניה.\nלידה שכב רומיאו, בלי תנועה.\n\"רומיאו?\" לחשה.\nהוא לא ענה. יוליה הבינה שהוא מת.\nהיא הרגישה כאילו כל האור בחדר כבה.\nלרגע חשבה שגם הסיפור שלה צריך להיגמר כאן.\n95סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-05.png",
+      "sourceArtSha256": "1430a26621a3ddd01484efa7c84ca5e5697a2df59c212e7b4d4aee8f274e61c4",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X69.jpg",
+      "pdfImageJpegSha256": "239b46ee3efaf9044021723402dfd1c207b78a05e42b74a6c6b24dd0cd16e550",
+      "pdfVersusLosslessSourceMae": 2.2574,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "anne",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 6,
+      "sourcePdfPage": 12,
+      "printedStoryPage": 10,
+      "act": 1,
+      "canonicalTitle": "לא. הסיפור שלי ממשיך!",
+      "canonicalParagraphs": [
+        "אבל אז יוליה הרימה את הראש.",
+        "\"רגע אחד,\" לחשה. \"אני עדיין כאן.\"",
+        "בחוץ מחכה עולם שלם. חברים, מקומות והרפתקאות.",
+        "היא נשמה עמוק.",
+        "\"אני תמיד אזכור אותך, רומיאו. אבל אני רוצה לחיות.\"",
+        "ובמקום סוף עצוב התחיל פרק חדש."
+      ],
+      "paragraphs": [
+        "אבל אז ג'ולייט הרימה את הראש.",
+        "\"רגע אחד,\" לחשה. \"אני עדיין כאן.\"",
+        "בחוץ מחכה עולם שלם. חברים, מקומות והרפתקאות.",
+        "היא נשמה עמוק.",
+        "\"אני תמיד אזכור אותך, רומיאו. אבל אני רוצה לחיות.\"",
+        "ובמקום סוף עצוב התחיל פרק חדש."
+      ],
+      "rawPdfExtract": "לא. הסיפור שלי ממשיך\nאבל אז יוליה הרימה את הראש.\n\"רגע אחד,\" לחשה. \"אני עדיין כאן.\"\nבחוץ מחכה עולם שלם. חברים, מקומות והרפתקאות.\nהיא נשמה עמוק.\n\"אני תמיד אזכור אותך, רומיאו. אבל אני רוצה לחיות.\"\nובמקום סוף עצוב התחיל פרק חדש.\n▶03רצועהBaby One More Time\n6סיפור10",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-06.png",
+      "sourceArtSha256": "c9e439ff16d17e1c25a44f84175dbb95992d0db2fc8c49ef7e67810c3d7fa7ff",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X77.jpg",
+      "pdfImageJpegSha256": "1f6531db3d013defb6f32c2a6d7c8437aea848c44d1c0722d7a467fce4ad2d52",
+      "pdfVersusLosslessSourceMae": 2.4384,
+      "musicTrackNumber": 3,
+      "canonicalTrackTitle": "…Baby One More Time",
+      "characterReferences": [
+        "juliet",
+        "anne",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 7,
+      "sourcePdfPage": 13,
+      "printedStoryPage": 11,
+      "act": 1,
+      "canonicalTitle": "מי עוד הכיר את רומיאו?",
+      "canonicalParagraphs": [
+        "בהלוויה הגיעו אנשים להיפרד מרומיאו.",
+        "\"גם אני הייתי מאוהבת בו,\" אמרה נערה.",
+        "\"גם אני!\" קראה אחרת.",
+        "\"וגם אני!\"",
+        "יוליה פערה פה. \"רגע, כמה אנשים רומיאו אהב?\"",
+        "\"אממ,\" מלמל שייקספיר מאחורי הקלעים.",
+        "יוליה לא ידעה אם לצחוק או לכעוס."
+      ],
+      "paragraphs": [
+        "בהלוויה הגיעו אנשים להיפרד מרומיאו.",
+        "\"גם אני הייתי מאוהבת בו,\" אמרה נערה.",
+        "\"גם אני!\" קראה אחרת.",
+        "\"וגם אני!\"",
+        "ג'ולייט פערה פה. \"רגע, כמה אנשים רומיאו אהב?\"",
+        "\"אממ,\" מלמל שייקספיר מאחורי הקלעים.",
+        "ג'ולייט לא ידעה אם לצחוק או לכעוס."
+      ],
+      "rawPdfExtract": "מי עוד הכיר את רומיאו\nבהלוויה הגיעו אנשים להיפרד מרומיאו.\n\"גם אני הייתי מאוהבת בו,\" אמרה נערה.\n\"גם אני!\" קראה אחרת.\n\"וגם אני!\"\nיוליה פערה פה. \"רגע, כמה אנשים רומיאו אהב?\"\n\"אממ,\" מלמל שייקספיר מאחורי הקלעים.\nיוליה לא ידעה אם לצחוק או לכעוס.\n▶04רצועהShow Me the Meaning of Being Lonely\n117סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-07.png",
+      "sourceArtSha256": "e0567ca3816fcebe82620d9de01a38ed4ee2b663b578f5568f7ddfac0bfb6aa9",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X84.jpg",
+      "pdfImageJpegSha256": "144c1e6c69adecd8e4b6005b59ffd7e13058888d853ea63d6fd6696cc815e013",
+      "pdfVersusLosslessSourceMae": 2.3357,
+      "musicTrackNumber": 4,
+      "canonicalTrackTitle": "Show Me the Meaning of Being Lonely",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 8,
+      "sourcePdfPage": 14,
+      "printedStoryPage": 12,
+      "act": 1,
+      "canonicalTitle": "התוכנית של ההורים",
+      "canonicalParagraphs": [
+        "ואז הגיעו הוריה של יוליה.",
+        "\"מצאנו לך מקום שקט במנזר,\" הודיעו.",
+        "\"מנזר?!\" התפלאה יוליה.",
+        "\"שם לא תסתבכי באהבות!\"",
+        "יוליה שילבה ידיים.",
+        "\"ומה עם מה שאני רוצה?\"",
+        "איש לא שאל אותה. אז היא החליטה למצוא תשובה בעצמה."
+      ],
+      "paragraphs": [
+        "ואז הגיעו הוריה של ג'ולייט.",
+        "\"מצאנו לך מקום שקט במנזר,\" הודיעו.",
+        "\"מנזר?!\" התפלאה ג'ולייט.",
+        "\"שם לא תסתבכי באהבות!\"",
+        "ג'ולייט שילבה ידיים.",
+        "\"ומה עם מה שאני רוצה?\"",
+        "איש לא שאל אותה. אז היא החליטה למצוא תשובה בעצמה."
+      ],
+      "rawPdfExtract": "התוכנית של ההורים\nואז הגיעו הוריה של יוליה.\n\"מצאנו לך מקום שקט במנזר,\" הודיעו.\n\"מנזר?!\" התפלאה יוליה.\n\"שם לא תסתבכי באהבות!\"\nיוליה שילבה ידיים.\n\"ומה עם מה שאני רוצה?\"\nאיש לא שאל אותה. אז היא החליטה למצוא תשובה בעצמה.\n8סיפור12",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-08.png",
+      "sourceArtSha256": "001f5073a0d22057e3cf38a1518890f2440518a1a20d9ebdf8015e7a477de5f2",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X93.jpg",
+      "pdfImageJpegSha256": "8641bb0a3af8ed5356fbddb2610756f7d3a2590d7f122fd5d3f1d9d0f0559b35",
+      "pdfVersusLosslessSourceMae": 2.5838,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 9,
+      "sourcePdfPage": 15,
+      "printedStoryPage": 13,
+      "act": 1,
+      "canonicalTitle": "חברים אמיתיים",
+      "canonicalParagraphs": [
+        "אנג׳ליק, שטיפלה ביוליה מאז שהייתה קטנה, מצאה אותה עצובה.",
+        "גם מיי, החבר הקרוב שלה, הגיע.",
+        "\"אני רוצה לצאת להרפתקה,\" אמרה יוליה.",
+        "\"אז לא תצאי לבד,\" אמר מיי.",
+        "\"ואני מביאה אוכל לדרך!\" הודיעה אנג׳ליק.",
+        "בדיוק אז קפצה אן לתוך הסיפור. \"וקוראים לי אפריל!\""
+      ],
+      "paragraphs": [
+        "אנג׳ליק, שטיפלה בג'ולייט מאז שהייתה קטנה, מצאה אותה עצובה.",
+        "גם מיי, החבר הקרוב שלה, הגיע.",
+        "\"אני רוצה לצאת להרפתקה,\" אמרה ג'ולייט.",
+        "\"אז לא תצאי לבד,\" אמר מיי.",
+        "\"ואני מביאה אוכל לדרך!\" הודיעה אנג׳ליק.",
+        "בדיוק אז קפצה אן לתוך הסיפור. \"וקוראים לי אפריל!\""
+      ],
+      "rawPdfExtract": "חברים אמיתיים\nליק, שטיפלה ביוליה מאז שהייתה קטנה, מצאה אותה עצובה.׳אנג\nגם מיי, החבר הקרוב שלה, הגיע.\n\"אני רוצה לצאת להרפתקה,\" אמרה יוליה.\n\"אז לא תצאי לבד,\" אמר מיי.\nליק.׳\"ואני מביאה אוכל לדרך!\" הודיעה אנג\nבדיוק אז קפצה אן לתוך הסיפור. \"וקוראים לי אפריל!\"\n▶05רצועהDomino\n139סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-09.png",
+      "sourceArtSha256": "56b4ce2b30c3b4d22f48b79b4ca5c4cbf7d275d515246b1d15ca96ff3b1988b9",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X101.jpg",
+      "pdfImageJpegSha256": "fe3eafeff4430c2a4cf5172c5ec86ab6b5238d90a2ecad4f3f235c2a8d64145a",
+      "pdfVersusLosslessSourceMae": 2.7597,
+      "musicTrackNumber": 5,
+      "canonicalTrackTitle": "Domino",
+      "characterReferences": [
+        "juliet",
+        "anne",
+        "april",
+        "may",
+        "angelique"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 10,
+      "sourcePdfPage": 16,
+      "printedStoryPage": 14,
+      "act": 1,
+      "canonicalTitle": "בורחים מוורונה",
+      "canonicalParagraphs": [
+        "\"לאן נוסעים?\" שאל מיי.",
+        "\"פריז!\" קראה יוליה.",
+        "\"יפה,\" חייכה אנג׳ליק, \"אבל מי נוהג?\"",
+        "\"אני!\" נשמע קול מתא הנהג.",
+        "שייקספיר חבש כובע ונופף אליהם.",
+        "אן גלגלה עיניים. \"גם לכאן הצלחת להיכנס?\"",
+        "הכרכרה יצאה לדרך, וכולם צחקו."
+      ],
+      "paragraphs": [
+        "\"לאן נוסעים?\" שאל מיי.",
+        "\"פריז!\" קראה ג'ולייט.",
+        "\"יפה,\" חייכה אנג׳ליק, \"אבל מי נוהג?\"",
+        "\"אני!\" נשמע קול מתא הנהג.",
+        "שייקספיר חבש כובע ונופף אליהם.",
+        "אן גלגלה עיניים. \"גם לכאן הצלחת להיכנס?\"",
+        "הכרכרה יצאה לדרך, וכולם צחקו."
+      ],
+      "rawPdfExtract": "בורחים מוורונה\n\"לאן נוסעים?\" שאל מיי.\n\"פריז!\" קראה יוליה.\nליק, \"אבל מי נוהג?\"׳\"יפה,\" חייכה אנג\n\"אני!\" נשמע קול מתא הנהג.\nשייקספיר חבש כובע ונופף אליהם.\nאן גלגלה עיניים. \"גם לכאן הצלחת להיכנס?\"\nהכרכרה יצאה לדרך, וכולם צחקו.\n10סיפור14",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-10.png",
+      "sourceArtSha256": "12786d8c57c79192badb15787d6b611ecd8d3b3f574ba32b16dbeb1e41710917",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X111.jpg",
+      "pdfImageJpegSha256": "100d963c022ee207abd823ba66b35aa70eb3cd96065c9e9a1adbca9b26713879",
+      "pdfVersusLosslessSourceMae": 2.5072,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne",
+        "may",
+        "angelique"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 11,
+      "sourcePdfPage": 17,
+      "printedStoryPage": 15,
+      "act": 1,
+      "canonicalTitle": "בדרך לעיר הגדולה",
+      "canonicalParagraphs": [
+        "הכרכרה קפצה על האבנים.",
+        "\"כבר הגענו?\" שאלה יוליה.",
+        "\"עוד לא,\" ענתה אנג׳ליק.",
+        "\"ועכשיו?\"",
+        "\"יוליה!\" צחק מיי.",
+        "אן פתחה מפה צבעונית.",
+        "\"הנה! פריז ממש מעבר לעיקול!\"",
+        "שייקספיר נאנח ממושב הנהג. \"מישהו פה בכלל כתב לי הוראות?\""
+      ],
+      "paragraphs": [
+        "הכרכרה קפצה על האבנים.",
+        "\"כבר הגענו?\" שאלה ג'ולייט.",
+        "\"עוד לא,\" ענתה אנג׳ליק.",
+        "\"ועכשיו?\"",
+        "\"ג'ולייט!\" צחק מיי.",
+        "אן פתחה מפה צבעונית.",
+        "\"הנה! פריז ממש מעבר לעיקול!\"",
+        "שייקספיר נאנח ממושב הנהג. \"מישהו פה בכלל כתב לי הוראות?\""
+      ],
+      "rawPdfExtract": "בדרך לעיר הגדולה\nהכרכרה קפצה על האבנים.\n\"כבר הגענו?\" שאלה יוליה.\nליק.׳\"עוד לא,\" ענתה אנג\n\"ועכשיו?\" \"יוליה!\" צחק מיי.\nאן פתחה מפה צבעונית.\n\"הנה! פריז ממש מעבר לעיקול!\"\nשייקספיר נאנח ממושב הנהג. \"מישהו פה בכלל כתב לי הוראות?\"\n▶06רצועהShow Me Love\n1511סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-11.png",
+      "sourceArtSha256": "dda72f2cc355cecd0dcb215797d9454ada6b79bc6e3c2ba7e55423892e5cd768",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X117.jpg",
+      "pdfImageJpegSha256": "8b2013af4aeff3d7c9ae1e5b35d574d0004a2ac59cb7ae47d83bb96836408be6",
+      "pdfVersusLosslessSourceMae": 2.6479,
+      "musicTrackNumber": 6,
+      "canonicalTrackTitle": "Show Me Love",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne",
+        "may",
+        "angelique"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 12,
+      "sourcePdfPage": 18,
+      "printedStoryPage": 16,
+      "act": 1,
+      "canonicalTitle": "פריז! אבל איזו מסיבה!",
+      "canonicalParagraphs": [
+        "כשהגיעו לפריז, גילו שהעיר כולה מתכוננת לנשף.",
+        "אורות נוצצים, מוזיקה חזקה ותור ארוך בכניסה.",
+        "\"זה המקום שלנו!\" התלהבה יוליה.",
+        "אנג׳ליק הביטה בתור. \"אני מקווה שיש שם גם משהו לאכול.\"",
+        "מאחורי השער חיכתה להם ההפתעה הראשונה."
+      ],
+      "paragraphs": [
+        "כשהגיעו לפריז, גילו שהעיר כולה מתכוננת לנשף.",
+        "אורות נוצצים, מוזיקה חזקה ותור ארוך בכניסה.",
+        "\"זה המקום שלנו!\" התלהבה ג'ולייט.",
+        "אנג׳ליק הביטה בתור. \"אני מקווה שיש שם גם משהו לאכול.\"",
+        "מאחורי השער חיכתה להם ההפתעה הראשונה."
+      ],
+      "rawPdfExtract": "פריז! אבל איזו מסיבה\nכשהגיעו לפריז, גילו שהעיר כולה מתכוננת לנשף.\nאורות נוצצים, מוזיקה חזקה ותור ארוך בכניסה.\n\"זה המקום שלנו!\" התלהבה יוליה.\nליק הביטה בתור. \"אני מקווה שיש שם גם משהו לאכול.\"׳אנג\nמאחורי השער חיכתה להם ההפתעה הראשונה.\n12סיפור16",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-12.png",
+      "sourceArtSha256": "1ef84866dca35e459b78b2b9fe2903a228d96ca4133d27c4d7eda5d7e7000856",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X124.jpg",
+      "pdfImageJpegSha256": "984e69da983a739bf7d6b14ace9669e381a6b83a3650bb228c62983f8acd0c57",
+      "pdfVersusLosslessSourceMae": 2.6322,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "angelique"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 13,
+      "sourcePdfPage": 19,
+      "printedStoryPage": 17,
+      "act": 1,
+      "canonicalTitle": "לנשף הזה נכנסים!",
+      "canonicalParagraphs": [
+        "בכניסה עמד שומר קשוח.",
+        "\"הזמנות, בבקשה!\"",
+        "\"יש לנו חיוך!\" אמרה אן.",
+        "השומר לא התרשם.",
+        "אבל אן כבר מצאה דרך להכניס את כולם.",
+        "\"קדימה!\" קראה יוליה.",
+        "ברגע שנפתחו הדלתות, המוזיקה הרעידה את הרצפה."
+      ],
+      "paragraphs": [
+        "בכניסה עמד שומר קשוח.",
+        "\"הזמנות, בבקשה!\"",
+        "\"יש לנו חיוך!\" אמרה אן.",
+        "השומר לא התרשם.",
+        "אבל אן כבר מצאה דרך להכניס את כולם.",
+        "\"קדימה!\" קראה ג'ולייט.",
+        "ברגע שנפתחו הדלתות, המוזיקה הרעידה את הרצפה."
+      ],
+      "rawPdfExtract": "לנשף הזה נכנסים\nבכניסה עמד שומר קשוח.\n\"הזמנות, בבקשה!\"\n\"יש לנו חיוך!\" אמרה אן.\nהשומר לא התרשם.\nאבל אן כבר מצאה דרך להכניס את כולם.\n\"קדימה!\" קראה יוליה.\nברגע שנפתחו הדלתות, המוזיקה הרעידה את הרצפה.\n1713סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-13.png",
+      "sourceArtSha256": "76c18e82c79aac4842315b1f31e4e4d2e4b33270e56aeb15535a1378e29c765f",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X130.jpg",
+      "pdfImageJpegSha256": "fad0c3da7887bd9f3fc43dd89160e907d4f875b93db1a91348018118491be69f",
+      "pdfVersusLosslessSourceMae": 2.5441,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "anne"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 14,
+      "sourcePdfPage": 20,
+      "printedStoryPage": 18,
+      "act": 1,
+      "canonicalTitle": "הנברשת והבום!",
+      "canonicalParagraphs": [
+        "רקדנים קפצו מכל עבר. אורות סגולים רקדו על הקירות.",
+        "\"וואו!\" צעקה יוליה.",
+        "ואז היא הסתכלה למעלה.",
+        "\"אנג׳ליק, ראית את הנברשת הזאת?\"",
+        "\"יוליה, אל תעזי!\"",
+        "מאוחר מדי! יוליה כבר התנדנדה גבוה מעל החוגגים.",
+        "כל האולם פרץ בתשואות."
+      ],
+      "paragraphs": [
+        "רקדנים קפצו מכל עבר. אורות סגולים רקדו על הקירות.",
+        "\"וואו!\" צעקה ג'ולייט.",
+        "ואז היא הסתכלה למעלה.",
+        "\"אנג׳ליק, ראית את הנברשת הזאת?\"",
+        "\"ג'ולייט, אל תעזי!\"",
+        "מאוחר מדי! ג'ולייט כבר התנדנדה גבוה מעל החוגגים.",
+        "כל האולם פרץ בתשואות."
+      ],
+      "rawPdfExtract": "הנברשת והבום\nרקדנים קפצו מכל עבר. אורות סגולים רקדו על הקירות.\n\"וואו!\" צעקה יוליה.\nואז היא הסתכלה למעלה.\nליק, ראית את הנברשת הזאת?\"׳\"אנג\n\"יוליה, אל תעזי!\"\nמאוחר מדי! יוליה כבר התנדנדה גבוה מעל החוגגים.\nכל האולם פרץ בתשואות.\n▶07רצועהBlow\n14סיפור18",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-14.png",
+      "sourceArtSha256": "267ab1d7f754477cfa29e7cd1ae5b8af3d3a158914aedaedb4b709b95721dfe9",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X136.jpg",
+      "pdfImageJpegSha256": "8e44c3fde6c8894af3961a8bcf69b065d234ca213314b28c7372051ef752e189",
+      "pdfVersusLosslessSourceMae": 2.7893,
+      "musicTrackNumber": 7,
+      "canonicalTrackTitle": "Blow",
+      "characterReferences": [
+        "juliet",
+        "angelique"
+      ],
+      "inPhase1": true
+    },
+    {
+      "sourceScene": 15,
+      "sourcePdfPage": 21,
+      "printedStoryPage": 19,
+      "act": 1,
+      "canonicalTitle": "מיי פוגש את פרנסואה",
+      "canonicalParagraphs": [
+        "בתוך כל הרעש עמד בחור צעיר שקצת פחות אהב את המסיבה.",
+        "\"שלום, אני מיי,\" אמר מיי.",
+        "\"פרנסואה,\" הוא השיב.",
+        "\"אתה לא רוקד?\"",
+        "\"אבא שלי ארגן את המסיבה. הוא רוצה שאתחתן או אתגייס לצבא.\"",
+        "\"ומה אתה רוצה?\"",
+        "\"לנגן. לשיר. להיות אני.\""
+      ],
+      "paragraphs": [
+        "בתוך כל הרעש עמד בחור צעיר שקצת פחות אהב את המסיבה.",
+        "\"שלום, אני מיי,\" אמר מיי.",
+        "\"פרנסואה,\" הוא השיב.",
+        "\"אתה לא רוקד?\"",
+        "\"אבא שלי ארגן את המסיבה. הוא רוצה שאתחתן או אתגייס לצבא.\"",
+        "\"ומה אתה רוצה?\"",
+        "\"לנגן. לשיר. להיות אני.\""
+      ],
+      "rawPdfExtract": "מיי פוגש את פרנסואה\nבתוך כל הרעש עמד בחור צעיר שקצת פחות אהב את המסיבה.\n\"שלום, אני מיי,\" אמר מיי.\n\"פרנסואה,\" הוא השיב.\n\"אתה לא רוקד?\"\n\"אבא שלי ארגן את המסיבה. הוא רוצה שאתחתן או אתגייס לצבא.\"\n\"ומה אתה רוצה?\"\n\"לנגן. לשיר. להיות אני.\"\n1915סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-15.png",
+      "sourceArtSha256": "c59d3bf35041d46bea980309e9864c04f8930499317b35a7bbb301d0ca34874b",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X145.jpg",
+      "pdfImageJpegSha256": "b8b8da5007f047215655b652de632289f6226ef8e3459207033b84df4d060d97",
+      "pdfVersusLosslessSourceMae": 2.3159,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "may",
+        "francois"
+      ],
+      "inPhase1": true
+    },
+    {
+      "sourceScene": 16,
+      "sourcePdfPage": 22,
+      "printedStoryPage": 20,
+      "act": 1,
+      "canonicalTitle": "מיי הוא פשוט מיי",
+      "canonicalParagraphs": [
+        "בהמשך הערב מישהו שאל את מיי, \"אז אתה בן או בת?\"",
+        "\"אני פשוט מיי. לא בן ולא בת,\" ענה מיי בשקט.",
+        "יוליה התיישבה לידו.",
+        "\"והחבר הכי טוב שלי,\" אמרה בחיוך.",
+        "מיי חייך בחזרה.",
+        "\"ופרנסואה?\" שאלה יוליה בקריצה.",
+        "מיי הסמיק. \"מה איתו?\""
+      ],
+      "paragraphs": [
+        "בהמשך הערב מישהו שאל את מיי, \"אז אתה בן או בת?\"",
+        "\"אני פשוט מיי. לא בן ולא בת,\" ענה מיי בשקט.",
+        "ג'ולייט התיישבה לידו.",
+        "\"והחבר הכי טוב שלי,\" אמרה בחיוך.",
+        "מיי חייך בחזרה.",
+        "\"ופרנסואה?\" שאלה ג'ולייט בקריצה.",
+        "מיי הסמיק. \"מה איתו?\""
+      ],
+      "rawPdfExtract": "מיי הוא פשוט מיי\nבהמשך הערב מישהו שאל את מיי, \"אז אתה בן או בת?\"\n\"אני פשוט מיי. לא בן ולא בת,\" ענה מיי בשקט.\nיוליה התיישבה לידו.\n\"והחבר הכי טוב שלי,\" אמרה בחיוך.\nמיי חייך בחזרה.\n\"ופרנסואה?\" שאלה יוליה בקריצה.\nמיי הסמיק. \"מה איתו?\"\n▶08רצועהI’m Not a Girl, Not Yet a Woman\n16סיפור20",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-16.png",
+      "sourceArtSha256": "2799531d07cb4933dac5cc493ade4ac8de0b9916b2dbfded9c25c7dc0fc87ce8",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X151.jpg",
+      "pdfImageJpegSha256": "6c11d5ca9943a40df64a7aafbfd80ef3db5b3d8633f2949347133a5c871438e8",
+      "pdfVersusLosslessSourceMae": 2.545,
+      "musicTrackNumber": 8,
+      "canonicalTrackTitle": "I’m Not a Girl, Not Yet a Woman",
+      "characterReferences": [
+        "juliet",
+        "may",
+        "francois"
+      ],
+      "inPhase1": true
+    },
+    {
+      "sourceScene": 17,
+      "sourcePdfPage": 23,
+      "printedStoryPage": 21,
+      "act": 1,
+      "canonicalTitle": "מי מחליט בשביל פרנסואה?",
+      "canonicalParagraphs": [
+        "יוליה מצאה את פרנסואה לבד.",
+        "\"אבא שלך מחליט עם מי תתחתן?\" שאלה.",
+        "\"וגם מה אעשה בחיים,\" אמר פרנסואה.",
+        "\"גם ההורים שלי ניסו!\" התפלאה יוליה.",
+        "\"אז מה עשית?\"",
+        "\"יצאתי להרפתקה!\"",
+        "פרנסואה חייך. לראשונה הרגיש שמישהו באמת מבין אותו."
+      ],
+      "paragraphs": [
+        "ג'ולייט מצאה את פרנסואה לבד.",
+        "\"אבא שלך מחליט עם מי תתחתן?\" שאלה.",
+        "\"וגם מה אעשה בחיים,\" אמר פרנסואה.",
+        "\"גם ההורים שלי ניסו!\" התפלאה ג'ולייט.",
+        "\"אז מה עשית?\"",
+        "\"יצאתי להרפתקה!\"",
+        "פרנסואה חייך. לראשונה הרגיש שמישהו באמת מבין אותו."
+      ],
+      "rawPdfExtract": "מי מחליט בשביל פרנסואה\nיוליה מצאה את פרנסואה לבד.\n\"אבא שלך מחליט עם מי תתחתן?\" שאלה.\n\"וגם מה אעשה בחיים,\" אמר פרנסואה.\n\"גם ההורים שלי ניסו!\" התפלאה יוליה.\n\"אז מה עשית?\"\n\"יצאתי להרפתקה!\"\nפרנסואה חייך. לראשונה הרגיש שמישהו באמת מבין אותו.\n▶09רצועהOverprotected\n2117סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-17.png",
+      "sourceArtSha256": "ddb45287797a74aa7a72c65a10b5f2d7227547d0078d02ba29e6e4eaea8c555b",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X158.jpg",
+      "pdfImageJpegSha256": "4ceb6e4d7df07576e84f4d78632f104fbeda4a601a4a12586dafd1c0f534e4a6",
+      "pdfVersusLosslessSourceMae": 2.132,
+      "musicTrackNumber": 9,
+      "canonicalTrackTitle": "Overprotected",
+      "characterReferences": [
+        "juliet",
+        "francois"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 18,
+      "sourcePdfPage": 24,
+      "printedStoryPage": 22,
+      "act": 1,
+      "canonicalTitle": "נשיקה אחת, בלגן גדול",
+      "canonicalParagraphs": [
+        "יוליה צחקה עם פרנסואה, וברגע של התרגשות נתנה לו נשיקה.",
+        "\"או!\" קראה אנג׳ליק מן הצד.",
+        "אבל בדיוק אז חזר מיי.",
+        "החיוך של מיי נעלם.",
+        "\"אוי,\" לחש מיי.",
+        "יוליה עוד לא הבינה שהנשיקה הקטנה הזאת עומדת לסבך את הכול."
+      ],
+      "paragraphs": [
+        "ג'ולייט צחקה עם פרנסואה, וברגע של התרגשות נתנה לו נשיקה.",
+        "\"או!\" קראה אנג׳ליק מן הצד.",
+        "אבל בדיוק אז חזר מיי.",
+        "החיוך של מיי נעלם.",
+        "\"אוי,\" לחש מיי.",
+        "ג'ולייט עוד לא הבינה שהנשיקה הקטנה הזאת עומדת לסבך את הכול."
+      ],
+      "rawPdfExtract": "נשיקה אחת, בלגן גדול\nיוליה צחקה עם פרנסואה, וברגע של התרגשות נתנה לו נשיקה.\nליק מן הצד.׳\"או!\" קראה אנג\nאבל בדיוק אז חזר מיי.\nהחיוך של מיי נעלם.\n\"אוי,\" לחש מיי.\nיוליה עוד לא הבינה שהנשיקה הקטנה הזאת עומדת לסבך את הכול.\n▶10רצועהConfident\n18סיפור22",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-18.png",
+      "sourceArtSha256": "998f83e42632581b86eae14dce3b88d7426b83b66734850d3e492c60c4bf7647",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X165.jpg",
+      "pdfImageJpegSha256": "5dde0446c22aa3257c11fa4159661ffc5630c9f2531b8537e62ee90b640f9ec3",
+      "pdfVersusLosslessSourceMae": 2.7428,
+      "musicTrackNumber": 10,
+      "canonicalTrackTitle": "Confident",
+      "characterReferences": [
+        "juliet",
+        "may",
+        "francois",
+        "angelique"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 19,
+      "sourcePdfPage": 25,
+      "printedStoryPage": 23,
+      "act": 1,
+      "canonicalTitle": "אנג׳ליק? זאת את?",
+      "canonicalParagraphs": [
+        "אנג׳ליק הסתובבה באולם ופתאום קפאה במקום.",
+        "\"לאנס?!\"",
+        "\"אנג׳ליק?!\"",
+        "לפני שנים רבות הם היו מאוהבים, אבל נפרדו.",
+        "\"לא ראיתי אותך המון זמן,\" אמר לאנס.",
+        "\"אולי טוב שכך,\" ענתה בחיוך שובב.",
+        "שניהם ניסו להיראות רציניים. זה לא ממש הצליח."
+      ],
+      "paragraphs": [
+        "אנג׳ליק הסתובבה באולם ופתאום קפאה במקום.",
+        "\"לאנס?!\"",
+        "\"אנג׳ליק?!\"",
+        "לפני שנים רבות הם היו מאוהבים, אבל נפרדו.",
+        "\"לא ראיתי אותך המון זמן,\" אמר לאנס.",
+        "\"אולי טוב שכך,\" ענתה בחיוך שובב.",
+        "שניהם ניסו להיראות רציניים. זה לא ממש הצליח."
+      ],
+      "rawPdfExtract": "אנג׳ליק? זאת את\nליק הסתובבה באולם ופתאום קפאה במקום.׳אנג\n\"לאנס?!\"\nליק?!\"׳\"אנג\nלפני שנים רבות הם היו מאוהבים, אבל נפרדו.\n\"לא ראיתי אותך המון זמן,\" אמר לאנס.\n\"אולי טוב שכך,\" ענתה בחיוך שובב.\nשניהם ניסו להיראות רציניים. זה לא ממש הצליח.\n2319סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-19.png",
+      "sourceArtSha256": "dbc46a03ba2558174a53ae832eb9cf18393811b92998b9675bc37c2e1e2c1b8e",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X172.jpg",
+      "pdfImageJpegSha256": "54789cb1d090b14b1e4012194b5ca5f2fe9f8294836480371c24c2ff8a53e5eb",
+      "pdfVersusLosslessSourceMae": 2.3448,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "angelique",
+        "lance"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 20,
+      "sourcePdfPage": 26,
+      "printedStoryPage": 24,
+      "act": 1,
+      "canonicalTitle": "רוקדים שוב יחד",
+      "canonicalParagraphs": [
+        "\"פעם היינו צוות לא רע,\" אמר לאנס.",
+        "\"פעם גם ידעת לרקוד,\" עקצה אנג׳ליק.",
+        "\"אני עדיין יודע!\"",
+        "הוא ניסה צעד גדול וכמעט איבד שיווי משקל.",
+        "אנג׳ליק פרצה בצחוק.",
+        "אולי, אחרי כל השנים, גם לשניהם מגיעה התחלה חדשה."
+      ],
+      "paragraphs": [
+        "\"פעם היינו צוות לא רע,\" אמר לאנס.",
+        "\"פעם גם ידעת לרקוד,\" עקצה אנג׳ליק.",
+        "\"אני עדיין יודע!\"",
+        "הוא ניסה צעד גדול וכמעט איבד שיווי משקל.",
+        "אנג׳ליק פרצה בצחוק.",
+        "אולי, אחרי כל השנים, גם לשניהם מגיעה התחלה חדשה."
+      ],
+      "rawPdfExtract": "רוקדים שוב יחד\n\"פעם היינו צוות לא רע,\" אמר לאנס.\nליק.׳\"פעם גם ידעת לרקוד,\" עקצה אנג\n\"אני עדיין יודע!\"\nהוא ניסה צעד גדול וכמעט איבד שיווי משקל.\nליק פרצה בצחוק.׳אנג\nאולי, אחרי כל השנים, גם לשניהם מגיעה התחלה חדשה.\n▶11רצועהTeenage Dream / Break Free\n20סיפור24",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-20.png",
+      "sourceArtSha256": "2932b3d440b1352d504cd3208a2d9b6be4d91e070f20f9fba9ccaa49174372a4",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X178.jpg",
+      "pdfImageJpegSha256": "0258e762f88c3069a1d6c61aef9cf7b18e75da77b2eca9b28b062390ec4ee4fd",
+      "pdfVersusLosslessSourceMae": 2.6728,
+      "musicTrackNumber": 11,
+      "canonicalTrackTitle": "Teenage Dream / Break Free",
+      "characterReferences": [
+        "angelique",
+        "lance"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 21,
+      "sourcePdfPage": 27,
+      "printedStoryPage": 25,
+      "act": 1,
+      "canonicalTitle": "רגע, להתחתן?",
+      "canonicalParagraphs": [
+        "למחרת פרנסואה ניגש ליוליה, נבוך מאוד.",
+        "\"יוליה, תרצי להתחתן איתי?\"",
+        "\"מה?!\" היא כמעט הפילה את הכוס.",
+        "היא עדיין לא הייתה בטוחה באהבה שלה.",
+        "אבל כשהוריה הופיעו ואיימו להחזיר אותה לוורונה, החתונה נראתה כמו דרך להישאר חופשייה.",
+        "\"טוב. כן,\" אמרה בשקט."
+      ],
+      "paragraphs": [
+        "למחרת פרנסואה ניגש לג'ולייט, נבוך מאוד.",
+        "\"ג'ולייט, תרצי להתחתן איתי?\"",
+        "\"מה?!\" היא כמעט הפילה את הכוס.",
+        "היא עדיין לא הייתה בטוחה באהבה שלה.",
+        "אבל כשהוריה הופיעו ואיימו להחזיר אותה לוורונה, החתונה נראתה כמו דרך להישאר חופשייה.",
+        "\"טוב. כן,\" אמרה בשקט."
+      ],
+      "rawPdfExtract": "רגע, להתחתן\nלמחרת פרנסואה ניגש ליוליה, נבוך מאוד.\n\"יוליה, תרצי להתחתן איתי?\"\n\"מה?!\" היא כמעט הפילה את הכוס.\nהיא עדיין לא הייתה בטוחה באהבה שלה.\nאבל כשהוריה הופיעו ואיימו להחזיר אותה לוורונה, החתונה נראתה כמו דרך להישאר\nחופשייה.\n\"טוב. כן,\" אמרה בשקט.\n▶12רצועהOops!...I Did it Again\n2521סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-21.png",
+      "sourceArtSha256": "f9b9c5ff4e524eca0ceda3a4fc876caa295139793cabffe21eaf49d08e4c8250",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X187.jpg",
+      "pdfImageJpegSha256": "709e2b4563e9387c9b42d4b7dcdd1724a3faf22a91356e59dac7171194bb835d",
+      "pdfVersusLosslessSourceMae": 2.3617,
+      "musicTrackNumber": 12,
+      "canonicalTrackTitle": "Oops!...I Did it Again",
+      "characterReferences": [
+        "juliet",
+        "francois"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 22,
+      "sourcePdfPage": 28,
+      "printedStoryPage": 26,
+      "act": 1,
+      "canonicalTitle": "אבל הלב לא שואל",
+      "canonicalParagraphs": [
+        "לאנס כבר הכריז, \"מחר חתונה!\"",
+        "מיי ופרנסואה מצאו רגע לבד.",
+        "\"יש משהו שרציתי להגיד לך,\" התחיל פרנסואה.",
+        "מיי הביט בו.",
+        "השניים התקרבו והתנשקו.",
+        "ואז פרנסואה נבהל. \"אבל הבטחתי להתחתן עם יוליה!\"",
+        "מיי נשאר עם השאלה שאף אחד לא ידע לענות עליה."
+      ],
+      "paragraphs": [
+        "לאנס כבר הכריז, \"מחר חתונה!\"",
+        "מיי ופרנסואה מצאו רגע לבד.",
+        "\"יש משהו שרציתי להגיד לך,\" התחיל פרנסואה.",
+        "מיי הביט בו.",
+        "השניים התקרבו והתנשקו.",
+        "ואז פרנסואה נבהל. \"אבל הבטחתי להתחתן עם ג'ולייט!\"",
+        "מיי נשאר עם השאלה שאף אחד לא ידע לענות עליה."
+      ],
+      "rawPdfExtract": "אבל הלב לא שואל\nלאנס כבר הכריז, \"מחר חתונה!\"\nמיי ופרנסואה מצאו רגע לבד.\n\"יש משהו שרציתי להגיד לך,\" התחיל פרנסואה.\nמיי הביט בו.\nהשניים התקרבו והתנשקו.\nואז פרנסואה נבהל. \"אבל הבטחתי להתחתן עם יוליה!\"\nמיי נשאר עם השאלה שאף אחד לא ידע לענות עליה.\n▶13רצועהI Kissed A Girl\n22סיפור26",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-22.png",
+      "sourceArtSha256": "d4dec23412fc1f73000067be3e9adebea5adf4eec11595255aef0e5907ecb898",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X194.jpg",
+      "pdfImageJpegSha256": "4c352227fb18428a6128c3c9b87977d7ed26bfafe14a8c9cc5f86e8a14fd4ef8",
+      "pdfVersusLosslessSourceMae": 1.9327,
+      "musicTrackNumber": 13,
+      "canonicalTrackTitle": "I Kissed A Girl",
+      "characterReferences": [
+        "juliet",
+        "may",
+        "francois",
+        "lance"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 23,
+      "sourcePdfPage": 29,
+      "printedStoryPage": 27,
+      "act": 1,
+      "canonicalTitle": "הסופר מסבך את העניינים",
+      "canonicalParagraphs": [
+        "מאחורי הקלעים אן כעסה.",
+        "\"הבטחנו שיוליה תבחר בעצמה, ופתאום כולם שוב מסדרים לה חתונה!\"",
+        "שייקספיר משך בכתפיו.",
+        "\"סיפור צריך הפתעות!\"",
+        "הוא לקח דף חדש וכתב משהו בסוד.",
+        "\"ויליאם, מה עשית?\"",
+        "\"חכי ותראי,\" הוא חייך."
+      ],
+      "paragraphs": [
+        "מאחורי הקלעים אן כעסה.",
+        "\"הבטחנו שג'ולייט תבחר בעצמה, ופתאום כולם שוב מסדרים לה חתונה!\"",
+        "שייקספיר משך בכתפיו.",
+        "\"סיפור צריך הפתעות!\"",
+        "הוא לקח דף חדש וכתב משהו בסוד.",
+        "\"ויליאם, מה עשית?\"",
+        "\"חכי ותראי,\" הוא חייך."
+      ],
+      "rawPdfExtract": "הסופר מסבך את העניינים\nמאחורי הקלעים אן כעסה.\n\"הבטחנו שיוליה תבחר בעצמה, ופתאום כולם שוב מסדרים לה חתונה!\"\nשייקספיר משך בכתפיו.\n\"סיפור צריך הפתעות!\"\nהוא לקח דף חדש וכתב משהו בסוד.\n\"ויליאם, מה עשית?\"\n\"חכי ותראי,\" הוא חייך.\n2723סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-23.png",
+      "sourceArtSha256": "1aaefede9e517a6742f693f9aa25ed0bc5fa9b52a6fe9c68c8a258d633b781b7",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X201.jpg",
+      "pdfImageJpegSha256": "ba69fb041db8db650c410f66e360cb79249d54358257c438b535118373370304",
+      "pdfVersusLosslessSourceMae": 2.6076,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 24,
+      "sourcePdfPage": 30,
+      "printedStoryPage": 28,
+      "act": 1,
+      "canonicalTitle": "רומיאו?!",
+      "canonicalParagraphs": [
+        "ופתאום נשמע קול מוכר.",
+        "\"יוליה!\"",
+        "יוליה הסתובבה וקפאה.",
+        "\"רומיאו?!\"",
+        "מולה עמד רומיאו. חי, מחייך ומוכן לשיר.",
+        "\"הפתעה!\" הוא קרא.",
+        "\"אבל היית מת!\"",
+        "שייקספיר קד קידה מאחורי הקלעים.",
+        "\"טוב,\" מלמלה אן, \"זו בהחלט הפתעה.\""
+      ],
+      "paragraphs": [
+        "ופתאום נשמע קול מוכר.",
+        "\"ג'ולייט!\"",
+        "ג'ולייט הסתובבה וקפאה.",
+        "\"רומיאו?!\"",
+        "מולה עמד רומיאו. חי, מחייך ומוכן לשיר.",
+        "\"הפתעה!\" הוא קרא.",
+        "\"אבל היית מת!\"",
+        "שייקספיר קד קידה מאחורי הקלעים.",
+        "\"טוב,\" מלמלה אן, \"זו בהחלט הפתעה.\""
+      ],
+      "rawPdfExtract": "רומיאו\nופתאום נשמע קול מוכר.\n\"יוליה!\" יוליה הסתובבה וקפאה.\n\"רומיאו?!\"\nמולה עמד רומיאו. חי, מחייך ומוכן לשיר.\n\"הפתעה!\" הוא קרא. \"אבל היית מת!\"\nשייקספיר קד קידה מאחורי הקלעים.\n\"טוב,\" מלמלה אן, \"זו בהחלט הפתעה.\"\n▶14רצועהIt’s My Life\nסוף מערכה ראשונה. אפשר לקחת הפסקה קטנה\n24סיפור28",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-24.png",
+      "sourceArtSha256": "bdae3a81c543e24f5de488ec616b56a1c35205c0aa4395b7b46f3df999e94a98",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X207.jpg",
+      "pdfImageJpegSha256": "30653e545b20b854773a003a8ca561f6cbe3f2bbdbdb90472170599757d930a0",
+      "pdfVersusLosslessSourceMae": 2.3628,
+      "musicTrackNumber": 14,
+      "canonicalTrackTitle": "It’s My Life",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 25,
+      "sourcePdfPage": 31,
+      "printedStoryPage": 29,
+      "act": 2,
+      "canonicalTitle": "רומיאו בטוח בעצמו",
+      "canonicalParagraphs": [
+        "אחרי ההפסקה רומיאו חזר בגדול.",
+        "\"יוליה, חזרתי בשבילך!\" הכריז ופתח את זרועותיו.",
+        "\"רומיאו, אני שמחה שאתה חי,\" ענתה יוליה.",
+        "\"אז הכול כמו פעם?\" שאל.",
+        "\"ממש לא.\"",
+        "רומיאו מצמץ. הוא לא ציפה לתשובה הזאת."
+      ],
+      "paragraphs": [
+        "אחרי ההפסקה רומיאו חזר בגדול.",
+        "\"ג'ולייט, חזרתי בשבילך!\" הכריז ופתח את זרועותיו.",
+        "\"רומיאו, אני שמחה שאתה חי,\" ענתה ג'ולייט.",
+        "\"אז הכול כמו פעם?\" שאל.",
+        "\"ממש לא.\"",
+        "רומיאו מצמץ. הוא לא ציפה לתשובה הזאת."
+      ],
+      "rawPdfExtract": "מערכה שנייה\nרומיאו בטוח בעצמו\nאחרי ההפסקה רומיאו חזר בגדול.\n\"יוליה, חזרתי בשבילך!\" הכריז ופתח את זרועותיו.\n\"רומיאו, אני שמחה שאתה חי,\" ענתה יוליה.\n\"אז הכול כמו פעם?\" שאל.\n\"ממש לא.\"\nרומיאו מצמץ. הוא לא ציפה לתשובה הזאת.\n▶15רצועהLove Me Like You Do\n2925סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-25.png",
+      "sourceArtSha256": "7f4b446c4ead972acf92ca8fca646298067c7d13559d272cdbf1493e9a1fab63",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X217.jpg",
+      "pdfImageJpegSha256": "d23cc908806a75a10feb27a70bf215b58a8187fc9a125e74620dae2dbb1d3d6b",
+      "pdfVersusLosslessSourceMae": 2.2107,
+      "musicTrackNumber": 15,
+      "canonicalTrackTitle": "Love Me Like You Do",
+      "characterReferences": [
+        "juliet",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 26,
+      "sourcePdfPage": 32,
+      "printedStoryPage": 30,
+      "act": 2,
+      "canonicalTitle": "יש לי חיים חדשים",
+      "canonicalParagraphs": [
+        "\"פגשתי חברים, נסעתי לפריז והכרתי את עצמי מחדש,\" אמרה יוליה.",
+        "\"אבל היינו מאוהבים!\" הזכיר רומיאו.",
+        "\"נכון. ועדיין, לא סיפרת לי הכול על העבר שלך.\"",
+        "\"אממ.\"",
+        "\"וחוץ מזה, אני אמורה להתחתן עם פרנסואה.\"",
+        "\"עם מי?!\"",
+        "רומיאו נראה כאילו מישהו כיבה לו את המוזיקה."
+      ],
+      "paragraphs": [
+        "\"פגשתי חברים, נסעתי לפריז והכרתי את עצמי מחדש,\" אמרה ג'ולייט.",
+        "\"אבל היינו מאוהבים!\" הזכיר רומיאו.",
+        "\"נכון. ועדיין, לא סיפרת לי הכול על העבר שלך.\"",
+        "\"אממ.\"",
+        "\"וחוץ מזה, אני אמורה להתחתן עם פרנסואה.\"",
+        "\"עם מי?!\"",
+        "רומיאו נראה כאילו מישהו כיבה לו את המוזיקה."
+      ],
+      "rawPdfExtract": "יש לי חיים חדשים\n\"פגשתי חברים, נסעתי לפריז והכרתי את עצמי מחדש,\" אמרה יוליה.\n\"אבל היינו מאוהבים!\" הזכיר רומיאו.\n\"נכון. ועדיין, לא סיפרת לי הכול על העבר שלך.\"\n\"אממ.\"\n\"וחוץ מזה, אני אמורה להתחתן עם פרנסואה.\"\n\"עם מי?!\"\nרומיאו נראה כאילו מישהו כיבה לו את המוזיקה.\n▶16רצועהSince U Been Gone\n26סיפור30",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-26.png",
+      "sourceArtSha256": "a844959ccbfa6f91de4e4584fdf4de014f1a6d92ad8df4c0119cd1ea95688834",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X229.jpg",
+      "pdfImageJpegSha256": "8509b6a3ca3c0451f1f46acc8815cee8f130127dd3bb5c08b197e174d4c4b87b",
+      "pdfVersusLosslessSourceMae": 2.2817,
+      "musicTrackNumber": 16,
+      "canonicalTrackTitle": "Since U Been Gone",
+      "characterReferences": [
+        "juliet",
+        "francois",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 27,
+      "sourcePdfPage": 33,
+      "printedStoryPage": 31,
+      "act": 2,
+      "canonicalTitle": "אתה שוב משנה לה את הסיפור!",
+      "canonicalParagraphs": [
+        "\"ויליאם!\" התפרצה אן.",
+        "\"מה עכשיו?\" שאל שייקספיר.",
+        "\"החזרת את רומיאו בלי לשאול את יוליה!\"",
+        "\"זה הופך את ההצגה למעניינת!\"",
+        "\"אבל היא צריכה לבחור בעצמה.\"",
+        "\"ואני צריך לכתוב סוף מוצלח!\"",
+        "שניהם הביטו זה בזו בכעס."
+      ],
+      "paragraphs": [
+        "\"ויליאם!\" התפרצה אן.",
+        "\"מה עכשיו?\" שאל שייקספיר.",
+        "\"החזרת את רומיאו בלי לשאול את ג'ולייט!\"",
+        "\"זה הופך את ההצגה למעניינת!\"",
+        "\"אבל היא צריכה לבחור בעצמה.\"",
+        "\"ואני צריך לכתוב סוף מוצלח!\"",
+        "שניהם הביטו זה בזו בכעס."
+      ],
+      "rawPdfExtract": "אתה שוב משנה לה את הסיפור\n\"ויליאם!\" התפרצה אן.\n\"מה עכשיו?\" שאל שייקספיר.\n\"החזרת את רומיאו בלי לשאול את יוליה!\"\n\"זה הופך את ההצגה למעניינת!\"\n\"אבל היא צריכה לבחור בעצמה.\"\n\"ואני צריך לכתוב סוף מוצלח!\"\nשניהם הביטו זה בזו בכעס.\n3127סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-27.png",
+      "sourceArtSha256": "ebc54310152bbe75233bf769dc079988be4f53911cbe10ea536b4a022c8991e3",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X238.jpg",
+      "pdfImageJpegSha256": "6c4fc99449776406317eba1e286fa38312f213847d9154bd63bb17f59264df14",
+      "pdfVersusLosslessSourceMae": 2.18,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 28,
+      "sourcePdfPage": 34,
+      "printedStoryPage": 32,
+      "act": 2,
+      "canonicalTitle": "קראק! הנוצה נשברה",
+      "canonicalParagraphs": [
+        "שייקספיר הניף את הנוצה בגאווה.",
+        "\"כל מה שקורה כאן נכתב בעזרת הנוצה הזאת!\"",
+        "אן לקחה אותה מידו.",
+        "קְרַאק!",
+        "הנוצה נשברה לשניים.",
+        "שייקספיר הביט בה, המום.",
+        "\"הנוצה שלי!\"",
+        "\"אופס,\" אמרה אן.",
+        "ועכשיו, בלי הנוצה, אפילו שייקספיר לא ידע מה יקרה."
+      ],
+      "paragraphs": [
+        "שייקספיר הניף את הנוצה בגאווה.",
+        "\"כל מה שקורה כאן נכתב בעזרת הנוצה הזאת!\"",
+        "אן לקחה אותה מידו.",
+        "קְרַאק!",
+        "הנוצה נשברה לשניים.",
+        "שייקספיר הביט בה, המום.",
+        "\"הנוצה שלי!\"",
+        "\"אופס,\" אמרה אן.",
+        "ועכשיו, בלי הנוצה, אפילו שייקספיר לא ידע מה יקרה."
+      ],
+      "rawPdfExtract": "קראק! הנוצה נשברה\nשייקספיר הניף את הנוצה בגאווה.\n\"כל מה שקורה כאן נכתב בעזרת הנוצה הזאת!\"\nאק!ַרְאן לקחה אותה מידו. ק\nהנוצה נשברה לשניים.\nשייקספיר הביט בה, המום.\n\"הנוצה שלי!\" \"אופס,\" אמרה אן.\nועכשיו, בלי הנוצה, אפילו שייקספיר לא ידע מה יקרה.\n28סיפור32",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-28.png",
+      "sourceArtSha256": "f66403aa54b75fba84cbb964491f1b7002e0cd14bc93b55d10a1e3bc712ab08d",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X246.jpg",
+      "pdfImageJpegSha256": "9e1ecc59ba5f34556e0af4731bb7d7f87e24339ec03a0b7a0f7e917632f7189f",
+      "pdfVersusLosslessSourceMae": 2.4073,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "shakespeare",
+        "anne"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 29,
+      "sourcePdfPage": 35,
+      "printedStoryPage": 33,
+      "act": 2,
+      "canonicalTitle": "מה עם מיי?",
+      "canonicalParagraphs": [
+        "מיי מצא את פרנסואה בשקט של הטירה.",
+        "\"יש משהו שאני חייב לספר,\" אמר מיי.",
+        "\"אני מקשיב,\" השיב פרנסואה.",
+        "\"אני אוהב אותך. לא רק כחבר.\"",
+        "פרנסואה השפיל את העיניים.",
+        "\"גם אני מרגיש משהו מיוחד, אבל הבטחתי להתחתן עם יוליה.\""
+      ],
+      "paragraphs": [
+        "מיי מצא את פרנסואה בשקט של הטירה.",
+        "\"יש משהו שאני חייב לספר,\" אמר מיי.",
+        "\"אני מקשיב,\" השיב פרנסואה.",
+        "\"אני אוהב אותך. לא רק כחבר.\"",
+        "פרנסואה השפיל את העיניים.",
+        "\"גם אני מרגיש משהו מיוחד, אבל הבטחתי להתחתן עם ג'ולייט.\""
+      ],
+      "rawPdfExtract": "מה עם מיי\nמיי מצא את פרנסואה בשקט של הטירה.\n\"יש משהו שאני חייב לספר,\" אמר מיי.\n\"אני מקשיב,\" השיב פרנסואה.\n\"אני אוהב אותך. לא רק כחבר.\"\nפרנסואה השפיל את העיניים.\n\"גם אני מרגיש משהו מיוחד, אבל הבטחתי להתחתן עם יוליה.\"\n▶17רצועהWhataya Want from Me\n3329סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-29.png",
+      "sourceArtSha256": "d7deaa299850f8131f62e660dfb96d3ee21ef64651a3e97a72dcd42939ce869e",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X254.jpg",
+      "pdfImageJpegSha256": "9f3183947e25b78ff795f388c37291bbf6b5f90ce37f4854acd3fa736c658c9a",
+      "pdfVersusLosslessSourceMae": 2.2512,
+      "musicTrackNumber": 17,
+      "canonicalTrackTitle": "Whataya Want from Me",
+      "characterReferences": [
+        "juliet",
+        "may",
+        "francois"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 30,
+      "sourcePdfPage": 36,
+      "printedStoryPage": 34,
+      "act": 2,
+      "canonicalTitle": "הבטחה שקשה לקיים",
+      "canonicalParagraphs": [
+        "\"אבל מה אתה רוצה?\" שאל מיי.",
+        "\"אני לא יודע,\" אמר פרנסואה.",
+        "\"אז אולי כדאי שתחשוב לפני שתתחתן.\"",
+        "פרנסואה הנהן, אבל עדיין פחד לאכזב את כולם.",
+        "מיי יצא מהחדר עם לב כבד.",
+        "גם חברות אמיתית לא תמיד מספיקה כדי לפתור הכול מיד."
+      ],
+      "paragraphs": [
+        "\"אבל מה אתה רוצה?\" שאל מיי.",
+        "\"אני לא יודע,\" אמר פרנסואה.",
+        "\"אז אולי כדאי שתחשוב לפני שתתחתן.\"",
+        "פרנסואה הנהן, אבל עדיין פחד לאכזב את כולם.",
+        "מיי יצא מהחדר עם לב כבד.",
+        "גם חברות אמיתית לא תמיד מספיקה כדי לפתור הכול מיד."
+      ],
+      "rawPdfExtract": "הבטחה שקשה לקיים\n\"אבל מה אתה רוצה?\" שאל מיי.\n\"אני לא יודע,\" אמר פרנסואה.\n\"אז אולי כדאי שתחשוב לפני שתתחתן.\"\nפרנסואה הנהן, אבל עדיין פחד לאכזב את כולם.\nמיי יצא מהחדר עם לב כבד.\nגם חברות אמיתית לא תמיד מספיקה כדי לפתור הכול מיד.\n30סיפור34",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-30.png",
+      "sourceArtSha256": "e92ad63e1c415e556256ee2bc1f3aa54f203a8bbbbff3914c6e14f74bc87d3b4",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X263.jpg",
+      "pdfImageJpegSha256": "c7869f442fa3cb161fd51b71e9a4be039653ed36169dd06de80df758868a8b89",
+      "pdfVersusLosslessSourceMae": 2.0274,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "may",
+        "francois"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 31,
+      "sourcePdfPage": 37,
+      "printedStoryPage": 35,
+      "act": 2,
+      "canonicalTitle": "רומיאו לומד להקשיב",
+      "canonicalParagraphs": [
+        "רומיאו מצא את יוליה ליד החלון.",
+        "\"אני יודע שלא תמיד הייתי חבר טוב,\" אמר.",
+        "\"נכון,\" ענתה.",
+        "\"ואני רוצה להשתנות.\"",
+        "יוליה הביטה בו. הפעם הוא לא שר בקול גדול ולא התגאה.",
+        "הוא פשוט הקשיב.",
+        "\"זאת התחלה טובה,\" אמרה."
+      ],
+      "paragraphs": [
+        "רומיאו מצא את ג'ולייט ליד החלון.",
+        "\"אני יודע שלא תמיד הייתי חבר טוב,\" אמר.",
+        "\"נכון,\" ענתה.",
+        "\"ואני רוצה להשתנות.\"",
+        "ג'ולייט הביטה בו. הפעם הוא לא שר בקול גדול ולא התגאה.",
+        "הוא פשוט הקשיב.",
+        "\"זאת התחלה טובה,\" אמרה."
+      ],
+      "rawPdfExtract": "רומיאו לומד להקשיב\nרומיאו מצא את יוליה ליד החלון.\n\"אני יודע שלא תמיד הייתי חבר טוב,\" אמר.\n\"נכון,\" ענתה.\n\"ואני רוצה להשתנות.\"\nיוליה הביטה בו. הפעם הוא לא שר בקול גדול ולא התגאה.\nהוא פשוט הקשיב.\n\"זאת התחלה טובה,\" אמרה.\n▶18רצועהOne More Try\n3531סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-31.png",
+      "sourceArtSha256": "21076d8793d1fa4784fa8e9436dbb71c2cc79a2df11ec61c96598702b4d714df",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X271.jpg",
+      "pdfImageJpegSha256": "49e6bc7391ce4c629a5ab85c3949a1ba0c5b455916861c3a5121263db01885a9",
+      "pdfVersusLosslessSourceMae": 2.5864,
+      "musicTrackNumber": 18,
+      "canonicalTrackTitle": "One More Try",
+      "characterReferences": [
+        "juliet",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 32,
+      "sourcePdfPage": 38,
+      "printedStoryPage": 36,
+      "act": 2,
+      "canonicalTitle": "עוד לא עכשיו",
+      "canonicalParagraphs": [
+        "\"אז נוכל להיות שוב יחד?\" שאל רומיאו.",
+        "יוליה חשבה ארוכות.",
+        "\"אני עדיין לא יודעת מה אני מרגישה.\"",
+        "\"זה אומר לא?\"",
+        "\"זה אומר שאני צריכה זמן.\"",
+        "רומיאו הנהן, עצוב קצת.",
+        "לפעמים גם כשאוהבים, צריך לתת למישהו מקום לבחור."
+      ],
+      "paragraphs": [
+        "\"אז נוכל להיות שוב יחד?\" שאל רומיאו.",
+        "ג'ולייט חשבה ארוכות.",
+        "\"אני עדיין לא יודעת מה אני מרגישה.\"",
+        "\"זה אומר לא?\"",
+        "\"זה אומר שאני צריכה זמן.\"",
+        "רומיאו הנהן, עצוב קצת.",
+        "לפעמים גם כשאוהבים, צריך לתת למישהו מקום לבחור."
+      ],
+      "rawPdfExtract": "עוד לא עכשיו\n\"אז נוכל להיות שוב יחד?\" שאל רומיאו.\nיוליה חשבה ארוכות.\n\"אני עדיין לא יודעת מה אני מרגישה.\"\n\"זה אומר לא?\"\n\"זה אומר שאני צריכה זמן.\"\nרומיאו הנהן, עצוב קצת.\nלפעמים גם כשאוהבים, צריך לתת למישהו מקום לבחור.\n32סיפור36",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-32.png",
+      "sourceArtSha256": "99be76ad0506393b9f86dd38eb45f372e9d576e87968954c3cd36a4495b7aba0",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X280.jpg",
+      "pdfImageJpegSha256": "5122d7e86fcf32fd724db9ea1f3732968ac85d20201b98cc22215a3345627d9c",
+      "pdfVersusLosslessSourceMae": 2.3066,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 33,
+      "sourcePdfPage": 39,
+      "printedStoryPage": 37,
+      "act": 2,
+      "canonicalTitle": "מי אוהב את מי?",
+      "canonicalParagraphs": [
+        "יוליה חשבה על רומיאו.",
+        "רומיאו חשב על יוליה.",
+        "פרנסואה חשב על מיי.",
+        "מיי חשב על פרנסואה.",
+        "אנג׳ליק חשבה על לאנס.",
+        "ושייקספיר? הוא חשב על תוכנית חדשה!",
+        "\"זה לא סיפור,\" גיחכה אן. \"זה סלט אהבות!\""
+      ],
+      "paragraphs": [
+        "ג'ולייט חשבה על רומיאו.",
+        "רומיאו חשב על ג'ולייט.",
+        "פרנסואה חשב על מיי.",
+        "מיי חשב על פרנסואה.",
+        "אנג׳ליק חשבה על לאנס.",
+        "ושייקספיר? הוא חשב על תוכנית חדשה!",
+        "\"זה לא סיפור,\" גיחכה אן. \"זה סלט אהבות!\""
+      ],
+      "rawPdfExtract": "מי אוהב את מי\nיוליה חשבה על רומיאו.\nרומיאו חשב על יוליה.\nפרנסואה חשב על מיי.\nמיי חשב על פרנסואה.\nליק חשבה על לאנס.׳אנג\nושייקספיר? הוא חשב על תוכנית חדשה!\n\"זה לא סיפור,\" גיחכה אן. \"זה סלט אהבות!\"\n▶19רצועהProblem / Can’t Feel My Face\n3733סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-33.png",
+      "sourceArtSha256": "7d192a2bf98e327fe74254cddb68bb5e9e9e1a1eaef95c0820c798e2ecdb5990",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X288.jpg",
+      "pdfImageJpegSha256": "5dcdfc1070a2b98b758526dd34387ab7daa945c2c560510980c87996fc5e2059",
+      "pdfVersusLosslessSourceMae": 2.934,
+      "musicTrackNumber": 19,
+      "canonicalTrackTitle": "Problem / Can’t Feel My Face",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne",
+        "may",
+        "francois",
+        "angelique",
+        "lance",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 34,
+      "sourcePdfPage": 40,
+      "printedStoryPage": 38,
+      "act": 2,
+      "canonicalTitle": "תוכנית החתונה הסודית",
+      "canonicalParagraphs": [
+        "\"אם רומיאו יופיע בחתונה, יוליה תיזכר בו!\" אמר שייקספיר.",
+        "\"ואיך תכניס אותו?\" שאל חבר.",
+        "\"בתור בן משפחה של פרנסואה!\"",
+        "רומיאו הביט בו.",
+        "\"אבל אני בכלל לא דומה לו.\"",
+        "\"שטויות!\" צחק שייקספיר. \"אנחנו בעולם של הצגה!\""
+      ],
+      "paragraphs": [
+        "\"אם רומיאו יופיע בחתונה, ג'ולייט תיזכר בו!\" אמר שייקספיר.",
+        "\"ואיך תכניס אותו?\" שאל חבר.",
+        "\"בתור בן משפחה של פרנסואה!\"",
+        "רומיאו הביט בו.",
+        "\"אבל אני בכלל לא דומה לו.\"",
+        "\"שטויות!\" צחק שייקספיר. \"אנחנו בעולם של הצגה!\""
+      ],
+      "rawPdfExtract": "תוכנית החתונה הסודית\n\"אם רומיאו יופיע בחתונה, יוליה תיזכר בו!\" אמר שייקספיר.\n\"ואיך תכניס אותו?\" שאל חבר.\n\"בתור בן משפחה של פרנסואה!\"\nרומיאו הביט בו.\n\"אבל אני בכלל לא דומה לו.\"\n\"שטויות!\" צחק שייקספיר. \"אנחנו בעולם של הצגה!\"\n34סיפור38",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-34.png",
+      "sourceArtSha256": "8d0766eb35b9dc8d1f50c1db0a8383b88d13a8fa169bd6f8c870399c1c1d6d8c",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X297.jpg",
+      "pdfImageJpegSha256": "a5c294949ccf8b3e10e8ca1a941235182e39cdabfe482efe4b0691376bb110f1",
+      "pdfVersusLosslessSourceMae": 2.8466,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "francois",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 35,
+      "sourcePdfPage": 41,
+      "printedStoryPage": 39,
+      "act": 2,
+      "canonicalTitle": "גם לאן יש חלומות",
+      "canonicalParagraphs": [
+        "אן מצאה את יוליה עצובה.",
+        "\"אני לא יודעת מה לעשות,\" אמרה יוליה. \"כולם רוצים שאחליט מיד.\"",
+        "אן ישבה לצדה.",
+        "\"גם אני למדתי שלפעמים, כשדואגים לכולם, שוכחים מה רוצים בעצמנו.\"",
+        "\"וגם את מרגישה ככה?\"",
+        "\"לפעמים. אפילו מבוגרים לומדים.\""
+      ],
+      "paragraphs": [
+        "אן מצאה את ג'ולייט עצובה.",
+        "\"אני לא יודעת מה לעשות,\" אמרה ג'ולייט. \"כולם רוצים שאחליט מיד.\"",
+        "אן ישבה לצדה.",
+        "\"גם אני למדתי שלפעמים, כשדואגים לכולם, שוכחים מה רוצים בעצמנו.\"",
+        "\"וגם את מרגישה ככה?\"",
+        "\"לפעמים. אפילו מבוגרים לומדים.\""
+      ],
+      "rawPdfExtract": "גם לאן יש חלומות\nאן מצאה את יוליה עצובה.\n\"אני לא יודעת מה לעשות,\" אמרה יוליה. \"כולם רוצים שאחליט מיד.\"\nאן ישבה לצדה.\n\"גם אני למדתי שלפעמים, כשדואגים לכולם, שוכחים מה רוצים בעצמנו.\"\n\"וגם את מרגישה ככה?\"\n\"לפעמים. אפילו מבוגרים לומדים.\"\n3935סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-35.png",
+      "sourceArtSha256": "e7d2943dd0ca8b3dba62703a1ded758a280a85f9a7ae9f3241f9348f6eae015e",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X305.jpg",
+      "pdfImageJpegSha256": "b7fd10e537c8bf3624a742e5d2133d33c2df56f331edf52ca1ab7012baffb6d0",
+      "pdfVersusLosslessSourceMae": 2.3445,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "anne"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 36,
+      "sourcePdfPage": 42,
+      "printedStoryPage": 40,
+      "act": 2,
+      "canonicalTitle": "אפשר לעצור ולחשוב",
+      "canonicalParagraphs": [
+        "\"אז איך יודעים מה נכון?\" שאלה יוליה.",
+        "\"מקשיבים ללב, וגם חושבים,\" אמרה אן. \"לא חייבים לענות לכל אחד ברגע.\"",
+        "יוליה חייכה.",
+        "\"אפילו אם זה שייקספיר בעצמו?\"",
+        "\"במיוחד אם זה שייקספיר!\" צחקה אן.",
+        "שתיהן קמו, מוכנות לעמוד מול החתונה המתקרבת."
+      ],
+      "paragraphs": [
+        "\"אז איך יודעים מה נכון?\" שאלה ג'ולייט.",
+        "\"מקשיבים ללב, וגם חושבים,\" אמרה אן. \"לא חייבים לענות לכל אחד ברגע.\"",
+        "ג'ולייט חייכה.",
+        "\"אפילו אם זה שייקספיר בעצמו?\"",
+        "\"במיוחד אם זה שייקספיר!\" צחקה אן.",
+        "שתיהן קמו, מוכנות לעמוד מול החתונה המתקרבת."
+      ],
+      "rawPdfExtract": "אפשר לעצור ולחשוב\n\"אז איך יודעים מה נכון?\" שאלה יוליה.\n\"מקשיבים ללב, וגם חושבים,\" אמרה אן. \"לא חייבים לענות לכל אחד ברגע.\"\nיוליה חייכה.\n\"אפילו אם זה שייקספיר בעצמו?\"\n\"במיוחד אם זה שייקספיר!\" צחקה אן.\nשתיהן קמו, מוכנות לעמוד מול החתונה המתקרבת.\n▶20רצועהThat’s the Way It Is\n36סיפור40",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-36.png",
+      "sourceArtSha256": "a41fd3d9304a3f821fe6dbeee4d4c90bd5387fe89839ed2e2ed58797e01a4cb8",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X313.jpg",
+      "pdfImageJpegSha256": "cf8f7e69188e3a1140d4de8f32d7dab555696c2699939b352672b99f03a7f96c",
+      "pdfVersusLosslessSourceMae": 2.229,
+      "musicTrackNumber": 20,
+      "canonicalTrackTitle": "That’s the Way It Is",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 37,
+      "sourcePdfPage": 43,
+      "printedStoryPage": 41,
+      "act": 2,
+      "canonicalTitle": "להקת הבנים של החתונה",
+      "canonicalParagraphs": [
+        "בחדר אחר התאמנו לאנס, פרנסואה, רומיאו ושייקספיר.",
+        "אנג׳ליק כבר הציעה ללאנס להתחתן. עכשיו צריך להקה!",
+        "\"נופיע בחתונה בתור להקה משפחתית!\" הודיע שייקספיר.",
+        "\"רק שחסר לנו זמר אחד,\" אמר לאנס.",
+        "בדיוק עבר שם מיי.",
+        "כולם הסתובבו אליו יחד.",
+        "\"לא,\" אמר מיי.",
+        "\"כן!\" אמרו כולם."
+      ],
+      "paragraphs": [
+        "בחדר אחר התאמנו לאנס, פרנסואה, רומיאו ושייקספיר.",
+        "אנג׳ליק כבר הציעה ללאנס להתחתן. עכשיו צריך להקה!",
+        "\"נופיע בחתונה בתור להקה משפחתית!\" הודיע שייקספיר.",
+        "\"רק שחסר לנו זמר אחד,\" אמר לאנס.",
+        "בדיוק עבר שם מיי.",
+        "כולם הסתובבו אליו יחד.",
+        "\"לא,\" אמר מיי.",
+        "\"כן!\" אמרו כולם."
+      ],
+      "rawPdfExtract": "להקת הבנים של החתונה\nבחדר אחר התאמנו לאנס, פרנסואה, רומיאו ושייקספיר.\nליק כבר הציעה ללאנס להתחתן. עכשיו צריך להקה!׳אנג\n\"נופיע בחתונה בתור להקה משפחתית!\" הודיע שייקספיר.\n\"רק שחסר לנו זמר אחד,\" אמר לאנס.\nבדיוק עבר שם מיי.\nכולם הסתובבו אליו יחד.\n\"לא,\" אמר מיי. \"כן!\" אמרו כולם.\n4137סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-37.png",
+      "sourceArtSha256": "f2295fb843f6917538d3f164a6372b2b96599de51efb378c0de23e8a2ff925ee",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X320.jpg",
+      "pdfImageJpegSha256": "1451f109c1261945861edc979fa42cc453b07cb430d056fc5875af3044ab5ec7",
+      "pdfVersusLosslessSourceMae": 2.6031,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "shakespeare",
+        "may",
+        "francois",
+        "angelique",
+        "lance",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 38,
+      "sourcePdfPage": 44,
+      "printedStoryPage": 42,
+      "act": 2,
+      "canonicalTitle": "בחזרה לבמה!",
+      "canonicalParagraphs": [
+        "האורחים ישבו במקומותיהם.",
+        "האורות כבו.",
+        "\"גבירותיי ורבותיי, הלהקה!\"",
+        "רומיאו, פרנסואה, לאנס, מיי ושייקספיר עלו בתנועת ריקוד מתואמת.",
+        "טוב, כמעט מתואמת.",
+        "לאנס פנה לצד הלא נכון וכולם צחקו.",
+        "אבל השיר היה כל כך מדבק, שהאולם קם על הרגליים."
+      ],
+      "paragraphs": [
+        "האורחים ישבו במקומותיהם.",
+        "האורות כבו.",
+        "\"גבירותיי ורבותיי, הלהקה!\"",
+        "רומיאו, פרנסואה, לאנס, מיי ושייקספיר עלו בתנועת ריקוד מתואמת.",
+        "טוב, כמעט מתואמת.",
+        "לאנס פנה לצד הלא נכון וכולם צחקו.",
+        "אבל השיר היה כל כך מדבק, שהאולם קם על הרגליים."
+      ],
+      "rawPdfExtract": "בחזרה לבמה\nהאורחים ישבו במקומותיהם.\nהאורות כבו.\n\"גבירותיי ורבותיי, הלהקה!\"\nרומיאו, פרנסואה, לאנס, מיי ושייקספיר עלו בתנועת ריקוד מתואמת.\nטוב, כמעט מתואמת.\nלאנס פנה לצד הלא נכון וכולם צחקו.\nאבל השיר היה כל כך מדבק, שהאולם קם על הרגליים.\n▶21רצועהEverybody\n38סיפור42",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-38.png",
+      "sourceArtSha256": "3bd4149fac4aaa06af73cd30b2ec7c98f27b1beed99096867b29fd83081b3064",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X328.jpg",
+      "pdfImageJpegSha256": "1f70ea5da22e9c5602308c11ce1c1532bebef085f0cd69b49ed669b30646f104",
+      "pdfVersusLosslessSourceMae": 2.7165,
+      "musicTrackNumber": 21,
+      "canonicalTrackTitle": "Everybody",
+      "characterReferences": [
+        "shakespeare",
+        "may",
+        "francois",
+        "lance",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 39,
+      "sourcePdfPage": 45,
+      "printedStoryPage": 43,
+      "act": 2,
+      "canonicalTitle": "חתונה? לא בטוח",
+      "canonicalParagraphs": [
+        "יוליה ופרנסואה עמדו מול כולם.",
+        "פרנסואה שר לה שיר אהבה.",
+        "יוליה חייכה במבוכה.",
+        "\"זה מאוד יפה,\" לחשה, \"אבל רגע.\"",
+        "לאנס קטע אותם בקול גדול.",
+        "\"האם למישהו יש סיבה שהחתונה לא תתקיים?\"",
+        "שקט השתרר באולם."
+      ],
+      "paragraphs": [
+        "ג'ולייט ופרנסואה עמדו מול כולם.",
+        "פרנסואה שר לה שיר אהבה.",
+        "ג'ולייט חייכה במבוכה.",
+        "\"זה מאוד יפה,\" לחשה, \"אבל רגע.\"",
+        "לאנס קטע אותם בקול גדול.",
+        "\"האם למישהו יש סיבה שהחתונה לא תתקיים?\"",
+        "שקט השתרר באולם."
+      ],
+      "rawPdfExtract": "חתונה? לא בטוח\nיוליה ופרנסואה עמדו מול כולם.\nפרנסואה שר לה שיר אהבה.\nיוליה חייכה במבוכה.\n\"זה מאוד יפה,\" לחשה, \"אבל רגע.\"\nלאנס קטע אותם בקול גדול.\n\"האם למישהו יש סיבה שהחתונה לא תתקיים?\"\nשקט השתרר באולם.\n▶22רצועהAs Long as You Love Me\n4339סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-39.png",
+      "sourceArtSha256": "336b535b4c073e062cfd8b0c10c3e9f121180b1faddbcc0afa034dd97aebf3cf",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X335.jpg",
+      "pdfImageJpegSha256": "207275447a377280d131ce01b623afe509a7e2a94d9f70f01f6685581f787255",
+      "pdfVersusLosslessSourceMae": 2.8024,
+      "musicTrackNumber": 22,
+      "canonicalTrackTitle": "As Long as You Love Me",
+      "characterReferences": [
+        "juliet",
+        "francois",
+        "lance"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 40,
+      "sourcePdfPage": 46,
+      "printedStoryPage": 44,
+      "act": 2,
+      "canonicalTitle": "יש לנו!",
+      "canonicalParagraphs": [
+        "\"לי יש!\" אמרה יוליה.",
+        "\"גם לי!\" קרא פרנסואה.",
+        "כולם פערו פה.",
+        "פרנסואה לקח אוויר.",
+        "\"יוליה חברה נהדרת, אבל אני מאוהב במיי.\"",
+        "יוליה נשמה לרווחה.",
+        "\"ואני לא רוצה להתחתן רק כדי לברוח מההורים שלי.\"",
+        "מיי חייך, ופרנסואה הושיט יד.",
+        "החתונה נעצרה. סוף סוף הם אמרו את האמת."
+      ],
+      "paragraphs": [
+        "\"לי יש!\" אמרה ג'ולייט.",
+        "\"גם לי!\" קרא פרנסואה.",
+        "כולם פערו פה.",
+        "פרנסואה לקח אוויר.",
+        "\"ג'ולייט חברה נהדרת, אבל אני מאוהב במיי.\"",
+        "ג'ולייט נשמה לרווחה.",
+        "\"ואני לא רוצה להתחתן רק כדי לברוח מההורים שלי.\"",
+        "מיי חייך, ופרנסואה הושיט יד.",
+        "החתונה נעצרה. סוף סוף הם אמרו את האמת."
+      ],
+      "rawPdfExtract": "יש לנו\n\"לי יש!\" אמרה יוליה. \"גם לי!\" קרא פרנסואה.\nכולם פערו פה. פרנסואה לקח אוויר.\n\"יוליה חברה נהדרת, אבל אני מאוהב במיי.\"\nיוליה נשמה לרווחה.\n\"ואני לא רוצה להתחתן רק כדי לברוח מההורים שלי.\"\nמיי חייך, ופרנסואה הושיט יד.\nהחתונה נעצרה. סוף סוף הם אמרו את האמת.\n▶23רצועהIt’s Gonna Be Me\n40סיפור44",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-40.png",
+      "sourceArtSha256": "98561d7d7488ef3c9dcde0860640c98d4844c71df530cd962c7ddcd388d277ff",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X344.jpg",
+      "pdfImageJpegSha256": "867023329843078bfb914abb68bc39617581f277778902be9f0554904bb3c13c",
+      "pdfVersusLosslessSourceMae": 2.6872,
+      "musicTrackNumber": 23,
+      "canonicalTrackTitle": "It’s Gonna Be Me",
+      "characterReferences": [
+        "juliet",
+        "may",
+        "francois"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 41,
+      "sourcePdfPage": 47,
+      "printedStoryPage": 45,
+      "act": 2,
+      "canonicalTitle": "כולם רוצים להחליט",
+      "canonicalParagraphs": [
+        "אבל בדיוק אז הגיעו הוריה של יוליה.",
+        "\"חוזרים לוורונה!\" הודיעו.",
+        "רומיאו מיהר קדימה.",
+        "\"יוליה, בואי איתי!\"",
+        "שייקספיר הוסיף: \"אני יודע איך הסיפור הזה צריך להיגמר!\"",
+        "יוליה הסתכלה על כולם.",
+        "\"מספיק!\" היא אמרה."
+      ],
+      "paragraphs": [
+        "אבל בדיוק אז הגיעו הוריה של ג'ולייט.",
+        "\"חוזרים לוורונה!\" הודיעו.",
+        "רומיאו מיהר קדימה.",
+        "\"ג'ולייט, בואי איתי!\"",
+        "שייקספיר הוסיף: \"אני יודע איך הסיפור הזה צריך להיגמר!\"",
+        "ג'ולייט הסתכלה על כולם.",
+        "\"מספיק!\" היא אמרה."
+      ],
+      "rawPdfExtract": "כולם רוצים להחליט\nאבל בדיוק אז הגיעו הוריה של יוליה.\n\"חוזרים לוורונה!\" הודיעו.\nרומיאו מיהר קדימה.\n\"יוליה, בואי איתי!\"\nשייקספיר הוסיף: \"אני יודע איך הסיפור הזה צריך להיגמר!\"\nיוליה הסתכלה על כולם.\n\"מספיק!\" היא אמרה.\n4541סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-41.png",
+      "sourceArtSha256": "280d3c37aa959e97127f691901f55510fc5d866fe3cd1ed342e3ca9fc5151560",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X351.jpg",
+      "pdfImageJpegSha256": "6a5660cc17b509ba038ffbce44ffd60134b6e3ae8ebc8a0e9b74067f628d7c63",
+      "pdfVersusLosslessSourceMae": 2.8639,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 42,
+      "sourcePdfPage": 48,
+      "printedStoryPage": 46,
+      "act": 2,
+      "canonicalTitle": "זה הסיפור שלי!",
+      "canonicalParagraphs": [
+        "\"כולם אומרים לי מה לעשות,\" אמרה יוליה.",
+        "\"עם מי לדבר, את מי לאהוב ולאן ללכת.\"",
+        "היא נשמה עמוק והרימה את הראש.",
+        "\"אבל החיים שלי הם שלי! אני אחליט!\"",
+        "לרגע כולם שתקו.",
+        "ואז החברים שלה התחילו למחוא כפיים.",
+        "יוליה הרגישה חזקה מאי פעם."
+      ],
+      "paragraphs": [
+        "\"כולם אומרים לי מה לעשות,\" אמרה ג'ולייט.",
+        "\"עם מי לדבר, את מי לאהוב ולאן ללכת.\"",
+        "היא נשמה עמוק והרימה את הראש.",
+        "\"אבל החיים שלי הם שלי! אני אחליט!\"",
+        "לרגע כולם שתקו.",
+        "ואז החברים שלה התחילו למחוא כפיים.",
+        "ג'ולייט הרגישה חזקה מאי פעם."
+      ],
+      "rawPdfExtract": "זה הסיפור שלי\n\"כולם אומרים לי מה לעשות,\" אמרה יוליה.\n\"עם מי לדבר, את מי לאהוב ולאן ללכת.\"\nהיא נשמה עמוק והרימה את הראש.\n\"אבל החיים שלי הם שלי! אני אחליט!\"\nלרגע כולם שתקו.\nואז החברים שלה התחילו למחוא כפיים.\nיוליה הרגישה חזקה מאי פעם.\n▶24רצועהStronger\n42סיפור46",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-42.png",
+      "sourceArtSha256": "b27612b1f494c296f7971b63dd24af2a05780294ae9abdcb2566a32d1c285660",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X359.jpg",
+      "pdfImageJpegSha256": "a87fae4c65cb6a12a53b19a8695aebcd7931d641fb3488b3acdad482c632ff54",
+      "pdfVersusLosslessSourceMae": 2.8547,
+      "musicTrackNumber": 24,
+      "canonicalTrackTitle": "Stronger",
+      "characterReferences": [
+        "juliet",
+        "anne"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 43,
+      "sourcePdfPage": 49,
+      "printedStoryPage": 47,
+      "act": 2,
+      "canonicalTitle": "לאנס מבקש סליחה",
+      "canonicalParagraphs": [
+        "לאנס ניגש לפרנסואה ולמיי.",
+        "\"ניסיתי להחליט בשבילך, בני,\" אמר. \"טעיתי.\"",
+        "פרנסואה לא האמין למשמע אוזניו.",
+        "\"אתה לא כועס?\"",
+        "\"אני בעיקר רוצה שתהיה מאושר.\"",
+        "פרנסואה חיבק את אביו.",
+        "מיי חייך.",
+        "גם אנשים עקשנים יכולים ללמוד דבר חדש."
+      ],
+      "paragraphs": [
+        "לאנס ניגש לפרנסואה ולמיי.",
+        "\"ניסיתי להחליט בשבילך, בני,\" אמר. \"טעיתי.\"",
+        "פרנסואה לא האמין למשמע אוזניו.",
+        "\"אתה לא כועס?\"",
+        "\"אני בעיקר רוצה שתהיה מאושר.\"",
+        "פרנסואה חיבק את אביו.",
+        "מיי חייך.",
+        "גם אנשים עקשנים יכולים ללמוד דבר חדש."
+      ],
+      "rawPdfExtract": "לאנס מבקש סליחה\nלאנס ניגש לפרנסואה ולמיי.\n\"ניסיתי להחליט בשבילך, בני,\" אמר. \"טעיתי.\"\nפרנסואה לא האמין למשמע אוזניו.\n\"אתה לא כועס?\"\n\"אני בעיקר רוצה שתהיה מאושר.\"\nפרנסואה חיבק את אביו. מיי חייך.\nגם אנשים עקשנים יכולים ללמוד דבר חדש.\n▶25רצועהShape of My Heart\n4743סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-43.png",
+      "sourceArtSha256": "f0b19cf03ce8e2213078dc60b694637d3420c670bd8a722e4e95c23190178e41",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X366.jpg",
+      "pdfImageJpegSha256": "250c322e749b0b8998c7835c27b391df5ae307ae9eb3a566e9777abc0695b599",
+      "pdfVersusLosslessSourceMae": 2.254,
+      "musicTrackNumber": 25,
+      "canonicalTrackTitle": "Shape of My Heart",
+      "characterReferences": [
+        "may",
+        "francois",
+        "lance"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 44,
+      "sourcePdfPage": 50,
+      "printedStoryPage": 48,
+      "act": 2,
+      "canonicalTitle": "עכשיו תורך, אנג׳ליק",
+      "canonicalParagraphs": [
+        "אנג׳ליק מצאה את יוליה ונתנה לה חיבוק.",
+        "\"אני תמיד כאן בשבילך,\" אמרה.",
+        "\"אני יודעת,\" חייכה יוליה. \"אבל מה עם החלומות שלך?\"",
+        "אנג׳ליק חשבה על לאנס.",
+        "\"אולי הגיע הזמן שאבחר גם בעצמי,\" לחשה.",
+        "\"בדיוק!\" אמרה יוליה. \"גם לך מגיע להיות מאושרת.\""
+      ],
+      "paragraphs": [
+        "אנג׳ליק מצאה את ג'ולייט ונתנה לה חיבוק.",
+        "\"אני תמיד כאן בשבילך,\" אמרה.",
+        "\"אני יודעת,\" חייכה ג'ולייט. \"אבל מה עם החלומות שלך?\"",
+        "אנג׳ליק חשבה על לאנס.",
+        "\"אולי הגיע הזמן שאבחר גם בעצמי,\" לחשה.",
+        "\"בדיוק!\" אמרה ג'ולייט. \"גם לך מגיע להיות מאושרת.\""
+      ],
+      "rawPdfExtract": "עכשיו תורך, אנג׳ליק\nליק מצאה את יוליה ונתנה לה חיבוק.׳אנג\n\"אני תמיד כאן בשבילך,\" אמרה.\n\"אני יודעת,\" חייכה יוליה. \"אבל מה עם החלומות שלך?\"\nליק חשבה על לאנס.׳אנג\n\"אולי הגיע הזמן שאבחר גם בעצמי,\" לחשה.\n\"בדיוק!\" אמרה יוליה. \"גם לך מגיע להיות מאושרת.\"\n▶26רצועה\n44סיפור48",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-44.png",
+      "sourceArtSha256": "bdd04d4593afe1d0dbbefdf93984f9e6069f7382d29a90c91ead520ac7c3a32b",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X375.jpg",
+      "pdfImageJpegSha256": "087becb87a481a7dbcde65f60d9ef43118dd0583ad62334100dab421761707ca",
+      "pdfVersusLosslessSourceMae": 2.6909,
+      "musicTrackNumber": 26,
+      "canonicalTrackTitle": "Fuckin’ Perfect",
+      "characterReferences": [
+        "juliet",
+        "anne",
+        "angelique",
+        "lance"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 45,
+      "sourcePdfPage": 51,
+      "printedStoryPage": 49,
+      "act": 2,
+      "canonicalTitle": "חברים, בכל זאת",
+      "canonicalParagraphs": [
+        "מיי ופרנסואה ניגשו ליוליה.",
+        "\"סליחה שלא סיפרנו לך בזמן,\" אמר פרנסואה.",
+        "\"פחדנו לפגוע בך,\" הוסיף מיי.",
+        "יוליה חייכה.",
+        "\"הלוואי שהייתם מספרים קודם. אבל אני שמחה שאתם מאושרים.\"",
+        "הם התחבקו.",
+        "ופתאום יוליה ידעה: היא לא צריכה שכולם יסכימו איתה כדי לבחור בדרך שלה."
+      ],
+      "paragraphs": [
+        "מיי ופרנסואה ניגשו לג'ולייט.",
+        "\"סליחה שלא סיפרנו לך בזמן,\" אמר פרנסואה.",
+        "\"פחדנו לפגוע בך,\" הוסיף מיי.",
+        "ג'ולייט חייכה.",
+        "\"הלוואי שהייתם מספרים קודם. אבל אני שמחה שאתם מאושרים.\"",
+        "הם התחבקו.",
+        "ופתאום ג'ולייט ידעה: היא לא צריכה שכולם יסכימו איתה כדי לבחור בדרך שלה."
+      ],
+      "rawPdfExtract": "חברים, בכל זאת\nמיי ופרנסואה ניגשו ליוליה.\n\"סליחה שלא סיפרנו לך בזמן,\" אמר פרנסואה.\n\"פחדנו לפגוע בך,\" הוסיף מיי.\nיוליה חייכה.\n\"הלוואי שהייתם מספרים קודם. אבל אני שמחה שאתם מאושרים.\"\nהם התחבקו.\nופתאום יוליה ידעה: היא לא צריכה שכולם יסכימו איתה כדי לבחור בדרך שלה.\n4945סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-45.png",
+      "sourceArtSha256": "78a02397c31de4a0c0a8e718b22f5aed2419b43c55515ae5c59bf8294eb62efd",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X382.jpg",
+      "pdfImageJpegSha256": "add46eb20d07c022a64e4bd9e0c8d6f66421d34ab88f7568c20a86b7b5dd3496",
+      "pdfVersusLosslessSourceMae": 2.4588,
+      "musicTrackNumber": null,
+      "canonicalTrackTitle": null,
+      "characterReferences": [
+        "juliet",
+        "may",
+        "francois"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 46,
+      "sourcePdfPage": 52,
+      "printedStoryPage": 50,
+      "act": 2,
+      "canonicalTitle": "השאגה של יוליה",
+      "canonicalParagraphs": [
+        "יוליה עלתה גבוה, אל המרפסת שעל הבמה.",
+        "למטה עמדו כל החברים.",
+        "האורות נדלקו. הקונפטי הסתחרר.",
+        "\"אני לא יודעת מה יהיה מחר,\" קראה יוליה.",
+        "\"אבל אני יודעת מי יחליט!\"",
+        "\"מי?!\" הריעו כולם.",
+        "\"אני!\"",
+        "והמוזיקה התפרצה בשאגה אדירה."
+      ],
+      "paragraphs": [
+        "ג'ולייט עלתה גבוה, אל המרפסת שעל הבמה.",
+        "למטה עמדו כל החברים.",
+        "האורות נדלקו. הקונפטי הסתחרר.",
+        "\"אני לא יודעת מה יהיה מחר,\" קראה ג'ולייט.",
+        "\"אבל אני יודעת מי יחליט!\"",
+        "\"מי?!\" הריעו כולם.",
+        "\"אני!\"",
+        "והמוזיקה התפרצה בשאגה אדירה."
+      ],
+      "rawPdfExtract": "השאגה של יוליה\nיוליה עלתה גבוה, אל המרפסת שעל הבמה.\nלמטה עמדו כל החברים.\nהאורות נדלקו. הקונפטי הסתחרר.\n\"אני לא יודעת מה יהיה מחר,\" קראה יוליה.\n\"אבל אני יודעת מי יחליט!\"\n\"מי?!\" הריעו כולם. \"אני!\"\nוהמוזיקה התפרצה בשאגה אדירה.\n▶27רצועהRoar\n46סיפור50",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-46.png",
+      "sourceArtSha256": "59c55119f0c3f79ff509cb6899d587488dde54f7f19bef94202f8b9a71ace3b6",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X390.jpg",
+      "pdfImageJpegSha256": "f16d5295b778668ca60c9a6310c9d89a45b0e856d0daf5ee9c87b2e77c5059f9",
+      "pdfVersusLosslessSourceMae": 2.9122,
+      "musicTrackNumber": 27,
+      "canonicalTrackTitle": "Roar",
+      "characterReferences": [
+        "juliet"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 47,
+      "sourcePdfPage": 53,
+      "printedStoryPage": 51,
+      "act": 2,
+      "canonicalTitle": "אולי נתחיל להכיר מחדש?",
+      "canonicalParagraphs": [
+        "אן ושייקספיר הביטו בבמה.",
+        "\"אני מודה,\" אמר שייקספיר. \"זה סוף לא רע.\"",
+        "\"כי הפעם יוליה בחרה,\" חייכה אן.",
+        "רומיאו ניגש ליוליה.",
+        "\"אז מה עכשיו?\"",
+        "\"אפשר להתחיל בתור חברים,\" אמרה. \"בלי להחליט כבר על הסוף.\"",
+        "רומיאו חייך. \"עסקה!\""
+      ],
+      "paragraphs": [
+        "אן ושייקספיר הביטו בבמה.",
+        "\"אני מודה,\" אמר שייקספיר. \"זה סוף לא רע.\"",
+        "\"כי הפעם ג'ולייט בחרה,\" חייכה אן.",
+        "רומיאו ניגש לג'ולייט.",
+        "\"אז מה עכשיו?\"",
+        "\"אפשר להתחיל בתור חברים,\" אמרה. \"בלי להחליט כבר על הסוף.\"",
+        "רומיאו חייך. \"עסקה!\""
+      ],
+      "rawPdfExtract": "אולי נתחיל להכיר מחדש\nאן ושייקספיר הביטו בבמה.\n\"אני מודה,\" אמר שייקספיר. \"זה סוף לא רע.\"\n\"כי הפעם יוליה בחרה,\" חייכה אן.\nרומיאו ניגש ליוליה.\n\"אז מה עכשיו?\"\n\"אפשר להתחיל בתור חברים,\" אמרה. \"בלי להחליט כבר על הסוף.\"\nרומיאו חייך. \"עסקה!\"\n▶28רצועהI Want It That Way (Reprise)\n5147סיפור",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-47.png",
+      "sourceArtSha256": "4a8619f0c37064fa2d0948a68912fa052348379815493201f65ac782cbaaa7ba",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X397.jpg",
+      "pdfImageJpegSha256": "74bcc213646e9c3f9db28a7798f0801dbd63daf0ecd65d30379aa6d041678011",
+      "pdfVersusLosslessSourceMae": 2.2361,
+      "musicTrackNumber": 28,
+      "canonicalTrackTitle": "I Want It That Way (Reprise)",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne",
+        "romeo"
+      ],
+      "inPhase1": false
+    },
+    {
+      "sourceScene": 48,
+      "sourcePdfPage": 54,
+      "printedStoryPage": 52,
+      "act": 2,
+      "canonicalTitle": "והסיפור? רק מתחיל!",
+      "canonicalParagraphs": [
+        "\"אז מה לכתוב בשורה האחרונה?\" שאל שייקספיר.",
+        "אן לקחה את העיפרון וחייכה.",
+        "\"אולי לא צריך שורה אחרונה.\"",
+        "המוזיקה התחילה שוב.",
+        "כולם עלו לבמה, רקדו וקפצו.",
+        "יוליה הרימה ידיים אל האורות.",
+        "כי לפעמים סוף של סיפור אחד הוא התחלה של משהו נפלא!"
+      ],
+      "paragraphs": [
+        "\"אז מה לכתוב בשורה האחרונה?\" שאל שייקספיר.",
+        "אן לקחה את העיפרון וחייכה.",
+        "\"אולי לא צריך שורה אחרונה.\"",
+        "המוזיקה התחילה שוב.",
+        "כולם עלו לבמה, רקדו וקפצו.",
+        "ג'ולייט הרימה ידיים אל האורות.",
+        "כי לפעמים סוף של סיפור אחד הוא התחלה של משהו נפלא!"
+      ],
+      "rawPdfExtract": "והסיפור? רק מתחיל\n\"אז מה לכתוב בשורה האחרונה?\" שאל שייקספיר.\nאן לקחה את העיפרון וחייכה.\n\"אולי לא צריך שורה אחרונה.\"\nהמוזיקה התחילה שוב.\nכולם עלו לבמה, רקדו וקפצו.\nיוליה הרימה ידיים אל האורות.\nכי לפעמים סוף של סיפור אחד הוא התחלה של משהו נפלא!\n▶29רצועהCAN’T STOP THE FEELING!\n48סיפור52",
+      "sourceArt": "outputs/and-juliet-full-story-v9/assets/page-48.png",
+      "sourceArtSha256": "638d63e8809a095430b152f01c005a857c2c88ea2979aa7e306e54ca3aa1defe",
+      "sourceArtPixels": [
+        1536,
+        1024
+      ],
+      "pdfImageName": "X406.jpg",
+      "pdfImageJpegSha256": "cb59b917dfc1da0c6eb3efb6e0d2d9df2e349b77d8d2d2c456355b9257cfdb62",
+      "pdfVersusLosslessSourceMae": 2.6638,
+      "musicTrackNumber": 29,
+      "canonicalTrackTitle": "CAN’T STOP THE FEELING!",
+      "characterReferences": [
+        "juliet",
+        "shakespeare",
+        "anne"
+      ],
+      "inPhase1": false
+    }
+  ]
+}
