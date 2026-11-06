@@ -2,46 +2,51 @@
   {
     "scene": 3,
     "prompt": "Precise background clean-plate edit. Input is the edit target, the original 1536x1024 children's theatre illustration. Remove ONLY the two large foreground people (Shakespeare at left and Anne at right), Shakespeare's feather quill, and their floor contact shadows. Leave the small distant purple ensemble silhouettes in the back. Fill the removed areas naturally with the same illustrated navy/cobalt brick theatre wall, cyan/magenta stage illumination, and reflective diagonal checkerboard floor. Preserve the original image framing, stage geometry, perspective, curtain placement, trusses, wall lights, background silhouettes, lighting palette and exact camera registration. Do not move, redesign, crop or zoom the scene. Do not add any new people, objects, signs or text. This is a hidden background repair plate for animating exact original foreground pixels; it must look like the identical theatre when the two main actors step out of frame. Drawn 2D comic/storybook rendering identical to the source. Opaque full canvas, no transparency.",
-    "output": "/Users/natiassor/.codex/generated_images/01a1a6c8-e104-79b2-83e9-ac1898ce6085/exec-83affd6b-fba4-4b6f-9e1f-83fd32684354.png",
-    "savedPath": "/Users/natiassor/Documents/Codex/2026-11-04/hh/outputs/and-juliet-premium-full-story-v2/public/assets/premium/scene-03-clean.webp",
+    "output": "source-assets/animation-plates/scene-03-clean.png",
+    "savedPath": "public/assets/premium/scene-03-clean.webp",
     "bytes": 437364,
     "sha256": "6d9c4dac089ec4c4b7aa41bf683070a0ead41f5b400247c737a0ad4de18b5e1c",
-    "method": "Built-in image_gen reference edit, hidden background only; original visible foreground pixels retained by SVG masks"
+    "method": "Built-in image_gen reference edit, hidden background only; original visible foreground pixels retained by SVG masks",
+    "generationId": "exec-83affd6b-fba4-4b6f-9e1f-83fd32684354"
   },
   {
     "scene": 10,
     "prompt": "Precise hidden-background clean-plate edit. Edit target: this original 1536x1024 colourful 2D children's Broadway theatre illustration. Remove ONLY the entire large foreground carriage including ALL its wheels, ornate cabin, lamps, reins and bars, all four seated passengers and the Shakespeare driver, plus the tiny carriage contact shadows/dust drawn at its wheels. Keep the existing theatre wall and balcony structures at both sides, all fixed roof trusses, the magenta painted clouds behind the carriage, the pink/gold stage lighting and the diagonal reflective checkerboard floor wherever already visible. Reconstruct the vacated area as the natural continuation of that SAME theatre set and floor, at exactly the original camera registration and perspective. No vehicle replacement, no people, no new objects or scenery, no text, no logos, no crop/pan/zoom. The reference is the edit target, not permission to restyle it. This background is only a repair layer behind original pixel-preserving foreground cutouts in animation; do not redesign. Opaque full-frame1536x1024 landscape.",
-    "output": "/Users/natiassor/.codex/generated_images/01a1a6c8-e104-79b2-83e9-ac1898ce6085/exec-22120e8e-05ac-4fc7-8a97-236810334503.png",
-    "savedPath": "/Users/natiassor/Documents/Codex/2026-11-04/hh/outputs/and-juliet-premium-full-story-v2/public/assets/premium/scene-10-clean.webp",
+    "output": "source-assets/animation-plates/scene-10-clean.png",
+    "savedPath": "public/assets/premium/scene-10-clean.webp",
     "bytes": 470262,
     "sha256": "93ac5310d1b37ebe3b3b1f2a37aec45abdbe55825cbdf947e703c7208cd83309",
-    "method": "Built-in image_gen reference edit. Hidden background repair; visible character/prop pixels come from the untouched original illustration."
+    "method": "Built-in image_gen reference edit. Hidden background repair; visible character/prop pixels come from the untouched original illustration.",
+    "generationId": "exec-22120e8e-05ac-4fc7-8a97-236810334503"
   },
   {
     "scene": 14,
     "prompt": "Precise background clean-plate edit. Input is the edit target: the original 1536x1024 illustrated chandelier ballroom scene. Remove ONLY the large central floating girl Juliet in pink (including hair, arms, dress, legs, shoes) AND the ENTIRE golden chandelier/swing she sits on: top chandelier crown, crystals, all suspension chains, curved gold swing arms, pink/gold seat and tassels. Fill their vacated silhouette with the exact continuation of the purple/cobalt theatre stage, gold proscenium architecture, pink/cyan light beams, distant ensemble dancers and reflective checkerboard floor. Preserve EVERY other character and their identity, especially the red-orange-dressed woman seated bottom left, the short-haired purple-clothed friend seated lower right and the blonde green-dressed woman seated bottom right. Preserve the original camera, framing, curtains, proscenium arch, trusses, background dance floor layout, perspective and lighting registration. No new people, no new furniture or decorations, no text, no logos, no crop or zoom. This is a hidden clean background repair plate, seen only in small gaps behind exact ORIGINAL pixel cutouts during 2.5D animation; keep unchanged areas aligned to the input. Opaque 1536x1024 landscape.",
-    "output": "/Users/natiassor/.codex/generated_images/01a1a6c8-e104-79b2-83e9-ac1898ce6085/exec-e3f366bc-b87f-473f-9588-11c46ee62f0f.png",
-    "savedPath": "/Users/natiassor/Documents/Codex/2026-11-04/hh/outputs/and-juliet-premium-full-story-v2/public/assets/premium/scene-14-clean.webp",
+    "output": "source-assets/animation-plates/scene-14-clean.png",
+    "savedPath": "public/assets/premium/scene-14-clean.webp",
     "bytes": 568174,
     "sha256": "b144e797897ca0df27d12b334717d830ad1ae50bc258dc945865a2aeb06bca9a",
-    "method": "Built-in image_gen reference edit, hidden background only; original visible foreground pixels retained by SVG masks"
+    "method": "Built-in image_gen reference edit, hidden background only; original visible foreground pixels retained by SVG masks",
+    "generationId": "exec-e3f366bc-b87f-473f-9588-11c46ee62f0f"
   },
   {
     "scene": 24,
     "prompt": "Precise hidden-background clean-plate edit. Edit target: the original 1536x1024 illustrated dramatic Romeo entrance. Remove ONLY the large standing male Romeo in the centre/right, including his hair, whole body, both outstretched arms/hands, pink/black embroidered coat, trousers, sneakers, and his small contact shadow on the circular stage platform. KEEP Juliet at the left absolutely unchanged, including her hair, face, clothing, all limbs and shoes. KEEP the entire illuminated circular platform (shape, horizontal gold rims, pixel-light stripes), LED burst screen behind Romeo, small distant ensemble silhouettes, trusses, curtains, light rig and reflective floor unchanged in placement and framing. Fill Romeo's vacated silhouette with the precise continuation of the navy/cyan/magenta LED starburst screen and blue spotlight; restore the existing empty platform top where his shoes were. No new characters or objects, no text/logos, no crop/zoom/pan, no identity restyling. This is a hidden repair plate behind original pixel-preserving cutouts; preserve scene registration and original drawn storybook comic style. Opaque1536x1024 landscape.",
-    "output": "/Users/natiassor/.codex/generated_images/01a1a6c8-e104-79b2-83e9-ac1898ce6085/exec-fa3fc18b-c849-4c39-a0b0-51cf8033df7c.png",
-    "savedPath": "/Users/natiassor/Documents/Codex/2026-11-04/hh/outputs/and-juliet-premium-full-story-v2/public/assets/premium/scene-24-clean.webp",
+    "output": "source-assets/animation-plates/scene-24-clean.png",
+    "savedPath": "public/assets/premium/scene-24-clean.webp",
     "bytes": 549824,
     "sha256": "7f19830a5370ea0beb36f57517b3a423fe15a4892bccc896b1eeccc5e6756059",
-    "method": "Built-in image_gen reference edit. Hidden background repair; visible character/prop pixels come from the untouched original illustration."
+    "method": "Built-in image_gen reference edit. Hidden background repair; visible character/prop pixels come from the untouched original illustration.",
+    "generationId": "exec-fa3fc18b-c849-4c39-a0b0-51cf8033df7c"
   },
   {
     "scene": 46,
     "prompt": "Precise background clean-plate edit. Input is the original 1536x1024 illustrated Roar finale scene. Remove ONLY the central elevated girl Juliet in blue with her raised microphone, and the entire central green-and-gold flowered balcony structure (semicircular rail, platform, arch and pillars, vines and flowers). Fill those vacated spaces naturally with the same dark navy theatre back wall, magenta/cyan stage lighting, warm gold firework lights and continuation of the reflective checkerboard floor. PRESERVE ALL other people and their exact faces, costumes, positions, hands and proportions: the whole front row cast and the small ensemble on stairs at both sides remain unchanged. Preserve original framing, perspective, curtain edges, roof trusses, staircase geometry, coloured light columns, balloon locations and original painted 2D comic style. Do not crop, pan, zoom, add text, add any characters or redesign. This is a hidden repair/background plate behind exact ORIGINAL cutouts, so preserve the input's pixel registration and everything outside the removed central structure. Opaque full-frame landscape.",
-    "output": "/Users/natiassor/.codex/generated_images/01a1a6c8-e104-79b2-83e9-ac1898ce6085/exec-c4e94013-37e6-4edd-8186-760c4d33219f.png",
-    "savedPath": "/Users/natiassor/Documents/Codex/2026-11-04/hh/outputs/and-juliet-premium-full-story-v2/public/assets/premium/scene-46-clean.webp",
+    "output": "source-assets/animation-plates/scene-46-clean.png",
+    "savedPath": "public/assets/premium/scene-46-clean.webp",
     "bytes": 631496,
     "sha256": "3feed7c791e53555b64e608a72bdd5549a125c192cfc6b56d935c24483a0027c",
-    "method": "Built-in image_gen reference edit, hidden background only; original visible foreground pixels retained by SVG masks"
+    "method": "Built-in image_gen reference edit, hidden background only; original visible foreground pixels retained by SVG masks",
+    "generationId": "exec-c4e94013-37e6-4edd-8186-760c4d33219f"
   }
 ]

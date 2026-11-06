@@ -19,6 +19,13 @@ jobs:
     steps:
       - name: Check out storybook
         uses: actions/checkout@v7
+        with:
+          # The site needs runtime assets, not the archived PNG/PDF masters.
+          sparse-checkout: |
+            .github
+            build
+            public
+            src
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:

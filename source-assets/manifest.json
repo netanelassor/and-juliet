@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "canonicalRuntimeText": "src/content/full-story.json",
+  "canonicalRuntimeChapters": "src/content/chapters-data.json",
+  "sourcePdfSha256": "9f79819126904d02408e7b1af58c1faa13f793654ba2c8e3ffdd59a9b0e1460b",
+  "notes": [
+    "Original story and illustration files are preserved byte for byte.",
+    "Current interactive story uses the approved name ג'ולייט; historical manuscripts retain original wording.",
+    "All paths are relative to the repository root. Current runtime assets stay in public/assets.",
+    "Source generation prompts are history, not instructions to overwrite later approved work."
+  ],
+  "files": [
+    {
+      "path": "source-assets/story-masters/scene-01.png",
+      "role": "lossless original scene",
+      "bytes": 3283218,
+      "sha256": "c8374126b3cff825da34130193b8660c0603c4d72def75c181b2292235ae3e6c",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-01.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-02.png",
+      "role": "lossless original scene",
+      "bytes": 3223408,
+      "sha256": "90eb1b76bc844092387dd09c7fd7731ae9e524c31ff88e6a54cd6fc14b59b376",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-02.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-03.png",
+      "role": "lossless original scene",
+      "bytes": 3096276,
+      "sha256": "d72979bf796b4112e8cf8f45bf4d261f93816e14f75a73dd6406ea602404a266",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-03.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-04.png",
+      "role": "lossless original scene",
+      "bytes": 3310616,
+      "sha256": "a742caa57df453caec63cbc26ebd9ac26b926009d6d9c8ac83fafce06e2deb5b",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-04.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-05.png",
+      "role": "lossless original scene",
+      "bytes": 2926133,
+      "sha256": "1430a26621a3ddd01484efa7c84ca5e5697a2df59c212e7b4d4aee8f274e61c4",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-05.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-06.png",
+      "role": "lossless original scene",
+      "bytes": 3121044,
+      "sha256": "c9e439ff16d17e1c25a44f84175dbb95992d0db2fc8c49ef7e67810c3d7fa7ff",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-06.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-07.png",
+      "role": "lossless original scene",
+      "bytes": 3105522,
+      "sha256": "e0567ca3816fcebe82620d9de01a38ed4ee2b663b578f5568f7ddfac0bfb6aa9",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-07.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-08.png",
+      "role": "lossless original scene",
+      "bytes": 3298172,
+      "sha256": "001f5073a0d22057e3cf38a1518890f2440518a1a20d9ebdf8015e7a477de5f2",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-08.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-09.png",
+      "role": "lossless original scene",
+      "bytes": 3430427,
+      "sha256": "56b4ce2b30c3b4d22f48b79b4ca5c4cbf7d275d515246b1d15ca96ff3b1988b9",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-09.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-10.png",
+      "role": "lossless original scene",
+      "bytes": 3233555,
+      "sha256": "12786d8c57c79192badb15787d6b611ecd8d3b3f574ba32b16dbeb1e41710917",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-10.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-11.png",
+      "role": "lossless original scene",
+      "bytes": 3365321,
+      "sha256": "dda72f2cc355cecd0dcb215797d9454ada6b79bc6e3c2ba7e55423892e5cd768",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-11.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-12.png",
+      "role": "lossless original scene",
+      "bytes": 3290506,
+      "sha256": "1ef84866dca35e459b78b2b9fe2903a228d96ca4133d27c4d7eda5d7e7000856",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-12.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-13.png",
+      "role": "lossless original scene",
+      "bytes": 3191026,
+      "sha256": "76c18e82c79aac4842315b1f31e4e4d2e4b33270e56aeb15535a1378e29c765f",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-13.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-14.png",
+      "role": "lossless original scene",
+      "bytes": 3428675,
+      "sha256": "267ab1d7f754477cfa29e7cd1ae5b8af3d3a158914aedaedb4b709b95721dfe9",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-14.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-15.png",
+      "role": "lossless original scene",
+      "bytes": 2918485,
+      "sha256": "c59d3bf35041d46bea980309e9864c04f8930499317b35a7bbb301d0ca34874b",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-15.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-16.png",
+      "role": "lossless original scene",
+      "bytes": 3355989,
+      "sha256": "2799531d07cb4933dac5cc493ade4ac8de0b9916b2dbfded9c25c7dc0fc87ce8",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-16.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-17.png",
+      "role": "lossless original scene",
+      "bytes": 2868892,
+      "sha256": "ddb45287797a74aa7a72c65a10b5f2d7227547d0078d02ba29e6e4eaea8c555b",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-17.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-18.png",
+      "role": "lossless original scene",
+      "bytes": 3440673,
+      "sha256": "998f83e42632581b86eae14dce3b88d7426b83b66734850d3e492c60c4bf7647",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-18.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-19.png",
+      "role": "lossless original scene",
+      "bytes": 3014739,
+      "sha256": "dbc46a03ba2558174a53ae832eb9cf18393811b92998b9675bc37c2e1e2c1b8e",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-19.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-20.png",
+      "role": "lossless original scene",
+      "bytes": 3375965,
+      "sha256": "2932b3d440b1352d504cd3208a2d9b6be4d91e070f20f9fba9ccaa49174372a4",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-20.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-21.png",
+      "role": "lossless original scene",
+      "bytes": 3031311,
+      "sha256": "f9b9c5ff4e524eca0ceda3a4fc876caa295139793cabffe21eaf49d08e4c8250",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-21.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-22.png",
+      "role": "lossless original scene",
+      "bytes": 2621197,
+      "sha256": "d4dec23412fc1f73000067be3e9adebea5adf4eec11595255aef0e5907ecb898",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-22.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-23.png",
+      "role": "lossless original scene",
+      "bytes": 3284257,
+      "sha256": "1aaefede9e517a6742f693f9aa25ed0bc5fa9b52a6fe9c68c8a258d633b781b7",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-23.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-24.png",
+      "role": "lossless original scene",
+      "bytes": 2882714,
+      "sha256": "bdae3a81c543e24f5de488ec616b56a1c35205c0aa4395b7b46f3df999e94a98",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-24.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-25.png",
+      "role": "lossless original scene",
+      "bytes": 2993447,
+      "sha256": "7f4b446c4ead972acf92ca8fca646298067c7d13559d272cdbf1493e9a1fab63",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-25.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-26.png",
+      "role": "lossless original scene",
+      "bytes": 2766276,
+      "sha256": "a844959ccbfa6f91de4e4584fdf4de014f1a6d92ad8df4c0119cd1ea95688834",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-26.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-27.png",
+      "role": "lossless original scene",
+      "bytes": 2982115,
+      "sha256": "ebc54310152bbe75233bf769dc079988be4f53911cbe10ea536b4a022c8991e3",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-27.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-28.png",
+      "role": "lossless original scene",
+      "bytes": 3104812,
+      "sha256": "f66403aa54b75fba84cbb964491f1b7002e0cd14bc93b55d10a1e3bc712ab08d",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-28.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-29.png",
+      "role": "lossless original scene",
+      "bytes": 3045769,
+      "sha256": "d7deaa299850f8131f62e660dfb96d3ee21ef64651a3e97a72dcd42939ce869e",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-29.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-30.png",
+      "role": "lossless original scene",
+      "bytes": 2876761,
+      "sha256": "e92ad63e1c415e556256ee2bc1f3aa54f203a8bbbbff3914c6e14f74bc87d3b4",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-30.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-31.png",
+      "role": "lossless original scene",
+      "bytes": 3176279,
+      "sha256": "21076d8793d1fa4784fa8e9436dbb71c2cc79a2df11ec61c96598702b4d714df",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-31.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-32.png",
+      "role": "lossless original scene",
+      "bytes": 3131795,
+      "sha256": "99be76ad0506393b9f86dd38eb45f372e9d576e87968954c3cd36a4495b7aba0",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-32.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-33.png",
+      "role": "lossless original scene",
+      "bytes": 3648384,
+      "sha256": "7d192a2bf98e327fe74254cddb68bb5e9e9e1a1eaef95c0820c798e2ecdb5990",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-33.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-34.png",
+      "role": "lossless original scene",
+      "bytes": 3498219,
+      "sha256": "8d0766eb35b9dc8d1f50c1db0a8383b88d13a8fa169bd6f8c870399c1c1d6d8c",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-34.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-35.png",
+      "role": "lossless original scene",
+      "bytes": 3131407,
+      "sha256": "e7d2943dd0ca8b3dba62703a1ded758a280a85f9a7ae9f3241f9348f6eae015e",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-35.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-36.png",
+      "role": "lossless original scene",
+      "bytes": 2960147,
+      "sha256": "a41fd3d9304a3f821fe6dbeee4d4c90bd5387fe89839ed2e2ed58797e01a4cb8",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-36.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-37.png",
+      "role": "lossless original scene",
+      "bytes": 3328472,
+      "sha256": "f2295fb843f6917538d3f164a6372b2b96599de51efb378c0de23e8a2ff925ee",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-37.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-38.png",
+      "role": "lossless original scene",
+      "bytes": 3267684,
+      "sha256": "3bd4149fac4aaa06af73cd30b2ec7c98f27b1beed99096867b29fd83081b3064",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-38.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-39.png",
+      "role": "lossless original scene",
+      "bytes": 3534624,
+      "sha256": "336b535b4c073e062cfd8b0c10c3e9f121180b1faddbcc0afa034dd97aebf3cf",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-39.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-40.png",
+      "role": "lossless original scene",
+      "bytes": 3350402,
+      "sha256": "98561d7d7488ef3c9dcde0860640c98d4844c71df530cd962c7ddcd388d277ff",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-40.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-41.png",
+      "role": "lossless original scene",
+      "bytes": 3496753,
+      "sha256": "280d3c37aa959e97127f691901f55510fc5d866fe3cd1ed342e3ca9fc5151560",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-41.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-42.png",
+      "role": "lossless original scene",
+      "bytes": 3296333,
+      "sha256": "b27612b1f494c296f7971b63dd24af2a05780294ae9abdcb2566a32d1c285660",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-42.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-43.png",
+      "role": "lossless original scene",
+      "bytes": 3033894,
+      "sha256": "f0b19cf03ce8e2213078dc60b694637d3420c670bd8a722e4e95c23190178e41",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-43.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-44.png",
+      "role": "lossless original scene",
+      "bytes": 3294221,
+      "sha256": "bdd04d4593afe1d0dbbefdf93984f9e6069f7382d29a90c91ead520ac7c3a32b",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-44.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-45.png",
+      "role": "lossless original scene",
+      "bytes": 3055419,
+      "sha256": "78a02397c31de4a0c0a8e718b22f5aed2419b43c55515ae5c59bf8294eb62efd",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-45.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-46.png",
+      "role": "lossless original scene",
+      "bytes": 3305488,
+      "sha256": "59c55119f0c3f79ff509cb6899d587488dde54f7f19bef94202f8b9a71ace3b6",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-46.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-47.png",
+      "role": "lossless original scene",
+      "bytes": 3113845,
+      "sha256": "4a8619f0c37064fa2d0948a68912fa052348379815493201f65ac782cbaaa7ba",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-47.png"
+    },
+    {
+      "path": "source-assets/story-masters/scene-48.png",
+      "role": "lossless original scene",
+      "bytes": 3416229,
+      "sha256": "638d63e8809a095430b152f01c005a857c2c88ea2979aa7e306e54ca3aa1defe",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/page-48.png"
+    },
+    {
+      "path": "source-assets/story/and-juliet-book-he.pdf",
+      "role": "Canonical original 60-page book, before approved name replacement",
+      "bytes": 54594960,
+      "sha256": "9f79819126904d02408e7b1af58c1faa13f793654ba2c8e3ffdd59a9b0e1460b",
+      "provenance": "and-juliet-book-he.pdf"
+    },
+    {
+      "path": "source-assets/story/original-story.json",
+      "role": "original pre-name-change48scene manuscript; hash referenced in source-inventory",
+      "bytes": 40022,
+      "sha256": "0ec7aceca0371ce69ac33ddd2ac0b1016ec65045789612d2cdea07c00ed01efd",
+      "provenance": "outputs/and-juliet-source-files/content/story.json"
+    },
+    {
+      "path": "source-assets/story/original-story-he.txt",
+      "role": "original pre-name-change plain text",
+      "bytes": 20385,
+      "sha256": "5daad6edfa9f6564fc57c4b157e37117bb05ab4efa31f5e22dc02b127fc0f477",
+      "provenance": "outputs/and-juliet-source-files/content/story-he.txt"
+    },
+    {
+      "path": "source-assets/cover/base-illustration.png",
+      "role": "base cover illustration, before final logo overlay",
+      "bytes": 2847352,
+      "sha256": "346c79ed32cbd35d1ad815f9be499ad124f25384828e64cadd5071ad6ef60db3",
+      "provenance": "outputs/and-juliet-source-files/art/cover.png"
+    },
+    {
+      "path": "source-assets/cover/assets/english-logo-graphic.png",
+      "role": "approved graphic logo, identical to runtime cover/logo.png",
+      "bytes": 1620495,
+      "sha256": "a8a56113598ab6db151fd842f8891b9599953227dad913bad1a2b29e0138a6ae",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/english-logo-graphic.png"
+    },
+    {
+      "path": "source-assets/cover/front-approved.svg",
+      "role": "self-contained approved cover composition",
+      "bytes": 6640857,
+      "sha256": "cb095d5a7fb3c193da88c90eccb99b226b36886ddea56705a27d57293f0d5140",
+      "provenance": "outputs/and-juliet-refined-samples-v3/editable/03-cover-english-logo.svg"
+    },
+    {
+      "path": "source-assets/cover/front-approved.png",
+      "role": "approved cover final raster",
+      "bytes": 14112354,
+      "sha256": "db25a3f6c4f65263ec1381a26d72e287b0035ea7a65cc1908af8dc372a677358",
+      "provenance": "outputs/and-juliet-full-story-v9/covers/01-front-approved.png"
+    },
+    {
+      "path": "source-assets/characters/cast-sheet.png",
+      "role": "original cast sheet",
+      "bytes": 2571818,
+      "sha256": "74c7e76ebe56c93cd886694dc1233d33e2d73468ae44fbf5adc09073aba6147c",
+      "provenance": "outputs/and-juliet-source-files/art/characters.png"
+    },
+    {
+      "path": "source-assets/cover/editable/back-cover.svg",
+      "role": "editable back cover, relative asset references",
+      "bytes": 478870,
+      "sha256": "62f330bd3e32b74aeb49d08424843ed6da7da9b119916da3d18e63297580a038",
+      "provenance": "outputs/and-juliet-full-story-v9/editable/back-cover.svg"
+    },
+    {
+      "path": "source-assets/cover/back-cover-copy-he.json",
+      "role": "back-cover copy",
+      "bytes": 947,
+      "sha256": "f20a17cadfc5f1c80d845c3cf014ca4d05205ffb2de57ceef4eed2a0ae8b89e5",
+      "provenance": "outputs/and-juliet-full-story-v9/docs/back-cover-copy-he.json"
+    },
+    {
+      "path": "source-assets/cover/assets/apple-album-qr.png",
+      "role": "Apple Music Broadway album QR used by the editable back cover",
+      "bytes": 3021,
+      "sha256": "588b61d397d626f670cd5a9f611a885baca029ad39e7d7b41480d29f74c79d01",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/apple-album-qr.png"
+    },
+    {
+      "path": "source-assets/cover/back-cover.jpg",
+      "role": "Printed back cover render",
+      "bytes": 1700162,
+      "sha256": "742299cd8c77f7fa5be67990133f7cd1d256878eb7e5831ed330af0a9775f316",
+      "provenance": "outputs/and-juliet-full-story-v9/covers/02-back-cover.jpg"
+    },
+    {
+      "path": "source-assets/animation-plates/scene-03-clean.png",
+      "role": "hidden clean-plate original, scene03",
+      "bytes": 2509020,
+      "sha256": "3c243ee7daeb6919613486e56cca490fbb751e2cdd5d6bd6598656c4e9096053",
+      "provenance": "exec-83affd6b-fba4-4b6f-9e1f-83fd32684354.png"
+    },
+    {
+      "path": "source-assets/animation-plates/scene-10-clean.png",
+      "role": "hidden clean-plate original, scene10",
+      "bytes": 2548104,
+      "sha256": "dab33cf0990e2f0279a5fbbe0d1ff662b681522e6b41257481c43034b090c8dc",
+      "provenance": "exec-22120e8e-05ac-4fc7-8a97-236810334503.png"
+    },
+    {
+      "path": "source-assets/animation-plates/scene-14-clean.png",
+      "role": "hidden clean-plate original, scene14",
+      "bytes": 2938774,
+      "sha256": "757a67ff21f73990b5a22731aa057a0cd096ad76dee976130d2150b733fd21be",
+      "provenance": "exec-e3f366bc-b87f-473f-9588-11c46ee62f0f.png"
+    },
+    {
+      "path": "source-assets/animation-plates/scene-24-clean.png",
+      "role": "hidden clean-plate original, scene24",
+      "bytes": 2680787,
+      "sha256": "b932f04a18f4eb0245f22a5a1c705832fba2353e47f0411f13c59408388e3796",
+      "provenance": "exec-fa3fc18b-c849-4c39-a0b0-51cf8033df7c.png"
+    },
+    {
+      "path": "source-assets/animation-plates/scene-46-clean.png",
+      "role": "hidden clean-plate original, scene46",
+      "bytes": 2956993,
+      "sha256": "079d30862776f4064b400b824a64fcf8fae0875fcbeacb0cda8c9bfb4313974f",
+      "provenance": "exec-c4e94013-37e6-4edd-8186-760c4d33219f.png"
+    },
+    {
+      "path": "source-assets/theatre/curtain-illustrated-v1.png",
+      "role": "illustrated curtain original PNG, visually confirmed",
+      "bytes": 2854083,
+      "sha256": "53cd974773c98c3e62e6398428d4687dacabbcdede48fc4f6c821315c73364b6",
+      "provenance": "exec-091d9998-f61f-47cc-aa7a-8bae032dd434.png"
+    },
+    {
+      "path": "source-assets/briefs/and_juliet_production_bible_he.md",
+      "role": "user-provided historical design brief",
+      "bytes": 64951,
+      "sha256": "79757af22f6557eef8d27801917e1337d140f35423aad3ed7eb38f59e21769df",
+      "provenance": "and_juliet_production_bible_he.md"
+    },
+    {
+      "path": "source-assets/briefs/CODEX_AND_JULIET_EDITORIAL_REDESIGN.md",
+      "role": "user-provided historical design brief",
+      "bytes": 11567,
+      "sha256": "cf87ad17a4ab9d172deb386af000263c12cf34ea1fc8da93b5f131dafa4992ec",
+      "provenance": "CODEX_AND_JULIET_EDITORIAL_REDESIGN.md"
+    },
+    {
+      "path": "source-assets/briefs/AND_JULIET_INTERACTIVE_IPAD_CODEX_BRIEF.md",
+      "role": "user-provided historical design brief",
+      "bytes": 18913,
+      "sha256": "ac06d9e67d16100ec60155409a84a8e362c55f9993e50a4a746b8282239122bb",
+      "provenance": "AND_JULIET_INTERACTIVE_IPAD_CODEX_BRIEF.md"
+    },
+    {
+      "path": "source-assets/briefs/and_juliet_production_bible_he.html",
+      "role": "Historical illustrated production bible",
+      "bytes": 5746745,
+      "sha256": "66c0ce4d38117f7d96b4c0d9daacba6052456113a9bb1fcf8c556bd5c623c1b4",
+      "provenance": "and_juliet_production_bible_he.html"
+    },
+    {
+      "path": "source-assets/prompts/cover.json",
+      "role": "original art generation prompt set",
+      "bytes": 1689,
+      "sha256": "86d9a667840e4a9fb649bce455bbaaf8291215ca839f5d1871570e4beba8ff97",
+      "provenance": "outputs/and-juliet-source-files/prompts/cover.json"
+    },
+    {
+      "path": "source-assets/prompts/prompts-01-16.json",
+      "role": "original art generation prompt set",
+      "bytes": 76706,
+      "sha256": "2a4b26612568dcd9dd72556e6ef9b09a0e69f2d5522e8cc96388b86356182fc7",
+      "provenance": "outputs/and-juliet-source-files/prompts/prompts-01-16.json"
+    },
+    {
+      "path": "source-assets/prompts/prompts-15-16-final.json",
+      "role": "original art generation prompt set",
+      "bytes": 3834,
+      "sha256": "382d66af8b434f7d2191abe72ec0fc2743a761595a4f848c570e6921f28edeb4",
+      "provenance": "outputs/and-juliet-source-files/prompts/prompts-15-16-final.json"
+    },
+    {
+      "path": "source-assets/prompts/prompts-17-32.json",
+      "role": "original art generation prompt set",
+      "bytes": 28887,
+      "sha256": "02afd6345addebb8ec6933a41cc4c9b0216a18234a43e6f242f0d50868ba86ec",
+      "provenance": "outputs/and-juliet-source-files/prompts/prompts-17-32.json"
+    },
+    {
+      "path": "source-assets/prompts/prompts-33-48.json",
+      "role": "original art generation prompt set",
+      "bytes": 11237,
+      "sha256": "eaa7e28f05ba24c69f015436bf110d286c9a054af527ccb26b09e5efef81f856",
+      "provenance": "outputs/and-juliet-source-files/prompts/prompts-33-48.json"
+    },
+    {
+      "path": "source-assets/prompts/prompts-characters.json",
+      "role": "original art generation prompt set",
+      "bytes": 2268,
+      "sha256": "1028dd8d00356eca9d7a7b1f2840c30d3c7df679dbe958f02d21c4398b8b62f2",
+      "provenance": "outputs/and-juliet-source-files/prompts/prompts-characters.json"
+    },
+    {
+      "path": "source-assets/prompts/prompts-parent-final.json",
+      "role": "original art generation prompt set",
+      "bytes": 9892,
+      "sha256": "9b6a2e24f6e6a205c091fdec116977c394a1a555d0abae819929d45dd0e4636a",
+      "provenance": "outputs/and-juliet-source-files/prompts/prompts-parent-final.json"
+    },
+    {
+      "path": "source-assets/original-production/production-metadata.json",
+      "role": "Historical original production metadata",
+      "bytes": 6307,
+      "sha256": "2028093984bacbb9a78d4d55e3078e5a15d1acf42774d1e15329b02efbb7e64d",
+      "provenance": "outputs/and-juliet-source-files/production-metadata.json"
+    },
+    {
+      "path": "source-assets/original-production/content/music.json",
+      "role": "Historical original production metadata",
+      "bytes": 5850,
+      "sha256": "37d75402770088bf1f13d0392746c079183c52586dbd97f4cffa36d87079ad55",
+      "provenance": "outputs/and-juliet-source-files/content/music.json"
+    },
+    {
+      "path": "source-assets/fonts/Rubik-VariableFont_wght.ttf",
+      "role": "Historical print font; current web font is public/assets/fonts/Rubik-Regular.ttf",
+      "bytes": 356080,
+      "sha256": "7604615c681d3594432cb7f1b592657d1cac98acdb60c7e95619cddda19b265f",
+      "provenance": "outputs/and-juliet-full-story-v9/assets/Rubik-VariableFont_wght.ttf"
+    },
+    {
+      "path": "source-assets/references/musical-logo-reference.png",
+      "role": "User supplied visual reference; historical art direction",
+      "bytes": 1263179,
+      "sha256": "eff81adeb3bae3a2130218a03346f1e73799a557c9ff5f9e93ffbca3e26683e5",
+      "provenance": "codex-clipboard-75045048-eb12-4210-b792-3a2b5d50884e.png"
+    },
+    {
+      "path": "source-assets/references/early-spread-reference.png",
+      "role": "User supplied visual reference; historical art direction",
+      "bytes": 3388659,
+      "sha256": "5de30fda143e02ad5a6c197784c5d17c3d300b8a94d6a7d1eb1bd9224b512cb3",
+      "provenance": "codex-clipboard-74106cb8-afd4-4c12-99d5-7cdb84e86bb6.png"
+    },
+    {
+      "path": "source-assets/references/composition-reference.png",
+      "role": "User supplied visual reference; historical art direction",
+      "bytes": 3030930,
+      "sha256": "f55373f452c920f483ef83e75d9349f8e11a748df3be638fd768301e1b11b1bc",
+      "provenance": "codex-clipboard-8be7caa7-2bc5-4e48-88cc-c5144e32c086.png"
+    },
+    {
+      "path": "source-assets/briefs/early-editorial-review-he.txt",
+      "role": "User supplied historical review; later approved product takes precedence",
+      "bytes": 15167,
+      "sha256": "10084d51dc3f01b85680de2d568bdea5ceb0b96633f33bcda06d8fac0c5ed07c",
+      "provenance": "Pasted text.txt"
+    },
+    {
+      "path": "source-assets/briefs/emotional-pacing-review-he.txt",
+      "role": "User supplied historical review; later approved product takes precedence",
+      "bytes": 8616,
+      "sha256": "2190749a111316534b040d5e39189cb413b56f0583edaae565ddbc44144935be",
+      "provenance": "Pasted text.txt"
+    },
+    {
+      "path": "source-assets/briefs/interactive-site-review-he.txt",
+      "role": "User supplied historical review; later approved product takes precedence",
+      "bytes": 16282,
+      "sha256": "d63fb2cbdfe928c2c64d388248ab8d874b11fbd7064784fb20862d9b53233978",
+      "provenance": "Pasted text.txt"
+    },
+    {
+      "path": "source-assets/theatre/CURTAIN_ART_DIRECTION.md",
+      "role": "Illustrated curtain generation prompt and art direction",
+      "bytes": 3058,
+      "sha256": "33b393c2fab089bc3b28e6bea6a14c1a2ccaf9e1cfa03a706eb85c500a5cb400",
+      "provenance": "outputs/and-juliet-interactive-full-story/docs/CURTAIN_ART_DIRECTION.md"
+    },
+    {
+      "path": "source-assets/README.md",
+      "role": "Source bundle index",
+      "bytes": 2257,
+      "sha256": "79389c6c8123e91798c047e8b9fef586b1c69773e3009ff27ebe1c6242c4b79e",
+      "provenance": "Prepared for the GitHub source handoff"
+    },
+    {
+      "path": "source-assets/tools/generate-pixel-mattes.py",
+      "role": "Portable data-only offline authoring helper",
+      "bytes": 7977,
+      "sha256": "86e87c28a840d0b6ff066b40106a952f667e306219b0067c63db5bb0d70036bd",
+      "provenance": "Prepared for the GitHub source handoff"
+    },
+    {
+      "path": "source-assets/STORY_INDEX.md",
+      "role": "Source bundle scene index",
+      "provenance": "Prepared for the GitHub source handoff",
+      "bytes": 5288,
+      "sha256": "cc08c0967dd243c771fa314c03002648cfbaeb4ad64af5d0ae64f77d65b32672"
+    }
+  ],
+  "fileCount": 90,
+  "totalBytes": 268112239
+}

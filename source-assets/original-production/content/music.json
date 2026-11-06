@@ -1,0 +1,256 @@
+{
+  "album_title": "& Juliet (Original Broadway Cast Recording)",
+  "album_url": "https://open.spotify.com/album/2lZR9j0d9P7u7bvJZwJOKD",
+  "verified_tracklist_url": "https://open.spotify.com/embed/album/2lZR9j0d9P7u7bvJZwJOKD",
+  "track_count": 30,
+  "tracks": [
+    {
+      "number": 1,
+      "title": "Larger Than Life",
+      "child_display_title": "Larger Than Life"
+    },
+    {
+      "number": 2,
+      "title": "I Want It That Way",
+      "child_display_title": "I Want It That Way"
+    },
+    {
+      "number": 3,
+      "title": "…Baby One More Time",
+      "child_display_title": "…Baby One More Time"
+    },
+    {
+      "number": 4,
+      "title": "Show Me the Meaning of Being Lonely",
+      "child_display_title": "Show Me the Meaning of Being Lonely"
+    },
+    {
+      "number": 5,
+      "title": "Domino",
+      "child_display_title": "Domino"
+    },
+    {
+      "number": 6,
+      "title": "Show Me Love",
+      "child_display_title": "Show Me Love"
+    },
+    {
+      "number": 7,
+      "title": "Blow",
+      "child_display_title": "Blow"
+    },
+    {
+      "number": 8,
+      "title": "I’m Not a Girl, Not Yet a Woman",
+      "child_display_title": "I’m Not a Girl, Not Yet a Woman"
+    },
+    {
+      "number": 9,
+      "title": "Overprotected",
+      "child_display_title": "Overprotected"
+    },
+    {
+      "number": 10,
+      "title": "Confident",
+      "child_display_title": "Confident"
+    },
+    {
+      "number": 11,
+      "title": "Teenage Dream / Break Free",
+      "child_display_title": "Teenage Dream / Break Free"
+    },
+    {
+      "number": 12,
+      "title": "Oops!...I Did it Again",
+      "child_display_title": "Oops!...I Did it Again"
+    },
+    {
+      "number": 13,
+      "title": "I Kissed A Girl",
+      "child_display_title": "I Kissed A Girl"
+    },
+    {
+      "number": 14,
+      "title": "It’s My Life",
+      "child_display_title": "It’s My Life"
+    },
+    {
+      "number": 15,
+      "title": "Love Me Like You Do",
+      "child_display_title": "Love Me Like You Do"
+    },
+    {
+      "number": 16,
+      "title": "Since U Been Gone",
+      "child_display_title": "Since U Been Gone"
+    },
+    {
+      "number": 17,
+      "title": "Whataya Want from Me",
+      "child_display_title": "Whataya Want from Me"
+    },
+    {
+      "number": 18,
+      "title": "One More Try",
+      "child_display_title": "One More Try"
+    },
+    {
+      "number": 19,
+      "title": "Problem / Can’t Feel My Face",
+      "child_display_title": "Problem / Can’t Feel My Face"
+    },
+    {
+      "number": 20,
+      "title": "That’s the Way It Is",
+      "child_display_title": "That’s the Way It Is"
+    },
+    {
+      "number": 21,
+      "title": "Everybody",
+      "child_display_title": "Everybody"
+    },
+    {
+      "number": 22,
+      "title": "As Long as You Love Me",
+      "child_display_title": "As Long as You Love Me"
+    },
+    {
+      "number": 23,
+      "title": "It’s Gonna Be Me",
+      "child_display_title": "It’s Gonna Be Me"
+    },
+    {
+      "number": 24,
+      "title": "Stronger",
+      "child_display_title": "Stronger"
+    },
+    {
+      "number": 25,
+      "title": "Shape of My Heart",
+      "child_display_title": "Shape of My Heart"
+    },
+    {
+      "number": 26,
+      "title": "Fuckin’ Perfect",
+      "child_display_title": "רצועה 26"
+    },
+    {
+      "number": 27,
+      "title": "Roar",
+      "child_display_title": "Roar"
+    },
+    {
+      "number": 28,
+      "title": "I Want It That Way (Reprise)",
+      "child_display_title": "I Want It That Way (Reprise)"
+    },
+    {
+      "number": 29,
+      "title": "CAN’T STOP THE FEELING!",
+      "child_display_title": "CAN’T STOP THE FEELING!"
+    }
+  ],
+  "bonus_track": {
+    "number": 30,
+    "title": "Since U Been Gone - Juliet’s Version"
+  },
+  "stage_order_track_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "act_1_track_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "act_2_track_numbers": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "act_break": {
+    "after_story_page": 24,
+    "after_track_number": 14,
+    "after_track_title": "It’s My Life"
+  },
+  "corrections": [
+    {
+      "story_page": 42,
+      "correct_track_number": 24,
+      "title": "Stronger"
+    },
+    {
+      "story_page": 43,
+      "correct_track_number": 25,
+      "title": "Shape of My Heart"
+    }
+  ],
+  "notes_he": "קישור Spotify שסופק מציג את Stronger כרצועה 24 ואת Shape of My Heart כרצועה 25. בתיק ההפקה מספרי שתי הרצועות הוחלפו. גם סדר הבמה המתועד ב-IBDB הוא Stronger לפני Shape of My Heart. רצועה 30 היא גרסת בונוס ואינה חלק מרשימת 29 שירי המופע.",
+  "sources": [
+    {
+      "title": "Spotify official album track list",
+      "url": "https://open.spotify.com/embed/album/2lZR9j0d9P7u7bvJZwJOKD",
+      "supports": "All 30 titles and track numbers; Stronger24, Shape25."
+    },
+    {
+      "title": "IBDB Broadway production songs",
+      "url": "https://www.ibdb.com/broadway-production/-juliet-534962",
+      "supports": "Act 1 ends with It’s My Life; Act 2 begins Love Me Like You Do; Stronger precedes Shape of My Heart."
+    },
+    {
+      "title": "Apple Music official album",
+      "url": "https://music.apple.com/us/album/juliet-original-broadway-cast-recording/1643207110",
+      "supports": "Original Broadway album published October 28, 2022; 30 songs; MTM Musical LLC / Atlantic copyright."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "page": 15,
+    "prompt": "Use case: illustration-story. Create ONE original finished wide landscape3:2 illustration for story page15 of a Hebrew children's musical theater book. The attached reference shows the two characters' faces, clothes, style and colors ONLY; do NOT use its kissing pose. NEW SCENE: Their FIRST MEETING earlier in the story. ONLY TWO PEOPLE, Francois and May, no other cast. Francois the curlydarkhair warmbrownskin youngadult male in cobaltblue Renaissance floral jacket, white shirt, bluetrousers and bluesneakers sits shyly on a theater staircase with a small lute on his knees. May the androgynous nonbinary warmtan youngadult with short dark sideundercut hair, lilacviolet corset over whiteshirt, purple loose trousers and purplesneakers stands or sits at comfortable distance, leaning slightly toward Francois, friendly open palms asking what he dreams of. Both have eyes OPEN, kind shy curious faces, talking and smiling. No kissing, no touching faces, no romantic close contact yet. Quiet side corner of a lavish pop Renaissance BALL SET: purple gilt curving arch atback, midnight brick, blue and cyan LED circles, checkerboard theatrical floor, small steelrail. Clear varied composition, mediumwide characterslarge. Crisp expressive premium handdrawn2D animation ink outlines, richflatcolor subtlehalftone, saturated cobalt fuchsia purple gold. Not3D, not watercolor, not photoreal. All faces and hands within central80% safe area. Single coherent illustration, no collage, no letters, no text, no signage, no logos. High resolution ideally3600x2200.",
+    "file": "page-15.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "built-in image_gen",
+    "reference": "page-22.png",
+    "review": "Correct two characters, first meeting, conversational pose. Layout aligns top to preserve May's hair."
+  },
+  {
+    "page": 16,
+    "prompt": "Use case: illustration-story. Create ONE finished WIDE LANDSCAPE3:2 illustration for page16 of a Hebrew age6 picturebook about a musical. Attached CHARACTER SHEET is identity/style reference ONLY. Draw ONLY TWO of those people, no other cast anywhere: JULIET (top left on sheet) and MAY (top right on sheet). Juliet is brownskin darkvoluminouscurlyponyhair with bluebow, fuchsia corset layeredpinkskirt and pinksneakers. May is androgynous nonbinary youngadult warmtan skin shortdark sideundercut hair, lilacviolet Renaissance corset over whitepuffedshirt, purple loosepants and purplesneakers. Quiet tendercomic scene in a side nook of the theater ballroom. Juliet and May sit sidebyside on two low stage steps, both faces OPENeyes clearly visible, warm supportive friendly conversation. Juliet smiling cheekily with tilted head and an encouraging hand on May's shoulder. May looking slightly shy, then breaking into a sincere small smile, onehand on chest, natural body. This illustrates May explaining 'I am simply May', not a girlorboy, no shame, Juliet a loyalfriend. Background just midnightindigo brickwall with a small pastel lavender/teal doorway and coolcyan footlights, hint of purplepartyglow in distance. NO TOILET SYMBOLS or labels, no gendericons, no written words. Rich expressive2D handdrawn animation, stablecrisp ink, deep saturatedpalette, subtlehalftone, Renaissance mixed withstreetwear, premium finishedstorybook same style asreference. Not3D, notDisneyprincess, notwatercolor, notphoto. Two largecharacters only, faces and hands inside central80%, room to crop5% topbottom. No collage, no text, no logo. Ideally3600x2200pixels.",
+    "file": "page-16.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "built-in image_gen",
+    "reference": "characters.png",
+    "review": "Correct two characters, Juliet pink, May lilac, warm supportive conversation. Layout aligns top to preserve heads."
+  }
+]
