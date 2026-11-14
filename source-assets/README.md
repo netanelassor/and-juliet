@@ -9,6 +9,7 @@ These files are tracked directly in Git. A normal clone includes the originals; 
 | `cover/` | Approved front cover PNG and self-contained editable SVG, base painting, graphic logo, back cover and album QR |
 | `characters/` | Original cast reference sheet |
 | `animation-plates/` | Five original PNG background repairs for layered animation |
+| `performance/` | Three lossless PNG pose sheets for scenes 38, 46 and 48, plus generation prompts |
 | `theatre/` | Original illustrated curtain PNG and generation notes |
 | `prompts/` | Original cover, cast and scene generation prompts |
 | `briefs/` and `references/` | Historical user-supplied production briefs, reviews and visual references |

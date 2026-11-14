@@ -86,20 +86,9 @@
   left: clamp(22px, 4vw, 54px);
   padding: 0;
   min-height: 0;
+  background: none;
 }
 .app.premium-showcase.live-musical .premium-stage-footer > p {display: none;}
-.app.premium-showcase.live-musical .premium-stage-footer button {
-  min-height: 52px;
-  padding: 0 19px;
-  gap: 10px;
-  font-size: 15px;
-  color: var(--live-gold);
-  border: 1px solid #e7aa55b8;
-  border-radius: 10px;
-  background: linear-gradient(120deg, #391a3fef, #211229f5);
-  box-shadow: 0 0 24px #ed7a3e32;
-}
-.app.premium-showcase.live-musical .premium-stage-footer button:disabled {opacity: .55;}
 .app.premium-showcase.live-musical .reading-panel {
   display: block;
   width: 38%;

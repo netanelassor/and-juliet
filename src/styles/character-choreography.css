@@ -1,0 +1,39 @@
+.character-choreography {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.character-choreography img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.choreography-light {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 26% 18%, #ffd5aa56, transparent 58%),
+    radial-gradient(ellipse at 76% 18%, #e599f544, transparent 54%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.character-choreography[data-choreography="46"] .choreography-light {
+  background: radial-gradient(ellipse at 50% 32%, #ffd5aa68, transparent 36%);
+}
+
+.character-choreography + .stage-moment-effect {
+  z-index: 4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character-choreography { display: none; }
+}

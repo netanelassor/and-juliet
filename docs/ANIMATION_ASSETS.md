@@ -1,8 +1,8 @@
 # Animation assets and maintenance
 
-The animation uses the existing paintings as its visible foreground. SVG mattes sample the RGB pixels of `public/assets/story/scene-NN.webp`; no newly generated character drawing replaces those pixels. Separate clean plates fill the small spaces exposed when an original-pixel layer moves. All paintings, mattes and plates share a **1536 × 1024** coordinate system.
+SVG mattes sample the RGB pixels of `public/assets/story/scene-NN.webp`. Separate clean plates fill the small spaces exposed when an original-pixel layer moves. The original paintings, mattes and clean plates share a **1536 × 1024** coordinate system. Three musical scenes also use supplementary drawn poses during the choreography. Their original paintings remain the static fallback.
 
-The paths below are portable repository-relative names. `source-assets/` is the source asset bundle; if delivered as a GitHub Release archive, extract it at the repository root. The application serves the smaller assets in `public/assets/`, not the archival PNGs. The final TypeScript mattes are authoritative; there are no separate transparent character PNGs or missing actor sprite sheets to recover. The application does not require a segmentation service, Python or an image-generation API.
+The paths below are portable repository-relative names. `source-assets/` is the source asset bundle. If delivered as a GitHub Release archive, extract it at the repository root. The application serves the smaller WebP files in `public/assets/`. The TypeScript mattes are authoritative for original-pixel animation. The pose sheets and generation prompts are archived alongside the other artwork. Runtime requires no external segmentation or image-generation service.
 
 ## Source files to retain
 
@@ -26,7 +26,7 @@ All six generated PNG originals above are 1536 × 1024. Full clean-plate prompts
 | 10, carriage | `components/JourneyStage.tsx`; `motion/journey-masks.ts`; `styles/journey-stage.css` | Original coach/riders bob about 1.8 source pixels. Two original spoke/hub mattes rotate inside stationary elliptical rims; inverse projection makes the rotation circular before restoring perspective. The normalized SVG image **must keep `preserveAspectRatio="none"`**. Blue floor apertures are excluded from the wheel paint matte. |
 | 14, chandelier | `components/PremiumStage.tsx`; `motion/premium-masks.ts`; `styles/premium-stage.css` | Juliet, seat, chains, crystals and fixture move as a pendulum around the top suspension. Keep the current swing within approximately ±1.1°; larger movement exposes imperfect hair/chain edges. Supporting audience stays fixed. |
 | 24, Romeo entrance | `components/JourneyStage.tsx`; `motion/journey-masks.ts`; `styles/journey-stage.css` | Original Romeo enters about 8 source pixels into the followspot, then remains visible through a restrained repeating pose/light loop (about 1.7px movement). Original floor/pedestal foreground from y720 down remains on top. No repeated closed curtain. |
-| 46, Roar | `components/PremiumStage.tsx`; `motion/premium-masks.ts`; `styles/premium-stage.css` | Original Juliet and upper platform rise gently (currently 8 source pixels). The original foreground from **y568 down** stays fixed, preserving every front-row cast pixel and support column. This is an upper-platform lift, not translation of the whole balcony set. |
+| 46, Roar | `components/PremiumStage.tsx`; `motion/premium-masks.ts`; `styles/premium-stage.css` | Original Juliet and upper platform rise gently (currently 8 source pixels). The original foreground from **y568 down** stays fixed, preserving every front-row cast pixel and support column. The keyframe performance adds the microphone lift described below. |
 
 Import paths above start at `src/`. `App.tsx` selects the five layered renderers. Other scenes use `Stage.tsx`, `TheatricalEffects.tsx` and `motion/scene-motion.ts` for scene-specific stage effects around their complete original paintings.
 
@@ -41,7 +41,7 @@ Motion repeats automatically; deliberate replay is optional. The `motion`/`mode`
 5. Keep the existing runtime WebP bytes when possible. The color-derived wheel and balcony mattes were derived from those encoded pixels. Re-encoding a PNG master can change edge colors even if dimensions stay identical; inspect a few moved frames before replacing it.
 6. Inspect registration and the cutout edges at rest and during movement at iPad landscape size. A successful build packages the app; no additional automated test suite is required for these asset edits.
 
-This is bounded 2.5D cutout animation. It does not provide independently rigged limbs, facial acting, lip synchronization or generated character video. Some hand-traced edges carry tiny backdrop slivers; conservative travel is intentional.
+The original-pixel scenes use 2.5D cutouts. Some hand-traced edges carry tiny backdrop slivers, so travel is kept within the documented bounds.
 
 ## Portable pixel-matte authoring helper
 
@@ -67,8 +67,25 @@ The older `make-wheel-paths.py` and `generate-scene46-matte.py` scratch helpers 
 
 The source-asset manifest and provenance records identify the archived PNG originals and their hashes. Future maintenance should use those repository-relative bundle paths, never a previous developer's local image-generation cache.
 
-## Live Musical poses
+## Choreography and stage cues
 
-Scene 06 and scene 38 use `src/components/PaintedPerformance.tsx` and `src/motion/painted-gesture.ts`. The runtime samples the existing WebPs in master-image coordinates. Scene 06 moves four local regions with fixed scenery. Scene 38 coordinates five shoulder regions, with Lance moving against the other four. Both fall back to the original images when WebGL is unavailable or motion is off. The animation and official music player run independently. The Hebrew production and asset brief is [LIVE_MUSICAL_DIRECTION_HE.md](LIVE_MUSICAL_DIRECTION_HE.md).
+Scene 06 uses `src/components/PaintedPerformance.tsx` and `src/motion/painted-gesture.ts` to move four local regions of the original artwork. WebGL availability and the motion settings determine whether the drawn movement plays. The Hebrew production and asset brief is [LIVE_MUSICAL_DIRECTION_HE.md](LIVE_MUSICAL_DIRECTION_HE.md).
 
-`StageCue.tsx` places a focusable touch target on the relevant part of the painting in scenes 03, 06, 10, 14, 24, 28, 38, 46 and 48. The carriage cue increases the rate of the existing wheel rotation, then eases back to its ambient pace. The chandelier cue starts a swing, and the adjacent drag area sets the swing direction. `StageMoments.tsx` draws the split-feather effect in 28 and the audience's clapping silhouettes in 48 over the unchanged paintings. These moments repeat after a rest and can also be triggered on touch. The next production assets needed for larger character acting are the three matching band poses for scene 38, a separate arm with the microphone for 46, and a matching cast bow pose for 48.
+`StageCue.tsx` places a focusable touch target on the relevant part of the painting in scenes 03, 06, 10, 14, 24, 28, 38, 46 and 48. The carriage cue increases the rate of the existing wheel rotation, then eases back to its ambient pace. The chandelier cue starts a swing, and the adjacent drag area sets the swing direction. `StageMoments.tsx` draws the split-feather effect in 28 and the audience's clapping silhouettes in 48. The effects repeat after a rest and can also be triggered by touch.
+
+The six keyframes below were generated with the built-in ImageGen using the original paintings as references. Each archived 2172 × 724 PNG sheet contains two 1086 × 724 cells with a fixed camera. Each runtime WebP is one of those cells at native resolution. Use `x=0` for `prep` and `x=1086` for `hit`. The animation and official music player run independently. [Generation prompts](../source-assets/performance/PROMPTS.md)
+
+| Scene | Prep and hit poses | Archived sheet |
+| --- | --- | --- |
+| 38, wedding band | A collective crouch followed by a knee lift and reach. Lance opens his arm across the other four performers' synchronized reach. | [scene-38-keyframes.png](../source-assets/performance/scene-38-keyframes.png) |
+| 46, Roar | Juliet holds the microphone near her mouth, then lifts it overhead on the balcony. | [scene-46-keyframes.png](../source-assets/performance/scene-46-keyframes.png) |
+| 48, curtain call | Eight cast members face the house and then bend forward together. | [scene-48-keyframes.png](../source-assets/performance/scene-48-keyframes.png) |
+
+To recreate a runtime crop, use FFmpeg with libwebp. Put both WebPs for each scene in `public/assets/performance/`. The offline build checks for all six and records their hashes.
+
+```sh
+ffmpeg -i source-assets/performance/scene-38-keyframes.png \
+  -vf 'crop=1086:724:0:0,format=yuv420p' -frames:v 1 \
+  -c:v libwebp -quality 88 -compression_level 6 \
+  public/assets/performance/scene-38-prep.webp
+```

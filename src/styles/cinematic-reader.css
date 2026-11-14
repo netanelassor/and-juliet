@@ -50,15 +50,31 @@ html:has(.app.live-musical) {scroll-padding-bottom: 108px;}
   text-shadow: 0 5px 22px #0808179c;
 }
 .app.premium-showcase.live-musical .reading-panel .story-copy {scroll-margin-block: 90px 112px;}
-.app.premium-showcase.live-musical .premium-stage-footer button {
-  border-radius: 999px;
+.app.premium-showcase.live-musical .premium-stage-footer > button {
+  min-height: 48px;
+  padding: 0 10px;
+  gap: 9px;
+  font-size: 15px;
   color: #fff0c2;
-  border-color: #f9ca8279;
-  background: #1b172fe8;
-  box-shadow: 0 8px 26px #09071960, inset 0 1px #fff1;
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  text-shadow: 0 0 2px #150d26, 0 1px 3px #150d26, 0 1px 7px #150d26;
 }
-.app.premium-showcase.live-musical .premium-stage-footer button:hover:not(:disabled) {
-  background: #362a48;
+.app.premium-showcase.live-musical .premium-stage-footer > button svg {
+  color: #ffd16b;
+  filter: drop-shadow(0 1px 2px #210e25) drop-shadow(0 0 5px #ffc06663);
+}
+.app.premium-showcase.live-musical .premium-stage-footer > button span {
+  text-decoration: underline;
+  text-decoration-color: #ffd16bb0;
+  text-underline-offset: .36em;
+}
+.app.premium-showcase.live-musical .premium-stage-footer > button:not(:disabled):is(:hover, :focus-visible) {
+  color: #fff9e7;
+}
+.app.premium-showcase.live-musical .premium-stage-footer > button:not(:disabled):is(:hover, :focus-visible) span {
+  text-decoration-color: currentColor;
 }
 .live-musical .scene-light-crossing {
   position: absolute;
@@ -278,6 +294,7 @@ html:has(.app.live-musical) {scroll-padding-bottom: 108px;}
 
 @media (orientation: landscape) and (min-width: 761px) {
   .app.live-musical .reader-layout[data-family="quiet"] .stage-picture {top: 0;}
+  .app.premium-showcase.live-musical .reader-layout[data-density="dense"]:has(+ .live-floor) .reading-panel {padding-bottom: 24px;}
   .app.live-musical:has(.music-dock-expanded) .stage .premium-stage-footer {
     left: min(38%, 430px);
   }
