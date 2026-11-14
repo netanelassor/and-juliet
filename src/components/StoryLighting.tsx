@@ -6,14 +6,12 @@ type LightingCue = {label: string; announcement: string; target: [number, number
 
 const lighting: Partial<Record<number, LightingCue>> = {
   19: {label: 'להדליק אור לשניים', announcement: 'אנג׳ליק ולאנס מזהים זה את זו.', target: [50, 66], pools: [[32, 31, 'rose'], [64, 30, 'gold']]},
-  22: {label: 'להאיר את השיחה', announcement: 'אור רך מתקרב אל מיי ופרנסואה.', target: [48, 71], pools: [[38, 34, 'blue'], [60, 36, 'rose']]},
   27: {label: 'לראות מי מחזיק בנוצה', announcement: 'אור נפרד מאיר את אן ואת שייקספיר בזמן הוויכוח.', target: [50, 70], pools: [[34, 34, 'rose'], [69, 36, 'gold']]},
   29: {label: 'להאיר את מיי', announcement: 'מיי מקבל רגע באור, ופרנסואה מקשיב.', target: [49, 74], pools: [[60, 35, 'rose'], [33, 30, 'blue']]},
   30: {label: 'להאיר את המסדרון', announcement: 'האור נפרד ממיי ונשאר עם פרנסואה.', target: [53, 76], pools: [[26, 42, 'blue'], [76, 42, 'gold']]},
   35: {label: 'להאיר את המדרגות', announcement: 'אור חם עולה על אן וג׳ולייט שישובות יחד.', target: [49, 78], pools: [[39, 42, 'gold'], [62, 41, 'rose']]},
   39: {label: 'להאיר את קשת החתונה', announcement: 'האור עובר מלאנס לשני החברים שמתלבטים.', target: [49, 76], pools: [[24, 40, 'gold'], [55, 36, 'rose'], [74, 36, 'blue']]},
   45: {label: 'להאיר את החיבוק', announcement: 'האורות של שלושת החברים נפגשים.', target: [50, 78], pools: [[36, 32, 'blue'], [61, 35, 'rose'], [50, 47, 'gold']]},
-  47: {label: 'להאיר התחלה חדשה', announcement: 'האור עובר בין ג׳ולייט לרומיאו, ואז לאן ושייקספיר.', target: [49, 76], pools: [[47, 38, 'blue'], [22, 35, 'rose'], [73, 36, 'gold']]},
 };
 
 export function lightingForScene(scene: number) {

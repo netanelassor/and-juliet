@@ -1,6 +1,6 @@
 # Animation assets and maintenance
 
-SVG mattes sample the RGB pixels of `public/assets/story/scene-NN.webp`. Separate clean plates fill the small spaces exposed when an original-pixel layer moves. The original paintings, mattes and clean plates share a **1536 × 1024** coordinate system. Three musical scenes also use supplementary drawn poses during the choreography. Their original paintings remain the static fallback.
+SVG mattes sample the RGB pixels of `public/assets/story/scene-NN.webp`. Separate clean plates fill the small spaces exposed when an original-pixel layer moves. The original paintings, mattes and clean plates share a **1536 × 1024** coordinate system. Eighteen scenes also use supplementary drawn poses during choreography. Each has a fully illustrated resting frame for reading with motion off.
 
 The paths below are portable repository-relative names. `source-assets/` is the source asset bundle. If delivered as a GitHub Release archive, extract it at the repository root. The application serves the smaller WebP files in `public/assets/`. The TypeScript mattes are authoritative for original-pixel animation. The pose sheets and generation prompts are archived alongside the other artwork. Runtime requires no external segmentation or image-generation service.
 
@@ -81,6 +81,8 @@ These keyframes were generated with the built-in ImageGen using the original pai
 | 17, Overprotected | François plays the piano alone. Juliet appears from behind and he turns to her. | [scene-17-keyframes.png](../source-assets/performance/scene-17-keyframes.png) |
 | 18, Confident | Juliet and François dance on the banquet table, then the scene returns to the piano and May's reaction. | [Dance sheet](../source-assets/performance/scene-18-keyframes.png) · [Piano still source](../source-assets/performance/scene-18-piano-reference.png) |
 | 20, Teenage Dream / Break Free | Angélique holds Lance's hand as he almost loses his balance. | [scene-20-keyframes.png](../source-assets/performance/scene-20-keyframes.png) |
+| 21, Oops!...I Did it Again | François opens the ring box. Juliet recoils and almost spills her drink. | [scene-21-keyframes.png](../source-assets/performance/scene-21-keyframes.png) |
+| 22, I Kissed A Girl | After the kiss, François remembers his promise. Their hands lower and part. | [scene-22-keyframes.png](../source-assets/performance/scene-22-keyframes.png) |
 | 26, Since U Been Gone | Juliet opens up to the audience while Romeo listens and gives her space. | [scene-26-keyframes.png](../source-assets/performance/scene-26-keyframes.png) |
 | 31, One More Try | Juliet and Romeo listen to one another as the moon bench rises in front of the Ferris wheel. | [scene-31-keyframes.png](../source-assets/performance/scene-31-keyframes.png) |
 | 33, Problem / Can’t Feel My Face | Juliet, Romeo and the cast go from a close-arm count to an open-arm answer. | [scene-33-keyframes.png](../source-assets/performance/scene-33-keyframes.png) |
@@ -89,12 +91,14 @@ These keyframes were generated with the built-in ImageGen using the original pai
 | 40, It’s Gonna Be Me | Juliet stops the ceremony and François reaches for May’s hand. | [scene-40-keyframes.png](../source-assets/performance/scene-40-keyframes.png) |
 | 42, Stronger | Juliet plants her feet and raises a hand as the ensemble gives her room. | [scene-42-keyframes.png](../source-assets/performance/scene-42-keyframes.png) |
 | 43, Shape of My Heart | Lance opens his arms and François accepts the apology with a hug. | [scene-43-keyframes.png](../source-assets/performance/scene-43-keyframes.png) |
+| 44, track 26 | Angélique puts a hand on Juliet's shoulder. Juliet leans in for a hug. | [scene-44-keyframes.png](../source-assets/performance/scene-44-keyframes.png) |
 | 46, Roar | Juliet sings and lifts the microphone in her gold, fuchsia and purple costume; François cheers empty-handed below. | [scene-46-costume-keyframes.png](../source-assets/performance/scene-46-costume-keyframes.png) |
+| 47, I Want It That Way (Reprise) | Juliet and Romeo shake hands as friends. Anne and Shakespeare acknowledge each other from the wings. | [scene-47-keyframes.png](../source-assets/performance/scene-47-keyframes.png) |
 | 48, curtain call | Eight cast members face the house and then bend forward together. | [scene-48-keyframes.png](../source-assets/performance/scene-48-keyframes.png) |
 
-To recreate a runtime crop, use FFmpeg with libwebp. Put both WebPs for each scene in `public/assets/performance/`. The offline build checks for all 28 and records their hashes. The corrected stills in 01, 15, 17, 18, 31, 33 and 46 also serve the scene picker thumbnails. Canonical masters and the previous blue Roar sheet remain archived.
+To recreate a runtime crop, use FFmpeg with libwebp. Put both WebPs for each scene in `public/assets/performance/`. The offline build checks for all 36 and records their hashes. The corrected stills in 01, 15, 17, 18, 31, 33 and 46 also serve the scene picker thumbnails. Canonical masters and the previous blue Roar sheet remain archived. [Prompts for the proposal and reconciliation scenes](../source-assets/performance/CONNECTIONS_PROMPTS.md)
 
-`StoryLighting.tsx` sequences focused light over listening characters, the wedding arch, or a group hug in nine quieter scenes. The movement is composed independently of the official music player.
+`StoryLighting.tsx` sequences focused light over listening characters, the wedding arch, or a group hug in seven quieter scenes. The movement is composed independently of the official music player.
 
 ```sh
 ffmpeg -i source-assets/performance/scene-38-keyframes.png \

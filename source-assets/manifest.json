@@ -1102,8 +1102,99 @@
       "provenance": "Right cell of source-assets/performance/scene-17-keyframes.png; 1086 × 724",
       "bytes": 268606,
       "sha256": "a857525b29ef91ee91ea0ca4728bc1500c8690697a4de6da8ef7236ae58f0127"
+    },
+    {
+      "path": "source-assets/performance/CONNECTIONS_PROMPTS.md",
+      "role": "ImageGen prompts for proposal and reconciliation",
+      "provenance": "Built-in ImageGen with the corresponding story masters as references",
+      "bytes": 7592,
+      "sha256": "0e3c3b99f38d36f410644c7446096eaf3178f96605155ba3dddb9ec2edabd58d"
+    },
+    {
+      "path": "source-assets/performance/scene-21-keyframes.png",
+      "role": "ImageGen keyframe sheet",
+      "provenance": "source-assets/performance/CONNECTIONS_PROMPTS.md",
+      "bytes": 2956229,
+      "sha256": "82beb34bf0cd86378819119022180d1277c5bb4f6c05bd3c74825de9a0b9c841"
+    },
+    {
+      "path": "public/assets/performance/scene-21-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "provenance": "Left cell of source-assets/performance/scene-21-keyframes.png; 1086 × 724",
+      "bytes": 214882,
+      "sha256": "0239466907891aa58baa31816781097bad1b38a5462d9650dc1b9e7d7cd6ca9e"
+    },
+    {
+      "path": "public/assets/performance/scene-21-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "provenance": "Right cell of source-assets/performance/scene-21-keyframes.png; 1086 × 724",
+      "bytes": 212038,
+      "sha256": "a114542eae4ca3f10c9d71ab07abadc32acafa32728962b7b5fa1dc82d074743"
+    },
+    {
+      "path": "source-assets/performance/scene-22-keyframes.png",
+      "role": "ImageGen keyframe sheet",
+      "provenance": "source-assets/performance/CONNECTIONS_PROMPTS.md",
+      "bytes": 2570733,
+      "sha256": "bd1493bc117136fdf147841f58632decabfe6f4e89b99f66cf5d7c82712ec954"
+    },
+    {
+      "path": "public/assets/performance/scene-22-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "provenance": "Left cell of source-assets/performance/scene-22-keyframes.png; 1086 × 724",
+      "bytes": 161568,
+      "sha256": "b83a162552ec65393419ee32d31ce9f1007bcb2c8995339854ac02e4f459379c"
+    },
+    {
+      "path": "public/assets/performance/scene-22-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "provenance": "Right cell of source-assets/performance/scene-22-keyframes.png; 1086 × 724",
+      "bytes": 164522,
+      "sha256": "d3dfe95313703cb88368106257bd9fba379dc916fdc24e83e0a6217804734985"
+    },
+    {
+      "path": "source-assets/performance/scene-44-keyframes.png",
+      "role": "ImageGen keyframe sheet",
+      "provenance": "source-assets/performance/CONNECTIONS_PROMPTS.md",
+      "bytes": 3328574,
+      "sha256": "2e168b4308ac854e26725368eebdc04be02702486a7757abfb6c61aa67d44bb6"
+    },
+    {
+      "path": "public/assets/performance/scene-44-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "provenance": "Left cell of source-assets/performance/scene-44-keyframes.png; 1086 × 724",
+      "bytes": 280340,
+      "sha256": "f330ebdc66a9bb4440ad271257be8d40e12062f3e4d182c2732677d66c16f1b3"
+    },
+    {
+      "path": "public/assets/performance/scene-44-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "provenance": "Right cell of source-assets/performance/scene-44-keyframes.png; 1086 × 724",
+      "bytes": 275194,
+      "sha256": "cec84ce11fe03cc07f4f028692a8e0db1a763f43c485b731a2025911bf8629ce"
+    },
+    {
+      "path": "source-assets/performance/scene-47-keyframes.png",
+      "role": "ImageGen keyframe sheet",
+      "provenance": "source-assets/performance/CONNECTIONS_PROMPTS.md",
+      "bytes": 3121830,
+      "sha256": "f4aeaab2be76f72002c79c6b40ee5b8e5bc5d29450fa06487a6d780e8a86041d"
+    },
+    {
+      "path": "public/assets/performance/scene-47-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "provenance": "Left cell of source-assets/performance/scene-47-keyframes.png; 1086 × 724",
+      "bytes": 238752,
+      "sha256": "11bb07d5964224449085fa07889637c82ee0dfdb85dfa66ab7a6d2854c9d2e67"
+    },
+    {
+      "path": "public/assets/performance/scene-47-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "provenance": "Right cell of source-assets/performance/scene-47-keyframes.png; 1086 × 724",
+      "bytes": 235750,
+      "sha256": "184e9acdc07461205da6dc718dbbedd7afe438fe2dc4b9ce81793850f7afa99c"
     }
   ],
-  "fileCount": 156,
-  "totalBytes": 340774107
+  "fileCount": 169,
+  "totalBytes": 354542111
 }

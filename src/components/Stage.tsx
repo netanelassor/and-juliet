@@ -22,6 +22,8 @@ const performanceCues: Partial<Record<ChoreographyScene, {x: number; y: number; 
   17: {x: 50, y: 75, icon: 'music', label: 'להפתיע את פרנסואה בפסנתר', announcement: 'ג׳ולייט מגיעה מאחור. פרנסואה מסתובב אליה ומחייך.'},
   18: {x: 42, y: 77, icon: 'music', label: 'לרקוד על השולחן', announcement: 'ג׳ולייט ופרנסואה רוקדים על השולחן!'},
   20: {x: 51, y: 40, icon: 'music', label: 'לנסות את הצעד של לאנס', announcement: 'אנג׳ליק תופסת את לאנס והוא חוזר לרקוד.'},
+  21: {x: 48, y: 36, icon: 'spark', label: 'לפתוח את קופסת הטבעת', announcement: 'פרנסואה פותח את הקופסה והכוס של ג׳ולייט כמעט נשמטת.'},
+  22: {x: 49, y: 75, icon: 'heart', label: 'לראות מה פרנסואה נזכר', announcement: 'מיי מרפה מהיד. פרנסואה נזכר בהבטחה לג׳ולייט.'},
   26: {x: 47, y: 71, icon: 'spark', label: 'לפתוח מקום לג׳ולייט', announcement: 'ג׳ולייט פונה לקהל ורומיאו מקשיב.'},
   31: {x: 49, y: 72, icon: 'spark', label: 'להרים את ספסל הירח', announcement: 'ספסל הירח עולה מול הגלגל הענק.'},
   33: {x: 53, y: 88, icon: 'music', label: 'להתחיל את הריקוד', announcement: 'ג׳ולייט, רומיאו והלהקה עונים זה לזה בריקוד.'},
@@ -30,6 +32,8 @@ const performanceCues: Partial<Record<ChoreographyScene, {x: number; y: number; 
   40: {x: 51, y: 81, icon: 'spark', label: 'לעצור רגע את החתונה', announcement: 'פרנסואה פונה אל מיי וג׳ולייט מחייכת.'},
   42: {x: 51, y: 82, icon: 'spark', label: 'לפנות לג׳ולייט את הבמה', announcement: 'ג׳ולייט עומדת יציבה ומרימה יד. עכשיו כולם מקשיבים.'},
   43: {x: 46, y: 79, icon: 'heart', label: 'לחבק את לאנס', announcement: 'פרנסואה ולאנס מתחבקים ומיי מחייך לידם.'},
+  44: {x: 48, y: 79, icon: 'heart', label: 'להתקרב לחיבוק', announcement: 'אנג׳ליק שמה יד על הכתף של ג׳ולייט והן מתחבקות.'},
+  47: {x: 50, y: 65, icon: 'heart', label: 'להתחיל מחדש כחברים', announcement: 'ג׳ולייט ורומיאו לוחצים ידיים. אן ושייקספיר מחייכים זה לזה.'},
   48: {x: 47, y: 91, icon: 'heart', label: 'להזמין את כולם לקידה', announcement: 'הלהקה קדה והקהל מוחא כפיים.'},
 };
 
