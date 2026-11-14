@@ -5,8 +5,6 @@ type Light = [x: number, y: number, color: 'gold' | 'rose' | 'blue'];
 type LightingCue = {label: string; announcement: string; target: [number, number]; pools: readonly Light[]};
 
 const lighting: Partial<Record<number, LightingCue>> = {
-  15: {label: 'להאיר את הפסנתר', announcement: 'האור עובר מהקלידים אל פרנסואה ומיי.', target: [43, 71], pools: [[43, 62, 'gold'], [31, 30, 'blue'], [62, 26, 'rose']]},
-  17: {label: 'להאיר את הקלידים', announcement: 'אור ורוד נוגע בקלידים, וג׳ולייט ופרנסואה מקשיבים זה לזה.', target: [65, 61], pools: [[64, 53, 'rose'], [46, 25, 'blue'], [32, 27, 'gold']]},
   19: {label: 'להדליק אור לשניים', announcement: 'אנג׳ליק ולאנס מזהים זה את זו.', target: [50, 66], pools: [[32, 31, 'rose'], [64, 30, 'gold']]},
   22: {label: 'להאיר את השיחה', announcement: 'אור רך מתקרב אל מיי ופרנסואה.', target: [48, 71], pools: [[38, 34, 'blue'], [60, 36, 'rose']]},
   27: {label: 'לראות מי מחזיק בנוצה', announcement: 'אור נפרד מאיר את אן ואת שייקספיר בזמן הוויכוח.', target: [50, 70], pools: [[34, 34, 'rose'], [69, 36, 'gold']]},

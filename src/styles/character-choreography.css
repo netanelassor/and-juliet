@@ -26,6 +26,14 @@
   will-change: opacity;
 }
 
+.character-choreography[data-choreography="15"] .choreography-light {
+  background: radial-gradient(ellipse at 49% 29%, #ffc0db45, transparent 60%);
+}
+
+.character-choreography[data-choreography="17"] .choreography-light {
+  background: radial-gradient(ellipse at 49% 43%, #ffd6aa44, transparent 56%);
+}
+
 .character-choreography[data-choreography="18"] .choreography-light {
   background: radial-gradient(ellipse at 30% 39%, #ffc97848, transparent 48%);
 }

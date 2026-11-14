@@ -18,6 +18,8 @@ type Geometry = {hotspots: Point[]; interactionAnchor?: {x: number; y: number}};
 const sceneGeometry = geometry.scenes as Record<string, Geometry>;
 
 const performanceCues: Partial<Record<ChoreographyScene, {x: number; y: number; icon: IconName; label: string; announcement: string}>> = {
+  15: {x: 48, y: 78, icon: 'spark', label: 'לפגוש את פרנסואה', announcement: 'מיי ופרנסואה נתקלים זה בזה ומחייכים.'},
+  17: {x: 50, y: 75, icon: 'music', label: 'להפתיע את פרנסואה בפסנתר', announcement: 'ג׳ולייט מגיעה מאחור. פרנסואה מסתובב אליה ומחייך.'},
   18: {x: 42, y: 77, icon: 'music', label: 'לרקוד על השולחן', announcement: 'ג׳ולייט ופרנסואה רוקדים על השולחן!'},
   20: {x: 51, y: 40, icon: 'music', label: 'לנסות את הצעד של לאנס', announcement: 'אנג׳ליק תופסת את לאנס והוא חוזר לרקוד.'},
   26: {x: 47, y: 71, icon: 'spark', label: 'לפתוח מקום לג׳ולייט', announcement: 'ג׳ולייט פונה לקהל ורומיאו מקשיב.'},

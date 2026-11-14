@@ -4,6 +4,28 @@ import {asset} from '../content/scenes';
 import '../styles/character-choreography.css';
 
 const performances = {
+  15: {
+    entrance: .62,
+    rest: 7.2,
+    light: [.56],
+    moves: [
+      ['prep', 1, .22, .04],
+      ['hit', 1, .23, .61],
+      ['prep', 0, 0, .86],
+      ['hit', 0, .22, 2.14],
+    ],
+  },
+  17: {
+    entrance: .75,
+    rest: 8,
+    light: [1.12],
+    moves: [
+      ['prep', 1, .30, .04],
+      ['hit', 1, .42, 1.15],
+      ['prep', 0, 0, 1.59],
+      ['hit', 0, .28, 2.69],
+    ],
+  },
   18: {
     entrance: .7,
     rest: 7,
