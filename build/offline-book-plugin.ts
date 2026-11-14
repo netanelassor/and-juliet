@@ -28,7 +28,7 @@ export function offlineBook(): Plugin {
         const scene = String(i).padStart(2, '0');
         for (const kind of ['story','thumbs']) if (!names.includes(`assets/${kind}/scene-${scene}.webp`)) throw new Error(`Offline book inventory is missing ${kind}/scene-${scene}.webp`);
       }
-      const performanceFrames = [18,20,31,33,38,46,48].flatMap(scene => ['prep','hit'].map(pose => `assets/performance/scene-${scene}-${pose}.webp`));
+      const performanceFrames = [18,20,26,31,33,36,38,40,42,43,46,48].flatMap(scene => ['prep','hit'].map(pose => `assets/performance/scene-${scene}-${pose}.webp`));
       const restingArtwork = ['01','15','17','18','33'].map(scene => `assets/performance/scene-${scene}-rest.webp`);
       for (const path of [...performanceFrames, ...restingArtwork]) if (!names.includes(path)) throw new Error(`Offline book inventory is missing ${path}`);
       if (!names.includes('index.html')) throw new Error('Offline book inventory requires index.html');

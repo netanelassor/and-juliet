@@ -6,7 +6,9 @@ import {motionForScene} from '../motion/scene-motion';
 import {TheatricalEffects} from './TheatricalEffects';
 import {Icon} from './Icons';
 import {PaintedPerformance} from './PaintedPerformance';
-import {CharacterChoreography} from './CharacterChoreography';
+import {CharacterChoreography, hasCharacterChoreography, type ChoreographyScene} from './CharacterChoreography';
+import {StoryLighting, lightingForScene} from './StoryLighting';
+import type {IconName} from './Icons';
 import {StageCue} from './StageCue';
 import {StageMomentEffect, stageMoment} from './StageMoments';
 import type {Mode} from '../utils/progress';
@@ -14,6 +16,20 @@ import type {Mode} from '../utils/progress';
 type Point = {characterId: string; x: number; y: number; radius: number};
 type Geometry = {hotspots: Point[]; interactionAnchor?: {x: number; y: number}};
 const sceneGeometry = geometry.scenes as Record<string, Geometry>;
+
+const performanceCues: Partial<Record<ChoreographyScene, {x: number; y: number; icon: IconName; label: string; announcement: string}>> = {
+  18: {x: 42, y: 77, icon: 'music', label: 'לרקוד על השולחן', announcement: 'ג׳ולייט ופרנסואה רוקדים על השולחן!'},
+  20: {x: 51, y: 40, icon: 'music', label: 'לנסות את הצעד של לאנס', announcement: 'אנג׳ליק תופסת את לאנס והוא חוזר לרקוד.'},
+  26: {x: 47, y: 71, icon: 'spark', label: 'לפתוח מקום לג׳ולייט', announcement: 'ג׳ולייט פונה לקהל ורומיאו מקשיב.'},
+  31: {x: 49, y: 72, icon: 'spark', label: 'להרים את ספסל הירח', announcement: 'ספסל הירח עולה מול הגלגל הענק.'},
+  33: {x: 53, y: 88, icon: 'music', label: 'להתחיל את הריקוד', announcement: 'ג׳ולייט, רומיאו והלהקה עונים זה לזה בריקוד.'},
+  36: {x: 46, y: 83, icon: 'spark', label: 'לקום עם אן וג׳ולייט', announcement: 'אן עומדת לצד ג׳ולייט, והן קמות יחד.'},
+  38: {x: 50, y: 85, icon: 'music', label: 'להרקיד את הלהקה', announcement: 'הלהקה רוקדת יחד!'},
+  40: {x: 51, y: 81, icon: 'spark', label: 'לעצור רגע את החתונה', announcement: 'פרנסואה פונה אל מיי וג׳ולייט מחייכת.'},
+  42: {x: 51, y: 82, icon: 'spark', label: 'לפנות לג׳ולייט את הבמה', announcement: 'ג׳ולייט עומדת יציבה ומרימה יד. עכשיו כולם מקשיבים.'},
+  43: {x: 46, y: 79, icon: 'heart', label: 'לחבק את לאנס', announcement: 'פרנסואה ולאנס מתחבקים ומיי מחייך לידם.'},
+  48: {x: 47, y: 91, icon: 'heart', label: 'להזמין את כולם לקידה', announcement: 'הלהקה קדה והקהל מוחא כפיים.'},
+};
 
 export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onInteract, onReady}: {
   chapter: Chapter; beatIndex: number; motion: boolean; mode: Mode; reading: boolean; replay: number;
@@ -29,26 +45,23 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
   const lastReplay = useRef(replay);
   const beat = chapter.beats[beatIndex], direction = motionForScene(beat.sourceScene);
   const juliet = beat.sourceScene === 6;
-  const choreography = beat.sourceScene === 18 || beat.sourceScene === 20 || beat.sourceScene === 31 || beat.sourceScene === 33 || beat.sourceScene === 38 || beat.sourceScene === 48 ? beat.sourceScene : undefined;
-  const ensemble = choreography === 38;
-  const moment = stageMoment(beat.sourceScene);
-  const actions = {18: 'לרקוד על השולחן', 20: 'לנסות את הצעד של לאנס', 31: 'להרים את ספסל הירח', 33: 'להתחיל את הריקוד', 38: 'להרקיד את הלהקה', 48: 'להזמין את כולם לקידה'} as const;
-  const action = choreography ? actions[choreography] : moment?.action ?? (juliet ? 'להדליק ספוט' : direction.action);
-  const cue = moment ? {x: moment.x, y: moment.y, label: choreography === 48 ? action : moment.target, icon: moment.icon}
+  const scene = beat.sourceScene;
+  const choreography = hasCharacterChoreography(scene) ? scene : undefined;
+  const moment = stageMoment(scene);
+  const performance = choreography ? performanceCues[choreography] : undefined;
+  const lighting = lightingForScene(scene);
+  const action = performance?.label ?? lighting?.label ?? moment?.action ?? (juliet ? 'להדליק ספוט' : direction.action);
+  const cue = performance ?? (moment ? {x: moment.x, y: moment.y, label: moment.target, icon: moment.icon}
     : juliet ? {x: 72, y: 37, label: 'להאיר את ג׳ולייט על הבמה', icon: 'spark' as const}
-    : choreography === 18 ? {x: 42, y: 77, label: action, icon: 'music' as const}
-    : choreography === 20 ? {x: 51, y: 40, label: action, icon: 'music' as const}
-    : choreography === 31 ? {x: 49, y: 72, label: action, icon: 'spark' as const}
-    : choreography === 33 ? {x: 53, y: 88, label: action, icon: 'music' as const}
-    : ensemble ? {x: 50, y: 85, label: action, icon: 'music' as const}
-    : undefined;
+    : lighting ? {x: lighting.target[0], y: lighting.target[1], label: action}
+    : undefined);
   const geo = sceneGeometry[String(beat.sourceScene).padStart(2, '0')];
   const hotspots = (geo?.hotspots || []).filter(p => p.characterId in characterInfo);
   const moving = motion && mode !== 'quiet';
-  const ambientRun = moment || choreography ? 0 : run;
+  const ambientRun = moment || choreography || lighting ? 0 : run;
 
   useLayoutEffect(() => {
-    if (!loaded || !moving || juliet || ensemble) return;
+    if (!loaded || !moving || juliet || choreography) return;
     const ctx = gsap.context(() => {
       // Every scene comes alive by itself. Reading and pointer focus do not
       // suspend it; the parent's global motion/quiet/device gates do.
@@ -66,7 +79,7 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
       }
     }, root);
     return () => ctx.revert();
-  }, [loaded, moving, beat.sourceScene, ambientRun, juliet, ensemble]);
+  }, [loaded, moving, beat.sourceScene, ambientRun, juliet, choreography]);
   useEffect(() => {
     if (!moment || !moving || !loaded) {
       setMomentRun(0);
@@ -85,8 +98,7 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
   function trigger() {
     if (!loaded || !moving) return;
     onInteract();
-    const reactions = {18: 'ג׳ולייט ופרנסואה רוקדים על השולחן!', 20: 'אנג׳ליק תופסת את לאנס והוא חוזר לרקוד.', 31: 'ספסל הירח עולה לפני הגלגל הענק.', 33: 'ג׳ולייט, רומיאו והלהקה עונים זה לזה בריקוד.', 38: 'הלהקה רוקדת יחד!', 48: 'הלהקה קדה והקהל מוחא כפיים.'};
-    setAnnouncement(choreography ? reactions[choreography] : moment?.announcement ?? (juliet ? 'הספוט מאיר את ג׳ולייט.' : direction.announcement));
+    setAnnouncement(performance?.announcement ?? lighting?.announcement ?? moment?.announcement ?? (juliet ? 'הספוט מאיר את ג׳ולייט.' : direction.announcement));
     setRun(n => n + 1);
     if (moment && choreography !== 48) setMomentRun(n => n + 1);
   }
@@ -110,6 +122,7 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
       {juliet && <PaintedPerformance painting={painting} ready={loaded} motion={moving} run={run} ensemble={false}/>}
       <div className="light-wash" aria-hidden="true"/>
       <TheatricalEffects scene={beat.sourceScene} run={ambientRun} enabled={moving && loaded && !juliet} ambient/>
+      {lighting && moving && loaded && <StoryLighting key={run} lighting={lighting}/>}
       {hotspots.map(point => <button key={point.characterId} className="character-hotspot" style={{left: `${point.x * 100}%`, top: `${point.y * 100}%`, width: `${point.radius * 200}%`, height: `${point.radius * 200}%`}} aria-label={`מי זה? ${characterInfo[point.characterId as CharacterId].name}`} onClick={() => onIdentity(point.characterId as CharacterId)}><span>מי זה?</span></button>)}
       {cue && loaded && moving && <StageCue {...cue} onActivate={trigger}/>}
       {!loaded && <div className="stage-load-status" aria-live="polite">{imageError ? <><span>האיור מתעכב לרגע.</span><button data-testid="artwork-retry" onClick={() => {setImageError(false); setRetry(n => n + 1);}}><Icon name="replay" size={16}/>ננסה שוב</button></> : <span>מכינים את הבמה...</span>}</div>}

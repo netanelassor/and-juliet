@@ -4,7 +4,7 @@ Settings mounts `<OfflineBook/>`. The App also observes the browser's online sta
 
 The production build inventories its actual output and emits `offline-book-manifest.json` and `offline-book-sw.js`. The inventory contains the built HTML/JS/CSS, all 48 original story illustrations, all 48 thumbnails, every clean plate present in `assets/premium`, cover/character/theatre artwork, local fonts, and icons. The plugin rejects a build missing any of the 48 original illustrations or thumbnails. Its version derives from file contents and the worker implementation. No audio/video extension or remote URL can enter the inventory.
 
-The build requires all 14 choreography keyframes for scenes 18, 20, 31, 33, 38, 46 and 48, and the corrected stills under `assets/performance`. A complete saved edition includes them. Readers with an older saved edition can refresh it from Settings while connected.
+The build requires all 24 choreography keyframes for scenes 18, 20, 26, 31, 33, 36, 38, 40, 42, 43, 46 and 48, and the corrected stills under `assets/performance`. A complete saved edition includes them. Readers with an older saved edition can refresh it from Settings while connected.
 
 Opening Settings requests only the small inventory and the status of an already installed worker. The explicit “נשמור את הספר לדרך” action registers the worker and starts the book download. Size, progress, cancellation, storage errors, and retry are visible. The worker verifies the size and SHA-256 of each response before caching it. Cancellation preserves verified files and a previous complete edition. Completion is reported after every inventory file is cached and the completion marker is written.
 

@@ -51,20 +51,16 @@ export function JourneyStage({chapter,beatIndex,motion,mode,replay,onIdentity,on
         gsap.fromTo(background.current,{x:2,scale:1.006,svgOrigin:'768 512'},{x:-3,scale:1.006,duration:6.5,repeat:-1,yoyo:true,ease:'sine.inOut'});
         gsap.fromTo('.journey-road-light',{x:70,opacity:0},{x:-105,opacity:.25,duration:2.4,repeat:-1,stagger:.55,ease:'none'});
       }else{
-        // One entrance, then an unhurried recurring followspot. Romeo remains
-        // visible during the loop; the story is never covered by a curtain.
-        gsap.fromTo(actor.current,{y:8,opacity:.55},{y:0,opacity:1,duration:1.15,ease:'power2.out'});
-        gsap.timeline({repeat:-1,delay:1.2,repeatDelay:.8})
-          .to(actor.current,{y:-1.7,duration:2.6,ease:'sine.inOut'})
-          .to(actor.current,{y:0,duration:3.1,ease:'sine.inOut'})
-          .to(actor.current,{y:.6,duration:1.9,ease:'sine.inOut'})
-          .to(actor.current,{y:0,duration:2,ease:'sine.inOut'});
-        gsap.timeline({repeat:-1,repeatDelay:1.1})
-          .fromTo('.journey-reveal-light',{opacity:.08},{opacity:.34,duration:1.3,ease:'sine.out'})
-          .to('.journey-reveal-light',{opacity:.16,duration:3.8,ease:'sine.inOut'})
-          .to('.journey-reveal-light',{opacity:.28,duration:2.5,ease:'sine.inOut'})
-          .to('.journey-reveal-light',{opacity:.08,duration:2.4,ease:'sine.inOut'});
-        gsap.fromTo('.journey-podium-glow',{opacity:.05},{opacity:.26,duration:3.2,repeat:-1,yoyo:true,ease:'sine.inOut'});
+        const followspot='.journey-reveal-light';
+        const podium='.journey-podium-glow';
+        // The podium lights up first. Romeo then steps into the spotlight
+        // and stays onstage as the lighting softens between passes.
+        gsap.timeline({repeat:-1,repeatDelay:5.5})
+          .fromTo(podium,{opacity:.04},{opacity:.42,duration:.56,ease:'sine.out'},0)
+          .fromTo(actor.current,{y:10,opacity:.22},{y:0,opacity:1,duration:.88,ease:'power2.out'},.24)
+          .fromTo(followspot,{opacity:.06,scaleX:.55,svgOrigin:'978 0'},{opacity:.49,scaleX:1,duration:.82,ease:'sine.out'},.24)
+          .to(followspot,{opacity:.16,duration:1.8,ease:'sine.inOut'},1.55)
+          .to(podium,{opacity:.18,duration:1.8,ease:'sine.inOut'},1.55);
       }
     },root);
     return()=>{speedCue.current?.kill(); speedCue.current = null; wheelMotion.current = []; ctx.revert();};

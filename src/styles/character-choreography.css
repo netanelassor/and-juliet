@@ -34,6 +34,11 @@
   background: radial-gradient(ellipse at 52% 32%, #ffc97850, transparent 59%);
 }
 
+.character-choreography[data-choreography="26"] .choreography-light {
+  background: radial-gradient(ellipse at 48% 34%, #ffc97849, transparent 55%),
+    radial-gradient(ellipse at 24% 22%, #d18dff36, transparent 43%);
+}
+
 .character-choreography[data-choreography="31"] .choreography-light {
   background: radial-gradient(ellipse at 50% 54%, #ffe0aa35, transparent 56%);
 }
@@ -41,6 +46,23 @@
 .character-choreography[data-choreography="33"] .choreography-light {
   background: radial-gradient(ellipse at 30% 36%, #e48bfa4f, transparent 53%),
     radial-gradient(ellipse at 72% 30%, #62cef845, transparent 56%);
+}
+
+.character-choreography[data-choreography="36"] .choreography-light {
+  background: radial-gradient(ellipse at 48% 35%, #ffc97844, transparent 58%);
+}
+
+.character-choreography[data-choreography="40"] .choreography-light {
+  background: radial-gradient(ellipse at 51% 39%, #ffd78c44, transparent 54%);
+}
+
+.character-choreography[data-choreography="42"] .choreography-light {
+  background: radial-gradient(ellipse at 48% 30%, #ffdc9859, transparent 56%),
+    radial-gradient(ellipse at 54% 72%, #78bffc26, transparent 46%);
+}
+
+.character-choreography[data-choreography="43"] .choreography-light {
+  background: radial-gradient(ellipse at 49% 42%, #ffd6a739, transparent 52%);
 }
 
 .character-choreography[data-choreography="46"] .choreography-light {

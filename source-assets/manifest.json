@@ -941,8 +941,134 @@
       "bytes": 43758,
       "sha256": "bc3d847d3ae2b0bfae80f22eba89e37009f2be0f96d24ff5352128145dc25838",
       "provenance": "360 × 240 crop from this scene’s corrected runtime still"
+    },
+    {
+      "path": "source-assets/performance/SCENE-26-PROMPT.md",
+      "role": "Illustrated source",
+      "bytes": 2431,
+      "sha256": "4ae4f6195f09a2ef2a0fb3b5dc53e754b4c7f3d90b401851b71de49cadbfb073",
+      "provenance": "Built-in ImageGen prompts"
+    },
+    {
+      "path": "source-assets/performance/SCENE-40-PROMPT.md",
+      "role": "Illustrated source",
+      "bytes": 2563,
+      "sha256": "264d0223587752ed3b071837f49bf7fb1ef049df9b242bfa35023d5176b722ed",
+      "provenance": "Built-in ImageGen prompts"
+    },
+    {
+      "path": "source-assets/performance/STORY_TURNING_POINTS_PROMPTS.md",
+      "role": "Illustrated source",
+      "bytes": 5778,
+      "sha256": "aa0db683518d156abbf083610ef5fcbd5d89dec65816de00e0258e3d5fc668cb",
+      "provenance": "Built-in ImageGen prompts"
+    },
+    {
+      "path": "source-assets/performance/scene-26-keyframes.png",
+      "role": "Illustrated source",
+      "bytes": 2915332,
+      "sha256": "0c3da101307d25e04ca91152fd16e818644a8295ef6bbd958f29bedec66c4581",
+      "provenance": "Built-in ImageGen edit of source-assets/story-masters/scene-26.png; prompts in this directory"
+    },
+    {
+      "path": "source-assets/performance/scene-36-keyframes.png",
+      "role": "Illustrated source",
+      "bytes": 2904752,
+      "sha256": "1dacc5e3a8d43efe39d163d8cc0aa418002e72df07c2e2e38845c4aa7674021b",
+      "provenance": "Built-in ImageGen edit of source-assets/story-masters/scene-36.png; prompts in this directory"
+    },
+    {
+      "path": "source-assets/performance/scene-40-keyframes.png",
+      "role": "Illustrated source",
+      "bytes": 3456494,
+      "sha256": "356d61956123549b9669d48fb9dea476c218d8e78d5d2e357e47d88da96f10e8",
+      "provenance": "Built-in ImageGen edit of source-assets/story-masters/scene-40.png; prompts in this directory"
+    },
+    {
+      "path": "source-assets/performance/scene-42-keyframes.png",
+      "role": "Illustrated source",
+      "bytes": 3289028,
+      "sha256": "14bd2bdebabae2ec243419d021eb2f04caaaa0308ec58aa32cb9fbf9ba3d497a",
+      "provenance": "Built-in ImageGen edit of source-assets/story-masters/scene-42.png; prompts in this directory"
+    },
+    {
+      "path": "source-assets/performance/scene-43-keyframes.png",
+      "role": "Illustrated source",
+      "bytes": 3124924,
+      "sha256": "00f4b26005043fdb533038d0fd80265c9f8f33c432390679af41b709a822a75b",
+      "provenance": "Built-in ImageGen edit of source-assets/story-masters/scene-43.png; prompts in this directory"
+    },
+    {
+      "path": "public/assets/performance/scene-26-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 233588,
+      "sha256": "609d0c4b74400bc19195c8fc93e1e601563acf8d0ed32d027f70765fac4b5289",
+      "provenance": "Right cell of source-assets/performance/scene-26-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-26-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 232712,
+      "sha256": "ef2878f8953ac14c025e05af5717e48f67bff1acee8ed76b1548f4d04a3c0c89",
+      "provenance": "Left cell of source-assets/performance/scene-26-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-36-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 208942,
+      "sha256": "51188106a99fffdc0703527916d3d8ddadf9eb12fa988bea7aea2462f8c569c9",
+      "provenance": "Right cell of source-assets/performance/scene-36-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-36-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 200126,
+      "sha256": "637a8bb415fe868d8be5606cf5ae5b6fb07ac5faa0f43c0f4ee76c0e77066925",
+      "provenance": "Left cell of source-assets/performance/scene-36-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-40-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 298574,
+      "sha256": "f5a454dc52694f245c8ff3fdf22b9ca6dc5bd9d5d5256941dd09207da490caeb",
+      "provenance": "Right cell of source-assets/performance/scene-40-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-40-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 301564,
+      "sha256": "7bd62a567a84417106adc9fc33d182cf12861ff5878ec41f9eb54c9dbdc05135",
+      "provenance": "Left cell of source-assets/performance/scene-40-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-42-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 287078,
+      "sha256": "2e71fd91717ebb286f3d150cfffc4abe7e069055caa737d169ac7302a9f980aa",
+      "provenance": "Right cell of source-assets/performance/scene-42-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-42-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 281916,
+      "sha256": "9f8ab26ce5f54cffce3a8c4f1870de464e6e1b6df9a0fd7b3437452745a56f21",
+      "provenance": "Left cell of source-assets/performance/scene-42-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-43-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 240670,
+      "sha256": "576c1276846a40e3fcaac6781d4f51e19f8cc421eee29c86b9757cca515da050",
+      "provenance": "Right cell of source-assets/performance/scene-43-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-43-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 248206,
+      "sha256": "808ba2b19d393b51e87e3b19969513dfcdb5854462cb54910ec1a635e3e7269e",
+      "provenance": "Left cell of source-assets/performance/scene-43-keyframes.png; 1086 × 724 WebP"
     }
   ],
-  "fileCount": 133,
-  "totalBytes": 316680458
+  "fileCount": 151,
+  "totalBytes": 334915136
 }

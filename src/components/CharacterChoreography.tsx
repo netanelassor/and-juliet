@@ -28,6 +28,17 @@ const performances = {
       ['hit', 0, .28, 2.18],
     ],
   },
+  26: {
+    entrance: .7,
+    rest: 5.6,
+    light: [.60],
+    moves: [
+      ['prep', 1, .24, .05],
+      ['hit', 1, .30, .62],
+      ['prep', 0, 0, .94],
+      ['hit', 0, .30, 2.24],
+    ],
+  },
   31: {
     entrance: 1.15,
     rest: 8,
@@ -52,6 +63,17 @@ const performances = {
       ['prep', 0, .23, 2.26],
     ],
   },
+  36: {
+    entrance: .65,
+    rest: 6.7,
+    light: [.58],
+    moves: [
+      ['prep', 1, .29, .05],
+      ['hit', 1, .40, .69],
+      ['prep', 0, 0, 1.12],
+      ['hit', 0, .30, 2.18],
+    ],
+  },
   38: {
     entrance: .9,
     rest: 4.1,
@@ -63,6 +85,39 @@ const performances = {
       ['hit', 1, .17, 1.28],
       ['hit', 0, .23, 1.86],
       ['prep', 0, .22, 2.31],
+    ],
+  },
+  40: {
+    entrance: .62,
+    rest: 6.7,
+    light: [.03, 1.10],
+    moves: [
+      ['prep', 1, .25, .05],
+      ['hit', 1, .36, 1.04],
+      ['prep', 0, 0, 1.42],
+      ['hit', 0, .34, 2.54],
+    ],
+  },
+  42: {
+    entrance: .65,
+    rest: 5.8,
+    light: [.58, 2.34],
+    moves: [
+      ['prep', 1, .18, .04],
+      ['hit', 1, .27, .60],
+      ['prep', 0, 0, .89],
+      ['hit', 0, .28, 2.34],
+    ],
+  },
+  43: {
+    entrance: .75,
+    rest: 7.8,
+    light: [.94],
+    moves: [
+      ['prep', 1, .28, .07],
+      ['hit', 1, .39, .95],
+      ['prep', 0, 0, 1.36],
+      ['hit', 0, .47, 2.68],
     ],
   },
   46: {
@@ -90,6 +145,10 @@ const performances = {
 } as const;
 
 export type ChoreographyScene = keyof typeof performances;
+
+export function hasCharacterChoreography(scene: number): scene is ChoreographyScene {
+  return Object.hasOwn(performances, scene);
+}
 
 export function CharacterChoreography({scene, enabled, run, onBow}: {
   scene: ChoreographyScene; enabled: boolean; run: number; onBow?: () => void;
