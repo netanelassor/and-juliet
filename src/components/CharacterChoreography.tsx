@@ -4,6 +4,54 @@ import {asset} from '../content/scenes';
 import '../styles/character-choreography.css';
 
 const performances = {
+  18: {
+    entrance: .7,
+    rest: 7,
+    light: [0, 2.44],
+    moves: [
+      ['prep', 1, .19, .04],
+      ['hit', 1, .19, .55],
+      ['hit', 0, .18, 1.07],
+      ['hit', 1, .19, 1.55],
+      ['hit', 0, .19, 2.42],
+      ['prep', 0, .19, 2.47],
+    ],
+  },
+  20: {
+    entrance: .8,
+    rest: 4.8,
+    light: [.09, 2.08],
+    moves: [
+      ['prep', 1, .15, .09],
+      ['hit', 1, .17, .62],
+      ['prep', 0, 0, .81],
+      ['hit', 0, .28, 2.18],
+    ],
+  },
+  31: {
+    entrance: 1.15,
+    rest: 8,
+    light: [.64],
+    moves: [
+      ['prep', 1, .50, .04],
+      ['hit', 1, .74, 1.30],
+      ['prep', 0, 0, 2.06],
+      ['hit', 0, .36, 3.08],
+    ],
+  },
+  33: {
+    entrance: .85,
+    rest: 5.4,
+    light: [.06, 2.2],
+    moves: [
+      ['prep', 1, .18, .09],
+      ['hit', 1, .21, .52],
+      ['hit', 0, .20, 1.03],
+      ['hit', 1, .19, 1.46],
+      ['hit', 0, .21, 2.13],
+      ['prep', 0, .23, 2.26],
+    ],
+  },
   38: {
     entrance: .9,
     rest: 4.1,
@@ -72,7 +120,7 @@ export function CharacterChoreography({scene, enabled, run, onBow}: {
     const sequence = gsap.timeline({repeat: -1, repeatDelay: score.rest, delay: run ? 0 : score.entrance});
 
     // The prep frame stays underneath the hit for a clean dissolve back to it.
-    // Keep the original stage at rest beneath both untransformed frames.
+    // Keep the scene's resting artwork beneath both untransformed frames.
     for (const [pose, opacity, duration, start] of score.moves) {
       sequence.to(pictures[pose], {opacity, duration, ease: 'sine.inOut'}, start);
     }

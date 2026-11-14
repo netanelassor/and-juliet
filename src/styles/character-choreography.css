@@ -26,6 +26,23 @@
   will-change: opacity;
 }
 
+.character-choreography[data-choreography="18"] .choreography-light {
+  background: radial-gradient(ellipse at 30% 39%, #ffc97848, transparent 48%);
+}
+
+.character-choreography[data-choreography="20"] .choreography-light {
+  background: radial-gradient(ellipse at 52% 32%, #ffc97850, transparent 59%);
+}
+
+.character-choreography[data-choreography="31"] .choreography-light {
+  background: radial-gradient(ellipse at 50% 54%, #ffe0aa35, transparent 56%);
+}
+
+.character-choreography[data-choreography="33"] .choreography-light {
+  background: radial-gradient(ellipse at 30% 36%, #e48bfa4f, transparent 53%),
+    radial-gradient(ellipse at 72% 30%, #62cef845, transparent 56%);
+}
+
 .character-choreography[data-choreography="46"] .choreography-light {
   background: radial-gradient(ellipse at 50% 32%, #ffd5aa68, transparent 36%);
 }

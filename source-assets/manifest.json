@@ -672,16 +672,16 @@
     {
       "path": "public/assets/performance/scene-46-prep.webp",
       "role": "Runtime choreography keyframe",
-      "bytes": 308478,
-      "sha256": "0a0b81fed3ee76da26efa7722d3a9c4122776bc58a774d84652cf628a13aabc7",
-      "provenance": "left cell of source-assets/performance/scene-46-keyframes.png; 1086 × 724 WebP"
+      "bytes": 328938,
+      "sha256": "992245d0528b8730801114a018986380cc490425df81a8e317dc05bb03637791",
+      "provenance": "left cell of source-assets/performance/scene-46-costume-keyframes.png; 1086 × 724 WebP"
     },
     {
       "path": "public/assets/performance/scene-46-hit.webp",
       "role": "Runtime choreography keyframe",
-      "bytes": 308736,
-      "sha256": "df8d767ff924e47eb5d28749d84000b3480d87d3c73d22d10b35958e877c66c9",
-      "provenance": "right cell of source-assets/performance/scene-46-keyframes.png; 1086 × 724 WebP"
+      "bytes": 327790,
+      "sha256": "d397b8b821d2676e4c2c6c300446e7f8cca1d4339580f75a0b74586350dabc4f",
+      "provenance": "right cell of source-assets/performance/scene-46-costume-keyframes.png; 1086 × 724 WebP"
     },
     {
       "path": "source-assets/performance/scene-48-keyframes.png",
@@ -710,8 +710,239 @@
       "bytes": 4310,
       "sha256": "e3f9fa39a2f2bbdccb605bb0a395c607cd323fba3e332f2119caed6acd52bdd1",
       "provenance": "Built-in ImageGen references and prompts"
+    },
+    {
+      "path": "source-assets/performance/PIANO_CORRECTIONS_PROMPTS.md",
+      "role": "Supplemental production references and ImageGen prompts",
+      "bytes": 4131,
+      "sha256": "25f8fce520e97b8d8efb833643a49e15c24ee2dcea2bc3ee87b1cb90484c9ea6",
+      "provenance": "Built-in ImageGen"
+    },
+    {
+      "path": "source-assets/performance/PRODUCTION_REFERENCE_PROMPTS.md",
+      "role": "Supplemental production references and ImageGen prompts",
+      "bytes": 10454,
+      "sha256": "62de9f36e0a658e5e2518228da28aa2bf45c8b9c3640f515938caba963654c96",
+      "provenance": "Built-in ImageGen"
+    },
+    {
+      "path": "source-assets/performance/scene-01-rest.png",
+      "role": "ImageGen art correction",
+      "bytes": 2857641,
+      "sha256": "d4981c1ecd4e6add99eb352765dd0857fd5e7400f61497bc2ed9f6686255b2b7",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-01.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-15-rest.png",
+      "role": "ImageGen art correction",
+      "bytes": 2774613,
+      "sha256": "5a26355733bc92f06839f6b940cec60e8829815023bce0cf52d385839a9a135a",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-15.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-17-rest.png",
+      "role": "ImageGen art correction",
+      "bytes": 3400116,
+      "sha256": "e3791123bd886a396b7c28a33f3e87dcf92ef1c9f22caf1dd45eb16075b64168",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-17.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-18-keyframes.png",
+      "role": "ImageGen supplemental choreography keyframe sheet",
+      "bytes": 3171361,
+      "sha256": "5770836e874d73d6701724d4de1dd2479147ede4f934416d5c8593c0e51c9935",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-18.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-18-piano-reference.png",
+      "role": "ImageGen supplemental choreography keyframe sheet",
+      "bytes": 3113175,
+      "sha256": "b909a4504e2a1577cc017d60cc0ac4311134473d7d940a7078c584353cb84472",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-18.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-20-keyframes.png",
+      "role": "ImageGen supplemental choreography keyframe sheet",
+      "bytes": 3299576,
+      "sha256": "e4a1b71cad4dc6515377bd3d14852e84232ed7fbda7b425371cdc9032c98f48c",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-20.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-31-keyframes.png",
+      "role": "ImageGen supplemental choreography keyframe sheet",
+      "bytes": 3160797,
+      "sha256": "67ecbc3409e6d970efa5a9e60da3918e917aa830b5e7a3c1ed686cb3dc06ed0b",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-31.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-33-keyframes.png",
+      "role": "ImageGen supplemental choreography keyframe sheet",
+      "bytes": 3485148,
+      "sha256": "292257564e5c3e83f9a8e4ffd794724cd984efdd7f5398115089c9aaea39a319",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-33.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-33-rest.png",
+      "role": "ImageGen art correction",
+      "bytes": 3421822,
+      "sha256": "09a27eb7bdcceef1cfdcfb274bddb1c4e55a45d44cdce3a797895fabe9b645e8",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-33.png; see prompt documents"
+    },
+    {
+      "path": "source-assets/performance/scene-46-costume-keyframes.png",
+      "role": "ImageGen supplemental choreography keyframe sheet",
+      "bytes": 3403541,
+      "sha256": "26e4821af67d2097f8b85ebebe78ca8bc7a52a3703fa95108adb28ff4911b0c9",
+      "provenance": "Built-in ImageGen with source-assets/story-masters/scene-46.png; see prompt documents"
+    },
+    {
+      "path": "public/assets/performance/francois-portrait.webp",
+      "role": "Storybook character portrait",
+      "bytes": 8808,
+      "sha256": "834895228898cf3942bab190b42909936f80f52142722b1a5e9f072059371a38",
+      "provenance": "Crop of public/assets/characters/francois.webp"
+    },
+    {
+      "path": "public/assets/performance/scene-01-rest.webp",
+      "role": "Corrected runtime scene still",
+      "bytes": 418416,
+      "sha256": "c637e12b36b659627d3f376fd9348acefd59cfe21aa90ef8be105ad1f1b363a8",
+      "provenance": "source-assets/performance/scene-01-rest.png"
+    },
+    {
+      "path": "public/assets/performance/scene-15-rest.webp",
+      "role": "Corrected runtime scene still",
+      "bytes": 368938,
+      "sha256": "58e6f17840637415dca85e41ea003b73d3f56293589eecc59bdee0edaa8b036d",
+      "provenance": "source-assets/performance/scene-15-rest.png"
+    },
+    {
+      "path": "public/assets/performance/scene-17-rest.webp",
+      "role": "Corrected runtime scene still",
+      "bytes": 541806,
+      "sha256": "2e2c42a49276d1b790f4fb5ddbd8a63849c1e1cf4f1450821aa112dbacc40c83",
+      "provenance": "source-assets/performance/scene-17-rest.png"
+    },
+    {
+      "path": "public/assets/performance/scene-18-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 258508,
+      "sha256": "9ea9d5b4ac6d0d6c1e46beafaf612730a2a481240809d1755203295a17ee5350",
+      "provenance": "right cell of source-assets/performance/scene-18-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-18-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 260610,
+      "sha256": "c013c951eaa0cc343514e65e1a6ef5a93c0ad45460aeef16efb5b692fe7b76af",
+      "provenance": "left cell of source-assets/performance/scene-18-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-18-rest.webp",
+      "role": "Corrected runtime scene still",
+      "bytes": 241058,
+      "sha256": "7b558c3aece2782d4b326f133b19a4b3af80445dabbb28976f3ec38ac41a001d",
+      "provenance": "Right cell of source-assets/performance/scene-18-piano-reference.png"
+    },
+    {
+      "path": "public/assets/performance/scene-20-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 260450,
+      "sha256": "afff1784c170d5d0ec1ee57a9628da3fb87faadf32af96b48eee1c287b1a9847",
+      "provenance": "right cell of source-assets/performance/scene-20-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-20-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 258336,
+      "sha256": "ca48c569a781fd712bd265059a44efd02725a6d9b710c1f7618d0cea4fd4c1f2",
+      "provenance": "left cell of source-assets/performance/scene-20-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-31-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 259206,
+      "sha256": "7da428d36ec93cc363abf68383b0f716f559631b76477e6791348e229cf1efc9",
+      "provenance": "right cell of source-assets/performance/scene-31-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-31-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 264668,
+      "sha256": "e888fa7290c4a14a3a1bf125ea08ca6ff1b74118391e9f9f75c28cd96712b621",
+      "provenance": "left cell of source-assets/performance/scene-31-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-33-hit.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 303930,
+      "sha256": "f4c2a7b68bc039cc96bb7f8cd56d445bc802042893203c05c728132b416e9cb2",
+      "provenance": "right cell of source-assets/performance/scene-33-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-33-prep.webp",
+      "role": "Runtime choreography keyframe",
+      "bytes": 305822,
+      "sha256": "ad2c02b159117019e8cc442f489ed7589099a46eb70670f9d2f2ea62b0f983bc",
+      "provenance": "left cell of source-assets/performance/scene-33-keyframes.png; 1086 × 724 WebP"
+    },
+    {
+      "path": "public/assets/performance/scene-33-rest.webp",
+      "role": "Corrected runtime scene still",
+      "bytes": 570280,
+      "sha256": "06e925e35c84189274dd7d38098826c4fb67359f413785e17dbdc50a63ab5460",
+      "provenance": "source-assets/performance/scene-33-rest.png"
+    },
+    {
+      "path": "public/assets/performance/thumbs/scene-01.webp",
+      "role": "Corrected runtime scene thumbnail",
+      "bytes": 39398,
+      "sha256": "584594a6e0cb2cdd96aff5ffe8555b82aa1af6c9f5ef91f8fdb526d15c14d6a1",
+      "provenance": "360 × 240 crop from this scene’s corrected runtime still"
+    },
+    {
+      "path": "public/assets/performance/thumbs/scene-15.webp",
+      "role": "Corrected runtime scene thumbnail",
+      "bytes": 32142,
+      "sha256": "8a1502e4d80ea31a299fddbfbda0e4876ae3d9c2c5aae4fb0c9a84ccc339b0f3",
+      "provenance": "360 × 240 crop from this scene’s corrected runtime still"
+    },
+    {
+      "path": "public/assets/performance/thumbs/scene-17.webp",
+      "role": "Corrected runtime scene thumbnail",
+      "bytes": 38224,
+      "sha256": "462c108f7252159e62533f8ce106415452020e93a7f9ab4fb72b644d9bf83682",
+      "provenance": "360 × 240 crop from this scene’s corrected runtime still"
+    },
+    {
+      "path": "public/assets/performance/thumbs/scene-18.webp",
+      "role": "Corrected runtime scene thumbnail",
+      "bytes": 34960,
+      "sha256": "fcaaf750dbe9f6be7be98b87b408c567a4d3e81ed0d58efc339a578a6b245c44",
+      "provenance": "360 × 240 crop from this scene’s corrected runtime still"
+    },
+    {
+      "path": "public/assets/performance/thumbs/scene-31.webp",
+      "role": "Corrected runtime scene thumbnail",
+      "bytes": 34790,
+      "sha256": "da1ccfb60dadf818d0f4896a24e32b1ba23f006c1da022a53b6620835ffa694d",
+      "provenance": "360 × 240 crop from this scene’s corrected runtime still"
+    },
+    {
+      "path": "public/assets/performance/thumbs/scene-33.webp",
+      "role": "Corrected runtime scene thumbnail",
+      "bytes": 43720,
+      "sha256": "70a693a887203bb4acb500d3586387532bf26f0b970c324d31e3a7314d863e5c",
+      "provenance": "360 × 240 crop from this scene’s corrected runtime still"
+    },
+    {
+      "path": "public/assets/performance/thumbs/scene-46.webp",
+      "role": "Corrected runtime scene thumbnail",
+      "bytes": 43758,
+      "sha256": "bc3d847d3ae2b0bfae80f22eba89e37009f2be0f96d24ff5352128145dc25838",
+      "provenance": "360 × 240 crop from this scene’s corrected runtime still"
     }
   ],
-  "fileCount": 100,
-  "totalBytes": 279950741
+  "fileCount": 133,
+  "totalBytes": 316680458
 }

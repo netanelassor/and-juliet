@@ -29,18 +29,23 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
   const lastReplay = useRef(replay);
   const beat = chapter.beats[beatIndex], direction = motionForScene(beat.sourceScene);
   const juliet = beat.sourceScene === 6;
-  const choreography = beat.sourceScene === 38 || beat.sourceScene === 48 ? beat.sourceScene : undefined;
+  const choreography = beat.sourceScene === 18 || beat.sourceScene === 20 || beat.sourceScene === 31 || beat.sourceScene === 33 || beat.sourceScene === 38 || beat.sourceScene === 48 ? beat.sourceScene : undefined;
   const ensemble = choreography === 38;
   const moment = stageMoment(beat.sourceScene);
-  const action = choreography === 48 ? 'להזמין את כולם לקידה' : ensemble ? 'להרקיד את הלהקה' : moment?.action ?? (juliet ? 'להדליק ספוט' : direction.action);
+  const actions = {18: 'לרקוד על השולחן', 20: 'לנסות את הצעד של לאנס', 31: 'להרים את ספסל הירח', 33: 'להתחיל את הריקוד', 38: 'להרקיד את הלהקה', 48: 'להזמין את כולם לקידה'} as const;
+  const action = choreography ? actions[choreography] : moment?.action ?? (juliet ? 'להדליק ספוט' : direction.action);
   const cue = moment ? {x: moment.x, y: moment.y, label: choreography === 48 ? action : moment.target, icon: moment.icon}
     : juliet ? {x: 72, y: 37, label: 'להאיר את ג׳ולייט על הבמה', icon: 'spark' as const}
+    : choreography === 18 ? {x: 42, y: 77, label: action, icon: 'music' as const}
+    : choreography === 20 ? {x: 51, y: 40, label: action, icon: 'music' as const}
+    : choreography === 31 ? {x: 49, y: 72, label: action, icon: 'spark' as const}
+    : choreography === 33 ? {x: 53, y: 88, label: action, icon: 'music' as const}
     : ensemble ? {x: 50, y: 85, label: action, icon: 'music' as const}
     : undefined;
   const geo = sceneGeometry[String(beat.sourceScene).padStart(2, '0')];
   const hotspots = (geo?.hotspots || []).filter(p => p.characterId in characterInfo);
   const moving = motion && mode !== 'quiet';
-  const ambientRun = moment ? 0 : run;
+  const ambientRun = moment || choreography ? 0 : run;
 
   useLayoutEffect(() => {
     if (!loaded || !moving || juliet || ensemble) return;
@@ -80,7 +85,8 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
   function trigger() {
     if (!loaded || !moving) return;
     onInteract();
-    setAnnouncement(choreography === 48 ? 'הלהקה קדה והקהל מוחא כפיים.' : ensemble ? 'הלהקה רוקדת יחד!' : moment?.announcement ?? (juliet ? 'הספוט מאיר את ג׳ולייט.' : direction.announcement));
+    const reactions = {18: 'ג׳ולייט ופרנסואה רוקדים על השולחן!', 20: 'אנג׳ליק תופסת את לאנס והוא חוזר לרקוד.', 31: 'ספסל הירח עולה לפני הגלגל הענק.', 33: 'ג׳ולייט, רומיאו והלהקה עונים זה לזה בריקוד.', 38: 'הלהקה רוקדת יחד!', 48: 'הלהקה קדה והקהל מוחא כפיים.'};
+    setAnnouncement(choreography ? reactions[choreography] : moment?.announcement ?? (juliet ? 'הספוט מאיר את ג׳ולייט.' : direction.announcement));
     setRun(n => n + 1);
     if (moment && choreography !== 48) setMomentRun(n => n + 1);
   }

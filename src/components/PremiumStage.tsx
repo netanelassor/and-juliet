@@ -21,8 +21,7 @@ function Matte({mask,fill='white'}:{mask:PremiumMask;fill?:string}){
   return <><g fill={fill} stroke="none">{mask.solidPaths.map((d,i)=><path key={i} d={d}/>)}</g><g stroke={fill} fill="none" strokeLinecap="round" strokeLinejoin="round">{mask.strokes.map((s,i)=><path key={i} d={s.d} strokeWidth={s.width}/>)}</g><g fill={fill==='white'?'black':'white'}>{mask.holes.map((d,i)=><path key={i} d={d}/>)}</g></>;
 }
 
-/** A layered paper-theatre rig. Every visible actor samples the original WebP.
- * Clean plates are only revealed at the small vacated edges of moving pieces. */
+/** Cutout motion in scenes 03 and 14. Roar uses registered costume keyframes. */
 export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIdentity,onInteract,onReady}:{
   chapter:Chapter;beatIndex:number;motion:boolean;mode:Mode;reading:boolean;replay:number;
   onIdentity:(id:CharacterId)=>void;onInteract:()=>void;onReady:()=>void;
@@ -37,7 +36,8 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
   const [run,setRun]=useState(0),[message,setMessage]=useState('');
   const lastReplay=useRef(replay);
   const moving=motion&&mode!=='quiet';
-  const ready=originalReady&&plateReady;
+  const useCutouts=scene!==46;
+  const ready=originalReady&&(!useCutouts||plateReady);
   const mask=scene===3?openingMask:premiumMasks[scene];
   const removalMask: PremiumMask = mask.removalPaths ? {...mask,solidPaths:mask.removalPaths,holes:mask.removalHoles??mask.holes,strokes:[]} : mask;
   const image=illustration(scene), plate=asset(`premium/scene-${String(scene).padStart(2,'0')}-clean.webp`);
@@ -88,12 +88,10 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
     const pieces=root.current!.querySelectorAll('.premium-confetti');
     tl.set(beams,{opacity:0}).set(pieces,{opacity:0})
       .to(beams,{opacity:.26,duration:1.2,stagger:.65,ease:'sine.inOut'},.2)
-      .to(rig.current,{y:-8,duration:2.7,ease:'power2.inOut'},.3)
       .fromTo(pieces,{opacity:0,y:0,x:0,rotation:0},{opacity:1,duration:.25,stagger:.012},2)
       .to(pieces,{y:1120,x:i=>Math.sin(i*2)*95,rotation:i=>i*23,duration:5.7,ease:'sine.in',stagger:.012},2.1)
       .to(pieces,{opacity:0,duration:.7},6.9)
-      .to(beams,{opacity:0,duration:1.5,stagger:.12},7.1)
-      .to(rig.current,{y:0,duration:1.7,ease:'sine.inOut'},7.1);
+      .to(beams,{opacity:0,duration:1.5,stagger:.12},7.1);
     return()=>{tl.kill();};
   },[ready,moving,run]);
 
@@ -117,12 +115,12 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
   const sample=(piece:Piece,id:string)=><mask id={`${prefix}-${id}`} maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><g fill="white">{piece.solidPaths.map((d,i)=><path key={i} d={d}/>)}</g><g stroke="white" fill="none" strokeLinecap="round">{piece.strokes.map((s,i)=><path key={i} d={s.d} strokeWidth={s.width}/>)}</g></mask>;
   const source=(matte:string)=><image href={image} width="1536" height="1024" mask={`url(#${prefix}-${matte})`}/>;
 
-  return <section ref={root} className={`stage premium-stage premium-scene-${scene} ${ready?'layers-ready':''} ${moving?'motion-on':'motion-off'}`} aria-label={`הבמה. ${beat.title}`} data-scene={scene} data-run={run} data-layered="original-pixels">
+  return <section ref={root} className={`stage premium-stage premium-scene-${scene} ${ready?'layers-ready':''} ${moving?'motion-on':'motion-off'}`} aria-label={`הבמה. ${beat.title}`} data-scene={scene} data-run={run} data-layered={useCutouts?'original-pixels':'costume-keyframes'}>
     <div className="ambient-backdrop" aria-hidden="true"><img src={image} alt=""/></div>
     <div className="stage-picture premium-stage-picture">
-      <img className={`premium-original scene-art ${ready?'original-behind-layers':''}`} src={image} alt={beat.title} fetchPriority="high" decoding="async" draggable={false} onLoad={()=>{setOriginalReady(true);onReady();}} onError={()=>{setFailed(true);onReady();}}/>
-      <img className="premium-preload" src={plate} alt="" onLoad={()=>setPlateReady(true)} onError={()=>setFailed(true)}/>
-      {ready&&<svg className="premium-canvas" viewBox="0 0 1536 1024" aria-hidden="true">
+      <img className={`premium-original scene-art ${ready&&useCutouts?'original-behind-layers':''}`} src={image} alt={beat.title} fetchPriority="high" decoding="async" draggable={false} onLoad={()=>{setOriginalReady(true);onReady();}} onError={()=>{setFailed(true);onReady();}}/>
+      {useCutouts&&<img className="premium-preload" src={plate} alt="" onLoad={()=>setPlateReady(true)} onError={()=>setFailed(true)}/>}
+      {ready&&<svg className={`premium-canvas${useCutouts?'':' premium-performance-effects'}`} viewBox="0 0 1536 1024" aria-hidden="true">
         <defs>
           <mask id={`${prefix}-moving`} maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><Matte mask={mask}/></mask>
           <mask id={`${prefix}-base`} maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><rect width="1536" height="1024" fill="white"/><Matte mask={removalMask} fill="black"/></mask>
@@ -131,10 +129,10 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
           <radialGradient id={`${prefix}-glow`}><stop stopColor="#FFF2DD" stopOpacity=".8"/><stop offset="1" stopColor="#FFC84B" stopOpacity="0"/></radialGradient>
           <linearGradient id={`${prefix}-beam`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFF2DD" stopOpacity=".65"/><stop offset="1" stopColor="#FFC84B" stopOpacity="0"/></linearGradient>
         </defs>
-        <image href={plate} width="1536" height="1024"/>{source('base')}
+        {useCutouts&&<><image href={plate} width="1536" height="1024"/>{source('base')}</>}
         {scene===46&&<g className="premium-followspots">{[355,768,1163].map((x,i)=><g key={x} className="premium-auto-beam" opacity="0"><path d={`M${x-12} 195 L${x+12} 195 L${x+340} 880 L${x-260} 880Z`} fill={`url(#${prefix}-beam)`}/><ellipse cx={x+30} cy="870" rx="230" ry="50" fill={`url(#${prefix}-glow)`}/></g>)}</g>}
-        {scene===3?<><g ref={head}>{source('head')}</g><g ref={quill}>{source('quill')}</g><g ref={finger}>{source('finger')}</g><g ref={paper} className="premium-manuscript" opacity="0"><path d="M190 529 Q280 502 383 525 L405 737 Q303 716 205 750Z" fill="#FFF2DD" stroke="#B98E4C" strokeWidth="4"/>{[0,1,2,3].map(i=><path key={i} d={`M230 ${560+i*29} Q300 ${548+i*29} 356 ${561+i*29}`} fill="none" stroke="#8C665B" strokeWidth="3"/>)}<path d="M225 702Q291 683 368 700" stroke="#EF168F" fill="none" strokeWidth="4"/></g></>:<g ref={rig}>{source('moving')}</g>}
-        {source('front')}
+        {scene===3?<><g ref={head}>{source('head')}</g><g ref={quill}>{source('quill')}</g><g ref={finger}>{source('finger')}</g><g ref={paper} className="premium-manuscript" opacity="0"><path d="M190 529 Q280 502 383 525 L405 737 Q303 716 205 750Z" fill="#FFF2DD" stroke="#B98E4C" strokeWidth="4"/>{[0,1,2,3].map(i=><path key={i} d={`M230 ${560+i*29} Q300 ${548+i*29} 356 ${561+i*29}`} fill="none" stroke="#8C665B" strokeWidth="3"/>)}<path d="M225 702Q291 683 368 700" stroke="#EF168F" fill="none" strokeWidth="4"/></g></>:scene===14&&<g ref={rig}>{source('moving')}</g>}
+        {useCutouts&&source('front')}
         {scene===14&&<g>{[[479,75],[1062,78],[475,390],[1026,498],[785,126],[995,333]].map(([x,y],i)=><circle key={i} className="premium-crystal-light" cx={x} cy={y} r="29" opacity="0" fill={`url(#${prefix}-glow)`}/>)}</g>}
         {scene===46&&<g>{confetti.map((p,i)=><rect key={i} className="premium-confetti" x={p.x*15.36} y={p.y} width={i%2?9:13} height={i%3?20:10} rx="2" fill={p.color} opacity="0" transform={`rotate(${p.r} ${p.x*15.36} ${p.y})`}/>)}</g>}
       </svg>}

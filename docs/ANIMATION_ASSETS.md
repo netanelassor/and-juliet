@@ -26,7 +26,7 @@ All six generated PNG originals above are 1536 × 1024. Full clean-plate prompts
 | 10, carriage | `components/JourneyStage.tsx`; `motion/journey-masks.ts`; `styles/journey-stage.css` | Original coach/riders bob about 1.8 source pixels. Two original spoke/hub mattes rotate inside stationary elliptical rims; inverse projection makes the rotation circular before restoring perspective. The normalized SVG image **must keep `preserveAspectRatio="none"`**. Blue floor apertures are excluded from the wheel paint matte. |
 | 14, chandelier | `components/PremiumStage.tsx`; `motion/premium-masks.ts`; `styles/premium-stage.css` | Juliet, seat, chains, crystals and fixture move as a pendulum around the top suspension. Keep the current swing within approximately ±1.1°; larger movement exposes imperfect hair/chain edges. Supporting audience stays fixed. |
 | 24, Romeo entrance | `components/JourneyStage.tsx`; `motion/journey-masks.ts`; `styles/journey-stage.css` | Original Romeo enters about 8 source pixels into the followspot, then remains visible through a restrained repeating pose/light loop (about 1.7px movement). Original floor/pedestal foreground from y720 down remains on top. No repeated closed curtain. |
-| 46, Roar | `components/PremiumStage.tsx`; `motion/premium-masks.ts`; `styles/premium-stage.css` | Original Juliet and upper platform rise gently (currently 8 source pixels). The original foreground from **y568 down** stays fixed, preserving every front-row cast pixel and support column. The keyframe performance adds the microphone lift described below. |
+| 46, Roar | `components/PremiumStage.tsx`; `styles/premium-stage.css` | The original balcony matte is archived. The current costume keyframes use a stable balcony composition with independent followspots and confetti. |
 
 Import paths above start at `src/`. `App.tsx` selects the five layered renderers. Other scenes use `Stage.tsx`, `TheatricalEffects.tsx` and `motion/scene-motion.ts` for scene-specific stage effects around their complete original paintings.
 
@@ -73,15 +73,19 @@ Scene 06 uses `src/components/PaintedPerformance.tsx` and `src/motion/painted-ge
 
 `StageCue.tsx` places a focusable touch target on the relevant part of the painting in scenes 03, 06, 10, 14, 24, 28, 38, 46 and 48. The carriage cue increases the rate of the existing wheel rotation, then eases back to its ambient pace. The chandelier cue starts a swing, and the adjacent drag area sets the swing direction. `StageMoments.tsx` draws the split-feather effect in 28 and the audience's clapping silhouettes in 48. The effects repeat after a rest and can also be triggered by touch.
 
-The six keyframes below were generated with the built-in ImageGen using the original paintings as references. Each archived 2172 × 724 PNG sheet contains two 1086 × 724 cells with a fixed camera. Each runtime WebP is one of those cells at native resolution. Use `x=0` for `prep` and `x=1086` for `hit`. The animation and official music player run independently. [Generation prompts](../source-assets/performance/PROMPTS.md)
+These keyframes were generated with the built-in ImageGen using the original paintings as references. Each archived 2172 × 724 PNG sheet contains two 1086 × 724 cells. Each runtime WebP is one of those cells at native resolution. Use `x=0` for `prep` and `x=1086` for `hit`. The animation and official music player run independently. [Original choreography prompts](../source-assets/performance/PROMPTS.md) · [Production-reference prompts](../source-assets/performance/PRODUCTION_REFERENCE_PROMPTS.md)
 
 | Scene | Prep and hit poses | Archived sheet |
 | --- | --- | --- |
+| 18, Confident | Juliet and François dance on the banquet table, then the scene returns to the piano and May's reaction. | [Dance sheet](../source-assets/performance/scene-18-keyframes.png) · [Piano still source](../source-assets/performance/scene-18-piano-reference.png) |
+| 20, Teenage Dream / Break Free | Angélique holds Lance's hand as he almost loses his balance. | [scene-20-keyframes.png](../source-assets/performance/scene-20-keyframes.png) |
+| 31, One More Try | Juliet and Romeo listen to one another as the moon bench rises in front of the Ferris wheel. | [scene-31-keyframes.png](../source-assets/performance/scene-31-keyframes.png) |
+| 33, Problem / Can’t Feel My Face | Juliet, Romeo and the cast go from a close-arm count to an open-arm answer. | [scene-33-keyframes.png](../source-assets/performance/scene-33-keyframes.png) |
 | 38, wedding band | A collective crouch followed by a knee lift and reach. Lance opens his arm across the other four performers' synchronized reach. | [scene-38-keyframes.png](../source-assets/performance/scene-38-keyframes.png) |
-| 46, Roar | Juliet holds the microphone near her mouth, then lifts it overhead on the balcony. | [scene-46-keyframes.png](../source-assets/performance/scene-46-keyframes.png) |
+| 46, Roar | Juliet sings and lifts the microphone in her gold, fuchsia and purple costume; François cheers empty-handed below. | [scene-46-costume-keyframes.png](../source-assets/performance/scene-46-costume-keyframes.png) |
 | 48, curtain call | Eight cast members face the house and then bend forward together. | [scene-48-keyframes.png](../source-assets/performance/scene-48-keyframes.png) |
 
-To recreate a runtime crop, use FFmpeg with libwebp. Put both WebPs for each scene in `public/assets/performance/`. The offline build checks for all six and records their hashes.
+To recreate a runtime crop, use FFmpeg with libwebp. Put both WebPs for each scene in `public/assets/performance/`. The offline build checks for all 14 and records their hashes. The corrected stills in 01, 15, 17, 18, 31, 33 and 46 also serve the scene picker thumbnails. Canonical masters and the previous blue Roar sheet remain archived.
 
 ```sh
 ffmpeg -i source-assets/performance/scene-38-keyframes.png \
