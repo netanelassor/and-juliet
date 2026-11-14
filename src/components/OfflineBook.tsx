@@ -1,5 +1,7 @@
 import {useEffect, useId, useRef, useState} from 'react';
 import {Icon} from './Icons';
+import {albums} from '../content/music-cues';
+import {useNetworkOnline} from '../utils/network';
 import '../styles/offline-book.css';
 
 interface BookManifest {schema: number; version: string; files: {path: string; bytes: number}[]; totalBytes: number; scenes: number; cleanPlates: number}
@@ -37,6 +39,7 @@ export function OfflineBook() {
   const [manifest,setManifest] = useState<BookManifest | null>(null);
   const [progress,setProgress] = useState<Progress>(empty);
   const [cancelRequested,setCancelRequested] = useState(false);
+  const online = useNetworkOnline();
   const [unavailable,setUnavailable] = useState('');
   const metadata = useRef<BookManifest | null>(null);
   const worker = useRef<ServiceWorker | null>(null);
@@ -89,13 +92,18 @@ export function OfflineBook() {
   }, []);
 
   async function save() {
-    if (progress.phase === 'preparing' || progress.phase === 'saving' || unavailable) return;
+    if (progress.phase === 'preparing' || progress.phase === 'saving' || unavailable || !online) return;
     setProgress(value => ({...value,phase:'preparing',reason:undefined}));
     setCancelRequested(false);
     try {
-      await fetchManifest();
+      const edition = await fetchManifest();
       const registration = await navigator.serviceWorker.register(scriptURL,{scope:base.pathname,updateViaCache:'none'});
-      const active = await activated(registration);
+      let active = await activated(registration);
+      if ((await request(active,'STATUS')).version !== edition.version) {
+        await registration.update();
+        active = await activated(registration);
+        if ((await request(active,'STATUS')).version !== edition.version) throw new Error('edition-unavailable');
+      }
       worker.current = active;
       // Persistence is a browser decision, not a requirement or a promise.
       void navigator.storage?.persist?.().catch(() => false);
@@ -116,7 +124,7 @@ export function OfflineBook() {
   const totalBytes = manifest?.totalBytes || progress.totalBytes;
   const percent = progress.total ? Math.min(100,Math.round(progress.completed / progress.total * 100)) : 0;
   const labels: Record<Phase,string> = {
-    idle:'אפשר לשמור את הסיפור והאיורים לקריאה בלי אינטרנט.',
+    idle:'אפשר לשמור את כל 48 הסצנות, האיורים, ההנפשות והפקדים לקריאה בלי אינטרנט.',
     preparing:'מכינים את השמירה…',
     saving:cancelRequested ? 'עוצרים את ההורדה…' : `שומרים את הספר. ${progress.completed} מתוך ${progress.total} פריטים.`,
     ready:'הספר שמור במכשיר הזה ומוכן לדרך.',
@@ -130,7 +138,24 @@ export function OfflineBook() {
     <div className="offline-book-heading"><span className="offline-book-mark" aria-hidden="true"><Icon name="contents" size={19}/></span><div><h3 id={`${statusId}-title`}>הספר בא איתנו</h3><p>כל הסיפור, בכל מקום.</p></div></div>
     <p className="offline-book-status" id={statusId} role="status" aria-live="polite">{unavailable || labels[progress.phase]}</p>
     {progress.phase === 'saving' && <div className="offline-book-progress" role="progressbar" aria-label="שמירת הספר במכשיר" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent}><span style={{width:`${percent}%`}}/></div>}
-    <div className="offline-book-controls"><button type="button" className="offline-book-save" onClick={save} disabled={busy || Boolean(unavailable)} aria-describedby={statusId}><Icon name={progress.phase === 'ready' ? 'check' : 'contents'} size={17}/>{busy ? 'שומרים…' : action}</button>{progress.phase === 'saving' && <button type="button" className="offline-book-cancel" onClick={cancel} disabled={cancelRequested}>עצירה</button>}{!busy && totalBytes > 0 && <span className="offline-book-size">כ־<bdi>{Math.ceil(totalBytes / 1048576)} MB</bdi></span>}</div>
-    <p className="offline-book-note">המוזיקה ב־<bdi>Apple Music</bdi> וב־<bdi>Spotify</bdi> דורשת חיבור לאינטרנט.{busy ? ' נשאיר את הספר פתוח עד לסיום השמירה.' : ''}</p>
+    <div className="offline-book-controls"><button type="button" className="offline-book-save" onClick={save} disabled={busy || Boolean(unavailable) || !online} aria-describedby={statusId}><Icon name={progress.phase === 'ready' ? 'check' : 'contents'} size={17}/>{busy ? 'שומרים…' : action}</button>{progress.phase === 'saving' && <button type="button" className="offline-book-cancel" onClick={cancel} disabled={cancelRequested}>עצירה</button>}{!busy && totalBytes > 0 && <span className="offline-book-size">כ־<bdi>{Math.ceil(totalBytes / 1048576)} MB</bdi></span>}</div>
+    {busy && <p className="offline-book-note">נשאיר את הספר פתוח עד לסיום השמירה.</p>}
+    {!online && progress.phase !== 'ready' && <p className="offline-book-note">לחידוש השמירה, התחברו שוב לאינטרנט.</p>}
+    <div className="offline-route">
+      <strong>גם האלבום בא איתנו</strong>
+      <p>כשהאייפון מחובר, פתחו את אלבום הקאסט ב־<bdi>Apple Music</bdi>, הוסיפו לספרייה והורידו אותו.</p>
+      <a href={albums.apple} target="_blank" rel="noopener noreferrer"><Icon name="music" size={16}/>אלבום המחזמר ב־<bdi>Apple Music</bdi><Icon name="external" size={14}/></a>
+      <details><summary>איך שומעים בלי רשת?</summary>
+        <ol>
+          <li>באפליקציית ״מוזיקה״, פתחו ״ספרייה״ ואז ״הורדות״.</li>
+          <li>בחרו את האלבום ואת שם השיר שמופיע בסצנה.</li>
+          <li>חזרו לספר והמשיכו לקרוא בזמן שהמוזיקה מתנגנת.</li>
+        </ol>
+        <p>הספר והאלבום נשמרים בנפרד. ההורדה באפליקציית ״מוזיקה״ תלויה במינוי ובזמינות האלבום.</p>
+      </details>
+      <details><summary>איך מוסיפים את הספר למסך הבית?</summary>
+        <p>ב־Safari בחרו ״שיתוף״ ואז ״הוספה למסך הבית״. פתחו את הספר מהאייקון החדש ובחרו בו ״נשמור את הספר לדרך״.</p>
+      </details>
+    </div>
   </section>;
 }

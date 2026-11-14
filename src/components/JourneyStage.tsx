@@ -4,6 +4,7 @@ import {asset,illustration,thumbnail,characterInfo,type Chapter,type CharacterId
 import geometry from '../content/stage-geometry.json';
 import {carriageMatte,romeoMatte,type JourneyMatte} from '../motion/journey-masks';
 import {Icon} from './Icons';
+import {StageCue} from './StageCue';
 import type {Mode} from '../utils/progress';
 import '../styles/journey-stage.css';
 
@@ -24,6 +25,8 @@ export function JourneyStage({chapter,beatIndex,motion,mode,replay,onIdentity,on
   const prefix='journey-'+useId().replaceAll(':','');
   const root=useRef<HTMLElement>(null),background=useRef<SVGGElement>(null),coach=useRef<SVGGElement>(null),actor=useRef<SVGGElement>(null);
   const wheels=useRef<(SVGGElement|null)[]>([]);
+  const wheelMotion=useRef<gsap.core.Tween[]>([]);
+  const speedCue=useRef<gsap.core.Timeline|null>(null);
   const [originalReady,setOriginalReady]=useState(false),[plateReady,setPlateReady]=useState(false),[failed,setFailed]=useState(false),[run,setRun]=useState(0);
   const previousReplay=useRef(replay);
   const moving=motion&&mode!=='quiet',ready=originalReady&&plateReady,layered=ready&&moving;
@@ -39,7 +42,9 @@ export function JourneyStage({chapter,beatIndex,motion,mode,replay,onIdentity,on
       if(carriage){
         // Rotate the circular source-space wheel planes, then their outer SVG
         // groups reproject to the original perspective ellipses. Rims stay put.
-        wheels.current.forEach((wheel,i)=>{if(wheel)gsap.fromTo(wheel,{rotation:0},{rotation:360,svgOrigin:'0 0',duration:i?4.2:3.4,ease:'none',repeat:-1});});
+        wheelMotion.current = wheels.current.flatMap((wheel, i) => wheel
+          ? [gsap.fromTo(wheel, {rotation:0}, {rotation:360, svgOrigin:'0 0', duration:i?4.2:3.4, ease:'none', repeat:-1})]
+          : []);
         gsap.timeline({repeat:-1}).to(coach.current,{y:-1.8,rotation:-.055,svgOrigin:'770 800',duration:.78,ease:'sine.inOut'})
           .to(coach.current,{y:.7,rotation:.035,duration:.86,ease:'sine.inOut'})
           .to(coach.current,{y:0,rotation:0,duration:.78,ease:'sine.inOut'});
@@ -62,10 +67,19 @@ export function JourneyStage({chapter,beatIndex,motion,mode,replay,onIdentity,on
         gsap.fromTo('.journey-podium-glow',{opacity:.05},{opacity:.26,duration:3.2,repeat:-1,yoyo:true,ease:'sine.inOut'});
       }
     },root);
-    return()=>ctx.revert();
+    return()=>{speedCue.current?.kill(); speedCue.current = null; wheelMotion.current = []; ctx.revert();};
   },[layered,scene,run]);
 
-  function replayMoment(){if(!ready||!moving)return;onInteract();setRun(n=>n+1);}
+  const action = carriage ? 'להאיץ את הכרכרה' : 'להאיר את רומיאו';
+  function replayMoment() {
+    if (!ready || !moving) return;
+    onInteract();
+    if (!carriage) {setRun(n => n + 1); return;}
+    speedCue.current?.kill();
+    speedCue.current = gsap.timeline()
+      .to(wheelMotion.current, {timeScale:2.7, duration:.3, ease:'power2.out'})
+      .to(wheelMotion.current, {timeScale:1, duration:1.55, ease:'sine.inOut'}, .68);
+  }
   const source=(mask:string)=><image href={image} width="1536" height="1024" mask={`url(#${prefix}-${mask})`}/>;
   const figure=carriage?carriageMatte.body:romeoMatte.character;
   const removal=carriage?carriageMatte.removal:romeoMatte.removal;
@@ -98,8 +112,9 @@ export function JourneyStage({chapter,beatIndex,motion,mode,replay,onIdentity,on
         {carriage&&<g stroke="#FFC84B" strokeWidth="2" strokeLinecap="round" fill="none" opacity=".5">{[0,1,2].map(i=><path key={i} className="journey-road-light" d={`M${15+i*85} ${918+i*23}q46-8 96 0`} opacity="0"/>)}</g>}
       </svg>}
       {hotspots.filter(p=>p.characterId in characterInfo).map(p=><button key={p.characterId} className="character-hotspot journey-character-hotspot" style={{left:`${p.x*100}%`,top:`${p.y*100}%`,width:`${p.radius*140}%`,height:`${p.radius*140}%`} as CSSProperties} aria-label={`מי זה? ${characterInfo[p.characterId as CharacterId].name}`} onClick={()=>onIdentity(p.characterId as CharacterId)}><span>{characterInfo[p.characterId as CharacterId].name}</span></button>)}
+      {layered && <StageCue x={carriage ? 63.6 : 63} y={carriage ? 78.8 : 28} label={action} icon={carriage ? 'replay' : 'spark'} onActivate={replayMoment}/>}
       {moving&&!ready&&<span className="journey-loading">{failed?'אפשר להמשיך לקרוא.':'מכינים את רגע הבמה…'}</span>}
     </div>
-    <div className="premium-stage-footer journey-stage-footer"><p>{moving?hint:'רגע שקט בסיפור.'}</p><button aria-label="נפעיל שוב את רגע הבמה" onClick={replayMoment} disabled={!ready||!moving}><Icon name="replay" size={17}/><span>שוב</span></button></div>
+    <div className="premium-stage-footer journey-stage-footer"><p>{moving?hint:'רגע שקט בסיפור.'}</p><button aria-label={action} onClick={replayMoment} disabled={!ready||!moving}><Icon name="replay" size={17}/><span>{action}</span></button></div>
   </section>;
 }

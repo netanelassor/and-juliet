@@ -1,0 +1,51 @@
+.music-handoff {
+  margin: 6px 14px 10px;
+}
+.music-selection .music-handoff {
+  margin-inline: 0;
+}
+.music-handoff-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: #ffdda2;
+  text-decoration: none;
+  font-size: 13px;
+}
+.offline-music-handoff {
+  padding: 13px 14px 9px;
+  border-radius: 17px;
+  background: #42334f6b;
+  border: 1px solid #cdb68d40;
+}
+.offline-music-handoff .music-handoff-link {
+  padding-inline: 12px;
+  border: 1px solid #f2cc7a52;
+  border-radius: 999px;
+  background: #e8bb6f16;
+}
+.music-handoff-heading {
+  margin: 0 0 6px;
+  color: #ffe9c3;
+  font-size: 15px;
+}
+.downloaded-music-instructions {
+  color: #eddfef;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.downloaded-music-instructions summary {
+  min-height: 44px;
+  display: list-item;
+  align-content: center;
+  cursor: pointer;
+  color: #efd6a2;
+}
+.downloaded-music-instructions p {
+  margin: 7px 0;
+}
+.downloaded-music-instructions strong,
+.downloaded-music-instructions bdi {
+  color: #fff2d5;
+}

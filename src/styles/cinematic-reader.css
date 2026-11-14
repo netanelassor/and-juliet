@@ -1,0 +1,319 @@
+/* Viewport chrome is independent of scene content and player state. */
+.app.cinematic-reader {
+  --reader-gap: clamp(12px, 2.1vw, 28px);
+  --reader-safe: max(12px, env(safe-area-inset-bottom));
+  --dock-height: 76px;
+  --dock-space: calc(var(--reader-safe) + var(--dock-height) + 14px);
+}
+.app.premium-showcase.live-musical.cinematic-reader {
+  padding-bottom: var(--dock-space);
+  overflow: visible;
+  background: radial-gradient(ellipse at 20% 12%, #272041 0%, #151329 51%, #0e0d19 100%);
+}
+html:has(.app.live-musical) {scroll-padding-bottom: 108px;}
+
+.app.premium-showcase.live-musical .reader-header {
+  max-width: 1600px;
+  margin-inline: auto;
+  border: 0;
+  background: transparent;
+  padding-inline: max(var(--reader-gap), env(safe-area-inset-right)) max(var(--reader-gap), env(safe-area-inset-left));
+}
+.app.premium-showcase.live-musical .header-title {font-size: 12px;}
+.app.premium-showcase.live-musical .header-controls {
+  padding: 3px;
+  gap: 3px;
+  border-radius: 999px;
+  background: #22223b9e;
+  border: 1px solid #b0a4d125;
+}
+.app.premium-showcase.live-musical .header-controls .icon-button {
+  border: 0;
+  background: transparent;
+}
+.app.premium-showcase.live-musical .header-controls .icon-button:hover {background: #a6a0e339;}
+
+.app.premium-showcase.live-musical .reader-layout {
+  --stage-height: clamp(450px, calc(100svh - 272px), 880px);
+  margin-inline: auto;
+  width: min(1560px, calc(100% - 2 * var(--reader-gap)));
+  border-radius: clamp(22px, 3vw, 38px);
+  border: 1px solid #a39cc832;
+  background: radial-gradient(ellipse at 0% 95%, #53245d 0%, #252242 46%, #15172c 79%);
+  box-shadow: 0 18px 35px #08071355, inset 0 1px #eef2ff18;
+  isolation: isolate;
+}
+.app.premium-showcase.live-musical .reader-layout .reading-panel::before {
+  background: linear-gradient(90deg, transparent, #14182de5 40%, #15182cef);
+}
+.app.premium-showcase.live-musical .reading-heading h1 {
+  text-shadow: 0 5px 22px #0808179c;
+}
+.app.premium-showcase.live-musical .reading-panel .story-copy {scroll-margin-block: 90px 112px;}
+.app.premium-showcase.live-musical .premium-stage-footer button {
+  border-radius: 999px;
+  color: #fff0c2;
+  border-color: #f9ca8279;
+  background: #1b172fe8;
+  box-shadow: 0 8px 26px #09071960, inset 0 1px #fff1;
+}
+.app.premium-showcase.live-musical .premium-stage-footer button:hover:not(:disabled) {
+  background: #362a48;
+}
+.live-musical .scene-light-crossing {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 58% 32%, #dfb9ff30 0%, transparent 54%),
+    radial-gradient(ellipse at 61% 84%, #949ee333 0%, transparent 62%);
+  animation: scene-light-crossing 650ms cubic-bezier(.24,.6,.2,1) both;
+}
+@keyframes scene-light-crossing {
+  from {transform: translateX(63%) scale(1.14); opacity: .9;}
+  to {transform: translateX(-86%); opacity: 0;}
+}
+.app.live-musical .live-floor {
+  max-width: 1560px;
+  width: calc(100% - 2 * var(--reader-gap));
+  margin: 12px auto 0;
+  min-height: 0;
+  background: transparent;
+  padding: 0;
+}
+.app.live-musical .live-floor-track {display: none;}
+.app.live-musical .live-cue {
+  max-width: 100%;
+  min-height: 57px;
+  border: 1px solid #a399c82e;
+  border-radius: 999px;
+  background: #222239;
+  padding: 5px 18px 5px 6px;
+}
+.app.live-musical .live-cue:hover {background: #302947;}
+.app.live-musical .live-cue-play {width: 43px; height: 43px; box-shadow: none;}
+.app.live-musical .live-cue-copy {min-width: 0;}
+.app.live-musical .live-cue-copy b {font-size: 16px;}
+.app.live-musical .live-cue-copy small {font-size: 10px; line-height: 1.4;}
+
+.app.premium-showcase.live-musical .reader-footer {
+  position: fixed;
+  z-index: 24;
+  inset: auto max(var(--reader-gap), env(safe-area-inset-right)) var(--reader-safe) max(var(--reader-gap), env(safe-area-inset-left));
+  height: var(--dock-height);
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 8px 11px 12px;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: 138px minmax(0, 1fr) 152px;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid #ab9aca66;
+  border-radius: 30px;
+  background: #19172cf7;
+  box-shadow: 0 11px 35px #06050eb3, inset 0 1px #d7cef21a;
+}
+.app.premium-showcase.live-musical .reader-footer .next-button,
+.app.premium-showcase.live-musical .reader-footer .back-button {
+  width: 100%;
+  height: 48px;
+  min-height: 48px;
+  min-width: 0;
+  border-radius: 999px;
+  padding: 0 11px;
+  justify-content: center;
+  gap: 9px;
+  font-size: 15px;
+}
+.app.premium-showcase.live-musical .reader-footer .next-button {
+  background: linear-gradient(120deg, #fff1c8, #f5c66e);
+  color: #261a31;
+  box-shadow: inset 0 1px #fff8, 0 4px 14px #ffd17c21;
+}
+.app.premium-showcase.live-musical .reader-footer .next-button:hover {background: #fff1ce;}
+.app.premium-showcase.live-musical .reader-footer .back-button {
+  background: #312d4c;
+  color: #f6eefc;
+}
+.app.premium-showcase.live-musical .reader-footer .back-button:hover {background: #413a60;}
+.reader-position {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-inline: 13px;
+  min-height: 48px;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 999px;
+  text-align: start;
+  color: #f9efff;
+  background: transparent;
+}
+.reader-position:hover {background: #adaaec1e;}
+.reader-position > svg {flex: none; color: #cfbff0;}
+.reader-position > span {display: grid; gap: 3px; min-width: 0;}
+.reader-position > span > b {font-size: 11px; font-weight: 400; color: #c3b7dd;}
+.reader-position-title {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px;}
+.reader-counter {flex: none; font-size: 14px; font-variant-numeric: tabular-nums; color: #f9de9b;}
+.reader-counter span {color: #b4a9d1;}
+.reader-progress {
+  position: absolute;
+  bottom: 6px;
+  inset-inline: 28px;
+  height: 2px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #aaa0d02a;
+}
+.reader-progress > i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #dda2ed, #f6d49b);
+  transition: width .3s ease;
+}
+
+.app.cinematic-reader > .music-dock.premium-music-dock[data-testid="background-player"] {
+  position: fixed;
+  z-index: 22;
+  inset: auto auto var(--dock-space) max(var(--reader-gap), env(safe-area-inset-left));
+  width: min(365px, calc(100% - 2 * var(--reader-gap)));
+  max-height: calc(100dvh - var(--dock-space) - 16px);
+  overflow: auto;
+  border-radius: 24px;
+  border-color: #9987c475;
+  margin: 0;
+  padding: 0;
+  background: #211c37;
+  box-shadow: 0 8px 38px #070515a6;
+}
+.app.cinematic-reader > .music-dock.premium-music-dock.music-dock-minimized {
+  width: min(268px, calc(100% - 2 * var(--reader-gap)));
+  border-radius: 999px;
+}
+.app.cinematic-reader:not(.live-musical) > .music-dock.premium-music-dock {bottom: var(--reader-safe);}
+.app.cinematic-reader .sound-header {
+  height: auto;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 3px 5px 3px 7px;
+  border: 0;
+  background: transparent;
+}
+.sound-toggle {
+  display: flex;
+  min-height: 44px;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  gap: 9px;
+  border-radius: 999px;
+  padding: 4px 7px;
+  background: transparent;
+  text-align: right;
+}
+.sound-toggle:hover {background: #af9dd526;}
+.sound-note {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #46355c;
+  color: #f5db9f;
+}
+.sound-title {flex: 1; min-width: 0; display: grid; gap: 2px;}
+.sound-title small {color: #c9beda; font-size: 10px;}
+.sound-title bdi {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; color: #fff0d8;}
+.sound-chevron {flex: none; color: #dbc8f4; font-size: 19px;}
+.sound-controls {padding-bottom: 12px;}
+.sound-controls[hidden] {display: none;}
+.sound-status {margin: 9px 14px 0; font-size: 12px; color: #d7cce6;}
+.sound-tools {display: flex; justify-content: space-between; align-items: center; margin-inline: 14px;}
+.sound-tools > :is(a, button) {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  background: transparent;
+  color: #ffdea2;
+  font-size: 12px;
+  text-decoration: none;
+}
+.sound-services {margin-inline: 12px;}
+.sound-services button {min-height: 44px;}
+.app.premium-showcase.live-musical:has(.music-dock-minimized) {padding-bottom: calc(var(--dock-space) + 54px);}
+.app.premium-showcase.live-musical:has(.music-dock-expanded) {padding-bottom: calc(var(--dock-space) + 72px);}
+
+.scene-picks {
+  flex: none;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 3px 6px;
+}
+.scene-picks button {
+  display: grid;
+  grid-template-rows: 47px 1fr;
+  gap: 4px;
+  flex: 0 0 96px;
+  padding: 4px;
+  border: 1px solid #ae99cf42;
+  border-radius: 13px;
+  background: #342746;
+  color: #fff0e2;
+  overflow: hidden;
+  font-size: 10px;
+  line-height: 1.35;
+}
+.scene-picks button[aria-current] {border-color: #eac481; background: #4a3852;}
+.scene-picks img {width: 100%; height: 100%; object-fit: cover; border-radius: 8px;}
+.app.cinematic-reader dialog[open] {border-radius: 28px;}
+.app.cinematic-reader .illustrated-curtain {position: fixed;}
+
+@media (orientation: landscape) and (min-width: 761px) {
+  .app.live-musical .reader-layout[data-family="quiet"] .stage-picture {top: 0;}
+  .app.live-musical:has(.music-dock-expanded) .stage .premium-stage-footer {
+    left: min(38%, 430px);
+  }
+}
+@media (orientation: portrait), (max-width: 760px) {
+  .app.cinematic-reader > .music-dock.premium-music-dock.music-dock-expanded {
+    max-height: min(340px, calc(54dvh - var(--reader-safe)));
+  }
+  .app.premium-showcase.live-musical:has(.music-dock-expanded) {
+    padding-bottom: calc(var(--dock-space) + min(340px, calc(54dvh - var(--reader-safe))));
+  }
+  .app.premium-showcase.live-musical .reader-header {position: relative; padding-inline: var(--reader-gap);}
+  .app.premium-showcase.live-musical .reader-layout > .stage {min-height: 0;}
+  .app.premium-showcase.live-musical .reader-layout .reading-panel::before {
+    background: linear-gradient(180deg, transparent, #14182de5 27%, #15182ce9);
+  }
+  .app.premium-showcase.live-musical .reading-panel {padding-inline: clamp(18px, 4vw, 34px);}
+}
+@media (max-width: 600px) {
+  .app.cinematic-reader {--dock-height: 66px;}
+  .app.premium-showcase.live-musical .reader-footer {
+    grid-template-columns: 48px minmax(70px, 1fr) 106px;
+    padding: 5px 7px 8px;
+    gap: 7px;
+    border-radius: 25px;
+  }
+  .app.premium-showcase.live-musical .reader-footer .back-button > span {display: none;}
+  .app.premium-showcase.live-musical .reader-footer .next-button {
+    font-size: 13px;
+    padding-inline: 5px;
+    gap: 4px;
+  }
+  .reader-position {gap: 7px; padding-inline: 6px;}
+  .reader-position > span {display: none;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .live-musical .scene-light-crossing {display: none;}
+  .reader-progress > i {transition: none;}
+}

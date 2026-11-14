@@ -40,8 +40,11 @@ async function download(file, signal) {
   try {
     const response = await fetch(absolute(file.path), {credentials: 'omit', cache: 'reload', signal: controller.signal});
     if (!response.ok || response.type === 'opaque' || (!file.path.endsWith('.html') && (response.headers.get('content-type') || '').includes('text/html'))) throw new Error('incomplete-response');
-    // Keep cancellation/timeout attached until the complete response body arrives.
-    await response.clone().arrayBuffer();
+    const body = await response.clone().arrayBuffer();
+    if (body.byteLength !== file.bytes) throw new Error('incomplete-response');
+    const digest = await crypto.subtle.digest('SHA-256', body);
+    const hex = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, '0')).join('');
+    if (hex !== file.sha256) throw new Error('edition-mismatch');
     return response;
   } finally {clearTimeout(timer); signal.removeEventListener('abort', abort);}
 }
@@ -63,7 +66,6 @@ async function keepPreviousEdition() {
 async function saveBook(current) {
   try {
     const cache = await caches.open(cacheName);
-    await cache.delete(markerURL);
     for (const file of BOOK.files) {
       if (current.controller.signal.aborted) throw new Error('cancelled');
       const url = absolute(file.path);
@@ -111,7 +113,9 @@ async function cachedAsset(url) {
   const names = await bookCaches();
   names.sort((a,b) => Number(b === cacheName) - Number(a === cacheName));
   for (const name of names) {
-    const hit = await (await caches.open(name)).match(url, {ignoreSearch: true});
+    const cache = await caches.open(name);
+    if (!await cache.match(markerURL)) continue;
+    const hit = await cache.match(url, {ignoreSearch: true});
     if (hit) return hit;
   }
 }
@@ -126,17 +130,22 @@ async function savedIndex() {
     }
   }
 }
+async function freshOrSaved(request, saved) {
+  let response;
+  try {response = await fetch(request);} catch { /* A saved response remains usable. */ }
+  return response?.ok ? response : await saved() || response || Response.error();
+}
 self.addEventListener('fetch', event => {
   const request = event.request;
   const url = new URL(request.url);
   if (request.method !== 'GET' || url.origin !== self.location.origin || !url.href.startsWith(scope)) return;
   // Navigating online always asks the server first: no stale site shell lock-in.
   if (request.mode === 'navigate') {
-    event.respondWith(fetch(request).catch(async () => await savedIndex() || new Response('הספר עדיין לא נשמר במכשיר הזה. פתחו אותו עם חיבור לאינטרנט ובחרו שמירה לדרך.', {status:503,headers:{'Content-Type':'text/plain; charset=utf-8'}})));
+    event.respondWith(freshOrSaved(request, async () => await savedIndex() || new Response('הספר עדיין לא נשמר במכשיר הזה. פתחו אותו עם חיבור לאינטרנט ובחרו שמירה לדרך.', {status:503,headers:{'Content-Type':'text/plain; charset=utf-8'}})));
     return;
   }
   if (url.href.split('?')[0] === manifestURL) {
-    event.respondWith(fetch(request).catch(async () => await cachedAsset(manifestURL) || Response.error()));
+    event.respondWith(freshOrSaved(request, () => cachedAsset(manifestURL)));
     return;
   }
   // Strictly local, generated-book assets. Remote music/auth requests pass untouched.
@@ -144,5 +153,5 @@ self.addEventListener('fetch', event => {
   if (!allowed.has(url.pathname) && !oldCore) return;
   url.search = '';
   // A newly published illustration/CSS must also win online, not just the HTML.
-  event.respondWith(fetch(request).then(async response => response.ok ? response : await cachedAsset(url.href) || response).catch(async () => await cachedAsset(url.href) || Response.error()));
+  event.respondWith(freshOrSaved(request, () => cachedAsset(url.href)));
 });

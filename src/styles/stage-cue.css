@@ -1,0 +1,33 @@
+.stage .stage-picture .stage-cue {
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #ffe7a9d9;
+  border-radius: 50%;
+  color: #ffe7a9;
+  background: #23132dea;
+  box-shadow: 0 0 22px #ffbb6680, inset 0 0 10px #ffc87825;
+  touch-action: manipulation;
+}
+.stage-cue::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 1px solid #ffe2a586;
+  border-radius: inherit;
+  pointer-events: none;
+  animation: stage-cue-pulse 3.2s ease-out infinite;
+}
+.stage .stage-picture .stage-cue:is(:hover, :focus-visible) {
+  color: #25162b;
+  background: #ffe7a9;
+}
+@keyframes stage-cue-pulse {
+  0%, 42% {opacity: .75; transform: scale(.91);}
+  75%, 100% {opacity: 0; transform: scale(1.22);}
+}
+@media(prefers-reduced-motion:reduce) {.stage-cue::after {animation: none;}}

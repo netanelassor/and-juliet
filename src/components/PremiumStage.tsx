@@ -5,6 +5,7 @@ import geometry from '../content/stage-geometry.json';
 import {premiumMasks,type PremiumMask} from '../motion/premium-masks';
 import {openingMask,openingPieces} from '../motion/premium-opening';
 import {Icon} from './Icons';
+import {StageCue} from './StageCue';
 import type {Mode} from '../utils/progress';
 import '../styles/premium-stage.css';
 
@@ -95,13 +96,14 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
     return()=>{tl.kill();};
   },[ready,moving,run]);
 
+  const action = scene === 3 ? 'להזיז את הנוצה' : scene === 14 ? 'לנדנד את הנברשת' : 'להאיר את המרפסת';
   function activate(){
-    if(!ready)return;onInteract();
+    if(!ready || !moving)return;onInteract();
     setMessage(info.done);setRun(n=>n+1);
   }
 
   function down(e:PointerEvent<HTMLButtonElement>){
-    if(!ready||scene!==14)return;e.preventDefault();e.currentTarget.setPointerCapture(e.pointerId);onInteract();sequence.current?.kill();
+    if(!ready||!moving||scene!==14)return;e.preventDefault();e.currentTarget.setPointerCapture(e.pointerId);onInteract();sequence.current?.kill();
     drag.current={x:e.clientX,rotation:Number(gsap.getProperty(rig.current,'rotation'))||0,moved:false};
   }
   function move(e:PointerEvent<HTMLButtonElement>){
@@ -135,11 +137,12 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
         {scene===14&&<g>{[[479,75],[1062,78],[475,390],[1026,498],[785,126],[995,333]].map(([x,y],i)=><circle key={i} className="premium-crystal-light" cx={x} cy={y} r="29" opacity="0" fill={`url(#${prefix}-glow)`}/>)}</g>}
         {scene===46&&<g>{confetti.map((p,i)=><rect key={i} className="premium-confetti" x={p.x*15.36} y={p.y} width={i%2?9:13} height={i%3?20:10} rx="2" fill={p.color} opacity="0" transform={`rotate(${p.r} ${p.x*15.36} ${p.y})`}/>)}</g>}
       </svg>}
-      {scene===14&&<button className="premium-swing-target" aria-label="משיכת הנברשת מצד לצד" disabled={!ready} data-premium-gesture="true" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onClick={e=>{if(e.detail===0)activate();}}/>}
+      {scene===14&&<button className="premium-swing-target" aria-label="משיכת הנברשת מצד לצד" disabled={!ready||!moving} data-premium-gesture="true" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onClick={e=>{if(e.detail===0)activate();}}/>}
 
       {hotspots.filter(p=>p.characterId in characterInfo).map(p=><button key={p.characterId} className="character-hotspot premium-character-hotspot" aria-label={`מי זה? ${characterInfo[p.characterId as CharacterId].name}`} style={{left:`${p.x*100}%`,top:`${p.y*100}%`,width:`${p.radius*140}%`,height:`${p.radius*140}%`}} onClick={()=>onIdentity(p.characterId as CharacterId)}><span>{characterInfo[p.characterId as CharacterId].name}</span></button>)}
+      {ready && moving && <StageCue x={scene === 3 ? 24 : scene === 14 ? 53 : 54} y={scene === 3 ? 23 : scene === 14 ? 13 : 20} label={action} onActivate={activate}/>}
       {!ready&&<span className="premium-loading">{failed?'אפשר לקרוא. שכבות הבמה מתעכבות לרגע.':'מכינים את רגע הבמה…'}</span>}
     </div>
-    <div className="premium-stage-footer"><p aria-live="polite">{message||info.hint}</p><button aria-label="נפעיל שוב את רגע הבמה" disabled={!ready} onClick={activate}><Icon name="replay" size={17}/><span>שוב</span></button></div>
+    <div className="premium-stage-footer"><p aria-live="polite">{message||info.hint}</p><button aria-label={action} disabled={!ready||!moving} onClick={activate}><Icon name="replay" size={17}/><span>{action}</span></button></div>
   </section>;
 }

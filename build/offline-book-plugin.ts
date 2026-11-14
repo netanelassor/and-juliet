@@ -31,11 +31,11 @@ export function offlineBook(): Plugin {
       if (!names.includes('index.html')) throw new Error('Offline book inventory requires index.html');
       const template = await readFile(resolve(config.root, 'build/offline-book-worker.js'), 'utf8');
       const hash = createHash('sha256').update(template);
-      const files: {path: string; bytes: number}[] = [];
+      const files: {path: string; bytes: number; sha256: string}[] = [];
       for (const path of names) {
         const data = await readFile(resolve(out, path));
         hash.update(path).update(data);
-        files.push({path, bytes: data.byteLength});
+        files.push({path, bytes: data.byteLength, sha256: createHash('sha256').update(data).digest('hex')});
       }
       const inventory = {
         schema: 1,

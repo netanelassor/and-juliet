@@ -5,6 +5,9 @@ import geometry from '../content/stage-geometry.json';
 import {motionForScene} from '../motion/scene-motion';
 import {TheatricalEffects} from './TheatricalEffects';
 import {Icon} from './Icons';
+import {PaintedPerformance} from './PaintedPerformance';
+import {StageCue} from './StageCue';
+import {StageMomentEffect, stageMoment} from './StageMoments';
 import type {Mode} from '../utils/progress';
 
 type Point = {characterId: string; x: number; y: number; radius: number};
@@ -17,17 +20,28 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
 }) {
   const root = useRef<HTMLDivElement>(null), art = useRef<HTMLDivElement>(null);
   const camera = useRef<HTMLDivElement>(null);
+  const painting = useRef<HTMLImageElement>(null);
   const [loaded, setLoaded] = useState(false), [run, setRun] = useState(0);
+  const [momentRun, setMomentRun] = useState(0);
   const [imageError, setImageError] = useState(false), [retry, setRetry] = useState(0);
   const [announcement, setAnnouncement] = useState('');
   const lastReplay = useRef(replay);
   const beat = chapter.beats[beatIndex], direction = motionForScene(beat.sourceScene);
+  const juliet = beat.sourceScene === 6;
+  const ensemble = beat.sourceScene === 38;
+  const moment = stageMoment(beat.sourceScene);
+  const action = moment?.action ?? (ensemble ? 'להעלות את הלהקה' : juliet ? 'להדליק ספוט' : direction.action);
+  const cue = moment ? {x: moment.x, y: moment.y, label: moment.target, icon: moment.icon}
+    : juliet ? {x: 72, y: 37, label: 'להאיר את ג׳ולייט על הבמה', icon: 'spark' as const}
+    : ensemble ? {x: 50, y: 85, label: 'להעלות את הלהקה על הבמה', icon: 'music' as const}
+    : undefined;
   const geo = sceneGeometry[String(beat.sourceScene).padStart(2, '0')];
   const hotspots = (geo?.hotspots || []).filter(p => p.characterId in characterInfo);
   const moving = motion && mode !== 'quiet';
+  const ambientRun = moment ? 0 : run;
 
   useLayoutEffect(() => {
-    if (!loaded || !moving) return;
+    if (!loaded || !moving || juliet || ensemble) return;
     const ctx = gsap.context(() => {
       // Every scene comes alive by itself. Reading and pointer focus do not
       // suspend it; the parent's global motion/quiet/device gates do.
@@ -45,14 +59,28 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
       }
     }, root);
     return () => ctx.revert();
-  }, [loaded, moving, beat.sourceScene, run]);
+  }, [loaded, moving, beat.sourceScene, ambientRun, juliet, ensemble]);
+  useEffect(() => {
+    if (!moment || !moving || !loaded) {
+      setMomentRun(0);
+      return;
+    }
+    const repeat = window.setTimeout(() => setMomentRun(n => n + 1), momentRun === 0 ? 2700 : 9700);
+    return () => window.clearTimeout(repeat);
+  }, [moment, moving, loaded, momentRun]);
   useEffect(() => {
     if (beat.sourceScene < 48) {const next = new Image(); next.src = illustration(beat.sourceScene + 1);}
   }, [beat.sourceScene]);
   useEffect(() => {
     if (lastReplay.current !== replay) {lastReplay.current = replay; trigger();}
   }, [replay]);
-  function trigger() {if (!loaded) return; onInteract(); setAnnouncement(direction.announcement); setRun(n => n + 1);}
+  function trigger() {
+    if (!loaded || !moving) return;
+    onInteract();
+    setAnnouncement(moment?.announcement ?? (juliet ? 'הספוט מאיר את ג׳ולייט.' : direction.announcement));
+    setRun(n => n + 1);
+    if (moment) setMomentRun(n => n + 1);
+  }
   return <section ref={root} className={`stage premium-standard-stage stage-${chapter.family} motion-scene-${direction.kind} ${moving ? 'motion-on' : 'motion-off'} ${loaded && moving || run > 0 ? 'activated' : ''} ${imageError ? 'stage-is-error' : loaded ? 'stage-is-ready' : 'stage-is-loading'}`} aria-label={`הבמה. ${beat.title}`} data-family={chapter.family} data-scene={beat.sourceScene} data-run={run}>
     <div className="ambient-backdrop" aria-hidden="true"><img src={illustration(beat.sourceScene)} alt=""/></div>
     <div className="stage-ceiling" aria-hidden="true"><span/><span/><span/><span/><span/></div>
@@ -63,14 +91,21 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
       if (e.clientX > bounds.left + 24 && e.clientX < bounds.right - 24) trigger();
     }}>
       <img className="scene-preview" src={thumbnail(beat.sourceScene)} alt="" aria-hidden="true" onError={e => {e.currentTarget.style.visibility = 'hidden';}}/>
-      <div ref={art} className="art-plane"><div ref={camera} className="camera-plane"><img key={retry} className="scene-art" src={illustration(beat.sourceScene) + (retry ? `?attempt=${retry}` : '')} alt={beat.title} draggable={false} fetchPriority="high" decoding="async" onLoad={() => {setLoaded(true); setImageError(false); onReady();}} onError={() => {setLoaded(false); setImageError(true); onReady();}}/></div></div>
+      <div ref={art} className="art-plane">
+        <div ref={camera} className="camera-plane">
+          <img ref={painting} key={retry} className="scene-art" src={illustration(beat.sourceScene) + (retry ? `?attempt=${retry}` : '')} alt={beat.title} draggable={false} fetchPriority="high" decoding="async" onLoad={() => {setLoaded(true); setImageError(false); onReady();}} onError={() => {setLoaded(false); setImageError(true); onReady();}}/>
+          {moment && moving && loaded && momentRun > 0 && <StageMomentEffect key={momentRun} scene={beat.sourceScene}/>}
+        </div>
+      </div>
+      {(juliet || ensemble) && <PaintedPerformance painting={painting} ready={loaded} motion={moving} run={run} ensemble={ensemble}/>}
       <div className="light-wash" aria-hidden="true"/>
-      <TheatricalEffects scene={beat.sourceScene} run={run} enabled={moving && loaded} ambient/>
+      <TheatricalEffects scene={beat.sourceScene} run={ambientRun} enabled={moving && loaded && !juliet} ambient/>
       {hotspots.map(point => <button key={point.characterId} className="character-hotspot" style={{left: `${point.x * 100}%`, top: `${point.y * 100}%`, width: `${point.radius * 200}%`, height: `${point.radius * 200}%`}} aria-label={`מי זה? ${characterInfo[point.characterId as CharacterId].name}`} onClick={() => onIdentity(point.characterId as CharacterId)}><span>מי זה?</span></button>)}
+      {cue && loaded && moving && <StageCue {...cue} onActivate={trigger}/>}
       {!loaded && <div className="stage-load-status" aria-live="polite">{imageError ? <><span>האיור מתעכב לרגע.</span><button data-testid="artwork-retry" onClick={() => {setImageError(false); setRetry(n => n + 1);}}><Icon name="replay" size={16}/>ננסה שוב</button></> : <span>מכינים את הבמה...</span>}</div>}
     </div>
     <div className="stage-floor" aria-hidden="true"/>
-    <div className="premium-stage-footer"><p>{direction.action}</p><button disabled={!loaded} onClick={trigger} data-testid="stage-interaction" aria-label={`שוב מההתחלה: ${direction.action}`}><Icon name="replay" size={17}/><span>שוב</span></button></div>
+    <div className="premium-stage-footer"><button disabled={!loaded || !moving} onClick={trigger} data-testid="stage-interaction" aria-label={action}><Icon name="spark" size={19}/><span>{action}</span></button></div>
     <span className="sr-only" role="status" aria-live="polite">{announcement}</span>
   </section>;
 }

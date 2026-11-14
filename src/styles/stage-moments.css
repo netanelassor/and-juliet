@@ -1,0 +1,157 @@
+/* The prop overlay uses the same 3:2 coordinate system and camera as the art. */
+.camera-plane {
+  position: relative;
+}
+
+.stage-moment-effect {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: stage-moment-duration var(--stage-moment-duration) linear both;
+}
+
+.stage-moment-effect[data-stage-moment="quill"] {
+  --stage-moment-duration: 1.28s;
+}
+
+.stage-moment-effect[data-stage-moment="applause"] {
+  --stage-moment-duration: 2.4s;
+}
+
+.stage:has([data-stage-moment="quill"]) .fx-snap-prop {
+  visibility: hidden;
+}
+
+.stage:has([data-stage-moment]) .stage-cue:not(:focus-visible) {
+  opacity: .45;
+}
+
+.stage:has([data-stage-moment]) .stage-cue::after {
+  animation-play-state: paused;
+}
+
+@keyframes stage-moment-duration {
+  0%, 95% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.stage-quill-connect {
+  animation: stage-quill-connect .72s ease-in-out both;
+}
+
+.stage-quill-left,
+.stage-quill-right {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.stage-quill-left {
+  animation: stage-quill-left .72s ease-out both;
+}
+
+.stage-quill-right {
+  animation: stage-quill-right .72s ease-out both;
+}
+
+.stage-quill-flare {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: stage-quill-flare .58s ease-out .3s both;
+}
+
+.stage-quill-fleck {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: stage-quill-fleck .88s cubic-bezier(.12,.64,.34,1) calc(.3s + var(--moment-delay)) both;
+}
+
+.stage-applause-light {
+  mix-blend-mode: screen;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: stage-applause-light 1.7s ease-in-out var(--moment-delay) both;
+}
+
+.stage-applause-hands {
+  animation: stage-applause-raise 1.7s ease-in-out var(--moment-delay) both;
+}
+
+.stage-applause-hand-left,
+.stage-applause-hand-right {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.stage-applause-hand-left {
+  animation: stage-applause-left .34s ease-in-out calc(var(--moment-delay) + .3s) 3 both;
+}
+
+.stage-applause-hand-right {
+  animation: stage-applause-right .34s ease-in-out calc(var(--moment-delay) + .3s) 3 both;
+}
+
+.stage-applause-marks {
+  animation: stage-applause-marks .34s ease-out calc(var(--moment-delay) + .3s) 3 both;
+}
+
+@keyframes stage-quill-connect {
+  0%, 100% { opacity: 0; }
+  16%, 46% { opacity: 1; }
+}
+
+@keyframes stage-quill-left {
+  0%, 44% { transform: none; }
+  100% { transform: translate(-19px, -13px) rotate(-31deg); }
+}
+
+@keyframes stage-quill-right {
+  0%, 44% { transform: none; }
+  100% { transform: translate(23px, 5px) rotate(38deg); }
+}
+
+@keyframes stage-quill-flare {
+  0% { opacity: 0; transform: scale(.25); }
+  19% { opacity: .85; }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+
+@keyframes stage-quill-fleck {
+  0% { opacity: 0; transform: scale(.3); }
+  15%, 42% { opacity: 1; }
+  71% { opacity: .74; }
+  100% { opacity: 0; transform: translate(var(--fleck-x), var(--fleck-y)) rotate(var(--fleck-turn)) scale(.66); }
+}
+
+@keyframes stage-applause-light {
+  0% { opacity: 0; transform: scale(.5); }
+  24%, 52% { opacity: .82; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.25); }
+}
+
+@keyframes stage-applause-raise {
+  0%, 100% { opacity: 0; transform: translateY(52px); }
+  25%, 76% { opacity: .98; transform: translateY(0); }
+}
+
+@keyframes stage-applause-left {
+  0%, 100% { transform: translateX(-6px) rotate(-15deg); }
+  48% { transform: translateX(11px) rotate(8deg); }
+}
+
+@keyframes stage-applause-right {
+  0%, 100% { transform: translateX(6px) rotate(15deg) scaleX(-1); }
+  48% { transform: translateX(-11px) rotate(-8deg) scaleX(-1); }
+}
+
+@keyframes stage-applause-marks {
+  0%, 100% { opacity: 0; }
+  46% { opacity: 0; transform: translateY(2px); }
+  54% { opacity: .9; }
+  88% { opacity: 0; transform: translateY(-13px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-moment-effect { display: none; }
+}
