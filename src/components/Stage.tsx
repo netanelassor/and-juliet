@@ -23,7 +23,7 @@ const performanceCues: Partial<Record<ChoreographyScene, {x: number; y: number; 
   18: {x: 42, y: 77, icon: 'music', label: 'לרקוד על השולחן', announcement: 'ג׳ולייט ופרנסואה רוקדים על השולחן!'},
   20: {x: 51, y: 40, icon: 'music', label: 'לנסות את הצעד של לאנס', announcement: 'אנג׳ליק תופסת את לאנס והוא חוזר לרקוד.'},
   21: {x: 48, y: 36, icon: 'spark', label: 'לפתוח את קופסת הטבעת', announcement: 'פרנסואה פותח את הקופסה והכוס של ג׳ולייט כמעט נשמטת.'},
-  22: {x: 49, y: 75, icon: 'heart', label: 'לראות מה פרנסואה נזכר', announcement: 'מיי מרפה מהיד. פרנסואה נזכר בהבטחה לג׳ולייט.'},
+  22: {x: 49, y: 75, icon: 'heart', label: 'לראות את התגובה של פרנסואה', announcement: 'מיי מרפה מהיד. פרנסואה נזכר בהבטחה לג׳ולייט.'},
   26: {x: 47, y: 71, icon: 'spark', label: 'לפתוח מקום לג׳ולייט', announcement: 'ג׳ולייט פונה לקהל ורומיאו מקשיב.'},
   31: {x: 49, y: 72, icon: 'spark', label: 'להרים את ספסל הירח', announcement: 'ספסל הירח עולה מול הגלגל הענק.'},
   33: {x: 53, y: 88, icon: 'music', label: 'להתחיל את הריקוד', announcement: 'ג׳ולייט, רומיאו והלהקה עונים זה לזה בריקוד.'},
@@ -127,7 +127,7 @@ export function Stage({chapter, beatIndex, motion, mode, replay, onIdentity, onI
       </div>
       {juliet && <PaintedPerformance painting={painting} ready={loaded} motion={moving} run={run} ensemble={false}/>}
       <div className="light-wash" aria-hidden="true"/>
-      <TheatricalEffects scene={beat.sourceScene} run={ambientRun} enabled={moving && loaded && !juliet} ambient/>
+      <TheatricalEffects scene={scene} run={ambientRun} enabled={moving && loaded && !juliet && scene !== 21} ambient/>
       {lighting && moving && loaded && <StoryLighting key={run} lighting={lighting}/>}
       {hotspots.map(point => <button key={point.characterId} className="character-hotspot" style={{left: `${point.x * 100}%`, top: `${point.y * 100}%`, width: `${point.radius * 200}%`, height: `${point.radius * 200}%`}} aria-label={`מי זה? ${characterInfo[point.characterId as CharacterId].name}`} onClick={() => onIdentity(point.characterId as CharacterId)}><span>מי זה?</span></button>)}
       {cue && loaded && moving && <StageCue {...cue} onActivate={trigger}/>}
