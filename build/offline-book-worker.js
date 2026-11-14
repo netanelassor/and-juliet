@@ -8,6 +8,7 @@ const manifestURL = absolute('offline-book-manifest.json');
 const indexURL = absolute('index.html');
 const allowed = new Set(BOOK.files.map(file => new URL(file.path, scope).pathname));
 let job = null;
+const transferBatchSize = 4;
 
 // Installing the lightweight worker itself never downloads the illustrations.
 self.addEventListener('install', event => event.waitUntil(self.skipWaiting()));
@@ -66,16 +67,25 @@ async function keepPreviousEdition() {
 async function saveBook(current) {
   try {
     const cache = await caches.open(cacheName);
-    for (const file of BOOK.files) {
+    for (let i = 0; i < BOOK.files.length; i += transferBatchSize) {
       if (current.controller.signal.aborted) throw new Error('cancelled');
-      const url = absolute(file.path);
-      if (!await cache.match(url)) {
-        const response = await download(file, current.controller.signal);
-        if (current.controller.signal.aborted) throw new Error('cancelled');
-        // URL-string keys contain no request cookies or authorization headers.
-        await cache.put(url, response);
+      const transfers = await Promise.allSettled(BOOK.files.slice(i, i + transferBatchSize).map(async file => {
+        const url = absolute(file.path);
+        if (!await cache.match(url)) {
+          const response = await download(file, current.controller.signal);
+          if (current.controller.signal.aborted) throw new Error('cancelled');
+          // URL-string keys contain no request cookies or authorization headers.
+          await cache.put(url, response);
+        }
+        return file.bytes;
+      }));
+      let {completed, bytes} = current.progress;
+      for (const transfer of transfers) {
+        if (transfer.status === 'fulfilled') {completed++; bytes += transfer.value;}
       }
-      current.progress = state('saving', {completed: current.progress.completed + 1, bytes: current.progress.bytes + file.bytes});
+      current.progress = state('saving', {completed, bytes});
+      const failed = transfers.find(transfer => transfer.status === 'rejected');
+      if (failed) throw failed.reason;
       await publish(current.progress);
     }
     if (current.controller.signal.aborted) throw new Error('cancelled');
