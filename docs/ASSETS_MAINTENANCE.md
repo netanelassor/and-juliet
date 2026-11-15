@@ -9,15 +9,15 @@
 | סדר הקריאה, 17 הפרקים וכל 48 הסצנות | `src/content/chapters-data.json` |
 | נוסח הסיפור המלא לפי מספר סצנה | `src/content/full-story.json` |
 | הקשר ל־PDF המקורי וטביעות האצבע של האיורים | `src/content/source-inventory.json` |
-| איורי הדפדפן | `public/assets/story/scene-01.webp` עד `scene-48.webp` |
+| איורי הדפדפן | `public/assets/story/scene-01.webp` עד `scene-48.webp`; `src/content/scenes.ts` מפנה לאיורים מעודכנים ב־`public/assets/performance/` |
 | כריכה ולוגו בדפדפן | `public/assets/cover/` |
-| איורי השלמה להנפשה | `public/assets/premium/` והפרומפטים ב־`docs/PREMIUM_ASSET_PROVENANCE.json` |
+| רקעי השלמה ותנוחות להנפשה | `public/assets/premium/` ו־`public/assets/performance/`. קובצי המקור והפרומפטים מתועדים ב־[מפת ההנפשות](ANIMATION_ASSETS.md) |
 | הווילון | `public/assets/theatre/curtain-illustrated-v1.webp`, `TheatreCurtain.tsx` והסגנון שלו |
 | עימוד, צבעים ו־Rubik בגודל 24 | `src/styles/premium-design.css`; הפונט ב־`public/assets/fonts/` |
-| מסכות הדמויות והנפשות בחמש סצנות המפתח | `src/components/PremiumStage.tsx` והסגנון שלו |
-| הנפשות שאר הסצנות | `Stage.tsx`, `TheatricalEffects.tsx`, `src/motion/scene-motion.ts` |
+| הנפשות בשכבות | `PremiumStage.tsx` לנוצה ולנברשת, `JourneyStage.tsx` לכרכרה ו־`RomeoDescent.tsx` לכניסה של רומיאו |
+| תנוחות דמויות והנפשות במה | `CharacterChoreography.tsx`, `PaintedPerformance.tsx`, `Stage.tsx`, `TheatricalEffects.tsx`, `src/motion/scene-motion.ts` |
 | שמות שירים, קישורים ושיוך לסצנות | `src/content/music-cues.ts` |
-| הנגן והקראת המכשיר | `BackgroundMusic.tsx`, `MusicPanel.tsx`, `DeviceNarration.tsx` |
+| הנגן ומעבר לאפליקציית מוזיקה | `BackgroundMusic.tsx`, `MusicPanel.tsx`, `MusicHandoff.tsx` |
 | בנייה, שמירה ללא רשת והפצה | `package-lock.json`, `vite.config.ts`, `build/`, `.github/workflows/deploy.yml` |
 
 העיבוד האינטראקטיבי לגיל שש כולל את כל 48 סצנות המקור והרחבות שמחברות את הסיפור לתנועות הבמה. מהדורת המקור מנתה 1,784 מילים, ומהדורת הדפוס v9 כוללת 1,847 מילים. בעריכת גרסת הבמה יש לעדכן יחד את הסצנה ב־`full-story.json` ואת העותק בפרק המתאים ב־`chapters-data.json`.
@@ -37,7 +37,7 @@
 
 אותם 48 מקורות PNG נמצאים גם בחבילת המקור וגם בנכסי v9, וזהים בית לבית לטביעות האצבע שבמלאי הסיפור. די לשמור עותק מקורי אחד. קובצי WebP והתמונות המוקטנות הם נכסי ההפעלה; אין להשתמש בהם במקום מקורות PNG לעריכת האיור.
 
-רקעי ההשלמה מסתירים את החלל שמאחורי הדמויות בזמן תנועה. הדמויות הנראות מגיעות מהאיורים המקוריים דרך מסכות בקוד. לכן חייבים לשמור יחד את האיור, רקע ההשלמה וקוד המסכה. כתובת מקומית מתחת ל־`.codex/generated_images` אינה גיבוי: יש להעתיק את ה־PNG עצמו לארכיון המקורות ולרשום במלאי את נתיבו הנייד.
+בהנפשה בשכבות, רקע ההשלמה ממלא את החלל שנחשף כשהמסכה זזה. שומרים יחד את האיור, רקע ההשלמה וקוד המסכה. הנפשות הריקוד והמחוות משתמשות גם בתנוחות מאוירות משלימות. שומרים את קובצי ה־PNG שלהם ואת הפרומפטים ב־`source-assets/performance/` ורושמים במלאי את הנתיבים היחסיים.
 
 ## מקורות סיפור, עיצוב והיסטוריה
 
@@ -64,7 +64,7 @@ npm run dev
 VITE_BASE_PATH=/and-juliet/ npm run build
 ```
 
-הפצה מתבצעת דרך תהליך ה־Deploy הידני ב־GitHub. לפי בקשת המשתמש אין להוסיף או להריץ בדיקות אוטומטיות כחלק מהעבודה השוטפת; מבצעים בנייה וצפייה חזותית בסצנות שהשתנו, לרבות סצנה צפופה ו־iPad רוחבי. קובצי האודיו אינם חלק מהמאגר: הנגנים משתמשים בשירותי Apple Music ו־Spotify, והקראת המכשיר תלויה בקול הזמין בו.
+הפצה מתבצעת דרך תהליך ה־Deploy הידני ב־GitHub. לפי בקשת המשתמש, העבודה השוטפת כוללת בנייה וצפייה חזותית בסצנות שהשתנו, לרבות סצנה צפופה בתצוגת אייפד לרוחב. בדיקות השימור זמינות לפי בקשה. השירים מתנגנים באמצעות הנגנים של Apple Music ו־Spotify. [האזנה בזמן קריאה בלי רשת](OFFLINE_READING.md)
 
 ## שחזור מקורות והיסטוריה
 

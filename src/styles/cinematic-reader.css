@@ -50,6 +50,37 @@ html:has(.app.live-musical) {scroll-padding-bottom: 108px;}
   text-shadow: 0 5px 22px #0808179c;
 }
 .app.premium-showcase.live-musical .reading-panel .story-copy {scroll-margin-block: 90px 112px;}
+
+/* Keep the longest conversations above the fixed dock at tablet reading size. */
+@media (orientation: landscape) and (min-width: 1024px) {
+  .app.premium-showcase.live-musical .reader-layout[data-source-scene="7"] {
+    --dialogue-width: 41.5%;
+  }
+  .app.premium-showcase.live-musical .reader-layout[data-source-scene="17"] {
+    --dialogue-width: 43%;
+  }
+  .app.premium-showcase.live-musical .reader-layout[data-source-scene="22"] {
+    --dialogue-width: 39.5%;
+  }
+  .app.premium-showcase.live-musical .reader-layout[data-source-scene="37"] {
+    --dialogue-width: 40.5%;
+  }
+  .app.premium-showcase.live-musical .reader-layout[data-source-scene="37"] .stage .stage-picture {
+    width: min(63%, calc(var(--stage-height) * 1.5));
+  }
+  .app.premium-showcase.live-musical .reader-layout:is([data-source-scene="7"], [data-source-scene="17"], [data-source-scene="22"], [data-source-scene="37"]) .reading-panel.dense-story {
+    width: var(--dialogue-width);
+    padding-block: clamp(24px, 3.2vh, 38px) 16px;
+  }
+  .app.premium-showcase.live-musical .reader-layout:is([data-source-scene="7"], [data-source-scene="17"], [data-source-scene="22"], [data-source-scene="37"]) .reading-panel .story-copy {
+    margin-top: 17px;
+    line-height: 1.45;
+  }
+  .app.premium-showcase.live-musical .reader-layout[data-source-scene="7"] .story-copy p + p {
+    margin-top: .36em;
+  }
+}
+
 .app.premium-showcase.live-musical .premium-stage-footer > button {
   min-height: 48px;
   padding: 0 10px;
@@ -294,7 +325,8 @@ html:has(.app.live-musical) {scroll-padding-bottom: 108px;}
 
 @media (orientation: landscape) and (min-width: 761px) {
   .app.live-musical .reader-layout[data-family="quiet"] .stage-picture {top: 0;}
-  .app.premium-showcase.live-musical .reader-layout[data-density="dense"]:has(+ .live-floor) .reading-panel {padding-bottom: 24px;}
+  .app.premium-showcase.live-musical .reader-layout:has(+ .live-floor) .reading-panel {padding-bottom: 26px;}
+  .app.premium-showcase.live-musical .reader-layout[data-density="dense"]:has(+ .live-floor) .reading-panel {padding-bottom: 14px;}
   .app.live-musical:has(.music-dock-expanded) .stage .premium-stage-footer {
     left: min(38%, 430px);
   }

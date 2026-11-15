@@ -74,9 +74,9 @@ export default function App() {
         if (layout) history.replaceState(null, '', `#/${layout.dataset.chapter}/${Number(layout.dataset.beat) + 1}`);
         return;
       }
-      setCurtain(false); setSceneReady(false); setPlayerOpen(false);
+      setCurtain(false); setSceneReady(false); setPlayerOpen(false); setOverlay(null);
       const p = parseSceneHash(location.hash);
-      if (p) {update({...p, hasProgress: true}); setCover(false); setOverlay(null);} else setCover(true);
+      if (p) {update({...p, hasProgress: true}); setCover(false);} else setCover(true);
     };
     addEventListener('hashchange', onHash); return () => removeEventListener('hashchange', onHash);
   }, []);

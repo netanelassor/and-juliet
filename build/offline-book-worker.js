@@ -7,6 +7,8 @@ const markerURL = absolute('__offline_book_complete__');
 const manifestURL = absolute('offline-book-manifest.json');
 const indexURL = absolute('index.html');
 const allowed = new Set(BOOK.files.map(file => new URL(file.path, scope).pathname));
+const assetDirectory = new URL('assets/', scope).pathname;
+const assetDestinations = new Set(['image', 'font', 'style', 'script']);
 let job = null;
 const transferBatchSize = 4;
 
@@ -158,9 +160,10 @@ self.addEventListener('fetch', event => {
     event.respondWith(freshOrSaved(request, () => cachedAsset(manifestURL)));
     return;
   }
-  // Strictly local, generated-book assets. Remote music/auth requests pass untouched.
-  const oldCore = url.pathname.startsWith(new URL('assets/',scope).pathname) && /\.(?:js|mjs|css)$/.test(url.pathname);
-  if (!allowed.has(url.pathname) && !oldCore) return;
+  // A previous saved shell may request its old static assets after a worker update.
+  // cachedAsset only looks in completed editions populated by the verified manifest.
+  const priorAsset = url.pathname.startsWith(assetDirectory) && (assetDestinations.has(request.destination) || /\.(?:js|mjs|css)$/.test(url.pathname));
+  if (!allowed.has(url.pathname) && !priorAsset) return;
   url.search = '';
   // A newly published illustration/CSS must also win online, not just the HTML.
   event.respondWith(freshOrSaved(request, () => cachedAsset(url.href)));

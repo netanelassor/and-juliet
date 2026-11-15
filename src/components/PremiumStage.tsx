@@ -38,6 +38,7 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
   const moving=motion&&mode!=='quiet';
   const useCutouts=scene!==46;
   const ready=originalReady&&(!useCutouts||plateReady);
+  const layered=ready&&moving;
   const mask=scene===3?openingMask:premiumMasks[scene];
   const removalMask: PremiumMask = mask.removalPaths ? {...mask,solidPaths:mask.removalPaths,holes:mask.removalHoles??mask.holes,strokes:[]} : mask;
   const image=illustration(scene), plate=asset(`premium/scene-${String(scene).padStart(2,'0')}-clean.webp`);
@@ -48,11 +49,7 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
   useEffect(()=>{if(scene<48){const next=new Image();next.src=illustration(scene+1);}return()=>{sequence.current?.kill();};},[scene]);
   useEffect(()=>{if(lastReplay.current!==replay){lastReplay.current=replay;activate();}},[replay]);
   useEffect(()=>{
-    if(moving)return;
-    sequence.current?.kill(); sequence.current=null;
-    gsap.set([rig.current,quill.current,finger.current,head.current].filter(Boolean),{clearProps:'transform'});
-    if(paper.current)gsap.set(paper.current,{opacity:0});
-    root.current?.querySelectorAll('.premium-confetti').forEach(el=>gsap.set(el,{opacity:0}));
+    if(!moving)drag.current=null;
   },[moving]);
 
   useLayoutEffect(()=>{
@@ -115,12 +112,12 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
   const sample=(piece:Piece,id:string)=><mask id={`${prefix}-${id}`} maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><g fill="white">{piece.solidPaths.map((d,i)=><path key={i} d={d}/>)}</g><g stroke="white" fill="none" strokeLinecap="round">{piece.strokes.map((s,i)=><path key={i} d={s.d} strokeWidth={s.width}/>)}</g></mask>;
   const source=(matte:string)=><image href={image} width="1536" height="1024" mask={`url(#${prefix}-${matte})`}/>;
 
-  return <section ref={root} className={`stage premium-stage premium-scene-${scene} ${ready?'layers-ready':''} ${moving?'motion-on':'motion-off'}`} aria-label={`הבמה. ${beat.title}`} data-scene={scene} data-run={run} data-layered={useCutouts?'original-pixels':'costume-keyframes'}>
+  return <section ref={root} className={`stage premium-stage premium-scene-${scene} ${layered?'layers-ready':''} ${moving?'motion-on':'motion-off'}`} aria-label={`הבמה. ${beat.title}`} data-scene={scene} data-run={run} data-layered={layered?(useCutouts?'original-pixels':'costume-keyframes'):'source-still'}>
     <div className="ambient-backdrop" aria-hidden="true"><img src={image} alt=""/></div>
     <div className="stage-picture premium-stage-picture">
-      <img className={`premium-original scene-art ${ready&&useCutouts?'original-behind-layers':''}`} src={image} alt={beat.title} fetchPriority="high" decoding="async" draggable={false} onLoad={()=>{setOriginalReady(true);onReady();}} onError={()=>{setFailed(true);onReady();}}/>
+      <img className={`premium-original scene-art ${layered&&useCutouts?'original-behind-layers':''}`} src={image} alt={beat.title} fetchPriority="high" decoding="async" draggable={false} onLoad={()=>{setOriginalReady(true);onReady();}} onError={()=>{setFailed(true);onReady();}}/>
       {useCutouts&&<img className="premium-preload" src={plate} alt="" onLoad={()=>setPlateReady(true)} onError={()=>setFailed(true)}/>}
-      {ready&&<svg className={`premium-canvas${useCutouts?'':' premium-performance-effects'}`} viewBox="0 0 1536 1024" aria-hidden="true">
+      {layered&&<svg className={`premium-canvas${useCutouts?'':' premium-performance-effects'}`} viewBox="0 0 1536 1024" aria-hidden="true">
         <defs>
           <mask id={`${prefix}-moving`} maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><Matte mask={mask}/></mask>
           <mask id={`${prefix}-base`} maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><rect width="1536" height="1024" fill="white"/><Matte mask={removalMask} fill="black"/></mask>
@@ -137,12 +134,12 @@ export function PremiumStage({chapter,beatIndex,motion,mode,reading,replay,onIde
         {scene===46&&<g>{confetti.map((p,i)=><rect key={i} className="premium-confetti" x={p.x*15.36} y={p.y} width={i%2?9:13} height={i%3?20:10} rx="2" fill={p.color} opacity="0" transform={`rotate(${p.r} ${p.x*15.36} ${p.y})`}/>)}</g>}
       </svg>}
       {scene === 46 && <CharacterChoreography scene={scene} enabled={originalReady && moving} run={run}/>}
-      {scene===14&&<button className="premium-swing-target" aria-label="משיכת הנברשת מצד לצד" disabled={!ready||!moving} data-premium-gesture="true" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onClick={e=>{if(e.detail===0)activate();}}/>}
+      {scene===14&&layered&&<button className="premium-swing-target" aria-label="משיכת הנברשת מצד לצד" data-premium-gesture="true" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onClick={e=>{if(e.detail===0)activate();}}/>}
 
       {hotspots.filter(p=>p.characterId in characterInfo).map(p=><button key={p.characterId} className="character-hotspot premium-character-hotspot" aria-label={`מי זה? ${characterInfo[p.characterId as CharacterId].name}`} style={{left:`${p.x*100}%`,top:`${p.y*100}%`,width:`${p.radius*140}%`,height:`${p.radius*140}%`}} onClick={()=>onIdentity(p.characterId as CharacterId)}><span>{characterInfo[p.characterId as CharacterId].name}</span></button>)}
-      {ready && moving && <StageCue x={scene === 3 ? 24 : scene === 14 ? 53 : 64} y={scene === 3 ? 23 : scene === 14 ? 13 : 31} label={action} onActivate={activate}/>}
-      {!ready&&<span className="premium-loading">{failed?'אפשר לקרוא. שכבות הבמה מתעכבות לרגע.':'מכינים את רגע הבמה…'}</span>}
+      {layered && <StageCue x={scene === 3 ? 24 : scene === 14 ? 53 : 64} y={scene === 3 ? 23 : scene === 14 ? 13 : 31} label={action} onActivate={activate}/>}
+      {moving&&!ready&&<span className="premium-loading">{failed?'אפשר לקרוא. שכבות הבמה מתעכבות לרגע.':'מכינים את רגע הבמה…'}</span>}
     </div>
-    <div className="premium-stage-footer"><p aria-live="polite">{message||info.hint}</p><button aria-label={action} disabled={!ready||!moving} onClick={activate}><Icon name="replay" size={17}/><span>{action}</span></button></div>
+    {moving&&<div className="premium-stage-footer"><p aria-live="polite">{message||info.hint}</p><button aria-label={action} disabled={!ready} onClick={activate}><Icon name="replay" size={17}/><span>{action}</span></button></div>}
   </section>;
 }

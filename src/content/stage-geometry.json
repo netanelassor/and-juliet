@@ -538,20 +538,20 @@
       "hotspots": [
         {
           "characterId": "juliet",
-          "x": 0.26,
-          "y": 0.28,
-          "radius": 0.08
+          "x": 0.292,
+          "y": 0.29,
+          "radius": 0.046
         },
         {
           "characterId": "francois",
-          "x": 0.325,
-          "y": 0.26,
-          "radius": 0.08
+          "x": 0.369,
+          "y": 0.292,
+          "radius": 0.046
         },
         {
           "characterId": "may",
-          "x": 0.71,
-          "y": 0.28,
+          "x": 0.758,
+          "y": 0.27,
           "radius": 0.08
         }
       ],
@@ -895,15 +895,15 @@
       "hotspots": [
         {
           "characterId": "juliet",
-          "x": 0.33,
-          "y": 0.25,
-          "radius": 0.08
+          "x": 0.47,
+          "y": 0.295,
+          "radius": 0.065
         },
         {
           "characterId": "romeo",
-          "x": 0.64,
-          "y": 0.2,
-          "radius": 0.08
+          "x": 0.604,
+          "y": 0.275,
+          "radius": 0.065
         }
       ],
       "interactionAnchor": {

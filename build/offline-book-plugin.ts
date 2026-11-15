@@ -24,16 +24,25 @@ export function offlineBook(): Plugin {
         return result;
       }
       const names = (await paths(out)).sort((a,b) => Number(b === 'index.html') - Number(a === 'index.html') || a.localeCompare(b));
+      const sceneFile = (scene: number) => `scene-${String(scene).padStart(2, '0')}`;
       for (let i = 1; i <= 48; i++) {
-        const scene = String(i).padStart(2, '0');
-        for (const kind of ['story','thumbs']) if (!names.includes(`assets/${kind}/scene-${scene}.webp`)) throw new Error(`Offline book inventory is missing ${kind}/scene-${scene}.webp`);
+        for (const kind of ['story','thumbs']) if (!names.includes(`assets/${kind}/${sceneFile(i)}.webp`)) throw new Error(`Offline book inventory is missing ${kind}/${sceneFile(i)}.webp`);
       }
-      const performanceFrames = [15,17,18,20,21,22,24,26,31,33,36,38,40,42,43,44,46,47,48].flatMap(scene => ['prep','hit'].map(pose => `assets/performance/scene-${scene}-${pose}.webp`));
-      const restingArtwork = ['01','18','33'].map(scene => `assets/performance/scene-${scene}-rest.webp`);
-      for (const path of [...performanceFrames, ...restingArtwork, 'assets/performance/thumbs/scene-24.webp']) {
+      const performanceFrames = [15,17,18,20,21,22,24,26,31,33,36,38,40,42,43,44,46,47,48].flatMap(scene => ['prep','hit'].map(pose => `assets/performance/${sceneFile(scene)}-${pose}.webp`));
+      const restingScenes = [1,18,33];
+      const restingArtwork = restingScenes.map(scene => `assets/performance/${sceneFile(scene)}-rest.webp`);
+      const replacementThumbnails = [...restingScenes,15,17,24,31,46].map(scene => `assets/performance/thumbs/${sceneFile(scene)}.webp`);
+      const cleanPlates = [3,10,14].map(scene => `assets/premium/${sceneFile(scene)}-clean.webp`);
+      const portraits = ['angelique','anne','juliet','lance','may','romeo','shakespeare'].map(name => `assets/characters/${name}.webp`);
+      const appManifest = JSON.parse(await readFile(resolve(out, 'manifest.webmanifest'), 'utf8')) as {icons: {src: string}[]};
+      const shell = [
+        'index.html', 'favicon.svg', 'manifest.webmanifest', 'assets/app/apple-touch-icon.png',
+        'assets/cover/front.webp', 'assets/cover/logo.webp', 'assets/theatre/curtain-illustrated-v1.webp',
+        ...appManifest.icons.map(icon => icon.src.replace(/^\.\//, '')),
+      ];
+      for (const path of [...shell, ...performanceFrames, ...restingArtwork, ...replacementThumbnails, ...cleanPlates, ...portraits, 'assets/performance/francois-portrait.webp']) {
         if (!names.includes(path)) throw new Error(`Offline book inventory is missing ${path}`);
       }
-      if (!names.includes('index.html')) throw new Error('Offline book inventory requires index.html');
       const template = await readFile(resolve(config.root, 'build/offline-book-worker.js'), 'utf8');
       const hash = createHash('sha256').update(template);
       const files: {path: string; bytes: number; sha256: string}[] = [];

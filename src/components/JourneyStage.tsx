@@ -91,6 +91,6 @@ export function JourneyStage({chapter,beatIndex,motion,mode,replay,onIdentity,on
       {layered && <StageCue x={carriage ? 63.6 : 75} y={carriage ? 78.8 : 77} label={action} icon={carriage ? 'replay' : 'spark'} onActivate={replayMoment}/>}
       {moving&&!ready&&<span className="journey-loading">{failed?'אפשר להמשיך לקרוא.':'מכינים את רגע הבמה…'}</span>}
     </div>
-    <div className="premium-stage-footer journey-stage-footer"><p>{moving?hint:'רגע שקט בסיפור.'}</p><button aria-label={action} onClick={replayMoment} disabled={!ready||!moving}><Icon name="replay" size={17}/><span>{action}</span></button></div>
+    {moving&&<div className="premium-stage-footer journey-stage-footer"><p>{hint}</p><button aria-label={action} onClick={replayMoment} disabled={!ready}><Icon name="replay" size={17}/><span>{action}</span></button></div>}
   </section>;
 }
