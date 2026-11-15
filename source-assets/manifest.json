@@ -1193,8 +1193,43 @@
       "provenance": "Right cell of source-assets/performance/scene-47-keyframes.png; 1086 × 724",
       "bytes": 235750,
       "sha256": "184e9acdc07461205da6dc718dbbedd7afe438fe2dc4b9ce81793850f7afa99c"
+    },
+    {
+      "path": "source-assets/performance/SCENE-24-DESCENT-PROMPT.md",
+      "role": "Scene 24 reference and generation prompt",
+      "provenance": "ImageGen with Broadway production sign reference",
+      "bytes": 5661,
+      "sha256": "34054c917013212cc2c13f14de96ed98f1971e6a870377447c312b4b40b145cb"
+    },
+    {
+      "path": "source-assets/performance/scene-24-romeo-descent.png",
+      "role": "Lossless ImageGen stage and descent sheet",
+      "provenance": "source-assets/performance/SCENE-24-DESCENT-PROMPT.md",
+      "bytes": 2483337,
+      "sha256": "68b705ce4b33c8e615efdaaa4b33bd1a4b78c4b24dd93ebbb4c6c8973efbb634"
+    },
+    {
+      "path": "public/assets/performance/scene-24-prep.webp",
+      "role": "Runtime clean stage for the Romeo descent",
+      "provenance": "Left cell of source-assets/performance/scene-24-romeo-descent.png; 1086 × 724",
+      "bytes": 144510,
+      "sha256": "6c01693bd3dacc00c2078cf30338194f40ab5ec1ee54854fbbe18dd1206b464c"
+    },
+    {
+      "path": "public/assets/performance/scene-24-hit.webp",
+      "role": "Runtime Romeo descent artwork and still",
+      "provenance": "Right cell of source-assets/performance/scene-24-romeo-descent.png; 1086 × 724",
+      "bytes": 213914,
+      "sha256": "4e0cd14e16c05e301be13568747dbff2642f5515c2970576d4f8654d3fcce7e7"
+    },
+    {
+      "path": "public/assets/performance/thumbs/scene-24.webp",
+      "role": "Runtime scene thumbnail",
+      "provenance": "Right cell of source-assets/performance/scene-24-romeo-descent.png; 360 × 240",
+      "bytes": 30746,
+      "sha256": "c85be1b65d88378acff627463da5e19fea967d709c6edff164f003e30465417d"
     }
   ],
-  "fileCount": 169,
-  "totalBytes": 354542111
+  "fileCount": 174,
+  "totalBytes": 357420279
 }

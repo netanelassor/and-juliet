@@ -27,7 +27,7 @@ export const characterInfo: Record<CharacterId, {name: string; description: stri
   romeo: {name: 'רומיאו', description: "כוכב עם המון ביטחון. גם הוא יכול ללמוד להקשיב ולהכיר את ג'ולייט מחדש.", image: 'romeo'},
 };
 export const asset = (path: string) => `${import.meta.env.BASE_URL}assets/${path}`;
-const revisedArt: Partial<Record<number, 'rest' | 'hit'>> = {1: 'rest', 15: 'hit', 17: 'hit', 18: 'rest', 31: 'hit', 33: 'rest', 46: 'hit'};
+const revisedArt: Partial<Record<number, 'rest' | 'hit'>> = {1: 'rest', 15: 'hit', 17: 'hit', 18: 'rest', 24: 'hit', 31: 'hit', 33: 'rest', 46: 'hit'};
 const sceneFile = (scene: number) => `scene-${String(scene).padStart(2, '0')}`;
 export const illustration = (scene: number) => asset(revisedArt[scene]
   ? `performance/${sceneFile(scene)}-${revisedArt[scene]}.webp`

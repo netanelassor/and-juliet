@@ -28,9 +28,11 @@ export function offlineBook(): Plugin {
         const scene = String(i).padStart(2, '0');
         for (const kind of ['story','thumbs']) if (!names.includes(`assets/${kind}/scene-${scene}.webp`)) throw new Error(`Offline book inventory is missing ${kind}/scene-${scene}.webp`);
       }
-      const performanceFrames = [15,17,18,20,21,22,26,31,33,36,38,40,42,43,44,46,47,48].flatMap(scene => ['prep','hit'].map(pose => `assets/performance/scene-${scene}-${pose}.webp`));
+      const performanceFrames = [15,17,18,20,21,22,24,26,31,33,36,38,40,42,43,44,46,47,48].flatMap(scene => ['prep','hit'].map(pose => `assets/performance/scene-${scene}-${pose}.webp`));
       const restingArtwork = ['01','18','33'].map(scene => `assets/performance/scene-${scene}-rest.webp`);
-      for (const path of [...performanceFrames, ...restingArtwork]) if (!names.includes(path)) throw new Error(`Offline book inventory is missing ${path}`);
+      for (const path of [...performanceFrames, ...restingArtwork, 'assets/performance/thumbs/scene-24.webp']) {
+        if (!names.includes(path)) throw new Error(`Offline book inventory is missing ${path}`);
+      }
       if (!names.includes('index.html')) throw new Error('Offline book inventory requires index.html');
       const template = await readFile(resolve(config.root, 'build/offline-book-worker.js'), 'utf8');
       const hash = createHash('sha256').update(template);

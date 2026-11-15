@@ -1,6 +1,6 @@
 # Animation assets and maintenance
 
-SVG mattes sample the RGB pixels of `public/assets/story/scene-NN.webp`. Separate clean plates fill the small spaces exposed when an original-pixel layer moves. The original paintings, mattes and clean plates share a **1536 × 1024** coordinate system. Eighteen scenes also use supplementary drawn poses during choreography. Each has a fully illustrated resting frame for reading with motion off.
+SVG mattes sample the RGB pixels of the scene illustrations. Separate clean plates fill the space exposed when an illustrated layer moves. The original paintings, mattes and clean plates share a **1536 × 1024** coordinate system. Romeo’s flying entrance uses its own **1086 × 724** artwork. Eighteen scenes also use supplementary drawn poses during choreography. Each has a fully illustrated resting frame for reading with motion off.
 
 The paths below are portable repository-relative names. `source-assets/` is the source asset bundle. If delivered as a GitHub Release archive, extract it at the repository root. The application serves the smaller WebP files in `public/assets/`. The TypeScript mattes are authoritative for original-pixel animation. The pose sheets and generation prompts are archived alongside the other artwork. Runtime requires no external segmentation or image-generation service.
 
@@ -13,10 +13,11 @@ The paths below are portable repository-relative names. `source-assets/` is the 
 | `source-assets/animation-plates/scene-03-clean.png` | `public/assets/premium/scene-03-clean.webp` | Hidden theatre wall/floor behind Shakespeare and Anne. |
 | `source-assets/animation-plates/scene-10-clean.png` | `public/assets/premium/scene-10-clean.webp` | Hidden set/floor behind the carriage, its riders, wheels and reins. |
 | `source-assets/animation-plates/scene-14-clean.png` | `public/assets/premium/scene-14-clean.webp` | Hidden ballroom behind Juliet and the chandelier/swing. |
-| `source-assets/animation-plates/scene-24-clean.png` | `public/assets/premium/scene-24-clean.webp` | Hidden LED backdrop/platform behind Romeo; Juliet and the set remain fixed. |
+| `source-assets/animation-plates/scene-24-clean.png` | `public/assets/premium/scene-24-clean.webp` | Archived clean plate for the previous podium entrance. |
+| `source-assets/performance/scene-24-romeo-descent.png` | `public/assets/performance/scene-24-prep.webp` and `scene-24-hit.webp` | Registered clean stage and full Romeo descent artwork. [Reference and prompt](../source-assets/performance/SCENE-24-DESCENT-PROMPT.md) |
 | `source-assets/animation-plates/scene-46-clean.png` | `public/assets/premium/scene-46-clean.webp` | Hidden stage behind the central balcony and Juliet. |
 
-All six generated PNG originals above are 1536 × 1024. Full clean-plate prompts, method, runtime SHA-256 hashes and original generation identifiers are in `docs/PREMIUM_ASSET_PROVENANCE.json`. The curtain prompt is documented in `docs/CURTAIN_ART_DIRECTION.md` when included in the handoff. Generation used the built-in imagegen tool, editing hidden scenery for the plates and creating a separate reference-guided curtain. There is no API key to recover.
+The curtain and the five PNGs in `animation-plates/` are 1536 × 1024. Full clean-plate prompts, method, runtime SHA-256 hashes and original generation identifiers are in `docs/PREMIUM_ASSET_PROVENANCE.json`. The curtain prompt is documented in `docs/CURTAIN_ART_DIRECTION.md` when included in the handoff. Generation used the built-in imagegen tool, editing hidden scenery for the plates and creating a separate reference-guided curtain.
 
 ## Five layered scenes
 
@@ -25,7 +26,7 @@ All six generated PNG originals above are 1536 × 1024. Full clean-plate prompts
 | 03, Shakespeare and Anne | `components/PremiumStage.tsx`; `motion/premium-opening.ts`; `motion/premium-masks.ts` types | Original quill, forearm/finger and head cutouts. Pivots/joins hide behind the original hand and cuff. Quill about 7°, forearm 5°, head 2°; return to the source pose. The turning manuscript is a code-drawn prop. |
 | 10, carriage | `components/JourneyStage.tsx`; `motion/journey-masks.ts`; `styles/journey-stage.css` | Original coach/riders bob about 1.8 source pixels. Two original spoke/hub mattes rotate inside stationary elliptical rims; inverse projection makes the rotation circular before restoring perspective. The normalized SVG image **must keep `preserveAspectRatio="none"`**. Blue floor apertures are excluded from the wheel paint matte. |
 | 14, chandelier | `components/PremiumStage.tsx`; `motion/premium-masks.ts`; `styles/premium-stage.css` | Juliet, seat, chains, crystals and fixture move as a pendulum around the top suspension. Keep the current swing within approximately ±1.1°; larger movement exposes imperfect hair/chain edges. Supporting audience stays fixed. |
-| 24, Romeo entrance | `components/JourneyStage.tsx`; `motion/journey-masks.ts`; `styles/journey-stage.css` | Original Romeo enters about 8 source pixels into the followspot, then remains visible through a restrained repeating pose/light loop (about 1.7px movement). Original floor/pedestal foreground from y720 down remains on top. No repeated closed curtain. |
+| 24, Romeo entrance | `components/JourneyStage.tsx`; `components/RomeoDescent.tsx`; `styles/journey-stage.css` | Romeo, the platform and the ROMEO sign descend together in a traced matte over the clean stage. Suspension lines and a followspot are drawn at runtime. The complete descent illustration is the resting frame. |
 | 46, Roar | `components/PremiumStage.tsx`; `styles/premium-stage.css` | The original balcony matte is archived. The current costume keyframes use a stable balcony composition with independent followspots and confetti. |
 
 Import paths above start at `src/`. `App.tsx` selects the five layered renderers. Other scenes use `Stage.tsx`, `TheatricalEffects.tsx` and `motion/scene-motion.ts` for scene-specific stage effects around their complete original paintings.
@@ -96,7 +97,7 @@ These keyframes were generated with the built-in ImageGen using the original pai
 | 47, I Want It That Way (Reprise) | Juliet and Romeo shake hands as friends. Anne and Shakespeare acknowledge each other from the wings. | [scene-47-keyframes.png](../source-assets/performance/scene-47-keyframes.png) |
 | 48, curtain call | Eight cast members face the house and then bend forward together. | [scene-48-keyframes.png](../source-assets/performance/scene-48-keyframes.png) |
 
-To recreate a runtime crop, use FFmpeg with libwebp. Put both WebPs for each scene in `public/assets/performance/`. The offline build checks for all 36 and records their hashes. The corrected stills in 01, 15, 17, 18, 31, 33 and 46 also serve the scene picker thumbnails. Canonical masters and the previous blue Roar sheet remain archived. [Prompts for the proposal and reconciliation scenes](../source-assets/performance/CONNECTIONS_PROMPTS.md)
+To recreate a runtime crop, use FFmpeg with libwebp. Put both WebPs for each scene in `public/assets/performance/`. The offline build checks for all 36 choreography frames and the separate Romeo descent pair, and records their hashes. The corrected stills in 01, 15, 17, 18, 24, 31, 33 and 46 also serve the scene picker thumbnails. Canonical masters and the previous blue Roar sheet remain archived. [Prompts for the proposal and reconciliation scenes](../source-assets/performance/CONNECTIONS_PROMPTS.md)
 
 `StoryLighting.tsx` sequences focused light over listening characters, the wedding arch, or a group hug in seven quieter scenes. The movement is composed independently of the official music player.
 
